@@ -113,7 +113,7 @@ define(['i18n!nls/questions'], function(Quests) {
 						"ask2.2":{
 				
 						"title": Quests['ask2.2'],
-						"type":"object"
+						"type": "object",
 						"properties":{
 									"ask2.2.1":{
 									"title": Quests['ask2.2.1'],
