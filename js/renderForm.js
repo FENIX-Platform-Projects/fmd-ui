@@ -9,8 +9,9 @@ USAGE:
 
 */
 define([
-	'require','jquery','underscore','jsoneditor'
-], function (require, $, _, JSONEditor) {
+	'require','jquery','underscore','jsoneditor','handlebars',
+	'text!html/formWrapper.html'
+], function (require, $, _, JSONEditor, formWrapper) {
 
 	function renderForm(target, schema, opts) {
 
@@ -44,12 +45,8 @@ define([
 		this.target = (target instanceof jQuery) ? target : $(target);
 
 		this.editor = new JSONEditor(this.target[0], this.opts);
-		
-/*		var that = this;
-		this.editor.on('ready', function() {
-			if(!that.editable)
-				that.editor.disable();
-		});*/
+
+		return this;
 	};
 
 	renderForm.prototype.setValues = function(data) {

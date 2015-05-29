@@ -84,16 +84,18 @@ require([
 
 		//SECTIONS
 		var questions = _.map(_.range(1,17), function(i) {
-					
-					var id = 'cat'+i;
 
-					return {
-						id: id,
-						title: i+') '+Quests[id],
-						html: '',
-						active: false
-					};
+				var id = 'cat'+i;
+
+				return {
+					id: id,
+					title: i+') '+Quests[id],
+					html: '',
+					active: false
+				};
 	        });
+
+window.editors = {};
 
 		$('#pills-quest').html( Handlebars.compile(tmplPills)({
 			items: questions
@@ -101,9 +103,10 @@ require([
 		.find('a[data-toggle="tab"]').one('shown.bs.tab', function (e) {
 			var id = $(e.target).data('id');
 
+
 			require(['json/'+ id ], function(schema) {
 				
-				renderForm('#'+ id, schema);
+				window.editors[id] = renderForm('#'+ id, schema);
 
 			}, function (err) {
 
