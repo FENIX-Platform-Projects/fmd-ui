@@ -21,7 +21,7 @@ define(['i18n!nls/questions'], function(Quests) {
 													},
 													
 													"ask2.1.1.2": {
-													"title":Quests['ask2.1.1.1.2'],
+													"title":Quests['ask2.1.1.2'],
 													"type": "string"
 												}
 						
@@ -76,7 +76,7 @@ define(['i18n!nls/questions'], function(Quests) {
 										}
 				                        },
 									"ask2.1.5":{
-									"title": Quests['ask2.5.1'],
+									"title": Quests['ask2.1.5'],
 									"type":	"object",
 									"properties": {
 													"ask2.1.5.1":{ 
