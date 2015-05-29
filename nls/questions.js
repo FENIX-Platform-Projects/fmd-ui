@@ -35,7 +35,7 @@ define({
 	"ask2.1.6.1":  "Number",
 	"ask2.1.6.1":  "Census year",
 
-"ask2.2":			 "2.2) FMD susceptible Wild Life species"
+"ask2.2":			 "2.2) FMD susceptible Wild Life species",
 "ask2.2.1": 		"Buffalo",
 	"ask2.2.1.1": 		"presence",
 	"ask2.2.1.1": 		"Approximate population number (if known)",
