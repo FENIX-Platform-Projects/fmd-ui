@@ -2,6 +2,13 @@ define({
 	"fr": false,
 	"root": {
 
+		"commons": {
+			"yes-of": "Yes, officially",
+			"yes-no": "Yes, not officially",
+			"no": "No",
+			"not": "Not sure"
+		},
+
 		"cat1": "GENERAL INFORMATION",
 
 			"ask1":       "1) Has your country identified a list of Priority Transboundary Animal Diseases (TAD)?",

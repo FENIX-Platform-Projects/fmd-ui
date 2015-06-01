@@ -31,5 +31,3 @@ define(['i18n!nls/questions'], function(Quests) {
 		}
 	};
 });
-
-"{"ask1":"Yes, not officially","ask1.1":["ddddd"]}"
