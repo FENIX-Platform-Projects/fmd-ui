@@ -87,6 +87,16 @@ define({
 		"cat6": "FMD OUTBREAKS",
 
 			"ask7":        "7) Number of FMD outbreaks detected in your country since 2012:      (An outbreak is defined as a FMD case in an epi-unit (farm, village, dip-tank location) with FMD clinical signs of FMD. It does not refer to the number of animals affected within an epi-unit.)",
+			"ask7.1": "2014 (to date) ",
+						"ask7.1.1":"Number of FMD outbreaks detected",
+						"ask7.1.2":"Serotype(s) involved (if unknown, please indicate with ‘unk’)",
+			"ask7.2": "2013",	
+						"ask7.2.1":"Number of FMD outbreaks detected",
+						"ask7.2.2":"Serotype(s) involved (if unknown, please indicate with ‘unk’)",
+			"ask7.3": "2012",
+						"ask7.3.1":"Number of FMD outbreaks detected",
+						"ask7.3.2":"Serotype(s) involved (if unknown, please indicate with ‘unk’)",
+			
 			"ask8":        "8) Is there a laboratory specialized in FMD diagnosis in your country? (Exclusive answers)",
 			"ask9":        "9) When an outbreak of FMD is notified, is an outbreak investigation conducted? (Exclusive answers)",
 				"ask9.1":  "Other:",
