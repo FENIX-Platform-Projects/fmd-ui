@@ -7,24 +7,51 @@ define(['i18n!nls/questions'], function(Quests) {
                 "title": Quests['ask7'],
                 "type": "object",
                 "properties": {
-                    "2014 (to date)": {
-                        "type": "string",
-                        "enum": [
-                            "Number of FMD outbreaks detected", "Serotype(s) involved (if unknown, please indicate with ‘unk’)"
-                        ]
+                    
+										"ask7.1":{
+												"title": Quests['ask7.1'],
+                        "type": "object",
+                        "properties": {
+														"ask7.1.1": {
+														"title": Quests['ask7.1.1'],
+														"type": "string"
+														},
+														"ask7.1.2": {
+														"title": Quests['ask7.1.2'],
+														"type": "string"
+														}							
+														}
                     },
-                    "2013": {
-                        "type": "string",
-                        "enum": [
-                            "Number of FMD outbreaks detected", "Serotype(s) involved (if unknown, please indicate with ‘unk’)"
-                        ]
+										"ask7.2":{
+												"title": Quests['ask7.2'],
+                        "type": "object",
+                        "properties": {
+														"ask7.2.1": {
+														"title": Quests['ask7.2.1'],
+														"type": "string"
+														},
+														"ask7.2.2": {
+														"title": Quests['ask7.2.2'],
+														"type": "string"
+														}							
+														}
                     },
-                    "2012": {
-                        "type": "string",
-                        "enum": [
-                            "Number of FMD outbreaks detected", "Serotype(s) involved (if unknown, please indicate with ‘unk’)"
-                        ]
+										
+										"ask7.3":{
+												"title": Quests['ask7.3'],
+                        "type": "object",
+                        "properties": {
+														"ask7.3.1": {
+														"title": Quests['ask7.3.1'],
+														"type": "string"
+														},
+														"ask7.3.2": {
+														"title": Quests['ask7.3.2'],
+														"type": "string"
+														}							
+														}
                     }
+
                 }
             },
             "ask8": {
@@ -38,21 +65,27 @@ define(['i18n!nls/questions'], function(Quests) {
                     "Not sure"
                 ]
             },
-            "ask9.1": {
-                "title": Quests['ask9'],
-                "type": "string"
-            },
-            "ask9.2": {
-                "title": Quests['ask9.2'],
-                "type": "string",
-                "uniqueItems": true,
-                "format": "select",
-                "enum": [
-                    "Yes",
-                    "No",
-                    "Maybe"
-                ]
-            },
+						"ask9": {
+						"title": Quests['ask9'],
+						"type": "object",
+						"properties": {
+							"ask9.1": {
+									"title": Quests['ask9'],
+									"type": "string"
+												},
+							"ask9.2": {
+									"title": Quests['ask9.2'],
+									"type": "string",
+									"uniqueItems": true,
+									"format": "select",
+									"enum": [
+											"Yes",
+											"No",
+											"Maybe"
+									]
+												}	
+												}
+						},
             "ask10": {
                 "title": Quests['ask10'],
                 "type": "object",
@@ -120,15 +153,17 @@ define(['i18n!nls/questions'], function(Quests) {
             },
             "ask11": {
                 "title": Quests['ask11'],
-                "type": "string",
-                "uniqueItems": false,
-                "format": "select",
+                "type": "array",
+                "uniqueItems": true,
+                "items": {
+								"type": "string",
                 "enum": [
                     "Animal movement restrictions",
                     "Application of biosecurity measures",
                     "Quarantine measures",
                     "Emergency vaccination"
                 ]
+								}
             },
             "ask11.1": {
                 "title": Quests['ask11.1'],
