@@ -84,13 +84,11 @@ require([
 		renderForm('#form-contact', schemaContact);
 
 		//SECTIONS
-		var questions = _.map(_.range(1,17), function(i) {
-
-				var id = 'cat'+i;
-
+		var n = 1,
+			questions = _.map(Config.cats, function(id) {
 				return {
 					id: id,
-					title: i+') '+Quests[id],
+					title: (n++) +') '+ Quests[id],
 					html: '',
 					active: false
 				};

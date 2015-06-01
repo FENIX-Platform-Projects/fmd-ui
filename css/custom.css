@@ -1,7 +1,14 @@
 
 .nav-pills {
 	padding-right: 0;
+/*	border-right: 1px solid #43beaf;
+	margin-right: -1px;*/
 }
+.tab-content {
+	border-left: 1px solid #43beaf;
+	background-color: #E4F9F5;
+}
+
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:focus,
 .nav-pills > li.active > a:hover {
@@ -33,20 +40,23 @@
 	color: #43beaf;
 }
 
+.panel-collapse.collapse.in ~ .panel-title {
+	color: #43beaf
+}
+
 .control-label {
 	float: left;
 	clear: both;
 }
 
-.tab-content {
-	border-left: 1px solid #43beaf;
-	background-color: #E4F9F5;
-}
-
-.form-wrapper-footer {
+/*.form-wrapper-footer {
 	background-color: #43beaf;
 }
-
+*/
 .form-wrapper-footer .btn {
 	margin: 10px 15px 10px 0;
+}
+
+.well .well {
+	padding-left: 10px;	
 }
