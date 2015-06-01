@@ -124,8 +124,8 @@ define(['i18n!nls/questions'], function(Quests) {
 													"type": "string"
 													},
 													
-													"ask2.1.1.2": {
-													"title":Quests['ask2.2.1.1.2'],
+													"ask2.2.1.2": {
+													"title":Quests['ask2.2.1.2'],
 													"type": "string",
 													 "uniqueItems": true,
 													"format": "select",
