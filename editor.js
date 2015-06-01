@@ -10,7 +10,7 @@ require([
 
 	Compiler.resolve([menuConfig], {
 	    placeholders: {
-	    	FENIX_CDN: "//fenixapps.fao.org/repository"
+	    	FENIX_CDN: "//fenixrepo.fao.org/cdn"
 	    },
 	    config: {
 	    	i18n: {
