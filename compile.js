@@ -105,7 +105,11 @@ require([
 
 			require(['json/'+ id ], function(schema) {
 				
-				window.editors[id] = renderForm('#'+ id, schema);
+				window.editors[id] = renderForm('#'+ id, schema, {
+					onSubmit: function(data) {
+						console.log('onSubmit', data);
+					}
+				});
 
 			}, function (err) {
 

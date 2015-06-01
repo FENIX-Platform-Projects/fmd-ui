@@ -1,19 +1,18 @@
-define([
-'jquery','underscore','handlebars','amplify',
+define(['jquery','underscore','handlebars','amplify',
 ], function ($, _, Handlebars, Amplify) {
-'use strict';
 
 	function sectionStorage(opts) {
 		//TODO extend defaults..
 
 		this.opts = _.defaults(opts, {
+			prefix: 'fmd-',
 			autosave: true,
 			autosaveInterval: 10000,
 			autosaveLoader: '#fx-sectionstorage-loader',
 			storeExpires: null
 		});
 
-		this.storeId = _.uniqueId('fx-sectionstorage');
+		this.storeId = _.uniqueId( this.prefix );
 		this.storeObj = {};
 		this.sections = [];
 		this.autosaveTimer = null;
@@ -40,6 +39,10 @@ define([
 		amplify.store(this.storeId, this.storeObj, {expires: this.opts.storeExpires });
 
 		return this.sections.length;
+	};
+
+	sectionStorage.prototype.getSections = function() {
+		return this.sections;
 	};
 
 	sectionStorage.prototype.initAutoSave = function(section) {

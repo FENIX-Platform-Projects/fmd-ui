@@ -17,7 +17,9 @@ define([
 
 		opts = opts || {};
 
-		this.opts = _.defaults(opts, {
+		var self = this;
+
+		self.opts = _.defaults(opts, {
 			theme: 'bootstrap3',
 			template: 'handlebars',
 			//TODO languages using module nls/jsoneditor_errors.js
@@ -29,11 +31,13 @@ define([
 			disable_properties: true,
 			disable_array_reorder: true,
 			//required_by_default: true,
-			schema: _.isString(schema) ? {$ref: require.toUrl(schema)} : schema
+			schema: _.isString(schema) ? {$ref: require.toUrl(schema)} : schema,
+			//ballbacks
+			onSubmit: $.noop
 		});
 
 		if(!_.isUndefined(opts.editable))
-			this.opts = _.extend(this.opts, {
+			self.opts = _.extend(self.opts, {
 				editable:              opts.editable,
 				disable_collapse:     !opts.editable,
 				disable_edit_json:    !opts.editable,
@@ -41,15 +45,20 @@ define([
 				disable_array_reorder:!opts.editable
 			});
 
-		this.target = (target instanceof jQuery) ? target : $(target);
+		self.target = (target instanceof jQuery) ? target : $(target);
 		
-		this.target.html(formWrapper);
+		self.target.html(formWrapper);
 
-		this.editor = new JSONEditor(this.target.find('.form-wrapper-content')[0], this.opts);
+		self.editor = new JSONEditor(self.target.find('.form-wrapper-content')[0], self.opts);
 
-		console.log(this.target.find('.form-wrapper-content')[0]);
+		self.target.find('.form-wrapper-submit').on('click', function(e) {
+			e.preventDefault();
+			self.opts.onSubmit.call(self, self.editor.getValue() );
 
-		return this;
+			//TODO STORAGE
+		});
+
+		return self;
 	};
 
 	renderForm.prototype.setValues = function(data) {
