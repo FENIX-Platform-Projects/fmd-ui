@@ -20,9 +20,10 @@ define(['i18n!nls/questions'], function(Quests) {
             },
             "ask20.2": {
                 "title": Quests['ask20.2'],
-                "type": "string",
-                "uniqueItems": false,
-                "format": "select",
+                "type": "array",
+                "uniqueItems": true,
+                "items": {
+                	"type": "string",
                 "enum": [
                     "Small holder",
                     "Dairy production",
@@ -32,6 +33,7 @@ define(['i18n!nls/questions'], function(Quests) {
                     "Mixed livestock systems",
                     "Other"
                 ]
+                }
             },
             "ask20.3": {
                 "title": Quests['ask20.3'],
