@@ -25,8 +25,11 @@
 }
 
 
+.panel-group .panel-body .btn,
+.panel-group .panel-body .btn:hover,
 .btn {
-	border: 1px solid #43beaf
+	border-color: #43beaf;
+	color: #43beaf;
 }
 
 .control-label {

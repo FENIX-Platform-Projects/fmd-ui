@@ -57,7 +57,6 @@ require([
 		'json/contact',
 
 		'text!submodules/fenix-ui-common/html/pills.html',
-		'text!html/formError.html',
 
 		'config/services',
 		'i18n!nls/questions',
@@ -71,11 +70,13 @@ require([
     	schemaContact,
 
     	tmplPills,
-		tmplFormError,
 
     	Config,
     	Quests
     ) {
+
+
+		var tmplFormError = Handlebars.compile('<div class="alert alert-warning">Question {{id}} not found</div>');
 
     	renderAuthMenu('compile');
 		
@@ -110,7 +111,7 @@ window.editors = {};
 
 			}, function (err) {
 
-			    $('#'+id).html( Handlebars.compile(tmplFormError )({id: id }) );
+			    $('#'+id).html( tmplFormError({id: id }) );
 			    
 			});
 
