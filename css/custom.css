@@ -1,16 +1,16 @@
 
 .nav-pills {
-	border-right: 1px solid #43beaf;
+	padding-right: 0;
 }
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:focus,
 .nav-pills > li.active > a:hover {
 	color: #fff;
 	background-color: #43beaf;
-	opacity: 0.7
+	border-radius: 0;
 }
 .nav-tabs > li > a {
-	color: #777
+	color: #777;
 }
 .nav-tabs > li.active > a {
   color: #43beaf;
@@ -29,10 +29,24 @@
 .panel-group .panel-body .btn:hover,
 .btn {
 	border-color: #43beaf;
+	background-color: #fff;
 	color: #43beaf;
 }
 
 .control-label {
 	float: left;
 	clear: both;
+}
+
+.tab-content {
+	border-left: 1px solid #43beaf;
+	background-color: #E4F9F5;
+}
+
+.form-wrapper-footer {
+	background-color: #43beaf;
+}
+
+.form-wrapper-footer .btn {
+	margin: 5px;
 }

@@ -9,9 +9,9 @@ USAGE:
 
 */
 define([
-	'require','jquery','underscore','jsoneditor','handlebars',
+	'require','jquery','underscore','handlebars','jsoneditor',
 	'text!html/formWrapper.html'
-], function (require, $, _, JSONEditor, formWrapper) {
+], function (require, $, _, Handlebars, JSONEditor, formWrapper) {
 
 	function renderForm(target, schema, opts) {
 
@@ -43,13 +43,11 @@ define([
 
 		this.target = (target instanceof jQuery) ? target : $(target);
 		
-		//this.wrapper = $(formWrapper);
+		this.target.html(formWrapper);
 
-		//this.wrapper.insertBefore(this.target);
+		this.editor = new JSONEditor(this.target.find('.form-wrapper-content')[0], this.opts);
 
-		//this.wrapper.find('.form-wrapper-content').append(this.target);
-
-		this.editor = new JSONEditor(this.target[0], this.opts);
+		console.log(this.target.find('.form-wrapper-content')[0]);
 
 		return this;
 	};
