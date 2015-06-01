@@ -22,14 +22,13 @@ define([
 			template: 'handlebars',
 			//TODO languages using module nls/jsoneditor_errors.js
 
+			ajax: true,
 			editable: false,
 			disable_collapse: true,
 			disable_edit_json: true,
 			disable_properties: true,
 			disable_array_reorder: true,
 			//required_by_default: true,
-
-			ajax: true,
 			schema: _.isString(schema) ? {$ref: require.toUrl(schema)} : schema
 		});
 
@@ -41,8 +40,14 @@ define([
 				disable_properties:   !opts.editable,
 				disable_array_reorder:!opts.editable
 			});
-		
+
 		this.target = (target instanceof jQuery) ? target : $(target);
+		
+		//this.wrapper = $(formWrapper);
+
+		//this.wrapper.insertBefore(this.target);
+
+		//this.wrapper.find('.form-wrapper-content').append(this.target);
 
 		this.editor = new JSONEditor(this.target[0], this.opts);
 

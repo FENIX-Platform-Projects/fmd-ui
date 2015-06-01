@@ -96,7 +96,7 @@ require([
 				};
 	        });
 
-window.editors = {};
+		window.editors = {};
 
 		$('#pills-quest').html( Handlebars.compile(tmplPills)({
 			items: questions
