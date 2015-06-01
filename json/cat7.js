@@ -20,8 +20,16 @@ define(['i18n!nls/questions'], function(Quests) {
 	        },
 	        "ask16.2": {
 	            "title": Quests['ask16.2'],
-	            "type": "string",
-	        },
+	            "type": "array",
+				"minItems": 1,
+				"maxItems": 5,
+				"items": {
+					"type": "string",
+					"title": " ",
+					"default": ""
+									},
+				"additionalItems":false
+				},
 	        "ask17": {
 	            "title": Quests['ask16'],
 	            "type": "string",
@@ -39,8 +47,16 @@ define(['i18n!nls/questions'], function(Quests) {
 	        },
 	        "ask17.2": {
 	            "title": Quests['ask16.2'],
-	            "type": "string",
-	        }
+	            "type": "array",
+				"minItems": 1,
+				"maxItems": 5,
+				"items": {
+					"type": "string",
+					"title": " ",
+					"default": ""
+									},
+				"additionalItems":false
+				}
 	    }
 	};
 });
