@@ -1,3 +1,35 @@
+
+.nav-pills {
+	border-right: 1px solid #43beaf;
+}
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:focus,
+.nav-pills > li.active > a:hover {
+	color: #fff;
+	background-color: #43beaf;
+	opacity: 0.7
+}
+.nav-tabs > li > a {
+	color: #777
+}
+.nav-tabs > li.active > a {
+  color: #43beaf;
+}
+
+.has-error .form-control {
+  border-color: #f00
+}
+
+.well {
+	margin-bottom: 0;
+}
+
+
 .btn {
 	border: 1px solid #43beaf
+}
+
+.control-label {
+	float: left;
+	clear: both;
 }
