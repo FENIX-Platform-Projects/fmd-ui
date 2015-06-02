@@ -85,10 +85,6 @@ require([
 				autosaveLoader: '#sectionstorage-loader'
 			});
 
-		window.editors = {};
-
-		window.secStore = secStore;
-
 		//CONTACT FORM
 		renderForm('#form-contact', schemaContact, {
 			onChange: function(data) {
@@ -116,11 +112,11 @@ require([
 
 			require(['json/'+ id ], function(schema) {
 				
-				window.editors[id] = renderForm('#'+ id, schema, {
+				renderForm('#'+ id, schema, {
 					onChange: function(data) {
 						secStore.addSection(id, data);
 					}
-				});
+				}).setValues( secStore.getSections(id) );
 
 			}, function (err) {
 
