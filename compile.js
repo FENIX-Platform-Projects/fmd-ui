@@ -100,7 +100,7 @@ require([
 				var n = id.replace('cat','');
 				return {
 					id: id,
-					title: n+') '+ Quests[id],
+					title: n+'. '+ Quests[id],
 					html: '',
 					active: false
 				};
@@ -122,7 +122,6 @@ require([
 					schema: schema,
 					values: formStore.getSections(id),
 					onChange: function(data) {
-						console.log('onchange', id)
 						formStore.addSection(id, data);
 						$pill.addClass('saved');
 					}

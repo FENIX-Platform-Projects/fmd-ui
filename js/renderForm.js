@@ -59,10 +59,11 @@ define([
 		if(!_.isEmpty(self.opts.values))
 			self.editor.setValue(self.opts.values);
 
-		self.editor.on('change', function(e) {
-			console.log('jsoneditor on change',e)
+		self.editor.on('change', _.after(2, function(e) {
+			console.log('jsoneditor on change',self.target.attr('id'))
 			self.opts.onChange.call(self, self.editor.getValue() );
-		});
+		}) );
+
 
 		self.target.find('.form-wrapper-submit').on('click', function(e) {
 			e.preventDefault();
