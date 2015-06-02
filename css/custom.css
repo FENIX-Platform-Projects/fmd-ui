@@ -73,3 +73,9 @@
 	box-shadow: 0 0 2px #ddd;
 }
 
+
+/* JSON-EDITOR CUSTOM */
+
+.form-json .checkbox {
+	clear: both;
+}

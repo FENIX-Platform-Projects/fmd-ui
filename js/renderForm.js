@@ -10,8 +10,11 @@ USAGE:
 */
 define([
 	'require','jquery','underscore','handlebars','jsoneditor',
+	//'fmdTheme',
 	'text!html/formWrapper.html'
-], function (require, $, _, Handlebars, JSONEditor, formWrapper) {
+], function (require, $, _, Handlebars, JSONEditor, 
+	//FMDTheme,
+	formWrapper) {
 
 	function renderForm(target, opts) {
 
@@ -20,8 +23,8 @@ define([
 		var self = this;
 
 		self.opts = _.defaults(opts, {
-			theme: 'bootstrap3',
 			template: 'handlebars',
+			theme: 'bootstrap3',			
 			//TODO languages using module nls/jsoneditor_errors.js
 
 			ajax: true,
@@ -31,7 +34,7 @@ define([
 			disable_properties: true,
 			disable_array_reorder: true,
 			
-			values: {},			
+			values: {},
 			schema: _.isString(opts.schema) ? {$ref: require.toUrl(opts.schema)} : opts.schema,
 			
 			//ballbacks

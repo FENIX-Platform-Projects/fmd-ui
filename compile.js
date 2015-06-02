@@ -77,11 +77,11 @@ require([
     	Quests
     ) {
     	var authMenu = renderAuthMenu('compile'),
-    		username = authMenu.auth.getCurrentUser().name;
+    		user = authMenu.auth.getCurrentUser();
 
 		var tmplFormError = Handlebars.compile('<div class="alert alert-warning">Question {{id}} not found</div>'),
-			secStore = new storeForm({
-				prefix: username,
+			formStore = new storeForm({
+				prefix: user.name || 'unlogged',
 				storeExpires: 100000,
 				autosaveLoader: '#sectionstorage-loader'
 			});
@@ -89,15 +89,15 @@ require([
 		//CONTACT FORM
 		renderForm('#form-contact', {
 			schema: schemaContact,			
-			values: secStore.getSections('contact'),
+			values: formStore.getSections('contact'),
 			onChange: function(data) {
-				secStore.addSection('contact', data);
+				formStore.addSection('contact', data);
 			}
 		});
 
 		//SECTIONS
 		var n = 1,
-			questions = _.map(Config.cats, function(id) {
+			questions = _.map(Config.sections, function(id) {
 				return {
 					id: id,
 					title: (n++) +') '+ Quests[id],
@@ -117,9 +117,9 @@ require([
 				
 				renderForm('#'+ id, {
 					schema: schema,
-					values: secStore.getSections(id),
+					values: formStore.getSections(id),
 					onChange: function(data) {
-						secStore.addSection(id, data);
+						formStore.addSection(id, data);
 					}
 				});
 
@@ -130,39 +130,6 @@ require([
 			});
 
 		});
-
-
-
-/*		editor.on("submit",  function() {
-		  console.log('submit',arguments);
-		});*/
-
-		/*
-		$('#form-contact').on('submit', function(e) {
-			e.preventDefault();
-
-			var isFormValid = true;
-
-			$(this).find('input').each(function() {
-			    if ($.trim($(this).val()).length == 0) {
-			        $(this).parent('.form-group').addClass('has-error');
-			        isFormValid = false;
-			    }
-			    else{
-			        $(this).parent('.form-group').removeClass('has-error');
-			    }
-			});
-
-			if(!isFormValid) {
-				alert('Please fill in all fields');
-				return false;
-			}
-
-			var adata = $(this).serializeArray();
-			//var data = _.object(_.pluck(adata, 'name'), _.pluck(adata, 'value'));
-
-			$(this).replaceWith( Handlebars.compile('<ul>{{#each this}}<li>{{name}}: {{value}}</li>{{/each}}</ul>')(adata) );
-        });*/
 
     });
 });

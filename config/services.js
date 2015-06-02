@@ -4,7 +4,7 @@ define(['underscore'], function(_) {
 		"wdsUrl": "http://faostat3.fao.org/wds/rest/table/json",
 		"wdsUrlExportCsv": "http://faostat3.fao.org/wds/rest/exporter/streamcsv",
 
-		"cats": (function() {
+		"sections": (function() {
 			return _.map(_.range(1, 17), function(i) {
 				return 'cat'+i;
 			});
