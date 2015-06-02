@@ -1,18 +1,18 @@
 define(['jquery','underscore','handlebars','amplify',
 ], function ($, _, Handlebars, Amplify) {
 
-	function sectionStorage(opts) {
+	function storeForm(opts) {
 		//TODO extend defaults..
 
 		this.opts = _.defaults(opts, {
-			prefix: 'fmd-',
+			prefix: '',
 			autosave: true,
 			autosaveInterval: 5000,
 			autosaveLoader: null,
 			storeExpires: 0
 		});
 
-		this.storeId = _.uniqueId( this.opts.prefix );
+		this.storeId = _.uniqueId('storeForm-'+this.opts.prefix);
 		this.storeObj = amplify.store(this.storeId) || {};
 		this.autosaveTimer = null;		
 		
@@ -23,7 +23,7 @@ define(['jquery','underscore','handlebars','amplify',
 			this.initAutoSave();
 	};
 
-	sectionStorage.prototype.addSection = function(id, data) {
+	storeForm.prototype.addSection = function(id, data) {
 
 		this.storeObj[ id ]= data;
 
@@ -32,9 +32,9 @@ define(['jquery','underscore','handlebars','amplify',
 		return this;
 	};
 
-	sectionStorage.prototype.storeSections = function() {
+	storeForm.prototype.storeSections = function() {
 
-		console.log('storeSections',this.storeObj)
+		console.log('storeSections '+(new Date()).toTimeString(),this.storeOb)
 
 		var self = this;
 
@@ -56,11 +56,11 @@ define(['jquery','underscore','handlebars','amplify',
 		return this;
 	};
 
-	sectionStorage.prototype.getSections = function(id) {
+	storeForm.prototype.getSections = function(id) {
 		return id ? this.storeObj[id] : this.storeObj;
 	};
 
-	sectionStorage.prototype.initAutoSave = function() {
+	storeForm.prototype.initAutoSave = function() {
 
 		var self = this;
 
@@ -73,5 +73,5 @@ define(['jquery','underscore','handlebars','amplify',
 		return this;
 	};
 
-	return sectionStorage;
+	return storeForm;
 });

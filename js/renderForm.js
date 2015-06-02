@@ -13,7 +13,7 @@ define([
 	'text!html/formWrapper.html'
 ], function (require, $, _, Handlebars, JSONEditor, formWrapper) {
 
-	function renderForm(target, schema, opts) {
+	function renderForm(target, opts) {
 
 		opts = opts || {};
 
@@ -30,7 +30,9 @@ define([
 			disable_edit_json: true,
 			disable_properties: true,
 			disable_array_reorder: true,
-			schema: _.isString(schema) ? {$ref: require.toUrl(schema)} : schema,
+			
+			values: {},			
+			schema: _.isString(opts.schema) ? {$ref: require.toUrl(opts.schema)} : opts.schema,
 			
 			//ballbacks
 			onChange: $.noop
@@ -50,6 +52,9 @@ define([
 		self.target.html(formWrapper);
 
 		self.editor = new JSONEditor(self.target.find('.form-wrapper-content')[0], self.opts);
+
+		if(!_.isEmpty(self.opts.values))
+			self.editor.setValue(self.opts.values);
 
 		self.editor.on('change', function(e) {
 			self.opts.onChange.call(self, self.editor.getValue() );

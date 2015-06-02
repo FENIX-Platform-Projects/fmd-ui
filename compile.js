@@ -53,7 +53,7 @@ require([
 
 		'js/renderAuthMenu',
 		'js/renderForm',
-		'js/sectionStorage',
+		'js/storeForm',
 
 		'json/contact',
 
@@ -67,7 +67,7 @@ require([
     	
     	renderAuthMenu,
     	renderForm,
-    	sectionStorage,
+    	storeForm,
 
     	schemaContact,
 
@@ -76,24 +76,24 @@ require([
     	Config,
     	Quests
     ) {
-    	var authMenu = renderAuthMenu('compile');
-
+    	var authMenu = renderAuthMenu('compile'),
+    		username = authMenu.auth.getCurrentUser().name;
 
 		var tmplFormError = Handlebars.compile('<div class="alert alert-warning">Question {{id}} not found</div>'),
-			secStore = new sectionStorage({
-				
-				//TODO prefix:  auth username
-
+			secStore = new storeForm({
+				prefix: username,
 				storeExpires: 100000,
 				autosaveLoader: '#sectionstorage-loader'
 			});
 
 		//CONTACT FORM
-		renderForm('#form-contact', schemaContact, {
+		renderForm('#form-contact', {
+			schema: schemaContact,			
+			values: secStore.getSections('contact'),
 			onChange: function(data) {
-				secStore.addSection('contact',data);
+				secStore.addSection('contact', data);
 			}
-		}).setValues( secStore.getSections('contact') );
+		});
 
 		//SECTIONS
 		var n = 1,
@@ -115,11 +115,13 @@ require([
 
 			require(['json/'+ id ], function(schema) {
 				
-				renderForm('#'+ id, schema, {
+				renderForm('#'+ id, {
+					schema: schema,
+					values: secStore.getSections(id),
 					onChange: function(data) {
 						secStore.addSection(id, data);
 					}
-				}).setValues( secStore.getSections(id) );
+				});
 
 			}, function (err) {
 
