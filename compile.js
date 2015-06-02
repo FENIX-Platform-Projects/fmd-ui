@@ -76,11 +76,14 @@ require([
     	Config,
     	Quests
     ) {
-    	renderAuthMenu('compile');
+    	var authMenu = renderAuthMenu('compile');
 
 
 		var tmplFormError = Handlebars.compile('<div class="alert alert-warning">Question {{id}} not found</div>'),
 			secStore = new sectionStorage({
+				
+				//TODO prefix:  auth username
+
 				storeExpires: 100000,
 				autosaveLoader: '#sectionstorage-loader'
 			});
