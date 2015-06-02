@@ -5,9 +5,11 @@ define(['underscore'], function(_) {
 		"wdsUrlExportCsv": "http://faostat3.fao.org/wds/rest/exporter/streamcsv",
 
 		"sections": (function() {
-			return _.map(_.range(1, 17), function(i) {
+			var secs = _.map(_.range(1, 17), function(i) {
 				return 'cat'+i;
 			});
+			//HIDDEN SECTIONS
+			return secs;//_.without(secs,'cat11');
 		})(),
 
 		"wds5Url": "http://fenixapps2.fao.org/wds_5",

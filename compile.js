@@ -96,11 +96,11 @@ require([
 		});
 
 		//SECTIONS
-		var n = 1,
-			questions = _.map(Config.sections, function(id) {
+		var questions = _.map(Config.sections, function(id) {
+				var n = id.replace('cat','');
 				return {
 					id: id,
-					title: (n++) +') '+ Quests[id],
+					title: n+') '+ Quests[id],
 					html: '',
 					active: false
 				};
