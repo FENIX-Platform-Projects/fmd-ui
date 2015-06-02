@@ -161,30 +161,18 @@ define({
 
 			"ask24":                   "24) Is there a FMD national vaccination strategy endorsed by your government? (exclusive)",
 			"ask25":                   "25) If yes, Please provide the information for the following species (check appropriate boxes)",
-				"ask25.1":             "a) Large Ruminants: (Cattle and Buffaloe)",
-					"ask25.1.1":       "Most recent implemented Year:",
-					"ask25.1.2":       "Type:",
-					"ask25.1.3":       "Choose only one:",
-						"ask25.1.3.1": "Please explain",
-						"ask25.1.3.2": "If the vaccine protocol is non-uniform, please choose all that apply below:",
-					"ask25.1.4":       "Other:",
 			
-			"ask25.2":             "b) Small Ruminants:",
-				"ask25.2.1":       "Most recent implemented Year:",
-				"ask25.2.2":       "Type:",
-				"ask25.2.3":       "Choose only one:",
-					"ask25.2.3.1": "Please explain",
-					"ask25.2.3.2": "If the vaccine protocol is non-uniform, please choose all that apply below:",
-			"ask25.2.4":           "Other:",
 			
-			"ask25.3":             "c) Pigs:",
-				"ask25.3.1":       "Most recent implemented Year:",
-				"ask25.3.2":       "Type:",
-				"ask25.3.3":       "Choose only one:",
-					"ask25.3.3.1": "Please explain",
-					"ask25.3.3.2": "If the vaccine protocol is non-uniform, please choose all that apply below:",
-				"ask25.3.4":       "Other:",
-			"ask25.4":             "Others:",
+					"ask25.1.":       "Type of animal:",
+					"ask25.2":       "Most recent implemented Year:",
+					"ask25.3":       "Type of vaccination:",
+					"ask25.4":       "Choose only one:",
+					
+					"ask25.4.1": "If the vaccine protocol is non-uniform, please choose all that apply below:",
+		
+					"ask25.4.1.1":       "Other:",
+			
+			
 			
 			"ask26":       "26) Indicate the Vaccine Name, Supplier, Species targeted and Serotypes (if unknown, please indicate with ‘?’):",
 			"ask27":       "27) Number of doses applied in 2013 and 2014 (fill in the table below)",
