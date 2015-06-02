@@ -53,6 +53,7 @@ require([
 
 		'js/renderAuthMenu',
 		'js/renderForm',
+		'js/sectionStorage',
 
 		'json/contact',
 
@@ -66,6 +67,7 @@ require([
     	
     	renderAuthMenu,
     	renderForm,
+    	sectionStorage,
 
     	schemaContact,
 
@@ -74,14 +76,28 @@ require([
     	Config,
     	Quests
     ) {
-
-
-		var tmplFormError = Handlebars.compile('<div class="alert alert-warning">Question {{id}} not found</div>');
-
     	renderAuthMenu('compile');
-		
+
+
+		var tmplFormError = Handlebars.compile('<div class="alert alert-warning">Question {{id}} not found</div>'),
+			secStore = new sectionStorage({
+				storeExpires: 100000,
+				autosaveLoader: '#sectionstorage-loader'
+			});
+
+		window.editors = {};
+
+		window.secStore = secStore;
+
 		//CONTACT FORM
-		renderForm('#form-contact', schemaContact);
+		renderForm('#form-contact', schemaContact, {
+			onChange: function(data) {
+				secStore.addSection('contact',data);
+			},
+			onSubmit: function(data) {
+				secStore.addSection('contact',data);
+			}			
+		});
 
 		//SECTIONS
 		var n = 1,
@@ -93,8 +109,6 @@ require([
 					active: false
 				};
 	        });
-
-		window.editors = {};
 
 		$('#pills-quest').html( Handlebars.compile(tmplPills)({
 			items: questions

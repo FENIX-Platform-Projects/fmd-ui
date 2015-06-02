@@ -30,9 +30,10 @@ define([
 			disable_edit_json: true,
 			disable_properties: true,
 			disable_array_reorder: true,
-			//required_by_default: true,
 			schema: _.isString(schema) ? {$ref: require.toUrl(schema)} : schema,
+			
 			//ballbacks
+			onChange: $.noop,			
 			onSubmit: $.noop
 		});
 
@@ -51,11 +52,13 @@ define([
 
 		self.editor = new JSONEditor(self.target.find('.form-wrapper-content')[0], self.opts);
 
+		self.editor.on('change', function(e) {
+			self.opts.onChange.call(self, self.editor.getValue() );
+		});
+
 		self.target.find('.form-wrapper-submit').on('click', function(e) {
 			e.preventDefault();
 			self.opts.onSubmit.call(self, self.editor.getValue() );
-
-			//TODO STORAGE
 		});
 
 		return self;

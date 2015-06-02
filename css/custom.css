@@ -60,3 +60,16 @@
 .well .well {
 	padding-left: 10px;	
 }
+
+#sectionstorage-loader {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	text-align: center;
+	padding: 2px 10px;
+	background: rgba(255,255,255,0.8);
+	box-shadow: 0 0 2px #ddd;
+}
+

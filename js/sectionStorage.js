@@ -7,49 +7,70 @@ define(['jquery','underscore','handlebars','amplify',
 		this.opts = _.defaults(opts, {
 			prefix: 'fmd-',
 			autosave: true,
-			autosaveInterval: 10000,
-			autosaveLoader: '#fx-sectionstorage-loader',
-			storeExpires: null
+			autosaveInterval: 5000,
+			autosaveLoader: null,
+			storeExpires: 0
 		});
 
-		this.storeId = _.uniqueId( this.prefix );
-		this.storeObj = {};
-		this.sections = [];
-		this.autosaveTimer = null;
+		this.storeId = _.uniqueId( this.opts.prefix );
+		this.storeObj = amplify.store(this.storeId) || {};
+		this.autosaveTimer = null;		
+		
+		if(this.opts.autosaveLoader)
+			$(this.opts.autosaveLoader).css({visibility: 'hidden'});
 
 		if(this.opts.autosave)
 			this.initAutoSave();
 	};
 
-	sectionStorage.prototype.addSection = function(section) {
-		var sectionId = this.storeId +'_'+ _.uniqueId()
+	sectionStorage.prototype.addSection = function(id, data) {
 
-		this.sections.push({
-			id: sectionId,
-			data: section
-		});
-		return sectionId;
+		this.storeObj[ id ]= data;
+
+		this.storeSections();
+
+		return this;
 	};
 
 	sectionStorage.prototype.storeSections = function() {
 
-		for(var i in this.sections)
-			this.storeObj[ this.sections[i].id ] = this.sections[i].data;
-
-		amplify.store(this.storeId, this.storeObj, {expires: this.opts.storeExpires });
-
-		return this.sections.length;
-	};
-
-	sectionStorage.prototype.getSections = function() {
-		return this.sections;
-	};
-
-	sectionStorage.prototype.initAutoSave = function(section) {
+		console.log('storeSections',this.storeObj)
 
 		var self = this;
 
-		self.autosaveTimer = setInterval(self.storeSections, self.opts.autosaveInterval);
+		if(_.isEmpty(this.storeObj))
+			return this;
+
+		if(this.opts.autosaveLoader)
+			$(this.opts.autosaveLoader).css({visibility: 'visible'});
+
+		amplify.store(this.storeId, this.storeObj, {
+			expires: this.opts.storeExpires
+		});
+
+		setTimeout(function() {
+			if(self.opts.autosaveLoader)
+				$(self.opts.autosaveLoader).css({visibility: 'hidden'});
+		}, 1000);
+
+		return this;
+	};
+
+	sectionStorage.prototype.getSections = function() {
+		return this.storeObj;
+	};
+
+	sectionStorage.prototype.initAutoSave = function() {
+
+		var self = this;
+
+		this.autosaveTimer = setInterval(function() {
+			
+			self.storeSections();
+
+		}, this.opts.autosaveInterval);
+
+		return this;
 	};
 
 	return sectionStorage;
