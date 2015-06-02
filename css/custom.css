@@ -17,15 +17,27 @@
 	background-color: #43beaf;
 	border-radius: 0;
 }
+
 .nav-tabs > li > a {
-	color: #777;
+	color: #777;	
 }
 .nav-tabs > li.active > a {
 	color: #43beaf;
 }
 
 .nav-pills > li > a.saved {
-	background-color: #E4F9F5
+	background-color: #E4F9F5;
+}
+.nav-pills > li > a .fa {
+	visibility: hidden;
+}
+.nav-pills > li > a.saved .fa {
+	visibility: visible;
+	font-size: large;
+	color: #43beaf
+}
+.nav-pills > li.active > a.saved .fa {
+	color: #fff
 }
 
 .has-error .form-control {

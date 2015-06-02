@@ -100,7 +100,7 @@ require([
 				var n = id.replace('cat','');
 				return {
 					id: id,
-					title: n+'. '+ Quests[id],
+					title: n+'. '+ Quests[id]+'<i class="fa fa-check pull-right"></i>',
 					html: '',
 					active: false
 				};

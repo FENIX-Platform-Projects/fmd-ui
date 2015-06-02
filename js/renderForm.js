@@ -56,13 +56,13 @@ define([
 
 		self.editor = new JSONEditor(self.target.find('.form-wrapper-content')[0], self.opts);
 
-		if(!_.isEmpty(self.opts.values))
-			self.editor.setValue(self.opts.values);
-
 		self.editor.on('change', _.after(2, function(e) {
 			console.log('jsoneditor on change',self.target.attr('id'))
 			self.opts.onChange.call(self, self.editor.getValue() );
 		}) );
+
+		if(!_.isEmpty(self.opts.values))
+			self.editor.setValue(self.opts.values);
 
 
 		self.target.find('.form-wrapper-submit').on('click', function(e) {
