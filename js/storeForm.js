@@ -34,7 +34,7 @@ define(['jquery','underscore','handlebars','amplify',
 
 	storeForm.prototype.storeSections = function() {
 
-		console.log('storeSections '+(new Date()).toTimeString(),this.storeOb)
+		//console.log('storeSections '+(new Date()).toTimeString(),JSON.stringify(this.storeObj))
 
 		var self = this;
 

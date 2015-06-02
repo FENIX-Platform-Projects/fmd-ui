@@ -20,7 +20,11 @@
 	color: #777;
 }
 .nav-tabs > li.active > a {
-  color: #43beaf;
+	color: #43beaf;
+}
+
+.nav-pills > li > a.saved {
+	background-color: #E4F9F5
 }
 
 .has-error .form-control {

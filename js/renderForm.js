@@ -60,6 +60,7 @@ define([
 			self.editor.setValue(self.opts.values);
 
 		self.editor.on('change', function(e) {
+			console.log('jsoneditor on change',e)
 			self.opts.onChange.call(self, self.editor.getValue() );
 		});
 

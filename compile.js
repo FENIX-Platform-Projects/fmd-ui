@@ -110,8 +110,11 @@ require([
 			items: questions
 		}) )
 		.find('a[data-toggle="tab"]').one('shown.bs.tab', function (e) {
-			var id = $(e.target).data('id');
+			
+			var $pill = $(e.target),
+				id = $pill.data('id');
 
+			
 
 			require(['json/'+ id ], function(schema) {
 				
@@ -119,7 +122,9 @@ require([
 					schema: schema,
 					values: formStore.getSections(id),
 					onChange: function(data) {
+						console.log('onchange', id)
 						formStore.addSection(id, data);
+						$pill.addClass('saved');
 					}
 				});
 
