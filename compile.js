@@ -93,11 +93,8 @@ require([
 		renderForm('#form-contact', schemaContact, {
 			onChange: function(data) {
 				secStore.addSection('contact',data);
-			},
-			onSubmit: function(data) {
-				secStore.addSection('contact',data);
-			}			
-		});
+			}
+		}).setValues( secStore.getSections('contact') );
 
 		//SECTIONS
 		var n = 1,
@@ -120,8 +117,8 @@ require([
 			require(['json/'+ id ], function(schema) {
 				
 				window.editors[id] = renderForm('#'+ id, schema, {
-					onSubmit: function(data) {
-						console.log('onSubmit', data);
+					onChange: function(data) {
+						secStore.addSection(id, data);
 					}
 				});
 

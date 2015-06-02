@@ -56,8 +56,8 @@ define(['jquery','underscore','handlebars','amplify',
 		return this;
 	};
 
-	sectionStorage.prototype.getSections = function() {
-		return this.storeObj;
+	sectionStorage.prototype.getSections = function(id) {
+		return id ? this.storeObj[id] : this.storeObj;
 	};
 
 	sectionStorage.prototype.initAutoSave = function() {
