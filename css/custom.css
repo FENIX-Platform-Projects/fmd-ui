@@ -11,7 +11,8 @@
 
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:focus,
-.nav-pills > li.active > a:hover {
+.nav-pills > li.active > a:hover, 
+.nav-pills > li.active > a.saved {	
 	color: #fff;
 	background-color: #43beaf;
 	border-radius: 0;
