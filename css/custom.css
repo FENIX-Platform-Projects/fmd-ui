@@ -28,15 +28,15 @@
 .nav-pills > li > a.saved {
 	background-color: #E4F9F5;
 }
-.nav-pills > li > a .fa {
+.nav-pills > li > a .fa-check {
 	visibility: hidden;
 }
-.nav-pills > li > a.saved .fa {
+.nav-pills > li > a.saved .fa-check {
 	visibility: visible;
 	font-size: large;
 	color: #43beaf
 }
-.nav-pills > li.active > a.saved .fa {
+.nav-pills > li.active > a.saved .fa-check {
 	color: #fff
 }
 
