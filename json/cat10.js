@@ -13,12 +13,12 @@ define(['i18n!nls/questions'], function(Quests) {
                     "No"
                 ]
             },
-            "ask21.1": {
-                "title": Quests['ask21.1'],
+            "ask21_1": {
+                "title": Quests['ask21_1'],
                 "type": "string"
             },
-            "ask21.2": {
-                "title": Quests['ask20.2'],
+            "ask21_2": {
+                "title": Quests['ask20_2'],
                 "type": "string",
                 "uniqueItems": false,
                 "format": "select",
@@ -26,8 +26,8 @@ define(['i18n!nls/questions'], function(Quests) {
 
                 ]
             },
-            "ask21.3": {
-                "title": Quests['ask20.3'],
+            "ask21_3": {
+                "title": Quests['ask20_3'],
                 "type": "string",
                 "uniqueItems": false,
                 "format": "select",
@@ -36,8 +36,8 @@ define(['i18n!nls/questions'], function(Quests) {
                     "No"
                 ]
             },
-            "ask21.4": { 
-                "title": Quests['ask20.4'],
+            "ask21_4": { 
+                "title": Quests['ask20_4'],
                 "type": "string",
             },
             "ask22": {

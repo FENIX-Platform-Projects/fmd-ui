@@ -14,12 +14,12 @@ define(['i18n!nls/questions'], function(Quests) {
 	                "Not sure"
 	            ]
 	        },
-	        "ask16.1": {
-	            "title": Quests['ask16.1'],
+	        "ask16_1": {
+	            "title": Quests['ask16_1'],
 	            "type": "string",
 	        },
-	        "ask16.2": {
-	            "title": Quests['ask16.2'],
+	        "ask16_2": {
+	            "title": Quests['ask16_2'],
 	            "type": "array",
 				"minItems": 1,
 				"maxItems": 5,
@@ -41,12 +41,12 @@ define(['i18n!nls/questions'], function(Quests) {
 	                "Not sure"
 	            ]
 	        },
-	        "ask17.1": {
-	            "title": Quests['ask16.1'],
+	        "ask17_1": {
+	            "title": Quests['ask16_1'],
 	            "type": "string",
 	        },
-	        "ask17.2": {
-	            "title": Quests['ask16.2'],
+	        "ask17_2": {
+	            "title": Quests['ask16_2'],
 	            "type": "array",
 				"minItems": 1,
 				"maxItems": 5,

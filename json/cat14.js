@@ -35,8 +35,8 @@ define(['i18n!nls/questions'], function(Quests) {
                     "Movement Control"
                 ]
             },
-            "ask35.1": {
-                "title": Quests['ask35.1'],
+            "ask35_1": {
+                "title": Quests['ask35_1'],
                 "type": "string"
             }
         }

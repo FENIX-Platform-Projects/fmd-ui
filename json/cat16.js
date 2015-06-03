@@ -7,44 +7,44 @@ define(['i18n!nls/questions'], function(Quests) {
                 "title": Quests['ask37'],
                 "type": "object",
                 "properties": {
-                    "ask37.1": {
-                        "title": Quests['ask37.1'],
+                    "ask37_1": {
+                        "title": Quests['ask37_1'],
                         "type": "object",
                         "properties": {
-                            "ask37.1.1": {
-                                "title": Quests['ask37.1.1'],
+                            "ask37_1_1": {
+                                "title": Quests['ask37_1_1'],
                                 "type": "string"
                             },
-                            "ask37.1.2": {
-                                "title": Quests['ask37.1.2'],
+                            "ask37_1_2": {
+                                "title": Quests['ask37_1_2'],
                                 "type": "string"
                             }
                         }
                     },
-                    "ask37.2": {
-                        "title": Quests['ask37.1'],
+                    "ask37_2": {
+                        "title": Quests['ask37_1'],
                         "type": "object",
                         "properties": {
-                            "ask37.1.1": {
-                                "title": Quests['ask37.2.1'],
+                            "ask37_1_1": {
+                                "title": Quests['ask37_2_1'],
                                 "type": "string"
                             },
-                            "ask37.1.2": {
-                                "title": Quests['ask37.2.2'],
+                            "ask37_1_2": {
+                                "title": Quests['ask37_2_2'],
                                 "type": "string"
                             }
                         }
                     },
-                    "ask37.3": {
-                        "title": Quests['ask37.1'],
+                    "ask37_3": {
+                        "title": Quests['ask37_1'],
                         "type": "object",
                         "properties": {
-                            "ask37.1.1": {
-                                "title": Quests['ask37.3.1'],
+                            "ask37_1_1": {
+                                "title": Quests['ask37_3_1'],
                                 "type": "string"
                             },
-                            "ask37.1.2": {
-                                "title": Quests['ask37.3.2'],
+                            "ask37_1_2": {
+                                "title": Quests['ask37_3_2'],
                                 "type": "string"
                             }
                         }

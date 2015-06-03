@@ -13,8 +13,8 @@ define(['i18n!nls/questions'], function(Quests) {
 	                "No"
 	            ]
 	        },
-	        "ask31.1": {
-	            "title": Quests['ask31.1'],
+	        "ask31_1": {
+	            "title": Quests['ask31_1'],
 	            "type": "string"
 	        },
 	        "ask32": {
@@ -27,8 +27,8 @@ define(['i18n!nls/questions'], function(Quests) {
 	                "No"
 	            ]
 	        },
-	        "ask32.1": {
-	            "title": Quests['ask32.1'],
+	        "ask32_1": {
+	            "title": Quests['ask32_1'],
 	            "type": "string"
 	        }
 	    }

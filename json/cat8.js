@@ -14,16 +14,16 @@ define(['i18n!nls/questions'], function(Quests) {
                     "Not sure"
                 ]
             },
-            "ask18.1": {
-                "title": Quests['ask18.1'],
+            "ask18_1": {
+                "title": Quests['ask18_1'],
                 "type": "object",
                 "properties": {
-                    "ask18.1.1": {
-                        "title": Quests['ask18.1.1'],
+                    "ask18_1_1": {
+                        "title": Quests['ask18_1_1'],
                         "type": "string"
                     },
-                    "ask18.1.2": {
-                        "title": Quests['ask18.1.2'],
+                    "ask18_1_2": {
+                        "title": Quests['ask18_1_2'],
                         "type": "string",
                         "uniqueItems": true,
                         "format": "select",
@@ -35,8 +35,8 @@ define(['i18n!nls/questions'], function(Quests) {
                     }
                 }
             },
-            "aks18.2": {
-                "title": Quests['ask18.2'],
+            "aks18_2": {
+                "title": Quests['ask18_2'],
                 "type": "string",
                 "uniqueItems": true,
                 "format": "select",

@@ -155,7 +155,7 @@ require([
 
 			wdsClient.create({
 				collection: Config.dbCollectionData,
-				//outputType: 'object',
+				outputType: 'object',
 				payload: {
 				    query: [ doc ]
 				},

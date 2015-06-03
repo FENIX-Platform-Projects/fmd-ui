@@ -14,12 +14,12 @@ define(['i18n!nls/questions'], function(Quests) {
                     "Not sure"
                 ]
             },
-            "ask20.1": {
-                "title": Quests['ask20.1'],
+            "ask20_1": {
+                "title": Quests['ask20_1'],
                 "type": "string"
             },
-            "ask20.2": {
-                "title": Quests['ask20.2'],
+            "ask20_2": {
+                "title": Quests['ask20_2'],
                 "type": "array",
                 "uniqueItems": true,
                 "items": {
@@ -35,8 +35,8 @@ define(['i18n!nls/questions'], function(Quests) {
                 ]
                 }
             },
-            "ask20.3": {
-                "title": Quests['ask20.3'],
+            "ask20_3": {
+                "title": Quests['ask20_3'],
                 "type": "string",
                 "uniqueItems": true,
                 "format": "select",
@@ -45,8 +45,8 @@ define(['i18n!nls/questions'], function(Quests) {
                     "No"
                 ]
             },
-            "ask20.4": {
-                "title": Quests['ask20.4'],
+            "ask20_4": {
+                "title": Quests['ask20_4'],
                 "type": "string"
             }
         }

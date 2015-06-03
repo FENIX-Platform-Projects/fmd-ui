@@ -17,9 +17,9 @@ define(['i18n!nls/questions'], function(Quests) {
 		        "title": Quests['ask25'],
 		        "type": "object",
 		        "properties": {
-		            "ask25.1": {
+		            "ask25_1": {
 
-		                "title": Quests['ask25.1'],
+		                "title": Quests['ask25_1'],
 		                "type": "string",
 		                "uniqueItems": "true",
 		                "format": "select",
@@ -30,13 +30,13 @@ define(['i18n!nls/questions'], function(Quests) {
 		                    "Others"
 		                ]
 		            },
-		            "ask25.2": {
-		                "title": Quests['ask25.2'],
+		            "ask25_2": {
+		                "title": Quests['ask25_2'],
 		                "type": "string",
 		            },
 
-		            "ask25.3": {
-		                "title": Quests['ask25.3'],
+		            "ask25_3": {
+		                "title": Quests['ask25_3'],
 		                "type": "string",
 		                "uniqueItems": "true",
 		                "format": "select",
@@ -45,8 +45,8 @@ define(['i18n!nls/questions'], function(Quests) {
 		                    "Compulsory ",
 		                ]
 		            },
-		            "ask25.4": {
-		                "title": Quests['ask25.4'],
+		            "ask25_4": {
+		                "title": Quests['ask25_4'],
 		                "type": "string",
 		                "uniqueItems": "true",
 		                "format": "select",
@@ -55,8 +55,8 @@ define(['i18n!nls/questions'], function(Quests) {
 		                    "Non-uniform vaccination – different programs that are best described in the following",
 		                ]
 		            },
-		            "ask25.4.1": {
-		                "title": Quests['ask25.4.1'],
+		            "ask25_4_1": {
+		                "title": Quests['ask25_4_1'],
 		                "type": "string",
 		                "uniqueItems": "true",
 		                "format": "select",
@@ -67,8 +67,8 @@ define(['i18n!nls/questions'], function(Quests) {
 		                    "Ring vaccination in response to a FMD outbreak"
 		                ]
 		            },
-		            "ask25.4.1.1": {
-		                "title": Quests['ask25.4.1.1'],
+		            "ask25_4_1_1": {
+		                "title": Quests['ask25_4_1_1'],
 		                "type": "string"
 		            }
 
@@ -204,12 +204,12 @@ define(['i18n!nls/questions'], function(Quests) {
 	                "Never"
 	            ]
 	        },
-	        "ask29.1": {
-	            "title": Quests['ask29.1'],
+	        "ask29_1": {
+	            "title": Quests['ask29_1'],
 	            "type": "string"
 	        },
-	        "ask29.2": {
-	            "title": Quests['ask29.2'],
+	        "ask29_2": {
+	            "title": Quests['ask29_2'],
 	            "type": "string",
 	            "uniqueItems": true,
 	            "format": "select",
@@ -230,12 +230,12 @@ define(['i18n!nls/questions'], function(Quests) {
 	                "Not sure"
 	            ]
 	        },
-	        "ask30.1": {
-	            "title": Quests['ask30.1'],
+	        "ask30_1": {
+	            "title": Quests['ask30_1'],
 	            "type": "object",
 	            "properties": {
-	                "ask30.1.1": {
-	                    "title": Quests['ask30.1.1'],
+	                "ask30_1_1": {
+	                    "title": Quests['ask30_1_1'],
 	                    "type": "string",
 	                    "uniqueItems": true,
 	                    "format": "select",
@@ -244,44 +244,44 @@ define(['i18n!nls/questions'], function(Quests) {
 	                        "An independent Vaccine Quality control centre/laboratory on behalf of the Veterinary Services"
 	                    ]
 	                },
-	                "ask30.1.1.1": {
-	                    "title": Quests['ask30.1.1.1'],
+	                "ask30_1_1_1": {
+	                    "title": Quests['ask30_1_1_1'],
 	                    "type": "string"
 	                },
-	                "ask30.1.2": {
-	                    "title": Quests['ask30.1.2'],
+	                "ask30_1_2": {
+	                    "title": Quests['ask30_1_2'],
 	                    "type": "object",
 	                    "properties": {
-	                        "ask30.1.2.1": {
-	                            "title": Quests['ask30.1.2.1'],
+	                        "ask30_1_2_1": {
+	                            "title": Quests['ask30_1_2_1'],
 	                            "type": "string",
 	                            "uniqueItems": true,
 	                            "format": "select",
 	                            "enum": ["2013", "2014"]
 	                        },
-	                        "ask30.1.2.2": {
-	                            "title": Quests['ask30.1.2.1'],
+	                        "ask30_1_2_2": {
+	                            "title": Quests['ask30_1_2_1'],
 	                            "type": "string",
 	                            "uniqueItems": true,
 	                            "format": "select",
 	                            "enum": ["2013", "2014"]
 	                        },
-	                        "ask30.1.2.3": {
-	                            "title": Quests['ask30.1.2.1'],
+	                        "ask30_1_2_3": {
+	                            "title": Quests['ask30_1_2_1'],
 	                            "type": "string",
 	                            "uniqueItems": true,
 	                            "format": "select",
 	                            "enum": ["2013", "2014"]
 	                        },
-	                        "ask30.1.2.4": {
-	                            "title": Quests['ask30.1.2.1'],
+	                        "ask30_1_2_4": {
+	                            "title": Quests['ask30_1_2_1'],
 	                            "type": "string",
 	                            "uniqueItems": true,
 	                            "format": "select",
 	                            "enum": ["2013", "2014"]
 	                        },
-	                        "ask30.1.2.5": {
-	                            "title": Quests['ask30.1.2.1'],
+	                        "ask30_1_2_5": {
+	                            "title": Quests['ask30_1_2_1'],
 	                            "type": "string",
 	                            "uniqueItems": true,
 	                            "format": "select",

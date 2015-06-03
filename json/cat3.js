@@ -14,8 +14,8 @@ define(['i18n!nls/questions'], function(Quests) {
 					"Partial"
 				]
 			},
-			"ask3.1": {
-				"title": Quests['ask3.1'],
+			"ask3_1": {
+				"title": Quests['ask3_1'],
 				"type": "string"
 			}			
 		}

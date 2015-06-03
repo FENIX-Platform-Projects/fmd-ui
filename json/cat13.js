@@ -13,8 +13,8 @@ define(['i18n!nls/questions'], function(Quests) {
                     "No"
                 ]
             },
-            "ask33.1": {
-                "title": Quests['ask21.1'],
+            "ask33_1": {
+                "title": Quests['ask21_1'],
                 "type": "string"
             }
 

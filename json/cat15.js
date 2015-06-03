@@ -13,12 +13,12 @@ define(['i18n!nls/questions'], function(Quests) {
                     "No"
                 ]
             },
-            "ask36.1": {
-                "title": Quests['ask36.1'],
+            "ask36_1": {
+                "title": Quests['ask36_1'],
                 "type": "object",
                 "properties": {
-                    "ask36.1.1": {
-                        "title": Quests['ask36.1.1'],
+                    "ask36_1_1": {
+                        "title": Quests['ask36_1_1'],
                         "type": "string",
                         "uniqueItems": true,
                         "format": "select",
@@ -28,8 +28,8 @@ define(['i18n!nls/questions'], function(Quests) {
                             "National"
                         ]
                     },
-                    "ask36.1.2": {
-                        "title": Quests['ask36.1.2'],
+                    "ask36_1_2": {
+                        "title": Quests['ask36_1_2'],
                         "type": "string",
                         "uniqueItems": true,
                         "format": "select",
@@ -39,16 +39,16 @@ define(['i18n!nls/questions'], function(Quests) {
                             "Pipeline"
                         ]
                     },
-                    "ask36.1.3": {
-                        "title": Quests['ask36.1.3'],
+                    "ask36_1_3": {
+                        "title": Quests['ask36_1_3'],
                         "type": "object",
                         "properties": {
-                            "ask36.1.3.1": {
-                                "title": Quests['ask36.1.3.1'],
+                            "ask36_1_3_1": {
+                                "title": Quests['ask36_1_3_1'],
                                 "type": "number"
                             },
-                            "ask36.1.3.2": {
-                                "title": Quests['ask36.1.3.2'],
+                            "ask36_1_3_2": {
+                                "title": Quests['ask36_1_3_2'],
                                 "type": "string",
                                 "uniqueItems": true,
                                 "format": "select",
@@ -57,18 +57,18 @@ define(['i18n!nls/questions'], function(Quests) {
                                     "External Support"
                                 ]
                             },
-                            "ask36.1.3.3": {
-                                "title": Quests['ask36.1.3.3'],
+                            "ask36_1_3_3": {
+                                "title": Quests['ask36_1_3_3'],
                                 "type": "string"
                             }
                         }
                     },
-                    "ask36.2": {
-                        "title": Quests['ask36.2'],
+                    "ask36_2": {
+                        "title": Quests['ask36_2'],
                         "type": "string"
                     },
-                    "ask36.3": {
-                        "title": Quests['ask36.3'],
+                    "ask36_3": {
+                        "title": Quests['ask36_3'],
                         "type": "string",
                         "uniqueItems": true,
                         "format": "select",
@@ -77,8 +77,8 @@ define(['i18n!nls/questions'], function(Quests) {
                             "Development project (medium to long term)"
                         ]
                     },
-                    "ask36.4": {
-                        "title": Quests['ask36.4'],
+                    "ask36_4": {
+                        "title": Quests['ask36_4'],
                         "type": "string",
                         "uniqueItems": false,
                         "format": "select",
@@ -96,12 +96,12 @@ define(['i18n!nls/questions'], function(Quests) {
                             "Research"
                         ]
                     },
-                    "ask36.4.1": {
-                        "title": Quests['ask36.4.1'],
+                    "ask36_4_1": {
+                        "title": Quests['ask36_4_1'],
                         "type": "string"
                     },
-                    "ask36.4": {
-                        "title": Quests['ask36.5'],
+                    "ask36_4": {
+                        "title": Quests['ask36_5'],
                         "type": "string",
                         "uniqueItems": false,
                         "format": "select",
@@ -110,8 +110,8 @@ define(['i18n!nls/questions'], function(Quests) {
                             "OIE Performance of Veterinary Services Pathway (PVS)"
                         ]
                     },
-                    "ask36.5.1": {
-                        "title": Quests['ask36.4.1'],
+                    "ask36_5_1": {
+                        "title": Quests['ask36_4_1'],
                         "type": "string"
                     }
                 }

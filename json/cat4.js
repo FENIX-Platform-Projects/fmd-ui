@@ -7,8 +7,8 @@ define(['i18n!nls/questions'], function(Quests) {
 				"type":"object",
 				"title": Quests['ask4'],				
 				"properties": {
-					"ask4.1": {
-						"title": Quests['ask4.1'],
+					"ask4_1": {
+						"title": Quests['ask4_1'],
 						"type": "string",
 						"uniqueItems": true,
 						"format": "select",
@@ -18,12 +18,12 @@ define(['i18n!nls/questions'], function(Quests) {
 							"Partial"
 						]
 					},
-					"ask4.1.1": {
-						"title": Quests['ask4.1.1'],
+					"ask4_1_1": {
+						"title": Quests['ask4_1_1'],
 						"type": "string"
 					},
-					"ask4.2": {
-						"title": Quests['ask4.2'],
+					"ask4_2": {
+						"title": Quests['ask4_2'],
 						"type": "string",
 						"uniqueItems": true,
 						"format": "select",
@@ -33,12 +33,12 @@ define(['i18n!nls/questions'], function(Quests) {
 							"Partial"
 						]
 					},
-					"ask4.2.1": {
-						"title": Quests['ask4.2.1'],
+					"ask4_2_1": {
+						"title": Quests['ask4_2_1'],
 						"type": "string"
 					},
-					"ask4.3": {
-						"title": Quests['ask4.3'],
+					"ask4_3": {
+						"title": Quests['ask4_3'],
 						"type": "string",
 						"uniqueItems": true,
 						"format": "select",
@@ -48,8 +48,8 @@ define(['i18n!nls/questions'], function(Quests) {
 							"Partial"
 						]
 					},
-					"ask4.3.1": {
-						"title": Quests['ask4.3.1'],
+					"ask4_3_1": {
+						"title": Quests['ask4_3_1'],
 						"type": "string"
 					}
 				}
