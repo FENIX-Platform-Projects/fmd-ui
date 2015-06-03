@@ -55,7 +55,7 @@ require([
 		'js/renderForm',
 		'js/storeForm',
 
-		'json/contact',
+		'json/search',
 
 		'text!submodules/fenix-ui-common/html/pills.html',
 
@@ -69,7 +69,7 @@ require([
     	renderForm,
     	storeForm,
 
-    	schemaContact,
+    	schemaSearch,
 
     	tmplPills,
 
@@ -86,7 +86,7 @@ require([
 			tmpl: {
 				submit: 'Search', reset: null
 			},			
-			schema: schemaContact,
+			schema: schemaSearch,
 			onChange: function(data) {
 				console.log('SEARCH', data)	
 			}
