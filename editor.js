@@ -84,13 +84,16 @@ require([
 			
 			require(['json/schema_fmd','json/'+cat], function (schema, values) {
 
+				schema.title = " ";
+				schema.description = " ";
+
 				renderForm('#form-schema', {
 					schema: schema,
 					values: values
 				});
 
 			});
-		});
+		}).trigger('change');
 
     });
 });
