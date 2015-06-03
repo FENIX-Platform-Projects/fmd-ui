@@ -3,12 +3,14 @@
 // relative or absolute path of Components' main.js
 require([
 	'submodules/fenix-ui-common/js/Compiler',
-	'submodules/fenix-ui-menu/js/paths'
-], function (Compiler, menuConfig) {
+	'submodules/fenix-ui-menu/js/paths',
+	'submodules/fenix-ui-reports/src/js/paths'
+], function (Compiler, menuConfig, reportConfig) {
 
     menuConfig.baseUrl = 'submodules/fenix-ui-menu/js';
+    reportConfig.baseUrl = 'submodules/fenix-ui-reports/src/js'
 
-    Compiler.resolve([menuConfig], {
+    Compiler.resolve([menuConfig, reportConfig], {
         placeholders: {
         	FENIX_CDN: "//fenixrepo.fao.org/cdn"
         },
@@ -58,6 +60,7 @@ require([
 		'js/storeForm',
 
 		'fx-common/js/WDSClient',
+		'fx-report',
 
 		'json/search',
 
@@ -74,6 +77,7 @@ require([
     	storeForm,
 
     	WDSClient,
+    	FenixReport,
 
     	schemaSearch,
 
@@ -82,12 +86,18 @@ require([
     	Config,
     	Quests
     ) {
+
+    	console.log('FenixReport',FenixReport);
+
+    	var fenixReport = new FenixReport();
+
+    	fenixReport.init("fmdExport");
+
     	var authMenu = renderAuthMenu('view'),
     		user = authMenu.auth.getCurrentUser();
 
 		var tmplFormError = Handlebars.compile('<div class="alert alert-warning">Question {{id}} not found</div>'),
-			tmplQuestResult = Handlebars.compile(questResult),
-			$results = $('#results-search');
+			tmplQuestResult = Handlebars.compile(questResult);
 
 		var wdsClient = new WDSClient({
 			datasource: Config.dbName
@@ -131,6 +141,22 @@ require([
 				});
 			}
 		});
+		
+		$('#btn-results-search').on('click', function(e) {
+			console.log(Config.reportPdfPayload, Config.reportPdfUrl);
+			fenixReport.exportData({
+					"input": {
+						"config": {
+							"uid": "556f1649e4b02b1c83181015"
+						}
+					},
+					"output": {
+						"config": {
+							"fileName":"fmdExport.pdf"
+						}
+					}
+				}, Config.reportPdfUrl);
+			});
 
 	});
 });
