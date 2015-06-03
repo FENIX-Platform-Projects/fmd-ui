@@ -93,7 +93,20 @@ require([
 				});
 
 			});
-		}).trigger('change');
+		});
+
+		$('#add-schema').on('click', function(e) {
+			require(['json/schema_fmd'], function (schema) {
+
+				schema.title = " ";
+				schema.description = " ";
+
+				renderForm('#form-schema', {
+					schema: schema
+				});
+
+			});			
+		});
 
     });
 });
