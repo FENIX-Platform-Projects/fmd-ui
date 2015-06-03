@@ -16,11 +16,15 @@ define([
 	//FMDTheme,
 	formWrapper) {
 
+	var tmplFormWrapper = Handlebars.compile(formWrapper);
+
 	function renderForm(target, opts) {
 
 		opts = opts || {};
 
 		var self = this;
+
+		self.target = (target instanceof jQuery) ? target : $(target);
 
 		self.opts = _.defaults(opts, {
 			template: 'handlebars',
@@ -37,6 +41,11 @@ define([
 			values: {},
 			schema: _.isString(opts.schema) ? {$ref: require.toUrl(opts.schema)} : opts.schema,
 			
+			tmpl: {
+				idform: self.target.attr('id'),
+				submit: 'Save',
+				reset: 'Cancel'
+			},
 			//ballbacks
 			onChange: $.noop
 		});
@@ -49,10 +58,8 @@ define([
 				disable_properties:   !opts.editable,
 				disable_array_reorder:!opts.editable
 			});
-
-		self.target = (target instanceof jQuery) ? target : $(target);
 		
-		self.target.html(formWrapper);
+		self.target.html( tmplFormWrapper(self.opts.tmpl) );
 
 		self.editor = new JSONEditor(self.target.find('.form-wrapper-content')[0], self.opts);
 
@@ -71,14 +78,6 @@ define([
 		});
 
 		return self;
-	};
-
-	renderForm.prototype.setValues = function(data) {
-		
-		if(_.isObject(data))
-			this.editor.setValue(data);
-
-		return this;
 	};
 
 	return function (target, schemaUrl, opts) {
