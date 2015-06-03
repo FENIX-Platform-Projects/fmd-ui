@@ -15,12 +15,12 @@ define({
 			"type": "string",
 			"title": "To Date",
 			"format": "date"
-		},
-		"name": {
+		}
+/*		,"name": {
 			"type": "string",
 			"title": "Compiler Name"
 		}
-/*		,"contact": {
+		,"contact": {
 			"type": "string",
 			"title": "Compiler Contact Information"
 		}*/

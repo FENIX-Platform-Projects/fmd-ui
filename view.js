@@ -97,14 +97,15 @@ require([
     		user = authMenu.auth.getCurrentUser();
 
 		var tmplFormError = Handlebars.compile('<div class="alert alert-warning">Question {{id}} not found</div>'),
-			tmplQuestResult = Handlebars.compile(questResult);
+			tmplQuestResult = Handlebars.compile(questResult),
+			$results = $('#results-search');
 
 		var wdsClient = new WDSClient({
 			datasource: Config.dbName
 		});
 
 		_.mixin({
-		  compactObject : function(o) {
+		  compactObject: function(o) {
 		     var clone = _.clone(o);
 		     _.each(clone, function(v, k) {
 		       if(!v) {
@@ -114,6 +115,21 @@ require([
 		     return clone;
 		  }
 		});
+
+		function downloadPdf(id) {
+			fenixReport.exportData({
+				input: {
+					config: {
+						uid: id
+					}
+				},
+				output: {
+					config: {
+						fileName: "FMD_"+id+".pdf"
+					}
+				}
+			}, Config.reportPdfUrl);
+		}
 
 		//SEARCH FORM
 		renderForm('#form-search', {
@@ -127,36 +143,28 @@ require([
 
 				console.log('onSubmit', data);
 
-				wdsClient.create({
+				wdsClient.retrieve({
 					collection: Config.dbCollectionData,
 					outputType: 'object',
 					payload: {
-					    query: [data],
-					    fields: 'contact'
+					    query: data,
+					    filters: { contact: 1 }
 					},
-					success: function(docs) {
-						console.log('success', docs);
-						//$results.append( tmplQuestResult(docs[0]) );
+					success: function(data) {
+						$results.empty();
+						_.each(data, function(quest) {
+							$results.append( tmplQuestResult(quest) );
+						});
 					}
 				});
 			}
 		});
-		
-		$('#btn-results-search').on('click', function(e) {
-			console.log(Config.reportPdfPayload, Config.reportPdfUrl);
-			fenixReport.exportData({
-					"input": {
-						"config": {
-							"uid": "556f1649e4b02b1c83181015"
-						}
-					},
-					"output": {
-						"config": {
-							"fileName":"fmdExport.pdf"
-						}
-					}
-				}, Config.reportPdfUrl);
-			});
 
+		$results.on('click','.btn-pdf', function(e) {
+			e.preventDefault();
+			var id = $(e.target).data('id');
+			downloadPdf(id);
+		});
+		
 	});
 });

@@ -4,7 +4,7 @@ define(['underscore'], function(_) {
 		"dbCollectionData": "survey",		
 		"dbCollectionSchemas": "schemas",
 		
-		"reportPdfUrl": "http://kalimaha-fao.device.fao.org:8080",
+		"reportPdfUrl": "http://fenixapps2.fao.org/fenixExport",
 
 		"wdsUrl": "http://faostat3.fao.org/wds/rest/table/json",
 		"wdsUrlExportCsv": "http://faostat3.fao.org/wds/rest/exporter/streamcsv",
