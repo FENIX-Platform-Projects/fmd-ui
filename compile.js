@@ -25,7 +25,9 @@ require([
 				amplify:   "{FENIX_CDN}/js/amplify/1.1.2/amplify.min",
 				handlebars:"{FENIX_CDN}/js/handlebars/2.0.0/handlebars",
 				underscore:"{FENIX_CDN}/js/underscore/1.8.0/underscore.min",
-				jsoneditor:"{FENIX_CDN}/js/json-editor/0.7.17/jsoneditor.min"
+				jsoneditor:"{FENIX_CDN}/js/json-editor/0.7.17/jsoneditor.min",
+
+				'fx-common': 'submodules/fenix-ui-common'
             },
             shim: {
             	bootstrap:['jquery'],
@@ -55,6 +57,8 @@ require([
 		'js/renderForm',
 		'js/storeForm',
 
+		'fx-common/js/WDSClient',
+
 		'json/contact',
 
 		'text!submodules/fenix-ui-common/html/pills.html',
@@ -68,6 +72,8 @@ require([
     	renderAuthMenu,
     	renderForm,
     	storeForm,
+
+    	WDSClient,
 
     	schemaContact,
 
@@ -85,6 +91,10 @@ require([
 				storeExpires: 100000,
 				autosaveLoader: '#sectionstorage-loader'
 			});
+
+		var wdsClient = new WDSClient({
+			datasource: Config.dbName
+		});
 
 		//CONTACT FORM
 		renderForm('#form-contact', {
@@ -106,6 +116,9 @@ require([
 				};
 	        });
 
+//DEBUG GEN JSON SCHEMAS
+//window.schemaAll = {};
+
 		$('#pills-quest').html( Handlebars.compile(tmplPills)({
 			items: questions
 		}) )
@@ -114,10 +127,12 @@ require([
 			var $pill = $(e.target),
 				id = $pill.data('id');
 
-			
-
 			require(['json/'+ id ], function(schema) {
 				
+				//DEBUG GEN JSON SCHEMAS
+				//window.schemaAll[id]= schema;
+				//console.log( JSON.stringify(window.schemaAll) );
+
 				renderForm('#'+ id, {
 					schema: schema,
 					values: formStore.getSections(id),
@@ -128,11 +143,26 @@ require([
 				});
 
 			}, function (err) {
-
 			    $('#'+id).html( tmplFormError({id: id }) );
-			    
 			});
+		});
 
+		$('#btn-pub-quest').on('click', function(e) {
+			
+			var doc = formStore.getSections();
+			
+			console.log(doc);
+
+			wdsClient.create({
+				collection: Config.dbCollectionData,
+				//outputType: 'object',
+				payload: {
+				    query: [ doc ]
+				},
+				success: function(jsonIds) {
+				    console.log('success', jsonIds);
+				}
+			});
 		});
 
     });

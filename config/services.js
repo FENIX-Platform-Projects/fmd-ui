@@ -1,6 +1,9 @@
 define(['underscore'], function(_) {
 	return {
-		"dbName": "fmd",
+		"dbName": "FMD",
+		"dbCollectionData": "survey",		
+		"dbCollectionSchemas": "schemas",
+
 		"wdsUrl": "http://faostat3.fao.org/wds/rest/table/json",
 		"wdsUrlExportCsv": "http://faostat3.fao.org/wds/rest/exporter/streamcsv",
 
