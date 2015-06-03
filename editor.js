@@ -73,12 +73,24 @@ require([
 
 		renderAuthMenu('editor');
 
-		require(['json/schema_fmd','json/cat1'], function (schema, values) {
+		var $list = $('#list-schema');
 
-			renderForm('#form-schema', schema, {editable: false}).setValues(values);
-
+		_.each(Config.sections, function(cat) {
+			$('<option>',{value: cat, text: cat.replace('cat','')+'. '+Quests[cat] }).appendTo($list);
 		});
 
+		$list.on('change', function(e) {
+			var cat = $(e.target).val();
+			
+			require(['json/schema_fmd','json/'+cat], function (schema, values) {
+
+				renderForm('#form-schema', {
+					schema: schema,
+					values: values
+				});
+
+			});
+		});
 
     });
 });
