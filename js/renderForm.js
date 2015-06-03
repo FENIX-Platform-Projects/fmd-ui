@@ -47,7 +47,8 @@ define([
 				reset: 'Cancel'
 			},
 			//ballbacks
-			onChange: $.noop
+			onChange: $.noop,
+			onSubmit: $.noop
 		});
 
 		if(!_.isUndefined(opts.editable))
@@ -75,6 +76,7 @@ define([
 		self.target.find('.form-wrapper-submit').on('click', function(e) {
 			e.preventDefault();
 			self.opts.onChange.call(self, self.editor.getValue() );
+			self.opts.onSubmit.call(self, self.editor.getValue() );
 		});
 
 		return self;

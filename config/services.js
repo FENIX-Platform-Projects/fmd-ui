@@ -3,6 +3,8 @@ define(['underscore'], function(_) {
 		"dbName": "FMD",
 		"dbCollectionData": "survey",		
 		"dbCollectionSchemas": "schemas",
+		
+		"reportPdfUrl": "http://kalimaha-fao.device.fao.org/",
 
 		"wdsUrl": "http://faostat3.fao.org/wds/rest/table/json",
 		"wdsUrlExportCsv": "http://faostat3.fao.org/wds/rest/exporter/streamcsv",

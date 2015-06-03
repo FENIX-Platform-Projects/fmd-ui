@@ -9,6 +9,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 <link href="//fenixrepo.fao.org/cdn/js/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="//fenixrepo.fao.org/cdn/js/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
 <link rel="stylesheet" href="css/host.css" />
 <link rel="stylesheet" href="css/custom.css" />
 
@@ -23,15 +26,55 @@
   </div>
 </div>
 
-<div class="container">
-	<div class="row">
-	    <div class="col-xs-6">
-			<div id="form-search">
-				<!-- FILLED BY JS -->
-			</div>
+
+<div class="container" style="min-height:750px">
+
+	<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+	  <div class="panel panel-default">
+	    <div class="panel-heading" role="tab" id="headingOne">
+	      <h4 class="panel-title" id="collapsible-group-item-#1-">
+	        <big>&bull;</big> <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="">
+	          Search 
+	        </a>
+	      <a class="anchorjs-link" href="#collapsible-group-item-#1-"><span class="anchorjs-icon"></span></a></h4>
 	    </div>
+	    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne" aria-expanded="true">
+	      <div class="panel-body">
+
+				<div class="row">
+					<div class="col-md-9">
+						<div id="form-search" class="list-group">
+							<!-- FILLED BY JS -->
+						</div>
+					</div>
+				</div>
+
+	      </div>
+	    </div>
+	  </div>
+	  <div class="panel panel-default">
+	    <div class="panel-heading" role="tab" id="headingTwo">
+	      <h4 class="panel-title" id="collapsible-group-item-#2-">
+	        <big>&bull;</big> <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+	          Results
+	        </a>
+	      <a class="anchorjs-link" href="#collapsible-group-item-#2-"><span class="anchorjs-icon"></span></a></h4>
+	    </div>
+	    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo" aria-expanded="false">
+	      <div class="panel-body">
+				
+				<div class="row">
+					<div class="col-xs-12">
+						<div id="results-search" class="list-group">
+							<!-- FILLED BY JS -->
+						</div>
+					</div>
+				</div>	
+	      </div>
+	    </div>
+	  </div>
 	</div>
-	<hr />
+
 </div>
 
 <div class="container">

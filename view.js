@@ -25,7 +25,9 @@ require([
 				amplify:   "{FENIX_CDN}/js/amplify/1.1.2/amplify.min",
 				handlebars:"{FENIX_CDN}/js/handlebars/2.0.0/handlebars",
 				underscore:"{FENIX_CDN}/js/underscore/1.8.0/underscore.min",
-				jsoneditor:"{FENIX_CDN}/js/json-editor/0.7.17/jsoneditor.min"
+				jsoneditor:"{FENIX_CDN}/js/json-editor/0.7.17/jsoneditor.min",
+				
+				'fx-common': 'submodules/fenix-ui-common'				
             },
             shim: {
             	bootstrap:['jquery'],
@@ -55,9 +57,11 @@ require([
 		'js/renderForm',
 		'js/storeForm',
 
+		'fx-common/js/WDSClient',
+
 		'json/search',
 
-		'text!submodules/fenix-ui-common/html/pills.html',
+		'text!html/questResult.html',
 
 		'config/services',
 		'i18n!nls/questions',
@@ -69,9 +73,11 @@ require([
     	renderForm,
     	storeForm,
 
+    	WDSClient,
+
     	schemaSearch,
 
-    	tmplPills,
+    	questResult,
 
     	Config,
     	Quests
@@ -79,18 +85,52 @@ require([
     	var authMenu = renderAuthMenu('view'),
     		user = authMenu.auth.getCurrentUser();
 
-		var tmplFormError = Handlebars.compile('<div class="alert alert-warning">Question {{id}} not found</div>');
+		var tmplFormError = Handlebars.compile('<div class="alert alert-warning">Question {{id}} not found</div>'),
+			tmplQuestResult = Handlebars.compile(questResult),
+			$results = $('#results-search');
+
+		var wdsClient = new WDSClient({
+			datasource: Config.dbName
+		});
+
+		_.mixin({
+		  compactObject : function(o) {
+		     var clone = _.clone(o);
+		     _.each(clone, function(v, k) {
+		       if(!v) {
+		         delete clone[k];
+		       }
+		     });
+		     return clone;
+		  }
+		});
 
 		//SEARCH FORM
 		renderForm('#form-search', {
 			tmpl: {
 				submit: 'Search', reset: null
-			},			
+			},
 			schema: schemaSearch,
-			onChange: function(data) {
-				console.log('SEARCH', data)	
+			onSubmit: function(data) {
+
+				data = _.compactObject(data);
+
+				console.log('onSubmit', data);
+
+				wdsClient.create({
+					collection: Config.dbCollectionData,
+					outputType: 'object',
+					payload: {
+					    query: [data],
+					    fields: 'contact'
+					},
+					success: function(docs) {
+						console.log('success', docs);
+						//$results.append( tmplQuestResult(docs[0]) );
+					}
+				});
 			}
 		});
 
-    });
+	});
 });
