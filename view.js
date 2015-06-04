@@ -134,7 +134,7 @@ require([
 		//SEARCH FORM
 		renderForm('#form-search', {
 			tmpl: {
-				submit: 'Search', reset: 'reset'
+				submit: 'Search', reset: ''
 			},
 			schema: schemaSearch,
 			onSubmit: function(data) {
