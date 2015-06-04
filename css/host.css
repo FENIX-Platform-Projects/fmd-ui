@@ -1953,6 +1953,9 @@ input[type="checkbox"]:checked + label {
     padding-right: 0;
     padding-left: 0; }
 
+.breadcrumb {
+  margin-bottom: 0; }
+
 .voh-topmenu-buttons-holder {
   padding-left: 0;
   padding-right: 0; }
@@ -2069,30 +2072,28 @@ input[type="checkbox"]:checked + label {
   #login {
     left: 0px; } }
 /* Pages */
-/* AFO - Home Style */
-.nav-tabs {
-  border-color: transparent; }
+/* FMD - Home Style */
+.fmd-home-bg {
+  height: 300px;
+  background-image: url("../images/bg-home.jpg");
+  background-size: cover; }
 
-.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
-  border-color: transparent; }
-
-.nav > li > a:focus, .nav > li > a:hover {
-  background-color: transparent; }
-
-.nav-tabs > li > a:hover {
-  border-color: transparent; }
-
-.afo-home-partn {
-  float: left;
-  width: 14%;
-  background-color: red;
-  height: 20px;
-  padding: 15px; }
+.fmd-home-news-holder {
+  width: 30%;
+  position: relative;
+  top: 25%;
+  left: 15px; }
+  .fmd-home-news-holder .fmd-home-news-title {
+    margin: 0;
+    display: inline-block;
+    padding: 10px;
+    color: white;
+    background-color: #43beaf; }
+  .fmd-home-news-holder p {
+    background-color: white;
+    padding: 10px; }
 
 /* ////////////////// Home Media Queries */
-@media (max-width: 990px) {
-  .afo-home-items-container .afo-home-item:nth-child(2) {
-    margin-bottom: 15px; } }
 /* Theme */
 /* FMD Theme */
 html {
