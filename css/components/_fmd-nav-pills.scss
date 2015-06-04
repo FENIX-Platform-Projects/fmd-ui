@@ -1,12 +1,12 @@
 
 .nav-pills {
 	padding-right: 0;
-	border-right: 1px solid #43beaf;
+	border-right: 1px solid $fx-cool-blue;
 	margin-right: -1px;
 }
 .tab-content {
-	border-left: 1px solid #43beaf;
-	background-color: #E4F9F5;
+	border-left: 1px solid $fx-cool-blue;
+	background-color: $custom-color1;
 }
 
 .nav-pills > li.active > a,
@@ -14,7 +14,7 @@
 .nav-pills > li.active > a:hover, 
 .nav-pills > li.active > a.saved {	
 	color: #fff;
-	background-color: #43beaf;
+	background-color: $fx-cool-blue;
 	border-radius: 0;
 }
 
@@ -22,11 +22,11 @@
 	color: #777;	
 }
 .nav-tabs > li.active > a {
-	color: #43beaf;
+	color: $fx-cool-blue;
 }
 
 .nav-pills > li > a.saved {
-	background-color: #E4F9F5;
+	background-color: $custom-color1;
 }
 .nav-pills > li > a .fa-check {
 	visibility: hidden;
@@ -34,7 +34,7 @@
 .nav-pills > li > a.saved .fa-check {
 	visibility: visible;
 	font-size: large;
-	color: #43beaf
+	color: $fx-cool-blue;
 }
 .nav-pills > li.active > a.saved .fa-check {
 	color: #fff
@@ -52,13 +52,13 @@
 .panel-group .panel-body .btn,
 .panel-group .panel-body .btn:hover,
 .btn {
-	border-color: #43beaf;
+	border-color: $fx-cool-blue;
 	background-color: #fff;
-	color: #43beaf;
+	color: $fx-cool-blue;
 }
 
 .panel-collapse.collapse.in ~ .panel-title {
-	color: #43beaf
+	color: $fx-cool-blue
 }
 
 .control-label {
@@ -67,7 +67,7 @@
 }
 
 /*.form-wrapper-footer {
-	background-color: #43beaf;
+	background-color: $fx-cool-blue;
 }
 */
 .form-wrapper-footer .btn {
@@ -93,9 +93,15 @@
 #public-quest {
 	padding: 20px;
 	border-top: 1px solid #fff;
-	background-color: #E4F9F5
+	background-color: $custom-color1
 }
 
+.fx-pills{
+  .checkbox{
+	display: block !important;
+  }
+
+}
 
 /* JSON-EDITOR CUSTOM */
 

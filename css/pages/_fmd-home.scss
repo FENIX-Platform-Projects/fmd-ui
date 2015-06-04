@@ -4,7 +4,8 @@
   height: 300px;
   background-image: url('../images/bg-home.jpg');
   background-size: cover;
-
+  position: relative;
+  @include fx-box-shadow(0, 0, 25px, rgba(0,0,0,0.25), true);
 }
 
 
@@ -13,6 +14,10 @@
   position:relative;
   top: 25%;
   left: 15px;
+  max-height: 220px;
+
+  overflow: hidden;
+
 
   .fmd-home-news-title{
     margin: 0;
@@ -27,6 +32,172 @@
     padding: 10px;
   }
   
+}
+
+
+.fmd-button-home{
+  background-color: $custom-color1;
+  height: 75px;
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 50px;
+  
+  .icojam_notebook{
+    display: inline-block;
+    height: 75px;
+    background-color: $fenix-standard-blue;
+    width: 50px;
+    font-size: 32px;
+    position: absolute;
+    left: 0;
+    color: white;
+    padding-top: 22px;
+    padding-left: 11px;
+  }
+
+
+  .fmd-title{
+    position: relative;
+    left: 15px;
+    margin-top: 28px;
+
+
+
+  }
+
+  button{
+    margin-top: 25px;
+    margin-right: 15px;
+  }
+}
+
+
+.col-sx-home{
+  border-right: 1px dashed $fx-cool-blue ;
+}
+
+
+.fmd-dashed{
+  margin-left: -15px;
+  margin-right: -15px;
+  border-top: 1px dashed $fx-cool-blue;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.fmd-dashed-nomargin{
+  margin-left: -15px;
+  margin-right: -15px;
+  border-top: 1px dashed $fx-cool-blue;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/*Map*/
+
+.fmd-home-map-container{
+  background-image: url(../images/worldLow.svg);
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  height: 250px;
+}
+
+
+
+
+/* Charts */
+
+.fmd-home-charts-holder{
+  text-align: center;
+  padding: 20px;
+
+  h4{
+    background-color: $fx-cool-blue;
+    display: inline-block;
+    padding: 5px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 100;
+
+  }
+}
+
+/* Stages */
+.fmd-home-stage{
+  margin-bottom: 5px;
+
+  &:nth-child(2){
+    .fmd-home-stage-number{
+      background-color: #b30c1a;
+    }
+
+  }
+
+  &:nth-child(3){
+    .fmd-home-stage-number{
+      background-color: #eb4c13;
+    }
+
+  }
+
+  &:nth-child(4){
+    .fmd-home-stage-number{
+      background-color: #ffc72a;
+    }
+
+  }
+
+  &:nth-child(5){
+    .fmd-home-stage-number{
+      background-color: #fec82a;
+    }
+
+  }
+
+  &:nth-child(6){
+    .fmd-home-stage-number{
+      background-color: #158332;
+    }
+
+  }
+
+  &:nth-child(7){
+    .fmd-home-stage-number{
+      background-color: #063b17;
+    }
+
+  }
+
+}
+
+.fmd-home-stage-number{
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 100;
+
+  @include fx-border-radius(100% 0 0 100%);
+
+  background-color: red;
+
+
+  color: white;
+  text-align: center;
+}
+
+.fmd-home-stage-description{
+  display: inline-block;
+  height: 30px;
+  position: relative;
+  top: -1px;
+  line-height: 30px;
+  padding: 0 15px;
+  background-color:$fenix-light-gray;
+  @include fx-border-radius(0 15px 15px 0);
 }
 
 /* ////////////////// Home Media Queries */
