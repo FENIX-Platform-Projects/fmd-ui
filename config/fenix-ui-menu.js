@@ -80,7 +80,7 @@ define({
 				},
 				"target": "view.html",
 				"label": {
-					"EN": "View Questionnaires",
+					"EN": "Search Filled Questionnaires",
 					"FR": ""
 				}
 			},			
