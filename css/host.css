@@ -208,6 +208,24 @@
 .icojam_link_1:before {
   content: "\ea50"; }
 
+.icojam_base_search_in:before {
+  content: "\e65e"; }
+
+.icojam_add:before {
+  content: "\e656"; }
+
+.icojam_delete:before {
+  content: "\e66a"; }
+
+.icojam_cancel_1:before {
+  content: "\eb55"; }
+
+.icojam_home2:before {
+  content: "\e7c1"; }
+
+.icojam_geography_globe:before {
+  content: "\e7be"; }
+
 /* Roboto */
 /* Roboto Import */
 /* Roboto Regular */
@@ -1893,7 +1911,7 @@ input[type="checkbox"]:checked + label {
 
 .jstree-default .jstree-node,
 .jstree-default .jstree-icon {
-  background-image: url("img/treejs-32px.png"); }
+  background-image: url("./css/img/treejs-32px.png"); }
 
 .jstree-default .jstree-wholerow-clicked {
   background: none;
@@ -1908,6 +1926,195 @@ input[type="checkbox"]:checked + label {
 /* Fenix Leaflet Zoom control 0.7.3*/
 /* Typography */
 /* Components */
+/* FMD Topmenu */
+/* Voh Top Menu */
+.fao-header {
+  height: 105px;
+  position: relative; }
+  .fao-header .col-xs-12 {
+    height: 105px; }
+  .fao-header .fao-logo {
+    width: 412px;
+    height: 75px;
+    position: relative;
+    top: 50%;
+    left: -22px;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%); }
+
+.voh-topmenu .container-fluid {
+  padding: 0; }
+
+.voh-topmenu-buttons-holder {
+  padding-left: 0;
+  padding-right: 0; }
+
+.navbar {
+  min-height: 50px;
+  margin-bottom: 0; }
+
+.navbar-default .navbar-nav > li > a {
+  color: white;
+  overflow: hidden;
+  padding-bottom: 10px;
+  padding-top: 10px; }
+  .navbar-default .navbar-nav > li > a:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-color: #d5e5d6;
+    left: 0;
+    bottom: -5px;
+    pointer-events: none; }
+  .navbar-default .navbar-nav > li > a:hover:before {
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    bottom: 0; }
+
+.navbar-default {
+  background-color: #0e6da5;
+  background-image: -moz-linear-gradient(top, #0e6da5, #0d5399);
+  background-image: -ms-linear-gradient(top, #0e6da5, #0d5399);
+  background-image: -o-linear-gradient(top, #0e6da5, #0d5399);
+  background-image: -webkit-gradient(linear, center top, center bottom, from(#0e6da5), to(#0d5399));
+  background-image: -webkit-linear-gradient(top, #0e6da5, #0d5399);
+  background-image: linear-gradient(top, #0e6da5, #0d5399);
+  background-image: linear-gradient(to bottom, #0e6da5, #0d5399);
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background-repeat: no-repeat; }
+  .navbar-default .navbar-nav > li {
+    border-right: 1px solid white; }
+    .navbar-default .navbar-nav > li > a {
+      text-transform: uppercase;
+      height: 50px; }
+
+.navbar-brand {
+  background-image: url("img/afo-ico.svg");
+  height: 50px;
+  width: 50px;
+  background-size: 80% 80%;
+  background-repeat: no-repeat;
+  background-color: white;
+  background-position: center center;
+  display: none; }
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  background-color: white; }
+
+/* Over menu */
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: white; }
+
+/* Active - hover and normal state of menu btn */
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  border-bottom: 0;
+  background-color: #003a45;
+  color: white; }
+
+.navbar-header {
+  background-color: #d5e5d6; }
+
+.navbar-default .navbar-toggle {
+  border-color: transparent; }
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+  background-color: transparent; }
+
+.navbar-collapse {
+  border-top: 0; }
+  .navbar-collapse .navbar-nav {
+    margin-top: 0; }
+    .navbar-collapse .navbar-nav .dropdown.open {
+      background-color: #dddddd; }
+
+.container {
+  background-color: white; }
+
+.navbar .container {
+  background-color: transparent; }
+
+.fx-menu .navbar-right {
+  margin: 0; }
+  .fx-menu .navbar-right > li {
+    border-right: 0;
+    border-left: 1px solid white; }
+
+#login {
+  position: relative;
+  left: 10px; }
+  #login:before {
+    content: '';
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    border: 2px solid white;
+    top: 12px;
+    left: 12px;
+    /* review - Too hardcoded */ }
+  #login a {
+    height: auto;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    top: 50%;
+    display: inline-block;
+    width: 100%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%); }
+    #login a:before {
+      display: none; }
+  #login span {
+    -webkit-font-smoothing: auto;
+    -moz-osx-font-smoothing: auto; }
+
+#logout {
+  position: relative;
+  left: 10px; }
+  #logout:before {
+    content: '';
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    border: 2px solid white;
+    top: 12px;
+    left: 12px;
+    /* review - Too hardcoded */ }
+  #logout a {
+    height: auto;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    top: 50%;
+    display: inline-block;
+    width: 100%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%); }
+    #logout a:before {
+      display: none; }
+  #logout span {
+    -webkit-font-smoothing: auto;
+    -moz-osx-font-smoothing: auto; }
+
+/*//////////////////////////////////////////// Navbar Media queries */
+@media (min-width: 768px) and (max-width: 990px) {
+  .navbar-nav.fx-ul > li > a {
+    font-size: 80%;
+    padding: 15px 7px; } }
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav > li > a:before {
+    display: none; }
+
+  #login {
+    left: 0px; } }
 /* Pages */
 /* AFO - Home Style */
 .nav-tabs {
@@ -2099,10 +2306,3 @@ thead {
 
 .modal-dialog {
   z-index: 1041; }
-
-.navbar-fixed-top {
-	box-shadow: 0 -1px 8px rgba(100,100,100,0.5)
-}
-footer {
-	padding-top: 100px;
-}
