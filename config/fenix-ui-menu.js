@@ -6,9 +6,10 @@ define({
 		"showHome":true,
 		"container": ".fx-menu-breadcrumb"
 	},
-	//TODO move config contents on root
+	"container": ".fx-menu-container",
 	"config": {
-		"type": "fixed",
+		"type": "static-top",
+    	"container": ".fx-menu-container",
 		"brand": {
 			"target": "index.html"
 		},
