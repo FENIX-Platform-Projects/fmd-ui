@@ -116,7 +116,7 @@ require([
 		  }
 		});
 
-		function downloadPdf(id) {
+		function downloadPdf(id, filename) {
 			fenixReport.exportData({
 				input: {
 					config: {
@@ -125,7 +125,7 @@ require([
 				},
 				output: {
 					config: {
-						fileName: "FMD_"+id+".pdf"
+						fileName: filename
 					}
 				}
 			}, Config.reportPdfUrl);
@@ -153,6 +153,7 @@ require([
 					success: function(data) {
 						$results.empty();
 						_.each(data, function(quest) {
+							quest.filename = 'FMD_'+quest.contact.name+'_'+quest.contact.date+'.pdf';
 							$results.append( tmplQuestResult(quest) );
 						});
 					}
@@ -162,8 +163,7 @@ require([
 
 		$results.on('click','.btn-pdf', function(e) {
 			e.preventDefault();
-			var id = $(e.target).data('id');
-			downloadPdf(id);
+			downloadPdf($(e.target).data('id'), $(e.target).data('filename'));
 		});
 		
 	});

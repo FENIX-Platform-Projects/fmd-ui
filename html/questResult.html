@@ -1,15 +1,15 @@
 
 <div class="list-group-item">
 	<div class="row">
+		{{#with contact}}	
 		<div class="col-md-8">
-		{{#with contact}}
 			<span class="name">{{name}}</span> &bull;
 			<span class="date"><b>{{date}}</b></span> &bull;
 			<span class="country">{{country}}</span>
-		{{/with}}
 		</div>
+		{{/with}}		
 		<div class="col-md-3">
-			<a class="btn-pdf btn btn-sm" data-id="{{_id.$oid}}" href="#"><span class="fa fa-file-pdf-o"></span> Download PDF</a>
+			<a class="btn-pdf btn btn-sm" data-filename="{{filename}}" data-id="{{_id.$oid}}" href="#"><span class="fa fa-file-pdf-o"></span> Download PDF</a>
 		</div>
 	</div>
 </div>
