@@ -4,11 +4,10 @@ define(['underscore'], function(_) {
 		"dbCollectionData": "survey",		
 		"dbCollectionSchemas": "schemas",
 		
-		"reportPdfUrl": "http://fenixapps2.fao.org/fenixExport",
-		//"reportPdfUrl": "http://kalimaha-fao.device.fao.org:8080",
-
-		"wdsUrl": "http://faostat3.fao.org/wds/rest/table/json",
-		"wdsUrlExportCsv": "http://faostat3.fao.org/wds/rest/exporter/streamcsv",
+		//"reportPdfUrl": "http://fenixapps2.fao.org:10100/fenixExport",
+		//"reportPdfUrl": "http://fenixapps2.fao.org:101000/fenixExport",
+		"reportPdfUrl": "http://kalimaha-fao.device.fao.org:8080",
+		//"reportPdfUrl": "http://hqlprfenixapp2.hq.un.fao.org:10100/fenixExport",
 
 		"sections": (function() {
 			var secs = _.map(_.range(1, 17), function(i) {
@@ -17,8 +16,6 @@ define(['underscore'], function(_) {
 			//HIDDEN SECTIONS
 			return secs;//_.without(secs,'cat11');
 		})(),
-
-		"wds5Url": "http://fenixapps2.fao.org/wds_5",
 
 		"wmsUrl": "http://fenixapps2.fao.org/geoserver-demo",
 		"sldUrl": "http://fenixapps2.fao.org/geoservices/CSS2SLD",

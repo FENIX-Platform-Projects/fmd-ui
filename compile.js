@@ -162,7 +162,7 @@ require([
 				},
 				success: function(jsonIds) {
 				    console.log('success', jsonIds);
-				    $loading.hide();
+				    $loading.fadeOut(1600);
 				}
 			});
 		});

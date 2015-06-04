@@ -140,22 +140,33 @@ require([
 			onSubmit: function(data) {
 
 				data = _.compactObject(data);
+				
+				if(!_.isEmpty(data))
+					data = _.map(data, function(d, k) {
+						var f = {};
+						f['contact.'+k] = {
+							$regex: d,
+							$options: 'si'
+						};
+						return f;
+					});
 
-				console.log('onSubmit', data);
+				console.log('onSubmit', JSON.stringify(data) );
 
 				wdsClient.retrieve({
 					collection: Config.dbCollectionData,
 					outputType: 'object',
 					payload: {
-					    query: data,
+					    query: data[0],
 					    filters: { contact: 1 }
 					},
 					success: function(data) {
 						$results.empty();
 						_.each(data, function(quest) {
-							quest.filename = 'FMD_';
+							quest.filename = 'fmd_';
 							if(quest.contact && quest.contact.name && quest.contact.date)
-								quest.filename += quest.contact.name+'_'+quest.contact.date+'.pdf';
+								quest.filename += quest.contact.name+'_'+quest.contact.date;
+							quest.filename += '.pdf';
 							$results.append( tmplQuestResult(quest) );
 						});
 					}
@@ -167,6 +178,23 @@ require([
 			e.preventDefault();
 			downloadPdf($(e.target).data('id'), $(e.target).data('filename'));
 		});
+
+/*		$results.on('click','.btn-del', function(e) {
+			e.preventDefault();
+
+			var id = $(e.target).data('id');
+			
+			wdsClient.delete({
+				collection: Config.dbCollectionData,
+				outputType: 'object',
+				payload: {
+				    query: {'_id': id}
+				},
+				success: function(data) {
+					$(e.target).parents('.list-group-item').remove();
+				}
+			});
+		});	*/	
 		
 	});
 });
