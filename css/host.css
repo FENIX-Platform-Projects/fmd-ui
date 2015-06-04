@@ -1946,12 +1946,19 @@ input[type="checkbox"]:checked + label {
 .voh-topmenu .container-fluid {
   padding: 0; }
 
+.fmd-menu-col {
+  padding-right: 0;
+  padding-left: 0; }
+  .fmd-menu-col .fx-menu-container .container {
+    padding-right: 0;
+    padding-left: 0; }
+
 .voh-topmenu-buttons-holder {
   padding-left: 0;
   padding-right: 0; }
 
 .navbar {
-  min-height: 50px;
+  min-height: 40px;
   margin-bottom: 0; }
 
 .navbar-default .navbar-nav > li > a {
@@ -1992,13 +1999,12 @@ input[type="checkbox"]:checked + label {
   .navbar-default .navbar-nav > li {
     border-right: 1px solid white; }
     .navbar-default .navbar-nav > li > a {
-      text-transform: uppercase;
-      height: 50px; }
+      height: 40px; }
 
 .navbar-brand {
   background-image: url("img/afo-ico.svg");
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   background-size: 80% 80%;
   background-repeat: no-repeat;
   background-color: white;
@@ -2046,63 +2052,8 @@ input[type="checkbox"]:checked + label {
     border-right: 0;
     border-left: 1px solid white; }
 
-#login {
-  position: relative;
-  left: 10px; }
-  #login:before {
-    content: '';
-    position: absolute;
-    height: 26px;
-    width: 26px;
-    border: 2px solid white;
-    top: 12px;
-    left: 12px;
-    /* review - Too hardcoded */ }
-  #login a {
-    height: auto;
-    padding: 0;
-    position: relative;
-    text-align: center;
-    top: 50%;
-    display: inline-block;
-    width: 100%;
-    -ms-transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%); }
-    #login a:before {
-      display: none; }
-  #login span {
-    -webkit-font-smoothing: auto;
-    -moz-osx-font-smoothing: auto; }
-
-#logout {
-  position: relative;
-  left: 10px; }
-  #logout:before {
-    content: '';
-    position: absolute;
-    height: 26px;
-    width: 26px;
-    border: 2px solid white;
-    top: 12px;
-    left: 12px;
-    /* review - Too hardcoded */ }
-  #logout a {
-    height: auto;
-    padding: 0;
-    position: relative;
-    text-align: center;
-    top: 50%;
-    display: inline-block;
-    width: 100%;
-    -ms-transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%); }
-    #logout a:before {
-      display: none; }
-  #logout span {
-    -webkit-font-smoothing: auto;
-    -moz-osx-font-smoothing: auto; }
+.lang_picker_holder {
+  display: none !important; }
 
 /*//////////////////////////////////////////// Navbar Media queries */
 @media (min-width: 768px) and (max-width: 990px) {
@@ -2141,12 +2092,11 @@ input[type="checkbox"]:checked + label {
   .afo-home-items-container .afo-home-item:nth-child(2) {
     margin-bottom: 15px; } }
 /* Theme */
-/* AFO Theme */
+/* FMD Theme */
 html {
   background-color: #d5e5d6; }
 
 body {
-  border-top: 50px solid #d5e5d6;
   background-color: #d5e5d6;
   color: #666666; }
 

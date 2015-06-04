@@ -31,6 +31,20 @@
 
 }
 
+.fmd-menu-col{
+  padding-right: 0;
+  padding-left: 0;
+  .fx-menu-container{
+
+    .container{
+      padding-right: 0;
+      padding-left: 0;
+    }
+
+  }
+
+}
+
 .voh-topmenu-buttons-holder{
   padding-left: 0;
   padding-right:0;
@@ -86,7 +100,7 @@
       border-right: 1px solid white;
       > a{
         //font: $afo-text-menu-item;
-        text-transform: uppercase;
+        //text-transform: uppercase;
         height: $host-menu-height;
         //      padding: 17px 15px 34px 15px;
         //      line-height: 20px;
@@ -205,74 +219,18 @@
   }
 }
 
+.lang_picker_holder{
+  display: none !important;
+}
+
 #login {
-  position: relative;
-  left: 10px;
-  &:before{
-    content: '';
-    position: absolute;
-    height:26px;
-    width: 26px;
-    border:2px solid white;
-    top: 12px;
-    left: 12px; /* review - Too hardcoded */
-  }
 
-  a{
-    height: auto;
-    padding: 0;
-    position: relative;
-    text-align: center;
-    top: 50%;
-    display: inline-block;
-    width: 100%;
-    @include fx-transfor-me(translateY(-50%));
-
-    &:before{
-      display: none;
-    }
-  }
-  span{
-
-    -webkit-font-smoothing: auto;
-    -moz-osx-font-smoothing: auto;
-
-  }
 }
 
 #logout {
-  position: relative;
-  left: 10px;
-  &:before{
-    content: '';
-    position: absolute;
-    height:26px;
-    width: 26px;
-    border:2px solid white;
-    top: 12px;
-    left: 12px; /* review - Too hardcoded */
-  }
 
-  a{
-    height: auto;
-    padding: 0;
-    position: relative;
-    text-align: center;
-    top: 50%;
-    display: inline-block;
-    width: 100%;
-    @include fx-transfor-me(translateY(-50%));
 
-    &:before{
-      display: none;
-    }
-  }
-  span{
 
-    -webkit-font-smoothing: auto;
-    -moz-osx-font-smoothing: auto;
-
-  }
 }
 
 /*//////////////////////////////////////////// Navbar Media queries */
