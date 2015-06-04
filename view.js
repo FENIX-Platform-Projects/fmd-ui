@@ -153,8 +153,9 @@ require([
 					success: function(data) {
 						$results.empty();
 						_.each(data, function(quest) {
+							quest.filename = 'FMD_';
 							if(quest.contact && quest.contact.name && quest.contact.date)
-								quest.filename = 'FMD_'+quest.contact.name+'_'+quest.contact.date+'.pdf';
+								quest.filename += quest.contact.name+'_'+quest.contact.date+'.pdf';
 							$results.append( tmplQuestResult(quest) );
 						});
 					}
