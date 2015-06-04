@@ -8,7 +8,7 @@ define({
 	},
 	//TODO move config contents on root
 	"config": {
-		"type": "fixed-top",
+		"type": "fixed",
 		"brand": {
 			"target": "index.html"
 		},
