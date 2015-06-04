@@ -151,7 +151,7 @@ require([
 		$('#btn-pub-quest').on('click', function(e) {
 			
 			var doc = formStore.getSections();
-				$loading = $(this).find('.loader');
+				$loading = $(this).next('.loader');
 
 			$loading.show();
 			wdsClient.create({
