@@ -6,6 +6,14 @@ define({
 			"type": "string",
 			"title": "Country Name"
 		},
+		"name": {
+			"type": "string",
+			"title": "Compiler Name"
+		},
+		"contact": {
+			"type": "string",
+			"title": "Compiler Contact Information"
+		},
 		"datefrom": {
 			"type": "string",
 			"title": "From Date",
@@ -15,14 +23,6 @@ define({
 			"type": "string",
 			"title": "To Date",
 			"format": "date"
-		},
-		"name": {
-			"type": "string",
-			"title": "Compiler Name"
-		},
-		"contact": {
-			"type": "string",
-			"title": "Compiler Contact Information"
-		}
+		}		
 	}
 });
