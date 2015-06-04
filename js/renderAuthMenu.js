@@ -17,12 +17,10 @@ define(['underscore',
 
 		var auth = new AuthManager({
 				onLogin: function() {
-					//menu.refresh(menuConfAuth);
 					location.reload();
 				},
 				onLogout: function() {
-					//menu.refresh(menuConfPub);
-					location.reload();
+					location.href = 'index.html';
 				}
 			}),
 			menu = new Menu( auth.isLogged() ? menuConfAuth : menuConfPub );

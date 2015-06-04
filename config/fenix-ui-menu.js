@@ -69,7 +69,7 @@ define({
 				},
 				"target": "compile.html",
 				"label": {
-					"EN": "Compile Questionnaire",
+					"EN": "Fill Questionnaire",
 					"FR": ""
 				}
 			},

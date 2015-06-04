@@ -36,7 +36,7 @@ define(['i18n!nls/questions'], function(Quests) {
                                         "type": "string"
                                     },
 
-                                    "ask2_1_1_2": {
+                                    "ask2_1_2_2": {
                                         "title": Quests['ask2_1_2_2'],
                                         "type": "string"
                                     }
@@ -100,7 +100,7 @@ define(['i18n!nls/questions'], function(Quests) {
                                         "type": "string"
                                     },
 
-                                    "ask2_1_1_2": {
+                                    "ask2_1_6_2": {
                                         "title": Quests['ask2_1_6_2'],
                                         "type": "string"
                                     }
@@ -146,7 +146,7 @@ define(['i18n!nls/questions'], function(Quests) {
                                         "type": "string"
                                     },
 
-                                    "ask2_2_1_2": {
+                                    "ask2_2_2_2": {
                                         "title": Quests['ask2_2_2_2'],
                                         "type": "string",
                                         "uniqueItems": true,
@@ -234,7 +234,7 @@ define(['i18n!nls/questions'], function(Quests) {
                                         "type": "string"
                                     },
 
-                                    "ask2_2_1_2": {
+                                    "ask2_2_6_2": {
                                         "title": Quests['ask2_2_6_2'],
                                         "type": "string",
                                         "uniqueItems": true,

@@ -97,6 +97,7 @@ require([
 		});
 
 		//CONTACT FORM
+		schemaContact.title = ' ';
 		renderForm('#form-contact', {
 			schema: schemaContact,			
 			values: formStore.getSections('contact'),
@@ -150,9 +151,9 @@ require([
 		$('#btn-pub-quest').on('click', function(e) {
 			
 			var doc = formStore.getSections();
-			
-			console.log(doc);
+				$loading = $(this).find('.loader');
 
+			$loading.show();
 			wdsClient.create({
 				collection: Config.dbCollectionData,
 				outputType: 'object',
@@ -161,6 +162,7 @@ require([
 				},
 				success: function(jsonIds) {
 				    console.log('success', jsonIds);
+				    $loading.hide();
 				}
 			});
 		});
