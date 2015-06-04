@@ -64,17 +64,8 @@ define({
 			},
 			{
 				"attrs": {
-					"id": "view"
-				},
-				"target": "view.html",
-				"label": {
-					"EN": "View Questionnaires",
-					"FR": ""
-				}
-			},
-			{
-				"attrs": {
-					"id": "compile"
+					"id": "compile",
+					"class": "admin"
 				},
 				"target": "compile.html",
 				"label": {
@@ -84,7 +75,19 @@ define({
 			},
 			{
 				"attrs": {
-					"id": "editor"
+					"id": "view",
+					"class": "admin"
+				},
+				"target": "view.html",
+				"label": {
+					"EN": "View Questionnaires",
+					"FR": ""
+				}
+			},			
+			{
+				"attrs": {
+					"id": "editor",
+					"class": "admin"
 				},
 				"target": "editor.html",
 				"label": {
