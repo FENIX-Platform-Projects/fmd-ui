@@ -97,6 +97,10 @@
     > li {
       // height: 50px !important;
 
+      &.admin{
+        background-color: $fx-cool-blue;
+      }
+
       border-right: 1px solid white;
       > a{
         //font: $afo-text-menu-item;

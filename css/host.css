@@ -1998,6 +1998,8 @@ input[type="checkbox"]:checked + label {
   background-repeat: no-repeat; }
   .navbar-default .navbar-nav > li {
     border-right: 1px solid white; }
+    .navbar-default .navbar-nav > li.admin {
+      background-color: #43beaf; }
     .navbar-default .navbar-nav > li > a {
       height: 40px; }
 
