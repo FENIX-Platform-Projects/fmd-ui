@@ -6,8 +6,8 @@ define(['underscore'], function(_) {
 		
 		//"reportPdfUrl": "http://fenixapps2.fao.org:10100/fenixExport",
 		//"reportPdfUrl": "http://fenixapps2.fao.org:101000/fenixExport",
-		"reportPdfUrl": "http://kalimaha-fao.device.fao.org:8080",
-		//"reportPdfUrl": "http://hqlprfenixapp2.hq.un.fao.org:10100/fenixExport",
+		//"reportPdfUrl": "http://kalimaha-fao.device.fao.org:8080",
+		"reportPdfUrl": "http://hqlprfenixapp2.hq.un.fao.org:10100/fenixExport",
 
 		"sections": (function() {
 			var secs = _.map(_.range(1, 17), function(i) {
