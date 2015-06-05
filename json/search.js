@@ -1,6 +1,6 @@
 define({
 	"type": "object",
-	"title": "Search Questionnaire",
+	"title": "Filter Questionnaire by",
 	"properties": {
 		"country": {
 			"type": "string",

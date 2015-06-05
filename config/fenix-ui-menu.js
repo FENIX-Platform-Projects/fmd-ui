@@ -58,7 +58,7 @@ define({
 				},
 				"target": "down.html",
 				"label": {
-					"EN": "Download Questionnaire",
+					"EN": "Download",
 					"FR": ""
 				}
 			},
@@ -80,11 +80,15 @@ define({
 				},
 				"target": "view.html",
 				"label": {
+					"EN": "Search",
+					"FR": ""
+				},
+				"breadcrumbLabel": {
 					"EN": "Search Filled Questionnaires",
 					"FR": ""
 				}
-			},			
-			{
+			}
+/*			,{
 				"attrs": {
 					"id": "editor",
 					"class": "admin"
@@ -94,7 +98,7 @@ define({
 					"EN": "Edit Questionnaire",
 					"FR": ""
 				}
-			}
+			}*/
 
 		],
 		"rightItems": [
