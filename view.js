@@ -183,22 +183,14 @@ require([
 			downloadPdf($(e.target).data('id'), $(e.target).data('filename'));
 		});
 
-/*		$results.on('click','.btn-del', function(e) {
+		$results.on('click','.btn-edit', function(e) {
 			e.preventDefault();
 
 			var id = $(e.target).data('id');
 			
-			wdsClient.delete({
-				collection: Config.dbCollectionData,
-				outputType: 'object',
-				payload: {
-				    query: {'_id': id}
-				},
-				success: function(data) {
-					$(e.target).parents('.list-group-item').remove();
-				}
-			});
-		});	*/	
+			//TODO reload quest in compile.html
+
+		});
 		
 	});
 });
