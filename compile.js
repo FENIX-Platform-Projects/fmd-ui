@@ -153,6 +153,11 @@ require([
 			var doc = formStore.getSections();
 				$loading = $(this).next('.loader');
 
+			if(_.isEmpty(doc)) {
+				alert('Questionnaire is Empty!');
+				return false;
+			}
+
 			$loading.show();
 			wdsClient.create({
 				collection: Config.dbCollectionData,
@@ -161,8 +166,8 @@ require([
 				    query: [ doc ]
 				},
 				success: function(jsonIds) {
-				    console.log('success', jsonIds);
-				    $loading.fadeOut(1600);
+				    //console.log('success', jsonIds);
+				    $loading.fadeOut(2000);
 				}
 			});
 		});

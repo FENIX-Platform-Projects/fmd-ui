@@ -87,7 +87,7 @@ require([
     	Quests
     ) {
 
-    	console.log('FenixReport',FenixReport);
+    	//console.log('FenixReport',FenixReport);
 
     	var fenixReport = new FenixReport();
 
@@ -98,7 +98,8 @@ require([
 
 		var tmplFormError = Handlebars.compile('<div class="alert alert-warning">Question {{id}} not found</div>'),
 			tmplQuestResult = Handlebars.compile(questResult),
-			$results = $('#results-search');
+			$results = $('#results-search'),
+			$resloading = $results.prev('.loader');
 
 		var wdsClient = new WDSClient({
 			datasource: Config.dbName
@@ -151,8 +152,8 @@ require([
 						return f;
 					});
 
-				console.log('onSubmit', JSON.stringify(data) );
-
+				//console.log('onSubmit', JSON.stringify(data) );
+				$resloading.show();
 				wdsClient.retrieve({
 					collection: Config.dbCollectionData,
 					outputType: 'object',
@@ -161,7 +162,10 @@ require([
 					    filters: { contact: 1 }
 					},
 					success: function(data) {
+						
 						$results.empty();
+						$resloading.fadeOut(1000);
+
 						_.each(data, function(quest) {
 							quest.filename = 'fmd_';
 							if(quest.contact && quest.contact.name && quest.contact.date)

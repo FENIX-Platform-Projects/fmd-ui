@@ -1,19 +1,14 @@
 
 <div class="list-group-item">
 	<div class="row">
-		{{#with contact}}	
-		<div class="col-md-8">
-			<span class="date"><b>{{date}}</b></span> &bull;
-			<span class="name">{{name}}</span> &bull;
-			<span class="country">{{country}}</span> &bull;
-			<span class="contact">{{contact}}</span>
-		</div>
+		{{#with contact}}
+			<div class="col-md-2"><b>{{date}}</b></div>
+			<div class="col-md-2">{{name}}</div>
+			<div class="col-md-2">{{country}}</div>
+			<div class="col-md-2">{{contact}}</div>
 		{{/with}}		
-		<div class="col-md-4">
-			<div class="btn-group pull-right">
-				<a class="btn-pdf btn btn-sm" data-id="{{_id.$oid}}" data-filename="{{filename}}" href="#"><span class="fa fa-file-pdf-o"></span> Download PDF</a> 
-				<!-- <a class="btn-del btn btn-sm" data-id="{{_id.$oid}}" href="#"><span class="fa "></span> X</a> -->
-			</div>
+		<div class="col-md-4 text-right">
+			<a class="btn-pdf btn btn-sm pull-right" data-id="{{_id.$oid}}" data-filename="{{filename}}" href="#"><span class="fa fa-file-pdf-o"></span> PDF</a> 
 		</div>
 	</div>
 </div>
