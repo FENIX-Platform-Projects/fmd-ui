@@ -133,11 +133,12 @@ require([
 		}
 
 		//SEARCH FORM
-		renderForm('#form-search', {
+		var formSearch = renderForm('#form-search', {
 			tmpl: {
 				submit: 'Search', reset: ''
 			},
 			schema: schemaSearch,
+			disabled: ['datefrom','dateto'],
 			onSubmit: function(data) {
 
 				data = _.compactObject(data);

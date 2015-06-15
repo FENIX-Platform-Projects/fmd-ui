@@ -40,7 +40,8 @@ define([
 			
 			values: {},
 			schema: _.isString(opts.schema) ? {$ref: require.toUrl(opts.schema)} : opts.schema,
-			
+			disabled: [],
+
 			tmpl: {
 				idform: self.target.attr('id'),
 				submit: 'Save',
@@ -63,6 +64,11 @@ define([
 		self.target.html( tmplFormWrapper(self.opts.tmpl) );
 
 		self.editor = new JSONEditor(self.target.find('.form-wrapper-content')[0], self.opts);
+
+		if(self.opts.disabled.length>0)
+			_.each(self.opts.disabled, function(key) {
+				self.editor.getEditor('root.'+key).disable();
+			});
 
 		self.editor.on('change', _.after(2, function(e) {
 			console.log('jsoneditor on change',self.target.attr('id'))
