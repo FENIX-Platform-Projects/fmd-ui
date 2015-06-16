@@ -55,8 +55,6 @@ require(["submodules/fenix-ui-menu/js/paths",
 		) {
 
 		renderAuthMenu('home');
-        
-        $('footer').load('html/footer.html');
 	});
 
 

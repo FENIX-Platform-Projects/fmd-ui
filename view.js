@@ -192,6 +192,5 @@ require([
 			//TODO reload quest in compile.html
 
 		});
-		
 	});
 });

@@ -25,6 +25,9 @@ define(['underscore',
 			}),
 			menu = new Menu( auth.isLogged() ? menuConfAuth : menuConfPub );
 
+        
+        $('footer').load('html/footer.html');
+        
 		return {
 			auth: auth,
 			menu: menu
