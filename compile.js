@@ -98,6 +98,7 @@ require([
 
 		//CONTACT FORM
 		schemaContact.title = ' ';
+		
 		renderForm('#form-contact', {
 			schema: schemaContact,			
 			values: formStore.getSections('contact'),
@@ -105,7 +106,7 @@ require([
 				formStore.addSection('contact', data);
 			}
 		});
-
+		
 		//SECTIONS
 		var questions = _.map(Config.sections, function(id) {
 				var n = id.replace('cat','');
@@ -132,7 +133,6 @@ require([
 				
 				//DEBUG GEN JSON SCHEMAS
 				//window.schemaAll[id]= schema;
-				//console.log( JSON.stringify(window.schemaAll) );
 
 				renderForm('#'+ id, {
 					schema: schema,
@@ -166,7 +166,6 @@ require([
 				    query: [ doc ]
 				},
 				success: function(jsonIds) {
-				    //console.log('success', jsonIds);
 				    $loading.fadeOut(2000);
 				}
 			});

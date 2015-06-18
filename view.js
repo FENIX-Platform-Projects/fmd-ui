@@ -87,8 +87,6 @@ require([
     	Quests
     ) {
 
-    	//console.log('FenixReport',FenixReport);
-
     	var fenixReport = new FenixReport();
 
     	fenixReport.init("fmdExport");
@@ -152,8 +150,7 @@ require([
 						};
 						return f;
 					});
-
-				//console.log('onSubmit', JSON.stringify(data) );
+				
 				$resloading.show();
 				wdsClient.retrieve({
 					collection: Config.dbCollectionData,

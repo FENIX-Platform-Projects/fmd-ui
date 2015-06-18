@@ -71,7 +71,6 @@ define([
 			});
 
 		self.editor.on('change', _.after(2, function(e) {
-			console.log('jsoneditor on change',self.target.attr('id'))
 			self.opts.onChange.call(self, self.editor.getValue() );
 		}) );
 
