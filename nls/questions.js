@@ -2,12 +2,31 @@ define({
 	"fr": false,
 	"root": {
 
+		"sections": {
+
+		},
+
 		"commons": {
 			"yes-of": "Yes, officially",
 			"yes-no": "Yes, not officially",
 			"no": "No",
 			"not": "Not sure"
 		},
+
+		"contact_info":       "Contact Information",
+			"contact_info_1": "Country Name",
+			"contact_info_2": "Date",
+
+		"contact_person":             "Please, complete the person in contact for each which applied",
+			"contact_person_1":       "FMD PCP specialist:",
+				"contact_person_1_1": "Name:",
+				"contact_person_1_2": "eMail",
+			"contact_person_2":       "FMD Laboratory specialist",
+				"contact_person_2_1": "Name",
+				"contact_person_2_2": "eMail:",
+			"contact_person_3":       "FMD Epidemiology specialist",
+				"contact_person_3_1": "Name:",
+				"contact_person_3_2": "eMail:",
 
 		"cat1": "GENERAL INFORMATION",
 
@@ -230,19 +249,6 @@ define({
 			"ask36_4":       "Activities (multiple):",
 				"ask36_4_1": "Others:",
 			"ask36_5":       "Tools used: (multiple)",
-				"ask36_5_1": "Others:",
-
-		"cat16": "POINT OF CONTACT",
-
-			"ask37":             "Please, complete the person in contact for each which applied",
-				"ask37_1":       "FMD PCP specialist:",
-					"ask37_1_1": "Name:",
-					"ask37_1_2": "eMail",
-				"ask37_2":       "FMD Laboratory specialist",
-					"ask37_2_1": "Name",
-					"ask37_2_2": "eMail:",
-				"ask37_3":       "FMD Epidemiology specialist",
-					"ask32_3_1": "Name:",
-					"ask32_3_2": "eMail:"
+				"ask36_5_1": "Others:"
 	}
 });

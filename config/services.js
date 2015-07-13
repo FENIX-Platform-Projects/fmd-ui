@@ -10,7 +10,7 @@ define(['underscore'], function(_) {
 		"reportPdfUrl": "http://fenixapps2.fao.org/fenixExport",
 
 		"sections": (function() {
-			var secs = _.map(_.range(1, 17), function(i) {
+			var secs = _.map(_.range(1, 16), function(i) {
 				return 'cat'+i;
 			});
 			//HIDDEN SECTIONS

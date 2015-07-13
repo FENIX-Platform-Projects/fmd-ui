@@ -19,6 +19,8 @@ require([
 		'text!fx-common/html/pills.html',
 
 		'json/contact',
+		//'json/cat16',
+
 		'config/services',
 		'i18n!nls/questions'
 	], function ($, _, bootstrap, Handlebars,
@@ -50,8 +52,6 @@ require([
 		});
 
 		//CONTACT FORM
-		schemaContact.title = ' ';
-		
 		renderForm('#form-contact', {
 			schema: schemaContact,			
 			values: formStore.getSections('contact'),
@@ -104,10 +104,10 @@ require([
 		$('#btn-pub-quest').on('click', function(e) {
 			
 			var doc = formStore.getSections();
-				$loading = $(this).next('.loader');
+				$loading = $('#btn-pub-quest-loader');
 
 			if(_.isEmpty(doc)) {
-				alert('Questionnaire is Empty!');
+				alert('Attention Questionnaire is Empty!');
 				return false;
 			}
 
