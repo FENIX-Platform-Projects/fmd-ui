@@ -6,6 +6,10 @@ define(['underscore',
 
 	return function(menuId) {
 		//AUTH & TOP MENU
+
+		if(menuId===true)
+			menuId = location.pathname.substring(location.pathname.lastIndexOf('/')).match(/\/(.+)\..*/)[1];
+		
 		menuConf.active = menuId;
 
 		var menuConfAuth = _.extend({}, menuConf, {

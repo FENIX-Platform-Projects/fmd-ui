@@ -1,5 +1,5 @@
 define({
-	"active": "home",
+	"active": "index",
 	"hiddens": [],
 	"breadcrumb": {
 		"active":true,
@@ -26,7 +26,7 @@ define({
 		"items": [
 			{
 				"attrs": {
-					"id": "home"
+					"id": "index"
 				},
 				"target": "index.html",
 				"label": {
