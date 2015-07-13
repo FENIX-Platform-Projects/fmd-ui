@@ -2,16 +2,11 @@ require([
     "config/paths",
     "submodules/fenix-ui-menu/js/paths",
     "submodules/fenix-ui-common/js/Compiler"    
-], function(Paths, menuConfig, Compiler) {
+], function(compilerConfig, menuConfig, Compiler) {
 
-    menuConfig['baseUrl'] = "submodules/fenix-ui-menu/js";
+    menuConfig.baseUrl = "submodules/fenix-ui-menu/js";
 
-    Compiler.resolve([menuConfig], {
-        placeholders : {
-            FENIX_CDN: Paths.FENIX_CDN
-        },
-        config: Paths
-    });
+    Compiler.resolve([menuConfig], compilerConfig);
 
 	require([
     	'jquery','underscore','handlebars','amplify',

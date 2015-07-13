@@ -2,18 +2,12 @@ require([
 	"config/paths",
 	"submodules/fenix-ui-menu/js/paths",
 	"submodules/fenix-ui-common/js/Compiler"    
-], function(Paths, menuConfig, Compiler) {
+], function(compilerConfig, menuConfig, Compiler) {
 
-	menuConfig['baseUrl'] = "submodules/fenix-ui-menu/js";
+	menuConfig.baseUrl = "submodules/fenix-ui-menu/js";
 
-	Compiler.resolve([menuConfig], {
-		placeholders : {
-			FENIX_CDN: Paths.FENIX_CDN
-		},
-		config: Paths
-	});
+	Compiler.resolve([menuConfig], compilerConfig);
 
-	// Bootstrap the application
 	require([
 		'jquery','underscore','bootstrap','handlebars',
 
@@ -41,11 +35,12 @@ require([
 		Quests
 	) {
 		var authMenu = renderAuthMenu(true),
-			user = authMenu.auth.getCurrentUser();
+			user = authMenu.auth.getCurrentUser(),
+			username = user.name || 'unlogged';
 
 		var tmplFormError = Handlebars.compile('<div class="alert alert-warning">Question {{id}} not found</div>'),
 			formStore = new storeForm({
-				prefix: user.name || 'unlogged',
+				prefix: username,
 				storeExpires: 100000,
 				autosaveLoader: '#sectionstorage-loader'
 			});

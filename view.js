@@ -1,21 +1,15 @@
 require([
-    "config/paths",
-    "submodules/fenix-ui-menu/js/paths",
-    "submodules/fenix-ui-common/js/Compiler",
-    "submodules/fenix-ui-reports/src/js/paths"
-], function(Paths, menuConfig, Compiler, reportConfig) {
+	"config/paths",
+	"submodules/fenix-ui-menu/js/paths",
+	"submodules/fenix-ui-common/js/Compiler",
+	"submodules/fenix-ui-reports/src/js/paths"
+], function(compilerConfig, menuConfig, Compiler, repoConfig) {
 
-    menuConfig.baseUrl = "submodules/fenix-ui-menu/js";
-    reportConfig.baseUrl = 'submodules/fenix-ui-reports/src/js'
+	menuConfig.baseUrl = "submodules/fenix-ui-menu/js";
+    repoConfig.baseUrl = "submodules/fenix-ui-reports/src/js";
 
-    Compiler.resolve([menuConfig, reportConfig], {
-        placeholders : {
-            FENIX_CDN: Paths.FENIX_CDN
-        },
-        config: Paths
-    });
+	Compiler.resolve([menuConfig, repoConfig], compilerConfig);
 
-    // Bootstrap the application
 	require([
 		'jquery','underscore','bootstrap','handlebars',
 
