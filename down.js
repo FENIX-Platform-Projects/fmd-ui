@@ -13,9 +13,7 @@ require([
 		'js/renderAuthMenu',
         'config/services'
 	], function($, _, Handlebars, JsonEditor,
-
     	renderAuthMenu,
-    	
     	Config
 		) {
 

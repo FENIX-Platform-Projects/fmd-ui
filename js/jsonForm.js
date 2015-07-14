@@ -1,24 +1,24 @@
 /*
 
 USAGE:
-	renderForm('#form-contact', 'json/schema.contact.json');
+	jsonForm('#form-contact', 'json/schema.contact.json');
 
 	//new dom element
 	var form$ = $('<form>').prependTo('body');
-	renderForm(form$, 'json/schema.contact.json');
+	jsonForm(form$, 'json/schema.contact.json');
 
 */
 define([
 	'require','jquery','underscore','handlebars','jsoneditor',
 	//'fmdTheme',
-	'text!html/formWrapper.html'
+	'text!html/jsonForm.html'
 ], function (require, $, _, Handlebars, JSONEditor, 
 	//FMDTheme,
-	formWrapper) {
+	jsonFormHtml) {
 
-	var tmplFormWrapper = Handlebars.compile(formWrapper);
+	var tmplJsonForm = Handlebars.compile(jsonFormHtml);
 
-	function renderForm(target, opts) {
+	function jsonForm(target, opts) {
 
 		opts = opts || {};
 
@@ -61,7 +61,7 @@ define([
 				disable_array_reorder:!opts.editable
 			});
 		
-		self.target.html( tmplFormWrapper(self.opts.tmpl) );
+		self.target.html( tmplJsonForm(self.opts.tmpl) );
 
 		self.editor = new JSONEditor(self.target.find('.form-wrapper-content')[0], self.opts);
 
@@ -88,6 +88,6 @@ define([
 	};
 
 	return function (target, schemaUrl, opts) {
-		return new renderForm(target, schemaUrl, opts);
+		return new jsonForm(target, schemaUrl, opts);
 	}
 });

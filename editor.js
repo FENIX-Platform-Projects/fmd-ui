@@ -10,18 +10,14 @@ require([
 
 	require([
 		'jquery','underscore','bootstrap','handlebars',
-
 		'js/renderAuthMenu',
-		'js/renderForm',
-
+		'js/jsonForm',
 		'text!submodules/fenix-ui-common/html/pills.html',
 		'config/services',
 		'i18n!nls/questions'
-	], function ($, _, bootstrap, Handlebars,
-		
+	], function ($, _, bootstrap, Handlebars,		
 		renderAuthMenu,
-		renderForm,
-
+		jsonForm,
 		tmplPills,
 		Config,
 		Quests
@@ -43,7 +39,7 @@ require([
 				schema.title = " ";
 				schema.description = " ";
 
-				renderForm('#form-schema', {
+				jsonForm('#form-schema', {
 					schema: schema,
 					values: values
 				});
@@ -57,7 +53,7 @@ require([
 				schema.title = " ";
 				schema.description = " ";
 
-				renderForm('#form-schema', {
+				jsonForm('#form-schema', {
 					schema: schema
 				});
 

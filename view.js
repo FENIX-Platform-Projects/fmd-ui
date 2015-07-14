@@ -14,7 +14,7 @@ require([
 		'jquery','underscore','bootstrap','handlebars',
 
 		'js/renderAuthMenu',
-		'js/renderForm',
+		'js/jsonForm',
 		'js/storeForm',
 
 		'fx-common/js/WDSClient',
@@ -29,7 +29,7 @@ require([
     ], function ($, _, bootstrap, Handlebars,
     	
     	renderAuthMenu,
-    	renderForm,
+    	jsonForm,
     	storeForm,
 
     	WDSClient,
@@ -87,7 +87,7 @@ require([
 		}
 
 		//SEARCH FORM
-		var formSearch = renderForm('#form-search', {
+		var formSearch = jsonForm('#form-search', {
 			tmpl: {
 				submit: 'Search', reset: ''
 			},

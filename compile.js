@@ -12,7 +12,7 @@ require([
 		'jquery','underscore','bootstrap','handlebars',
 
 		'js/renderAuthMenu',
-		'js/renderForm',
+		'js/jsonForm',
 		'js/storeForm',
 
 		'fx-common/js/WDSClient',
@@ -26,7 +26,7 @@ require([
 	], function ($, _, bootstrap, Handlebars,
 		
 		renderAuthMenu,
-		renderForm,
+		jsonForm,
 		storeForm,
 
 		WDSClient,
@@ -52,7 +52,7 @@ require([
 		});
 
 		//CONTACT FORM
-		renderForm('#form-contact', {
+		jsonForm('#form-contact', {
 			schema: schemaContact,			
 			values: formStore.getSections('contact'),
 			onChange: function(data) {
@@ -87,7 +87,7 @@ require([
 				//DEBUG GEN JSON SCHEMAS
 				//window.schemaAll[id]= schema;
 
-				renderForm('#'+ id, {
+				jsonForm('#'+ id, {
 					schema: schema,
 					values: formStore.getSections(id),
 					onChange: function(data) {
