@@ -4,15 +4,27 @@ define(['i18n!nls/questions'], function(Quests) {
         "title": Quests['contact_info'],
         "properties": {
 
-            "country": {
-                "type": "string",
-                "title": Quests['contact_info_1']
-            },
             "date": {
                 "type": "string",
-                "title": Quests['contact_info_2'],
+                "title": Quests['contact_info_1'],
                 "format": "date"
             },
+            "country": {
+                "type": "string",
+                "title": Quests['contact_info_2']
+            },          
+            "email": {
+                "type": "string",
+                "title": Quests['contact_info_3']
+            }, 
+            "phone": {
+                "type": "string",
+                "title": Quests['contact_info_4']
+            }, 
+            "street": {
+                "type": "string",
+                "title": Quests['contact_info_5']
+            },       
 
             "person": {
                 "title": Quests['contact_person'],

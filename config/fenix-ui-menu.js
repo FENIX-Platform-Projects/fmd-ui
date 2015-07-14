@@ -69,7 +69,7 @@ define({
 				},
 				"target": "compile.html",
 				"label": {
-					"EN": "Fill Questionnaire",
+					"EN": "Data Entry",
 					"FR": ""
 				}
 			},
