@@ -34,7 +34,7 @@ require([
 		$list.on('change', function(e) {
 			var cat = $(e.target).val();
 			
-			require(['json/schema_fmd','json/'+cat], function (schema, values) {
+			require(['json/jsonschema_fmd','json/'+cat], function (schema, values) {
 
 				schema.title = " ";
 				schema.description = " ";
