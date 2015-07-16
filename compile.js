@@ -9,7 +9,7 @@ require([
 	Compiler.resolve([menuConfig], compilerConfig);
 
 	require([
-		'jquery','underscore','bootstrap','handlebars',
+		'jquery','underscore','bootstrap','handlebars','bootstrap-btn',
 
 		'js/renderAuthMenu',
 		'js/jsonForm',
@@ -23,7 +23,7 @@ require([
 
 		'config/services',
 		'i18n!nls/questions'
-	], function ($, _, bootstrap, Handlebars,
+	], function ($, _, bootstrap, Handlebars, bootstrapBtn,
 		
 		renderAuthMenu,
 		jsonForm,

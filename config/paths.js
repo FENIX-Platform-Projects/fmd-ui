@@ -24,7 +24,7 @@ define(function() {
                 'jstree':            FX_CDN+"/js/jstree/3.0.8/dist/jstree.min",
                 'chosen':            FX_CDN+"/js/chosen/1.0.0/chosen.jquery.min",
                 'jsoneditor':        FX_CDN+"/js/json-editor/0.7.17/jsoneditor.min",
-                
+                'bootstrap-btn':     FX_CDN+"/js/bootstrap-confirm-button/0.0.4/bootstrap-confirm-button.src.js",
                 'fx-common':                   "submodules/fenix-ui-common",
                 'fx-common/config/auth_users' : 'config/auth_users.json',
             },
@@ -33,6 +33,7 @@ define(function() {
                 'swiper': ['jquery'],
                 'chosen': ['jquery'],
                 'bootstrap': ['jquery'],
+                'bootstrap-btn': ['bootstrap','jquery'],
                 'underscore-string': ['underscore'],
                 'underscore': { exports: '_' },            
                 'amplify': { deps: ['jquery'], exports: 'amplifyjs' },
