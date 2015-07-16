@@ -149,13 +149,12 @@ require([
 			var btn$ = $(e.currentTarget),
 				row$ = btn$.parents('.list-group-item'),
 				id = btn$.data('id');
-
 			wdsClient.delete({
 				payload: {
 					query: {'_id': { '$oid': id } }
 				},
 				success: function(data) {
-					row$.remove();
+					row$.slideUp();
 				}
 			});
 		});		
