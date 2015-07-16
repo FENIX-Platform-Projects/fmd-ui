@@ -56,7 +56,9 @@ require([
 			$resloading = $results.prev('.loader');
 
 		var wdsClient = new WDSClient({
-			datasource: Config.dbName
+			datasource: Config.dbName,
+			collection: Config.dbCollectionData,
+			outputType: 'object'
 		});
 
 		_.mixin({
@@ -109,8 +111,6 @@ require([
 				
 				$resloading.show();
 				wdsClient.retrieve({
-					collection: Config.dbCollectionData,
-					outputType: 'object',
 					payload: {
 					    query: data[0],
 					    filters: { contact: 1 }
@@ -135,14 +135,29 @@ require([
 		$results
 		.on('click','.btn-pdf', function(e) {
 			e.preventDefault();
-			downloadPdf($(e.target).data('id'), $(e.target).data('filename'));
+			downloadPdf($(e.currentTarget).data('id'), $(e.currentTarget).data('filename'));
 		})
 		.on('click','.btn-edit', function(e) {
 			e.preventDefault();
-
-			var id = $(e.target).data('id');
-			
+			//var id = $(e.currentTarget).data('id');
 			//TODO reload quest in compile.html
-		});
+			alert('Edit of questionnaire is temporary disabled');
+		})
+		.on('click','.btn-del', function(e) {
+			e.preventDefault();
+
+			var btn$ = $(e.currentTarget),
+				row$ = btn$.parents('.list-group-item'),
+				id = btn$.data('id');
+
+			wdsClient.delete({
+				payload: {
+					query: {'_id': { '$oid': id } }
+				},
+				success: function(data) {
+					row$.remove();
+				}
+			});
+		});		
 	});
 });
