@@ -26,9 +26,11 @@ define([
 
 		self.target = (target instanceof jQuery) ? target : $(target);
 
+
 		self.opts = _.defaults(opts, {
 			template: 'handlebars',
-			theme: 'bootstrap3',			
+			theme: 'bootstrap3',		
+			iconlib: 'fontawesome4',
 			//TODO languages using module nls/jsoneditor_errors.js
 
 			ajax: true,

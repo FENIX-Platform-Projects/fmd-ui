@@ -8,6 +8,10 @@ define(['i18n!nls/questions'], function(Quests) {
                 "type": "object",
                 "properties": {
                     "ask2_1": {
+                        "options": {
+                            "disable_collapse": false,
+                            "collapsed": true
+                        },                           
                         "title": Quests['ask2_1'],
                         "type": "object",
                         "properties": {
@@ -111,7 +115,10 @@ define(['i18n!nls/questions'], function(Quests) {
                         }
                     },
                     "ask2_2": {
-
+                        "options": {
+                            "disable_collapse": false,
+                            "collapsed": true
+                        },   
                         "title": Quests['ask2_2'],
                         "type": "object",
                         "properties": {
@@ -121,18 +128,18 @@ define(['i18n!nls/questions'], function(Quests) {
                                 "properties": {
                                     "ask2_2_1_1": {
                                         "title": Quests['ask2_2_1_1'],
-                                        "type": "string"
-                                    },
-
-                                    "ask2_2_1_2": {
-                                        "title": Quests['ask2_2_1_2'],
                                         "type": "string",
                                         "uniqueItems": true,
                                         "format": "select",
                                         "enum": [
                                             "present",
                                             "absent"
-                                        ]
+                                        ]                                        
+                                    },
+
+                                    "ask2_2_1_2": {
+                                        "title": Quests['ask2_2_1_2'],
+                                        "type": "number"
                                     }
 
                                 }
@@ -143,11 +150,6 @@ define(['i18n!nls/questions'], function(Quests) {
                                 "properties": {
                                     "ask2_2_2_1": {
                                         "title": Quests['ask2_2_2_1'],
-                                        "type": "string"
-                                    },
-
-                                    "ask2_2_2_2": {
-                                        "title": Quests['ask2_2_2_2'],
                                         "type": "string",
                                         "uniqueItems": true,
                                         "format": "select",
@@ -155,6 +157,11 @@ define(['i18n!nls/questions'], function(Quests) {
                                             "present",
                                             "absent"
                                         ]
+                                    },
+
+                                    "ask2_2_2_2": {
+                                        "title": Quests['ask2_2_2_2'],
+                                        "type": "number"
                                     }
 
                                 }
@@ -176,7 +183,7 @@ define(['i18n!nls/questions'], function(Quests) {
 
                                     "ask2_2_3_2": {
                                         "title": Quests['ask2_2_3_2'],
-                                        "type": "string"
+                                        "type": "number"
                                     }
 
                                 }
@@ -187,11 +194,6 @@ define(['i18n!nls/questions'], function(Quests) {
                                 "properties": {
                                     "ask2_2_4_1": {
                                         "title": Quests['ask2_2_4_1'],
-                                        "type": "string"
-                                    },
-
-                                    "ask2_2_4_2": {
-                                        "title": Quests['ask2_2_4_2'],
                                         "type": "string",
                                         "uniqueItems": true,
                                         "format": "select",
@@ -199,6 +201,11 @@ define(['i18n!nls/questions'], function(Quests) {
                                             "present",
                                             "absent"
                                         ]
+                                    },
+
+                                    "ask2_2_4_2": {
+                                        "title": Quests['ask2_2_4_2'],
+                                        "type": "number"
                                     }
 
                                 }
@@ -209,11 +216,6 @@ define(['i18n!nls/questions'], function(Quests) {
                                 "properties": {
                                     "ask2_2_5_1": {
                                         "title": Quests['ask2_2_5_1'],
-                                        "type": "string"
-                                    },
-
-                                    "ask2_2_5_2": {
-                                        "title": Quests['ask2_2_5_2'],
                                         "type": "string",
                                         "uniqueItems": true,
                                         "format": "select",
@@ -221,6 +223,11 @@ define(['i18n!nls/questions'], function(Quests) {
                                             "present",
                                             "absent"
                                         ]
+                                    },
+
+                                    "ask2_2_5_2": {
+                                        "title": Quests['ask2_2_5_2'],
+                                        "type": "number"
                                     }
 
                                 }
@@ -231,11 +238,6 @@ define(['i18n!nls/questions'], function(Quests) {
                                 "properties": {
                                     "ask2_2_6_1": {
                                         "title": Quests['ask2_2_6_1'],
-                                        "type": "string"
-                                    },
-
-                                    "ask2_2_6_2": {
-                                        "title": Quests['ask2_2_6_2'],
                                         "type": "string",
                                         "uniqueItems": true,
                                         "format": "select",
@@ -243,6 +245,11 @@ define(['i18n!nls/questions'], function(Quests) {
                                             "present",
                                             "absent"
                                         ]
+                                    },
+
+                                    "ask2_2_6_2": {
+                                        "title": Quests['ask2_2_6_2'],
+                                        "type": "number"
                                     }
                                 }
                             }
