@@ -37,7 +37,7 @@ define([
 			disable_edit_json: true,
 			disable_properties: true,
 			disable_array_reorder: true,
-			
+
 			values: {},
 			schema: _.isString(opts.schema) ? {$ref: require.toUrl(opts.schema)} : opts.schema,
 			disabled: [],
@@ -52,6 +52,8 @@ define([
 			onSubmit: $.noop
 		});
 
+		console.log(self.opts)
+
 		if(!_.isUndefined(opts.editable))
 			self.opts = _.extend(self.opts, {
 				editable:              opts.editable,
@@ -60,7 +62,7 @@ define([
 				disable_properties:   !opts.editable,
 				disable_array_reorder:!opts.editable
 			});
-		
+
 		self.target.html( tmplJsonForm(self.opts.tmpl) );
 
 		self.editor = new JSONEditor(self.target.find('.form-wrapper-content')[0], self.opts);

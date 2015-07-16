@@ -12,24 +12,32 @@ define(['i18n!nls/questions'], function(Quests) {
             "country": {
                 "type": "string",
                 "title": Quests['contact_info_2']
-            },          
-            "email": {
+            },
+            "name": {
                 "type": "string",
                 "title": Quests['contact_info_3']
             }, 
-            "phone": {
+            "email": {
                 "type": "string",
                 "title": Quests['contact_info_4'],
-                "format": "tel"
+                "format": "email"
             }, 
+            "phone": {
+                "type": "string",
+                "title": Quests['contact_info_5'],
+                "format": "tel"
+            },
             "street": {
                 "type": "string",
-                "title": Quests['contact_info_5']
-            },       
-
+                "title": Quests['contact_info_6']
+            },
             "person": {
                 "title": Quests['contact_person'],
                 "type": "object",
+                "options": {
+                    "disable_collapse": false,
+                    "collapsed": true
+                },                
                 "properties": {
                     "contact_1": {
                         "title": Quests['contact_person_1'],

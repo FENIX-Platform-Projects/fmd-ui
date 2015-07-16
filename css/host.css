@@ -2081,7 +2081,7 @@ footer.fmd-footer {
   display: block !important; }
 
 /* JSON-EDITOR CUSTOM */
-.form-json .checkbox {
+.fx-jsonform .checkbox {
   clear: both; }
 
 /* FMD Topmenu */
@@ -2539,5 +2539,6 @@ thead {
   margin-left: -2px;
 }
 
-
-
+.json-editor-btn-collapse {
+  content: '+' !important;
+}

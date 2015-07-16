@@ -53,6 +53,7 @@ require([
 
 		//CONTACT FORM
 		jsonForm('#form-contact', {
+			disable_collapse: false,
 			schema: schemaContact,			
 			values: formStore.getSections('contact'),
 			onChange: function(data) {

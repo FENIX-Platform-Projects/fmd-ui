@@ -16,9 +16,10 @@ define({
 		"contact_info":       "Contact Information",
 			"contact_info_1": "Date",
 			"contact_info_2": "Country Name",
-			"contact_info_3": "Email",
-			"contact_info_4": "Phone",
-			"contact_info_5": "Street address",
+			"contact_info_3": "Name",
+			"contact_info_4": "Email",
+			"contact_info_5": "Phone",
+			"contact_info_6": "Street address",
 
 		"contact_person":             "Please, complete the person in contact for each which applied",
 			"contact_person_1":       "FMD PCP specialist:",
