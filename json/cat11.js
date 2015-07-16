@@ -4,6 +4,10 @@ define(['i18n!nls/questions'], function(Quests) {
 		"title": Quests['cat11'],
 		"properties": {
 		    "ask24": {
+                "options": {
+                    "disable_collapse": false,
+                    "collapsed": true
+                },		    	
 		        "title": Quests['ask24'],
 		        "type": "string",
 		        "uniqueItems": true,
@@ -14,6 +18,10 @@ define(['i18n!nls/questions'], function(Quests) {
 		        ]
 		    },
 		    "ask25": {
+                "options": {
+                    "disable_collapse": false,
+                    "collapsed": true
+                },		    	
 		        "title": Quests['ask25'],
 		        "type": "object",
 		        "properties": {
@@ -75,6 +83,10 @@ define(['i18n!nls/questions'], function(Quests) {
 		        }
 		    },
 		    "ask26": {
+                "options": {
+                    "disable_collapse": false,
+                    "collapsed": true
+                },		    	
 		        "title": Quests['ask26'],
 		        "type": "object",
 		        "properties": {
@@ -93,6 +105,10 @@ define(['i18n!nls/questions'], function(Quests) {
 		        }
 		    },
 		    "ask27": {
+                "options": {
+                    "disable_collapse": false,
+                    "collapsed": true
+                },		    	
 		        "title": Quests['ask27'],
 		        "type": "object",
 		        "properties": {
@@ -143,6 +159,10 @@ define(['i18n!nls/questions'], function(Quests) {
 		        }
 	        },
 	        "ask28": {
+                "options": {
+                    "disable_collapse": false,
+                    "collapsed": true
+                },	        	
 	            "title": Quests['ask28'],
 	            "type": "object",
 	            "properties": {
@@ -231,6 +251,10 @@ define(['i18n!nls/questions'], function(Quests) {
 	            ]
 	        },
 	        "ask30_1": {
+                "options": {
+                    "disable_collapse": false,
+                    "collapsed": true
+                },			        	
 	            "title": Quests['ask30_1'],
 	            "type": "object",
 	            "properties": {

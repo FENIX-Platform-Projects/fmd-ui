@@ -2,10 +2,6 @@ define({
 	"fr": false,
 	"root": {
 
-		"sections": {
-
-		},
-
 		"commons": {
 			"yes-of": "Yes, officially",
 			"yes-no": "Yes, not officially",
@@ -184,8 +180,6 @@ define({
 
 			"ask24":                   "24) Is there a FMD national vaccination strategy endorsed by your government? (exclusive)",
 			"ask25":                   "25) If yes, Please provide the information for the following species (check appropriate boxes)",
-			
-			
 					"ask25_1_":       "Type of animal:",
 					"ask25_2":       "Most recent implemented Year:",
 					"ask25_3":       "Type of vaccination:",
@@ -194,8 +188,6 @@ define({
 					"ask25_4_1": "If the vaccine protocol is non-uniform, please choose all that apply below:",
 		
 					"ask25_4_1_1":       "Other:",
-			
-			
 			
 			"ask26":       "26) Indicate the Vaccine Name, Supplier, Species targeted and Serotypes (if unknown, please indicate with ‘?’):",
 			"ask27":       "27) Number of doses applied in 2013 and 2014 (fill in the table below)",
