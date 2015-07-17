@@ -16,6 +16,7 @@ define(function() {
                 'domready':          FX_CDN+"/js/requirejs/plugins/domready/2.0.1/domReady",
                 'jquery':            FX_CDN+"/js/jquery/2.1.1/jquery.min",            
                 'amplify' :          FX_CDN+"/js/amplify/1.1.2/amplify.min",
+                'backbone':          FX_CDN+"/js/backbone/1.1.2/backbone.min",
                 'underscore':        FX_CDN+"/js/underscore/1.7.0/underscore.min",
                 'underscore-string': FX_CDN+"/js/underscore-string/3.0.3/underscore.string.min",
                 'handlebars':        FX_CDN+"/js/handlebars/2.0.0/handlebars.min",
@@ -37,6 +38,10 @@ define(function() {
                 'underscore-string': ['underscore'],
                 'underscore': { exports: '_' },            
                 'amplify': { deps: ['jquery'], exports: 'amplifyjs' },
+                'backbone': {
+                    deps: ['jquery', 'underscore'],
+                    exports: 'Backbone'
+                },                
                 'jsoneditor': {
                     deps: ['jquery', 'bootstrap'],
                     exports: 'JSONEditor'

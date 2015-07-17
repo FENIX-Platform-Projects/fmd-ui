@@ -125,23 +125,23 @@ require([
 							if(quest.contact && quest.contact.name && quest.contact.date)
 								quest.filename += quest.contact.name+'_'+quest.contact.date;
 							quest.filename += '.pdf';
-							$results.append( tmplQuestResult(quest) );
 
-							$results.find('.btn-del').btsConfirmButton({
+							var $row = $(tmplQuestResult(quest)).appendTo($results);
+
+							$row.find('.btn-del').btsConfirmButton({
 								msg: 'Confirm',
 								className: '.btn-primary'
 							}, function(e) {
 					
-					  			var btn$ = $(e.currentTarget),
-									row$ = btn$.parents('.list-group-item'),
-									id = btn$.data('id');
+					  			var $btn = $(e.currentTarget),
+									id = $btn.data('id');
 								
 								wdsClient.delete({
 									payload: {
 										query: {'_id': { '$oid': id } }
 									},
 									success: function(data) {
-										row$.slideUp();
+										$row.slideUp();
 									}
 								});
 							});	
