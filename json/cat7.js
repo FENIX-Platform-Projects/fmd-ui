@@ -17,6 +17,7 @@ define(['i18n!nls/questions'], function(Quests) {
 	        "ask16_1": {
 	            "title": Quests['ask16_1'],
 	            "type": "string",
+	            "format": "date"
 	        },
 	        "ask16_2": {
 	            "title": Quests['ask16_2'],
@@ -44,6 +45,7 @@ define(['i18n!nls/questions'], function(Quests) {
 	        "ask17_1": {
 	            "title": Quests['ask16_1'],
 	            "type": "string",
+	            "format": "date"
 	        },
 	        "ask17_2": {
 	            "title": Quests['ask16_2'],

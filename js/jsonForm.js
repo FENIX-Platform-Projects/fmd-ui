@@ -54,8 +54,6 @@ define([
 			onSubmit: $.noop
 		});
 
-		console.log(self.opts)
-
 		if(!_.isUndefined(opts.editable))
 			self.opts = _.extend(self.opts, {
 				editable:              opts.editable,

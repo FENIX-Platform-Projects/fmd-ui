@@ -33,7 +33,7 @@ define(function() {
                 'swiper': ['jquery'],
                 'chosen': ['jquery'],
                 'bootstrap': ['jquery'],
-                'bootstrap-btn': ['bootstrap','jquery'],
+                'bootstrap-btn': ['jquery','bootstrap'],
                 'underscore-string': ['underscore'],
                 'underscore': { exports: '_' },            
                 'amplify': { deps: ['jquery'], exports: 'amplifyjs' },

@@ -20,7 +20,8 @@ define(['i18n!nls/questions'], function(Quests) {
                 "properties": {
                     "ask18_1_1": {
                         "title": Quests['ask18_1_1'],
-                        "type": "string"
+                        "type": "string",
+                        "format": "date"
                     },
                     "ask18_1_2": {
                         "title": Quests['ask18_1_2'],

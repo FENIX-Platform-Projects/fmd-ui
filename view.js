@@ -11,7 +11,7 @@ require([
 	Compiler.resolve([menuConfig, repoConfig], compilerConfig);
 
 	require([
-		'jquery','underscore','bootstrap','handlebars',
+		'jquery','underscore','handlebars','bootstrap','bootstrap-btn',
 
 		'js/renderAuthMenu',
 		'js/jsonForm',
@@ -26,7 +26,7 @@ require([
 
 		'config/services',
 		'i18n!nls/questions'
-    ], function ($, _, bootstrap, Handlebars,
+    ], function ($, _, Handlebars, bootstrap, bootstrapBtn,
     	
     	renderAuthMenu,
     	jsonForm,
@@ -126,6 +126,25 @@ require([
 								quest.filename += quest.contact.name+'_'+quest.contact.date;
 							quest.filename += '.pdf';
 							$results.append( tmplQuestResult(quest) );
+
+							$results.find('.btn-del').btsConfirmButton({
+								msg: 'Confirm',
+								className: '.btn-primary'
+							}, function(e) {
+					
+					  			var btn$ = $(e.currentTarget),
+									row$ = btn$.parents('.list-group-item'),
+									id = btn$.data('id');
+								
+								wdsClient.delete({
+									payload: {
+										query: {'_id': { '$oid': id } }
+									},
+									success: function(data) {
+										row$.slideUp();
+									}
+								});
+							});	
 						});
 					}
 				});
@@ -142,22 +161,6 @@ require([
 			//var id = $(e.currentTarget).data('id');
 			//TODO reload quest in compile.html
 			alert('Edit of questionnaire is temporary disabled');
-		})
-		.on('click','.btn-del', function(e) {
-			e.preventDefault();
-
-			var btn$ = $(e.currentTarget),
-				row$ = btn$.parents('.list-group-item'),
-				id = btn$.data('id');
-			
-			wdsClient.delete({
-				payload: {
-					query: {'_id': { '$oid': id } }
-				},
-				success: function(data) {
-					row$.slideUp();
-				}
-			});
-		});		
+		});
 	});
 });
