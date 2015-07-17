@@ -154,13 +154,7 @@ require([
 		$results
 		.on('click','.btn-pdf', function(e) {
 			e.preventDefault();
-			downloadPdf($(e.currentTarget).data('id'), $(e.currentTarget).data('filename'));
-		})
-		.on('click','.btn-edit', function(e) {
-			e.preventDefault();
-			//var id = $(e.currentTarget).data('id');
-			//TODO reload quest in compile.html
-			alert('Edit of questionnaire is temporary disabled');
+			downloadPdf( $(e.currentTarget).data('id'), $(e.currentTarget).data('filename') );
 		});
 	});
 });

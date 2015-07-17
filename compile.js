@@ -14,6 +14,7 @@ require([
 		'js/renderAuthMenu',
 		'js/jsonForm',
 		'js/storeForm',
+		'js/router',
 
 		'fx-common/js/WDSClient',
 		'text!fx-common/html/pills.html',
@@ -28,6 +29,7 @@ require([
 		renderAuthMenu,
 		jsonForm,
 		storeForm,
+		Router,		
 
 		WDSClient,
 		tmplPills,
@@ -36,6 +38,7 @@ require([
 		Config,
 		Quests
 	) {
+
 		var authMenu = renderAuthMenu(true),
 			user = authMenu.auth.getCurrentUser(),
 			username = user.name || 'unlogged';
@@ -51,6 +54,16 @@ require([
 			datasource: Config.dbName
 		});
 
+
+		Router({
+			default: function(path) {
+
+			},
+			edit: function(path) {
+				
+			}	
+		});
+
 		//CONTACT FORM
 		jsonForm('#form-contact', {
 			disable_collapse: false,
@@ -60,23 +73,17 @@ require([
 				formStore.addSection('contact', data);
 			}
 		});
-		
-		//SECTIONS
-		var questions = _.map(Config.sections, function(id) {
-				var n = id.replace('cat','');
+
+		$('#sections').html( Handlebars.compile(tmplPills)({
+			items: _.map(Config.sections, function(id) {
+				var title = id.replace('cat','')+'. '+ Quests[id]+'<i class="fa fa-check pull-right"></i>';
 				return {
-					id: id,
-					title: n+'. '+ Quests[id]+'<i class="fa fa-check pull-right"></i>',
+					active: false,
+					title: title,
 					html: '',
-					active: false
+					id: id
 				};
-	        });
-
-//DEBUG GEN JSON SCHEMAS
-//window.schemaAll = {};
-
-		$('#pills-quest').html( Handlebars.compile(tmplPills)({
-			items: questions
+			})
 		}) )
 		.find('a[data-toggle="tab"]').one('shown.bs.tab', function (e) {
 			
@@ -84,15 +91,14 @@ require([
 				id = $pill.data('id');
 
 			require(['json/'+ id ], function(schema) {
-				
-				//DEBUG GEN JSON SCHEMAS
-				//window.schemaAll[id]= schema;
 
 				jsonForm('#'+ id, {
 					schema: schema,
 					values: formStore.getSections(id),
 					onChange: function(data) {
+						
 						formStore.addSection(id, data);
+
 						$pill.addClass('saved');
 					}
 				});
