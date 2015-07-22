@@ -77,7 +77,8 @@ require([
 			fenixReport.exportData({
 				input: {
 					config: {
-						uid: id
+						uid: id,
+						urlSchema: Config.reportPdfUrlSchema
 					}
 				},
 				output: {
@@ -85,12 +86,6 @@ require([
 						fileName: filename
 					}
 				}
-/*	            ,resource: {
-	                "metadata": {
-	                    "dsd": 
-	                },
-	                "data": []
-	            }		*/
 			}, Config.reportPdfUrl);
 		}
 
