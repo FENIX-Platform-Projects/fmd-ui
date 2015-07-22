@@ -8,48 +8,47 @@ define(['i18n!nls/questions'], function(Quests) {
                 "type": "object",
                 "properties": {
                     
-										"ask7_1":{
-												"title": Quests['ask7_1'],
+					"ask7_1":{
+						"title": Quests['ask7_1'],
                         "type": "object",
                         "properties": {
-														"ask7_1_1": {
-														"title": Quests['ask7_1_1'],
-														"type": "string"
-														},
-														"ask7_1_2": {
-														"title": Quests['ask7_1_2'],
-														"type": "string"
-														}							
-														}
+							"ask7_1_1": {
+							"title": Quests['ask7_1_1'],
+							"type": "string"
+							},
+							"ask7_1_2": {
+							"title": Quests['ask7_1_2'],
+							"type": "string"
+							}							
+						}
                     },
-										"ask7_2":{
-												"title": Quests['ask7_2'],
+					"ask7_2":{
+						"title": Quests['ask7_2'],
                         "type": "object",
                         "properties": {
-														"ask7_2_1": {
-														"title": Quests['ask7_2_1'],
-														"type": "string"
-														},
-														"ask7_2_2": {
-														"title": Quests['ask7_2_2'],
-														"type": "string"
-														}							
-														}
+							"ask7_2_1": {
+							"title": Quests['ask7_2_1'],
+							"type": "string"
+							},
+							"ask7_2_2": {
+							"title": Quests['ask7_2_2'],
+							"type": "string"
+							}							
+						}
                     },
-										
-										"ask7_3":{
-												"title": Quests['ask7_3'],
+					"ask7_3":{
+						"title": Quests['ask7_3'],
                         "type": "object",
                         "properties": {
-														"ask7_3_1": {
-														"title": Quests['ask7_3_1'],
-														"type": "string"
-														},
-														"ask7_3_2": {
-														"title": Quests['ask7_3_2'],
-														"type": "string"
-														}							
-														}
+							"ask7_3_1": {
+							"title": Quests['ask7_3_1'],
+							"type": "string"
+							},
+							"ask7_3_2": {
+							"title": Quests['ask7_3_2'],
+							"type": "string"
+							}							
+						}
                     }
 
                 }
@@ -65,27 +64,27 @@ define(['i18n!nls/questions'], function(Quests) {
                     "Not sure"
                 ]
             },
-						"ask9": {
+			"ask9": {
+    			"title": Quests['ask9'],
+    			"type": "object",
+    			"properties": {
+    				"ask9_1": {
 						"title": Quests['ask9'],
-						"type": "object",
-						"properties": {
-							"ask9_1": {
-									"title": Quests['ask9'],
-									"type": "string"
-												},
-							"ask9_2": {
-									"title": Quests['ask9_2'],
-									"type": "string",
-									"uniqueItems": true,
-									"format": "select",
-									"enum": [
-											"Yes",
-											"No",
-											"Maybe"
-									]
-												}	
-												}
-						},
+						"type": "string"
+					},
+    				"ask9_2": {
+						"title": Quests['ask9_2'],
+						"type": "string",
+						"uniqueItems": true,
+						"format": "select",
+						"enum": [
+								"Yes",
+								"No",
+								"Maybe"
+						]
+    				}	
+				}
+			},
             "ask10": {
                 "title": Quests['ask10'],
                 "type": "object",
@@ -156,14 +155,14 @@ define(['i18n!nls/questions'], function(Quests) {
                 "type": "array",
                 "uniqueItems": true,
                 "items": {
-								"type": "string",
-                "enum": [
-                    "Animal movement restrictions",
-                    "Application of biosecurity measures",
-                    "Quarantine measures",
-                    "Emergency vaccination"
-                ]
-								}
+    				"type": "string",
+                    "enum": [
+                        "Animal movement restrictions",
+                        "Application of biosecurity measures",
+                        "Quarantine measures",
+                        "Emergency vaccination"
+                    ]
+				}
             },
             "ask11_1": {
                 "title": Quests['ask11_1'],

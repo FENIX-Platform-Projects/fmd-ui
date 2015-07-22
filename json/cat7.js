@@ -28,9 +28,9 @@ define(['i18n!nls/questions'], function(Quests) {
 					"type": "string",
 					"title": " ",
 					"default": ""
-									},
-				"additionalItems":false
 				},
+				"additionalItems":false
+			},
 	        "ask17": {
 	            "title": Quests['ask16'],
 	            "type": "string",
@@ -56,9 +56,9 @@ define(['i18n!nls/questions'], function(Quests) {
 					"type": "string",
 					"title": " ",
 					"default": ""
-									},
+				},
 				"additionalItems":false
-				}
+			}
 	    }
 	};
 });

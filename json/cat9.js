@@ -23,16 +23,16 @@ define(['i18n!nls/questions'], function(Quests) {
                 "type": "array",
                 "uniqueItems": true,
                 "items": {
-                	"type": "string",
-                "enum": [
-                    "Small holder",
-                    "Dairy production",
-                    "Beef production",
-                    "Small ruminants",
-                    "Pigs",
-                    "Mixed livestock systems",
-                    "Other"
-                ]
+                    "type": "string",
+                    "enum": [
+                        "Small holder",
+                        "Dairy production",
+                        "Beef production",
+                        "Small ruminants",
+                        "Pigs",
+                        "Mixed livestock systems",
+                        "Other"
+                    ]
                 }
             },
             "ask20_3": {

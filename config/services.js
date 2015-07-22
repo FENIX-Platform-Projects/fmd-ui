@@ -6,6 +6,8 @@ define(['underscore'], function(_) {
 		
 		reportPdfUrl: "http://kalimaha-fao.device.fao.org:8080",
 		//reportPdfUrl: "http://fenixapps2.fao.org/fenixExport",
+
+		//TODO use WDS for load schema from DB
 		reportPdfUrlSchema: "http://fenix.fao.org/demo/fmd-ui/json/jsonschema_pdf.json",
 
 		sections: (function() {
