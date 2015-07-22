@@ -43,8 +43,7 @@ require([
 			user = authMenu.auth.getCurrentUser(),
 			username = user.name || 'unlogged';
 
-		var tmplFormError = Handlebars.compile('<div class="alert alert-warning">Question {{id}} not found</div>'),
-			formStore = new storeForm({
+		var formStore = new storeForm({
 				prefix: username,
 				storeExpires: 100000,
 				autosaveLoader: '#sectionstorage-loader'
@@ -54,6 +53,7 @@ require([
 			datasource: Config.dbName
 		});
 
+		var tmplFormError = Handlebars.compile('<div class="alert alert-warning">Question {{id}} not found</div>');
 
 		Router({
 			default: function(path) {

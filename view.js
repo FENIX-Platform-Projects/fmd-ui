@@ -85,6 +85,12 @@ require([
 						fileName: filename
 					}
 				}
+/*	            ,resource: {
+	                "metadata": {
+	                    "dsd": 
+	                },
+	                "data": []
+	            }		*/
 			}, Config.reportPdfUrl);
 		}
 
