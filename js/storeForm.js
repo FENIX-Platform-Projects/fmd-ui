@@ -32,12 +32,12 @@ define(['jquery','underscore','handlebars','amplify',
 		return this;
 	};
 
-	storeForm.prototype.storeSections = function() {
+	storeForm.prototype.storeSections = function(data) {
 		
 		var self = this;
 
-		if(_.isEmpty(this.storeObj))
-			return this;
+		if(_.isObject(data))
+			this.storeObj = data;
 
 		if(this.opts.autosaveLoader)
 			$(this.opts.autosaveLoader).css({visibility: 'visible'});
@@ -54,6 +54,13 @@ define(['jquery','underscore','handlebars','amplify',
 		return this;
 	};
 
+	storeForm.prototype.cleanSections = function() {
+
+		this.storeSections( {} );
+
+		return this;
+	};
+
 	storeForm.prototype.getSections = function(id) {
 		return id ? this.storeObj[id] : this.storeObj;
 	};
@@ -63,8 +70,11 @@ define(['jquery','underscore','handlebars','amplify',
 		var self = this;
 
 		this.autosaveTimer = setInterval(function() {
-			
-			self.storeSections();
+
+			//TODO run autosave only if data is changed
+
+			if(!_.isEmpty(self.storeObj))
+				self.storeSections();
 
 		}, this.opts.autosaveInterval);
 

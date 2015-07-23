@@ -130,11 +130,11 @@ require([
 							var $row = $(tmplQuestResult(quest)).appendTo($results);
 
 							$row.find('.btn-del').btsConfirmButton({
-								msg: 'Confirm',
-								className: '.btn-primary'
+								className: '.btn-primary',
+								msg: 'Confirm'
 							}, function(e) {
 					
-					  			var $btn = $(e.currentTarget),
+								var $btn = $(e.currentTarget),
 									id = $btn.data('id');
 								
 								wdsClient.delete({
