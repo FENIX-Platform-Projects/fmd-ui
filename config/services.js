@@ -4,8 +4,9 @@ define(['underscore'], function(_) {
 		dbCollectionData: "survey",		
 		dbCollectionSchemas: "schemas",
 		
-		reportPdfUrl: "http://kalimaha-fao.device.fao.org:8080",
+		//reportPdfUrl: "http://kalimaha-fao.device.fao.org:8080",
 		//reportPdfUrl: "http://fenixapps2.fao.org/fenixExport",
+		reportPdfUrl: "http://fenixapps2.fao.org/fenixExport-demo",
 
 		//TODO use WDS for load schema from DB
 		reportPdfUrlSchema: "http://fenix.fao.org/demo/fmd-ui/json/jsonschema_pdf.json",

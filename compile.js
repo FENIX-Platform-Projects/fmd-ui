@@ -50,17 +50,28 @@ require([
 			});
 
 		var wdsClient = new WDSClient({
-			datasource: Config.dbName
+			datasource: Config.dbName,
+			collection: Config.dbCollectionData,
+			outputType: 'object'
 		});
 
 		var tmplFormError = Handlebars.compile('<div class="alert alert-warning">Question {{id}} not found</div>');
 
 		Router({
 			default: function(path) {
-
+				console.log('compile mode', id);
 			},
-			edit: function(path) {
-				
+			edit: function(id) {
+				console.log('edit mode', id);
+
+				wdsClient.retrieve({
+					payload: {
+					    query: {'_id': { '$oid': id } }
+					},
+					success: function(data) {
+						console.log('edit doc', data);
+					}
+				});
 			}	
 		});
 
@@ -91,6 +102,10 @@ require([
 				id = $pill.data('id');
 
 			require(['json/'+ id ], function(schema) {
+
+				schema.lang = requirejs.s.contexts._.config.i18n.locale;
+
+				console.log('form '+id, schema);
 
 				jsonForm('#'+ id, {
 					schema: schema,
