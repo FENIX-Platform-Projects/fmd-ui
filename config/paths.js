@@ -26,6 +26,7 @@ define(function() {
                 'chosen':            FX_CDN+"/js/chosen/1.0.0/chosen.jquery.min",
                 'jsoneditor':        FX_CDN+"/js/json-editor/0.7.17/jsoneditor.min",
                 'bootstrap-btn':     FX_CDN+"/js/bootstrap-confirm-button/0.0.4/bootstrap-confirm-button.src",
+                'sweetalert':        FX_CDN+"/js/sweet-alert/0.5.0/sweet-alert.min.js",
                 'fx-common':                   "submodules/fenix-ui-common",
                 'fx-common/config/auth_users' : 'config/auth_users.json',
             },
