@@ -34,7 +34,7 @@ body{
 }
 
 // Buttons
-
+/*
 .btn{
   background-color:transparent;
   color: $fx-cool-blue;
@@ -57,7 +57,7 @@ body{
     @include fx-box-shadow(0, 0, 0, white);
   }
 
-}
+}*/
 
 .open > .dropdown-toggle.btn-default{
   background-color: transparent;

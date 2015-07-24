@@ -24,7 +24,7 @@ define(function() {
                 'swiper':            FX_CDN+"/js/swiper/2.7.5/dist/idangerous.swiper.min",
                 'jstree':            FX_CDN+"/js/jstree/3.0.8/dist/jstree.min",
                 'chosen':            FX_CDN+"/js/chosen/1.0.0/chosen.jquery.min",
-                'jsoneditor':        FX_CDN+"/js/json-editor/0.7.17/jsoneditor.min",
+                'jsoneditor':        FX_CDN+"/js/json-editor/0.7.21/jsoneditor.min",
                 'bootstrap-btn':     FX_CDN+"/js/bootstrap-confirm-button/0.0.4/bootstrap-confirm-button.src",
                 'sweetalert':        FX_CDN+"/js/sweet-alert/0.5.0/sweet-alert.min.js",
                 'fx-common':                   "submodules/fenix-ui-common",

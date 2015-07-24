@@ -2387,7 +2387,7 @@ body {
   .contact-information h3 {
     margin-top: 0; }
 
-.btn {
+/*.btn {
   background-color: transparent;
   color: #0d6cac;
   border-color: #0d6cac;
@@ -2409,7 +2409,7 @@ body {
     border-color: #0d6cac;
     -webkit-box-shadow: 0 0 0 white;
     -moz-box-shadow: 0 0 0 white;
-    box-shadow: 0 0 0 white; }
+    box-shadow: 0 0 0 white; }*/
 
 .open > .dropdown-toggle.btn-default {
   background-color: transparent;

@@ -56,7 +56,7 @@ require([
 				autosaveLoader: '#sectionstorage-loader'
 			});
 
-		var tmplFormError = Handlebars.compile('<div class="alert alert-warning">Question {{id}} not found</div>');
+		var jsonForms = {};
 
 		amplify.subscribe('router.edit', function(id) {
 			wdsClient.retrieve({
@@ -67,8 +67,6 @@ require([
 					console.log('retrieve edit doc', data);
 
 					formStore.storeSections(data[0]);
-
-					//TODO replace formStore data
 				}
 			});
 		});
@@ -84,7 +82,7 @@ require([
 			var id = $(e.target).attr('id');
 
 			if(id === 'collapse1')
-				jsonForm('#form-contact', {
+				jsonForms['contact'] = new jsonForm('#form-contact', {
 					disable_collapse: false,
 					schema: schemaContact,			
 					values: formStore.getSections('contact'),
@@ -116,7 +114,7 @@ require([
 
 				console.log('form '+id, schema);
 
-				jsonForm('#'+ id, {
+				jsonForms[id] = new jsonForm('#'+ id, {
 					schema: schema,
 					values: formStore.getSections(id),
 					onChange: function(data) {
@@ -128,7 +126,7 @@ require([
 				});
 
 			}, function (err) {
-			    $('#'+id).html( tmplFormError({id: id }) );
+			    $('#'+id).html('<div class="alert alert-warning">Question '+id+' not found</div>');
 			});
 		});
 
@@ -154,6 +152,19 @@ require([
 				}
 			});
 		});
+
+window.jsonForms = jsonForms;
+
+		$('#btn-reset-quest').on('click', function(e) {
+
+			formStore.cleanSections();
+
+			_.each(jsonForms, function(form, id) {
+				console.log(id, form);
+				form.reset();
+			});
+
+		});		
 
     });
 });
