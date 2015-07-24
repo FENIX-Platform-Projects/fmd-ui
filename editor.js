@@ -11,8 +11,8 @@ require([
 	require([
 		'jquery','underscore','bootstrap','handlebars',
 		'js/renderAuthMenu',
-		'js/jsonForm',
-		'text!submodules/fenix-ui-common/html/pills.html',
+		'fx-common/js/jsonForm',
+		'text!fx-common/html/pills.html',
 		'config/services',
 		'i18n!nls/questions'
 	], function ($, _, bootstrap, Handlebars,		

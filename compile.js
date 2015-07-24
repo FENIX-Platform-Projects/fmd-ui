@@ -12,9 +12,10 @@ require([
 		'jquery','underscore','bootstrap','handlebars','bootstrap-btn','amplify',
 
 		'js/renderAuthMenu',
-		'js/jsonForm',
-		'js/storeForm',
 		'js/router',
+
+		'fx-common/js/jsonForm',
+		'fx-common/js/storeForm',		
 
 		'fx-common/js/WDSClient',
 		'text!fx-common/html/pills.html',
@@ -27,9 +28,10 @@ require([
 	], function ($, _, bootstrap, Handlebars, bootstrapBtn, Amplify,
 		
 		renderAuthMenu,
+		Router,
+		
 		jsonForm,
 		storeForm,
-		Router,		
 
 		WDSClient,
 		tmplPills,

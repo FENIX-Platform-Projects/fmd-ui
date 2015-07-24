@@ -14,8 +14,9 @@ require([
 		'jquery','underscore','handlebars','bootstrap','bootstrap-btn',
 
 		'js/renderAuthMenu',
-		'js/jsonForm',
-		'js/storeForm',
+		
+		'fx-common/js/jsonForm',
+		'fx-common/js/storeForm',
 
 		'fx-common/js/WDSClient',
 		'fx-report',
