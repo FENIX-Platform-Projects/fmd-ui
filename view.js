@@ -46,7 +46,7 @@ require([
 
     	var fenixReport = new FenixReport();
 
-    	fenixReport.init("fmdExport");
+    	fenixReport.init('fmdExport');
 
     	var authMenu = renderAuthMenu(true),
     		user = authMenu.auth.getCurrentUser();
@@ -73,22 +73,6 @@ require([
 		     return clone;
 		  }
 		});
-
-		function downloadPdf(id, filename) {
-			fenixReport.exportData({
-				input: {
-					config: {
-						uid: id,
-						urlSchema: Config.reportPdfUrlSchema
-					}
-				},
-				output: {
-					config: {
-						fileName: filename
-					}
-				}
-			}, Config.reportPdfUrl);
-		}
 
 		//SEARCH FORM
 		var formSearch = jsonForm('#form-search', {
@@ -156,7 +140,19 @@ require([
 		$results
 		.on('click','.btn-pdf', function(e) {
 			e.preventDefault();
-			downloadPdf( $(e.currentTarget).data('id'), $(e.currentTarget).data('filename') );
+			fenixReport.exportData({
+				input: {
+					config: {
+						uid: $(e.currentTarget).data('id'),
+						urlSchema: Config.reportPdfUrlSchema
+					}
+				},
+				output: {
+					config: {
+						fileName: $(e.currentTarget).data('filename')
+					}
+				}
+			}, Config.reportPdfUrl);
 		});
 	});
 });
