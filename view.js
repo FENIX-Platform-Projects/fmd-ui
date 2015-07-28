@@ -43,11 +43,6 @@ require([
     	Config,
     	Quests
     ) {
-
-    	var fenixReport = new FenixReport();
-
-    	fenixReport.init('fmdExport');
-
     	var authMenu = renderAuthMenu(true),
     		user = authMenu.auth.getCurrentUser();
 
@@ -61,6 +56,8 @@ require([
 			collection: Config.dbCollectionData,
 			outputType: 'object'
 		});
+
+    	var fenixReport = new FenixReport();
 
 		_.mixin({
 		  compactObject: function(o) {
@@ -140,6 +137,7 @@ require([
 		$results
 		.on('click','.btn-pdf', function(e) {
 			e.preventDefault();
+    		fenixReport.init('fmdExport');			
 			fenixReport.exportData({
 				input: {
 					config: {
