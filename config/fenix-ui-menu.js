@@ -64,29 +64,42 @@ define({
 			},
 			{
 				"attrs": {
-					"id": "compile",
-					"class": "admin"
-				},
-				"target": "compile.html",
-				"label": {
-					"EN": "Data Entry",
-					"FR": ""
-				}
-			},
-			{
-				"attrs": {
-					"id": "view",
-					"class": "admin"
-				},
-				"target": "view.html",
-				"label": {
-					"EN": "Search",
-					"FR": ""
-				},
-				"breadcrumbLabel": {
-					"EN": "Search questionnaires in Archive",
-					"FR": ""
-				}
+	                "id": "dataentry",
+					"class": "admin"	                
+	            },
+	            "target": "#",
+	            "label": {
+	                "EN": "Data Entry",
+	                "FR": ""
+	            },				
+				"type": "dropdown",
+	            "children": [
+					{
+						"attrs": {
+							"id": "compile"
+						},
+						"target": "compile.html",
+						"label": {
+							"EN": "New Questionnaire",
+							"FR": ""
+						}
+					},
+					{
+						"attrs": {
+							"id": "view",
+							"class": "admin"
+						},
+						"target": "view.html",
+						"label": {
+							"EN": "Archive",
+							"FR": ""
+						},
+						"breadcrumbLabel": {
+							"EN": "List questionnaires in Archive",
+							"FR": ""
+						}
+					}
+				]
 			}
 /*			,{
 				"attrs": {
