@@ -83,7 +83,7 @@ require([
 
 			var id = $(e.target).attr('id');
 
-			if(id === 'collapse1')
+			if(id === 'coll-contact')
 				jsonForms['contact'] = new jsonForm('#form-contact', {
 					disable_collapse: false,
 					schema: schemaContact,			
