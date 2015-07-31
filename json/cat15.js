@@ -4,7 +4,7 @@ define(['i18n!nls/questions'], function(Quests) {
         "title": Quests['cat15'],
         "properties": {
             "ask36": {
-                "title": Quests['ask36'],
+                "title": Quests['ask36'],                
                 "type": "string",
                 "uniqueItems": true,
                 "format": "select",
@@ -14,6 +14,10 @@ define(['i18n!nls/questions'], function(Quests) {
                 ]
             },
             "ask36_1": {
+                "options": {
+                    "disable_collapse": false,
+                    "collapsed": true
+                },                   
                 "title": Quests['ask36_1'],
                 "type": "object",
                 "properties": {

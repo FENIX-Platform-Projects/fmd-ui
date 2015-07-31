@@ -29,7 +29,7 @@ require([
 		}
 
 		var $embed =  $('<iframe id="pdf-embed" style="display:none;position:fixed;top:0;z-index:99999" '+
-						'	src="down/questionnaire_20150312.pdf" '+
+						'	src="files/questionnaire_20150312.pdf" '+
 						'	width="100%" '+
 						'	height="100%" '+
 						'</iframe>');
