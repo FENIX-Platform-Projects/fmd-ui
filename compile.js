@@ -60,6 +60,8 @@ require([
 
 		var jsonForms = {};
 
+		window.jsonForms = jsonForms;
+
 		amplify.subscribe('router.edit', function(id) {
 			wdsClient.retrieve({
 				payload: {
