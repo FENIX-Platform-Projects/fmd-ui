@@ -61,6 +61,7 @@ require([
 		var jsonForms = {};
 
 		window.jsonForms = jsonForms;
+		window.formStore = formStore;
 
 		amplify.subscribe('router.edit', function(id) {
 			wdsClient.retrieve({
@@ -69,7 +70,6 @@ require([
 				},
 				success: function(data) {
 					console.log('retrieve edit doc', data);
-
 					formStore.storeSections(data[0]);
 				}
 			});

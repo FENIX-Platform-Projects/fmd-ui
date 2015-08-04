@@ -10,7 +10,7 @@ define(function() {
             i18n: {
                 locale: 'en'
             },
-            paths: {
+            paths: {                
                 'text':              FX_CDN+"/js/requirejs/plugins/text/2.0.12/text",
                 'i18n':              FX_CDN+"/js/requirejs/plugins/i18n/2.0.4/i18n",
                 'domready':          FX_CDN+"/js/requirejs/plugins/domready/2.0.1/domReady",

@@ -1,8 +1,9 @@
 define(['underscore',
+	'config/services',
     'submodules/fenix-ui-common/js/AuthManager',
     'fx-menu/start',
 	'config/fenix-ui-menu'
-], function (_,	AuthManager, Menu, menuConf) {
+], function (_,	Config, AuthManager, Menu, menuConf) {
 
 	return function(menuId) {
 		//AUTH & TOP MENU
@@ -27,7 +28,7 @@ define(['underscore',
 					location.href = 'index.html';
 				}
 			}),
-			menu = new Menu( auth.isLogged() ? menuConfAuth : menuConfPub );
+			menu = new Menu( Config.debug || auth.isLogged() ? menuConfAuth : menuConfPub );
 
         
         $('footer').load('html/footer.html');
