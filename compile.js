@@ -89,7 +89,7 @@ require([
 				jsonForms['contact'] = new jsonForm('#form-contact', {
 					disable_collapse: false,
 					schema: schemaContact,			
-					values: formStore.getSections('contact'),
+					startval: formStore.getSections('contact'),
 					onChange: function(data) {
 						formStore.addSection('contact', data);
 					}
@@ -116,11 +116,9 @@ require([
 
 				schema.lang = language;
 
-				console.log('form '+id, schema);
-
 				jsonForms[id] = new jsonForm('#'+ id, {
 					schema: schema,
-					values: formStore.getSections(id),
+					startval: formStore.getSections(id),
 					onChange: function(data) {
 						
 						formStore.addSection(id, data);

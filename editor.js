@@ -41,7 +41,7 @@ require([
 
 				jsonForm('#form-schema', {
 					schema: schema,
-					values: values
+					startval: values
 				});
 
 			});
