@@ -18,8 +18,7 @@ define(['i18n!nls/questions'], function(Quests) {
 				},
 				"type": "string",
 				"title": "From Date",
-				"format": "date",
-				"readOnly": true
+				"format": "date"
 			},
 			"dateto": {
 				"options": {
@@ -27,8 +26,7 @@ define(['i18n!nls/questions'], function(Quests) {
 				},				
 				"type": "string",
 				"title": "To Date",
-				"format": "date",
-				"readOnly": true
+				"format": "date"
 			}		
 		}
 	};
