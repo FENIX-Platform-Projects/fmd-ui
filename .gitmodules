@@ -7,3 +7,6 @@
 [submodule "submodules/fenix-ui-reports"]
 	path = submodules/fenix-ui-reports
 	url = https://github.com/FENIX-Platform/fenix-ui-reports.git
+[submodule "lib/json-editor"]
+	path = lib/json-editor
+	url = https://github.com/stefanocudini/json-editor.git

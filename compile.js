@@ -81,11 +81,11 @@ require([
 			}
 		});
 
-		$('#accordion').on('show.bs.collapse', function (e) {
+		//$('#accordion').on('show.bs.collapse', function (e) {
 
-			var id = $(e.target).attr('id');
+		//	var id = $(e.target).attr('id');
 
-			if(id === 'coll-contact')
+		//	if(id === 'coll-contact')
 				jsonForms['contact'] = new jsonForm('#form-contact', {
 					disable_collapse: false,
 					schema: schemaContact,			
@@ -94,7 +94,7 @@ require([
 						formStore.addSection('contact', data);
 					}
 				});
-		});
+		//});
 
 		$('#sections').html( Handlebars.compile(tmplPills)({
 			items: _.map(Config.sections, function(id) {
