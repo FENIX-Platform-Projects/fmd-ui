@@ -10,7 +10,7 @@ define(function() {
             i18n: {
                 locale: 'en'
             },
-            paths: {                
+            paths: {
                 'text':              FX_CDN+"/js/requirejs/plugins/text/2.0.12/text",
                 'i18n':              FX_CDN+"/js/requirejs/plugins/i18n/2.0.4/i18n",
                 'domready':          FX_CDN+"/js/requirejs/plugins/domready/2.0.1/domReady",
@@ -25,6 +25,8 @@ define(function() {
                 'jstree':            FX_CDN+"/js/jstree/3.0.8/dist/jstree.min",
                 'chosen':            FX_CDN+"/js/chosen/1.0.0/chosen.jquery.min",
                 'jsoneditor':        FX_CDN+"/js/json-editor/0.7.21/jsoneditor.min",
+                //'jsoneditor':        "lib/json-editor/dist/jsoneditor",
+
                 'bootstrap-btn':     FX_CDN+"/js/bootstrap-confirm-button/0.0.4/bootstrap-confirm-button.src",
                 'sweetalert':        FX_CDN+"/js/sweet-alert/0.5.0/sweet-alert.min.js",
                 'fx-common':                   "submodules/fenix-ui-common",

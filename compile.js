@@ -82,13 +82,11 @@ require([
 		});
 
 		//$('#accordion').on('show.bs.collapse', function (e) {
-
 		//	var id = $(e.target).attr('id');
-
 		//	if(id === 'coll-contact')
 				jsonForms['contact'] = new jsonForm('#form-contact', {
 					disable_collapse: false,
-					schema: schemaContact,			
+					schema: schemaContact,
 					startval: formStore.getSections('contact'),
 					onChange: function(data) {
 						formStore.addSection('contact', data);

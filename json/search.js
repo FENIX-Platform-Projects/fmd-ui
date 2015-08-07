@@ -13,14 +13,22 @@ define(['i18n!nls/questions'], function(Quests) {
 	            "title": Quests['contact_info_3']
 	        },
 			"datefrom": {
+				"options": {
+					"disabled": true
+				},
 				"type": "string",
 				"title": "From Date",
-				"format": "date"
+				"format": "date",
+				"readOnly": true
 			},
 			"dateto": {
+				"options": {
+					"disabled": true
+				},				
 				"type": "string",
 				"title": "To Date",
-				"format": "date"
+				"format": "date",
+				"readOnly": true
 			}		
 		}
 	};

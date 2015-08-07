@@ -59,6 +59,10 @@ require([
 
     	var fenixReport = new FenixReport();
 
+		var jsonForms = {};
+
+		window.jsonForms = jsonForms;
+
 		_.mixin({
 		  compactObject: function(o) {
 		     var clone = _.clone(o);
@@ -72,12 +76,11 @@ require([
 		});
 
 		//SEARCH FORM
-		var formSearch = jsonForm('#form-search', {
+		jsonForms['search'] = new jsonForm('#form-search', {
 			tmpl: {
 				submit: 'Search', reset: ''
 			},
 			schema: schemaSearch,
-			disabled: ['datefrom','dateto'],
 			onSubmit: function(data) {
 
 				data = _.compactObject(data);

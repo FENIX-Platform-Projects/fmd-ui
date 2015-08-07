@@ -12,7 +12,7 @@ define(['i18n!nls/questions'], function(Quests) {
                 "title": Quests['contact_info_1'],
                 "format": "date"
             },
-            "country": {                   
+            "country": {
                 "type": "string",
                 "title": Quests['contact_info_2']
             },
