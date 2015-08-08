@@ -46,8 +46,8 @@ require([
     	var authMenu = renderAuthMenu(true),
     		user = authMenu.auth.getCurrentUser();
 
-		var tmplFormError = Handlebars.compile('<div class="alert alert-warning">Question {{id}} not found</div>'),
-			tmplQuestResult = Handlebars.compile(questResult),
+		var tmplQuestResult = Handlebars.compile(questResult),
+			$tmplAlert = $(Handlebars.compile('<div class="alert alert-warning">{{text}}</div>')),
 			$results = $('#results-search'),
 			$resloading = $results.prev('.loader');
 

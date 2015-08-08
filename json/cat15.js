@@ -14,11 +14,20 @@ define(['i18n!nls/questions'], function(Quests) {
                 ]
             },
             "ask36_1": {
-                "options": {
-                    "disable_collapse": false,
-                    "collapsed": true
-                },                   
                 "title": Quests['ask36_1'],
+                "type": "array",
+                "format": "tabs",
+                "items": {
+                    "$ref": "#/definitions/project"
+                },
+                "minItems": 1,
+                "maxItems": 3,
+                "additionalItems": false
+            }
+        },
+        "definitions": {
+            "project": {
+                "title": Quests['ask36_0'],
                 "type": "object",
                 "properties": {
                     "ask36_1_1": {
@@ -114,8 +123,8 @@ define(['i18n!nls/questions'], function(Quests) {
                             "OIE Performance of Veterinary Services Pathway (PVS)"
                         ]
                     },
-                    "ask36_5_1": {
-                        "title": Quests['ask36_4_1'],
+                    "ask36_5": {
+                        "title": Quests['ask36_5'],
                         "type": "string"
                     }
                 }

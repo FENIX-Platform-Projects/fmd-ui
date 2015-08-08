@@ -19,7 +19,7 @@ define(['i18n!nls/questions'], function(Quests) {
             "name": {
                 "type": "string",
                 "title": Quests['contact_info_3']
-            }, 
+            },         
             "email": {
                 "type": "string",
                 "title": Quests['contact_info_4'],

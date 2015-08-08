@@ -38,12 +38,23 @@
 
 <div class="container" style="min-height:700px">
 
-	<br />
+	<div class="row">
+		<div style="display:none" id="alertmsg" class="alert alert-warning alert-dismissible fade in" role="alert">
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+			<h4>Questionnaire Not Published!</h4>
+			<p>Click on Publish button below to Search this on Archive</p>
+		</div>
+	</div>
 
-	<div id="alertmsg" class="alert alert-warning alert-dismissible fade in" role="alert">
-		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
-		<h4>Questionnaire Not Published!</h4>
-		<p>Click on Publish button below to Search this on Archive</p>
+	<br />
+	
+	<div class="panel panel-default">
+	  <div class="panel-heading">
+	  	<h3 class="panel-title">Edit Questionnaire:</h3>
+	  </div>
+	  <div class="panel-body">
+	    <i class="fa icon-archive"></i> <b>Countryname</b> &bull; <b>04/03/2015</b> &bull; <b>Author Name</b>
+	  </div>
 	</div>
 
 	<div id="accordion" class="panel-group" role="tablist" aria-multiselectable="true">
@@ -54,7 +65,7 @@
 	        <a href="#coll-contact" data-toggle="collapse" data-parent="#accordion" aria-expanded="true">
 	          POINT OF CONTACT
 	        </a>
-	      </h4>	        
+	      </h4>
 	    </div>
 	    <div id="coll-contact" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne" aria-expanded="true">
 	      <div class="panel-body">
@@ -75,7 +86,7 @@
 	        <a href="#coll-quest" class="collapsed" data-toggle="collapse" data-parent="#accordion" aria-expanded="false">
 	          QUESTIONNAIRE
 	        </a>
-	      </h4>	        
+	      </h4>
 	    </div>
 	    <div id="coll-quest" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo" aria-expanded="false">
 	      <div class="panel-body">
@@ -85,7 +96,7 @@
 						<!-- FILLED BY JS -->
 					</div>
 				</div>
-			</div>		
+			</div>
 	      </div>
 	    </div>
 	  </div>

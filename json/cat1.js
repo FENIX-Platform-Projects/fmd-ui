@@ -15,7 +15,7 @@ define(['i18n!nls/questions'], function(Quests) {
 					"Not sure"
 				]
 			},
-			"ask1_1": {
+			"ask1_1": {		
 				"title": Quests['ask1_1'],
 				"type": "array",
 				"minItems": 1,

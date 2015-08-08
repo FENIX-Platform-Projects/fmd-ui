@@ -231,6 +231,7 @@ define({
 		"cat15": "GLOBAL FMD PORTFOLIO",
 
 			"ask36":               "36) Has your country participated in any specific activities, programs or projects that involve FMD surveillance and/or control in the last 3 years? (please list as appropriate)",
+				"ask36_0":         "Project",
 				"ask36_1":         "If yes:",
 				"ask36_1_1":       "What is the Geographic area of implementation? (exclusive)",
 				"ask36_1_2":       "Project status (exclusive):",

@@ -66,10 +66,9 @@ require([
 		amplify.subscribe('router.edit', function(id) {
 			wdsClient.retrieve({
 				payload: {
-				    query: {'_id': { '$oid': id } }
+					query: {'_id': { '$oid': id } }
 				},
 				success: function(data) {
-					console.log('retrieve edit doc', data);
 					formStore.storeSections(data[0]);
 				}
 			});
@@ -81,10 +80,12 @@ require([
 			}
 		});
 
-		//$('#accordion').on('show.bs.collapse', function (e) {
-		//	var id = $(e.target).attr('id');
-		//	if(id === 'coll-contact')
-				jsonForms['contact'] = new jsonForm('#form-contact', {
+/*		$('#accordion').on('show.bs.collapse', function (e) {
+			
+			var id = $(e.target).attr('id');
+
+			if(id === 'coll-contact')*/
+				jsonForms.contact = new jsonForm('#form-contact', {
 					disable_collapse: false,
 					schema: schemaContact,
 					startval: formStore.getSections('contact'),
@@ -149,11 +150,11 @@ require([
 				},
 				success: function(jsonIds) {
 				    $loading.fadeOut(2000);
+
+				    //TODO RESET FORM, EMPTY storeForm
 				}
 			});
 		});
-
-window.jsonForms = jsonForms;
 
 		$('#btn-reset-quest').on('click', function(e) {
 
