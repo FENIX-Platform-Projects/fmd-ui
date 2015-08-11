@@ -19,6 +19,7 @@ require([
 
 		'fx-common/js/WDSClient',
 		'text!fx-common/html/pills.html',
+		'text!html/questHead.html',
 
 		'json/contact',
 		//'json/cat16',
@@ -35,6 +36,7 @@ require([
 
 		WDSClient,
 		tmplPills,
+		tmplHead,
 
 		schemaContact,
 		Config,
@@ -70,21 +72,30 @@ require([
 				},
 				success: function(data) {
 					formStore.storeSections(data[0]);
+					showHead(data[0].contact);
 				}
 			});
 		});
 
 		Router({
+			default: function() {
+				$('body').addClass('page-compile');
+				$('#alertnotpub').show();
+			},
 			edit: function(id) {
+				$('body').addClass('page-edit');
 				amplify.publish('router.edit', id);
 			}
 		});
 
+		function showHead(data) {
+			$('#quest-head').html(Handlebars.compile(tmplHead)(data));
+		}
 /*		$('#accordion').on('show.bs.collapse', function (e) {
 			
 			var id = $(e.target).attr('id');
 
-			if(id === 'coll-contact')*/
+			if(id === 'coll-contact') {*/
 				jsonForms.contact = new jsonForm('#form-contact', {
 					disable_collapse: false,
 					schema: schemaContact,
@@ -94,9 +105,13 @@ require([
 					},
 					onReset: function(data) {
 						formStore.removeSection('contact');
-					}				
+					},
+					onSubmit: function(data) {
+						showHead(data);
+					}
 				});
-		//});
+/*			}
+		});*/
 
 		$('#sections').html( Handlebars.compile(tmplPills)({
 			items: _.map(Config.sections, function(id) {
@@ -157,7 +172,7 @@ require([
 				},
 				success: function(jsonIds) {
 				    $loading.fadeOut(2000);
-
+				    $('#alertmsg').hide();
 				    //TODO RESET FORM, EMPTY storeForm
 				}
 			});
@@ -166,7 +181,6 @@ require([
 		$('#btn-reset-quest').on('click', function(e) {
 
 			_.each(jsonForms, function(form, id) {
-				console.log(id, form);
 				form.reset();
 			});
 

@@ -4,7 +4,7 @@ define(['underscore'], function(_) {
 		debug: true,
 
 		dbName: "FMD",
-		dbCollectionData: "survey",		
+		dbCollectionData: "quests",		
 		dbCollectionSchemas: "schemas",
 		
 		//reportPdfUrl: "http://kalimaha-fao.device.fao.org:8080",
@@ -13,6 +13,8 @@ define(['underscore'], function(_) {
 
 		//TODO use WDS for load schema from DB
 		reportPdfUrlSchema: "http://fenix.fao.org/demo/fmd-ui/json/jsonschema_pdf.json",
+
+		gaul0Url: "http://fenixservices.fao.org/d3s/msd/resources/data/uid/GAUL0",
 
 		sections: (function() {
 			var secs = _.map(_.range(1, 16), function(i) {

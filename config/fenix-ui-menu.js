@@ -80,7 +80,7 @@ define({
 						},
 						"target": "compile.html",
 						"label": {
-							"EN": "Compile Questionnaire",
+							"EN": "Fill a Questionnaire",
 							"FR": ""
 						}
 					},
@@ -95,7 +95,7 @@ define({
 							"FR": ""
 						},
 						"breadcrumbLabel": {
-							"EN": "List questionnaires in Archive",
+							"EN": "Archive",
 							"FR": ""
 						}
 					}

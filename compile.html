@@ -8,13 +8,14 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	
-	<link href="//fenixrepo.fao.org/cdn/js/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="//fenixrepo.fao.org/cdn/js/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" />
 	<link href="//fenixrepo.fao.org/cdn/js/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" />
 	<link href="//fenixrepo.fao.org/cdn/js/sweet-alert/0.5.0/sweet-alert.min.css" rel="stylesheet" />
 	<link href="//fenixrepo.fao.org/cdn/js/bootstrap-datetimepicker/4.14.30/build/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
 	<link href="css/host.css" rel="stylesheet" />
 </head>
-<body>
+
+<body class="">
 
 <div class="container">
 	<div class="row fao-header">
@@ -40,22 +41,15 @@
 <div class="container" style="min-height:700px">
 
 	<div class="row">
-		<div style="display:none" id="alertmsg" class="alert alert-warning alert-dismissible fade in" role="alert">
+		<div id="alertnotpub" style="display:none" class="alert alert-warning alert-dismissible fade in" role="alert">
 			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
 			<h4>Questionnaire Not Published!</h4>
-			<p>Click on Publish button below to Search this on Archive</p>
+			<p>Click on Publish button below to move it in Archive</p>
 		</div>
 	</div>
-
-	<br />
 	
-	<div class="panel panel-default">
-	  <div class="panel-heading">
-	  	<h3 class="panel-title">Edit Questionnaire:</h3>
-	  </div>
-	  <div class="panel-body">
-	    <i class="fa icon-archive"></i> <b>Countryname</b> &bull; <b>04/03/2015</b> &bull; <b>Author Name</b>
-	  </div>
+	<div id="quest-head" class="row">
+		<!-- FILLED BY JS /html/questHead.html -->
 	</div>
 
 	<div id="accordion" class="panel-group" role="tablist" aria-multiselectable="true">
