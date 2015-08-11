@@ -91,7 +91,10 @@ require([
 					startval: formStore.getSections('contact'),
 					onChange: function(data) {
 						formStore.addSection('contact', data);
-					}
+					},
+					onReset: function(data) {
+						formStore.removeSection('contact');
+					}				
 				});
 		//});
 
@@ -119,10 +122,14 @@ require([
 					schema: schema,
 					startval: formStore.getSections(id),
 					onChange: function(data) {
-						
 						formStore.addSection(id, data);
-
+					},
+					onSubmit: function(data) {
 						$pill.addClass('saved');
+					},
+					onReset: function(data) {
+						formStore.removeSection(id);
+						$pill.removeClass('saved');
 					}
 				});
 
@@ -158,12 +165,12 @@ require([
 
 		$('#btn-reset-quest').on('click', function(e) {
 
-			formStore.cleanSections();
-
 			_.each(jsonForms, function(form, id) {
 				console.log(id, form);
 				form.reset();
 			});
+
+			formStore.cleanSections();
 
 		});		
 

@@ -30,6 +30,10 @@ define(['i18n!nls/questions'], function(Quests) {
                 "title": Quests['ask36_0'],
                 "type": "object",
                 "properties": {
+                    "ask36_2": {
+                        "title": Quests['ask36_2'],
+                        "type": "string"
+                    },                    
                     "ask36_1_1": {
                         "title": Quests['ask36_1_1'],
                         "type": "string",
@@ -75,10 +79,6 @@ define(['i18n!nls/questions'], function(Quests) {
                                 "type": "string"
                             }
                         }
-                    },
-                    "ask36_2": {
-                        "title": Quests['ask36_2'],
-                        "type": "string"
                     },
                     "ask36_3": {
                         "title": Quests['ask36_3'],
