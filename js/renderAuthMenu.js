@@ -7,7 +7,8 @@ define(['underscore',
 
 	return function(menuId) {
 		//AUTH & TOP MENU
-		var pagename = location.pathname.substring(location.pathname.lastIndexOf('/')).match(/\/(.+)\..*/)[1];
+		var path = window.location.pathname.substring(window.location.pathname.lastIndexOf('/')).match(/\/(.+)\..*/)
+			pagename = !_.isEmpty(path) ? [1] : 'index';
 
 		if(menuId===true)
 			menuId = pagename;
@@ -23,10 +24,10 @@ define(['underscore',
 
 		var auth = new AuthManager({
 				onLogin: function() {
-					location.href = 'compile.html';
+					window.location.href = 'compile.html';
 				},
 				onLogout: function() {
-					location.href = 'index.html';
+					window.location.href = 'index.html';
 				}
 			}),
 			menu = new Menu( Config.debug || auth.isLogged() ? menuConfAuth : menuConfPub );
