@@ -78,9 +78,13 @@ require([
 		//SEARCH FORM
 		jsonForms['search'] = new jsonForm('#form-search', {
 			tmpl: {
-				submit: 'Search', reset: ''
+				submit: 'Search',
+				reset: 'Reset'
 			},
 			schema: schemaSearch,
+			onReset: function() {
+				$results.empty();
+			},
 			onSubmit: function(data) {
 
 				data = _.compactObject(data);

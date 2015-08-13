@@ -230,8 +230,9 @@ thead{
 
 
 
-.fa {
-  color: #0d6cac
+.panel-title .fa {
+  color: #0d6cac;
+    font-size: 20px;
 }
 
 
@@ -239,6 +240,27 @@ thead{
   margin-left: -2px;
 }
 
+
 #quest-head {
+  background: #35a6dc;
+}
+#quest-head h4 {
   font: normal normal 300 16px/normal "Roboto";
+  text-shadow:none;
+}
+#quest-head * {
+    color: #fff;
+}
+#quest-head .fa-edit {
+  font-size: 60px;
+  float: left;
+  margin-right: 20px
+}
+
+.bootstrap-datetimepicker-widget {
+  font-family: 'Glyphicons Halflings' !important;
+}
+
+.tab-content {
+  padding-top: 0;
 }

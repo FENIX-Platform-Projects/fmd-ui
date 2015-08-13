@@ -62,24 +62,13 @@ require([
 				autosaveLoader: '#sectionstorage-loader'
 			});
 
+		var currentQuestId = null;
+
 		var jsonForms = {};
 
 		window.jsonForms = jsonForms;
 		window.formStore = formStore;
 
-		amplify.subscribe('router.edit', function(id) {
-			wdsClient.retrieve({
-				payload: {
-					query: {'_id': { '$oid': id } }
-				},
-				success: function(data) {
-					
-					formStore.storeSections(data[0]);
-
-					showHead( data[0].contact );
-				}
-			});
-		});
 
 		Router({
 			default: function() {
@@ -89,17 +78,47 @@ require([
 			edit: function(id) {
 				$('body').addClass('page-edit');
 				amplify.publish('router.edit', id);
+				currentQuestId = id;
+				wdsClient.retrieve({
+					payload: {
+						query: {'_id': { '$oid': id } }
+					},
+					success: function(data) {
+						formStore.storeSections(data[0]);
+						showQuestDetail( data[0] );
+					}
+				});				
 			}
 		});
 
-		function showHead(data) {
-			$('#quest-head').html(Handlebars.compile(tmplHead)(data));
+		function showQuestDetail(data) {
+
+			if(_.isEmpty(data)) {
+				$('#quest-head').html('');
+
+				$('#sections').find('a[data-toggle="tab"]').each(function() {
+					$(this).removeClass('saved');
+				});
+			}
+			else
+			{
+				$('#quest-head').html(Handlebars.compile(tmplHead)(data.contact));
+
+				$('#sections').find('a[data-toggle="tab"]').each(function() {
+					var $pill = $(this),
+						id = $pill.data('id');
+
+					if(data[id])
+						$pill.addClass('saved');
+				});
+			}
 		}
-/*		$('#accordion').on('show.bs.collapse', function (e) {
+
+		$('#accordion').on('show.bs.collapse', function (e) {
 			
 			var id = $(e.target).attr('id');
 
-			if(id === 'coll-contact') {*/
+			if(id === 'coll-contact') {
 				jsonForms.contact = new jsonForm('#form-contact', {
 					disable_collapse: false,
 					schema: schemaContact,
@@ -111,11 +130,11 @@ require([
 						formStore.removeSection('contact');
 					},
 					onSubmit: function(data) {
-						showHead(data);
+						showQuestDetail({contact: data});
 					}
 				});
-/*			}
-		});*/
+			}
+		});
 
 		$('#sections').html( Handlebars.compile(tmplPills)({
 			items: _.map(Config.sections, function(id) {
@@ -159,35 +178,54 @@ require([
 
 		$('#btn-pub-quest').on('click', function(e) {
 			
-			var doc = formStore.getSections();
-				$loading = $('#btn-pub-quest-loader');
+			var doc = formStore.getSections(),
+				$loading = $('#btn-pub-quest-loader'),
+				payload;
 
 			if(_.isEmpty(doc)) {
 				alert('Attention Questionnaire is Empty!');
 				return false;
 			}
 
-			$loading.show();
-			wdsClient.create({
-				collection: Config.dbCollectionData,
-				payload: {
+			if(currentQuestId) {
+				wdsAction = 'update';
+				payload = {
+				    query: {'_id': { '$oid': currentQuestId } },
+				    update: doc
+				};
+			}
+			else
+			{
+				wdsAction = 'create';
+				payload = {
 				    query: [ doc ]
-				},
+				};
+			}
+			
+			$loading.show();
+			wdsClient[ wdsAction ]({
+				collection: Config.dbCollectionData,
+				payload: payload,
 				success: function() {
-				    $loading.fadeOut(2000);
+				    
 				    $('#alertmsg').hide();
-				    //TODO RESET FORM, EMPTY storeForm
+				    $loading.fadeOut(2000, function() {
+					    if(currentQuestId)
+							window.location.href = 'view.html';
+				    });
 				}
 			});
 		});
 
 		$('#btn-reset-quest').on('click', function(e) {
 
+			formStore.cleanSections();
+
 			_.each(jsonForms, function(form, id) {
 				form.reset();
 			});
 
-			formStore.cleanSections();
+			showQuestDetail({});
 		});		
 
     });

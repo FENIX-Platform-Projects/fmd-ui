@@ -2529,8 +2529,9 @@ thead {
 .modal-dialog {
   z-index: 1041; }
 
-.fa {
-  color: #0d6cac
+.panel-title .fa {
+  color: #0d6cac;
+  font-size: 20px;
 }
 
 .fmd-quest-result .btn {
@@ -2541,11 +2542,48 @@ thead {
   content: '+' !important;
 }
 
+.fx-jsonform .tabs.list-group {
+  padding-right: 0;
+  margin-right: -4px;
+}
+.fx-jsonform .tabs.list-group > .list-group-item {
+  margin-bottom: 1px;  
+  background-color: #ddd;
+}
+.fx-jsonform .tabs.list-group > .list-group-item.active {
+    margin-bottom: 1px;
+    background-color: #fff;
+    border: none;
+    color: #0d6cac;
+    border-bottom: 1px solid transparent
+}
+.fx-jsonform .tabs.list-group + .col-md-10 {
+  background-color: #fff;
+  padding-left: 0;
+}
 
+#quest-head {
+  background: #35a6dc;
+}
 #quest-head h4 {
-  font: normal normal 300 16px/normal "Roboto";
+  font: normal normal 300 30px "Roboto";
+  text-shadow:none;
+}
+#quest-head * {
+    color: #fff;
+}
+#quest-head .fa-edit {
+  font-size: 60px;
+  float: left;
+  margin-right: 20px
 }
 
 .bootstrap-datetimepicker-widget {
   font-family: 'Glyphicons Halflings' !important;
 }
+
+
+.tab-content {
+  padding-top: 0;
+}
+
