@@ -13,9 +13,10 @@ require([
 
 		'js/renderAuthMenu',
 		'js/router',
+		'js/fmdCore',
 
 		'fx-common/js/jsonForm',
-		'fx-common/js/storeForm',		
+		'fx-common/js/storeForm',
 
 		'fx-common/js/WDSClient',
 		'text!fx-common/html/pills.html',
@@ -30,6 +31,7 @@ require([
 		
 		renderAuthMenu,
 		Router,
+		fmdCore,
 		
 		jsonForm,
 		storeForm,
@@ -71,8 +73,10 @@ require([
 					query: {'_id': { '$oid': id } }
 				},
 				success: function(data) {
+					
 					formStore.storeSections(data[0]);
-					showHead(data[0].contact);
+
+					showHead( data[0].contact );
 				}
 			});
 		});
@@ -166,11 +170,10 @@ require([
 			$loading.show();
 			wdsClient.create({
 				collection: Config.dbCollectionData,
-				outputType: 'object',
 				payload: {
 				    query: [ doc ]
 				},
-				success: function(jsonIds) {
+				success: function() {
 				    $loading.fadeOut(2000);
 				    $('#alertmsg').hide();
 				    //TODO RESET FORM, EMPTY storeForm
@@ -185,7 +188,6 @@ require([
 			});
 
 			formStore.cleanSections();
-
 		});		
 
     });
