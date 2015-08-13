@@ -16,6 +16,8 @@ define(['underscore'], function(_) {
 
 		gaul0Url: "http://fenixservices.fao.org/d3s/msd/resources/data/uid/GAUL0",
 
+		adminPages: ['compile','view','editor'],
+
 		sections: (function() {
 			var secs = _.map(_.range(1, 16), function(i) {
 				return 'cat'+i;

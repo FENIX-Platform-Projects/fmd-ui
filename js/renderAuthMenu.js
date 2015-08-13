@@ -11,11 +11,7 @@ define(['underscore',
 
 		if(menuId===true)
 			menuId = pagename;
-
-		var adminPages = ['compile','view','editor'];
 		
-		console.log('pagename', pagename)
-
 		menuConf.active = menuId;
 
 		var menuConfAuth = _.extend({}, menuConf, {
@@ -35,7 +31,7 @@ define(['underscore',
 			}),
 			menu = new Menu( Config.debug || auth.isLogged() ? menuConfAuth : menuConfPub );
 
-		if(_.contains(adminPages, menuId) && auth.isLogged()===false)
+		if(_.contains(Config.adminPages, menuId) && auth.isLogged()===false)
 			window.location.replace('index.html');
         
         $('footer').load('html/footer.html');
