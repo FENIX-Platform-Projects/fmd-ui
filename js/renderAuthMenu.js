@@ -11,7 +11,7 @@ define(['underscore',
 
 		if(menuId===true)
 			menuId = pagename;
-		
+
 		menuConf.active = menuId;
 
 		var menuConfAuth = _.extend({}, menuConf, {
@@ -23,7 +23,7 @@ define(['underscore',
 
 		var auth = new AuthManager({
 				onLogin: function() {
-					location.reload();
+					location.href = 'compile.html';
 				},
 				onLogout: function() {
 					location.href = 'index.html';
