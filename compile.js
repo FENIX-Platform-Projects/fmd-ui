@@ -23,7 +23,6 @@ require([
 		'text!html/questHead.html',
 
 		'json/contact',
-		//'json/cat16',
 
 		'config/services',
 		'i18n!nls/questions'
@@ -77,32 +76,26 @@ require([
 			},
 			edit: function(id) {
 				$('body').addClass('page-edit');
-				amplify.publish('router.edit', id);
+
+				
 				currentQuestId = id;
+
+				var that = this;
 				wdsClient.retrieve({
 					payload: {
 						query: {'_id': { '$oid': id } }
 					},
 					success: function(data) {
-						formStore.storeSections(data[0]);
+						formStore.storeSections( data[0] );
 						showQuestDetail( data[0] );
+						that.always();
 					}
 				});				
-			}
-		});
+			},
+			always: function(path) {
 
-		function showQuestDetail(data) {
-
-			if(_.isEmpty(data)) {
-				$('#quest-head').html('');
-
-				$('#sections').find('a[data-toggle="tab"]').each(function() {
-					$(this).removeClass('saved');
-				});
-			}
-			else
-			{
-				$('#quest-head').html(Handlebars.compile(tmplHead)(data.contact));
+				var data = formStore.getSections();
+				showQuestDetail( data );
 
 				$('#sections').find('a[data-toggle="tab"]').each(function() {
 					var $pill = $(this),
@@ -110,7 +103,21 @@ require([
 
 					if(data[id])
 						$pill.addClass('saved');
+					else
+						$pill.removeClass('saved');
 				});
+			}
+		});
+
+		function showQuestDetail(data) {
+
+			if(_.isEmpty(data)) {
+				$('#quest-head').html('');
+				$('#alertnotpub').show();
+			}
+			else {
+				$('#quest-head').html(Handlebars.compile(tmplHead)(data.contact));		
+				$('#alertnotpub').hide();
 			}
 		}
 
@@ -156,7 +163,7 @@ require([
 
 				schema.lang = language;
 
-				jsonForms[id] = new jsonForm('#'+ id, {
+				jsonForms[id] = new jsonForm('#'+id, {
 					schema: schema,
 					startval: formStore.getSections(id),
 					onChange: function(data) {

@@ -10,6 +10,9 @@ define([
             },
             edit: function(id) {
                 console.log('route edit', id);
+            },
+            always: function(path) {
+                console.log('route always', path);
             }
         });
 
@@ -20,8 +23,14 @@ define([
             },
 
             routes: {
-                'edit/:id': callbacks.edit,
-                '*path':  callbacks.default
+                'edit/:id': function(path) {
+                    callbacks.edit(path);
+                    callbacks.always(path);
+                },
+                '*path':  function(path) {
+                    callbacks.default(path);
+                    callbacks.always(path);
+                }
             }
 
         }));

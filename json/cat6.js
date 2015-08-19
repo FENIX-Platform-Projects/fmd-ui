@@ -13,12 +13,12 @@ define(['i18n!nls/questions'], function(Quests) {
                         "type": "object",
                         "properties": {
 							"ask7_1_1": {
-							"title": Quests['ask7_1_1'],
-							"type": "string"
+    							"title": Quests['ask7_1_1'],
+    							"type": "number"
 							},
 							"ask7_1_2": {
-							"title": Quests['ask7_1_2'],
-							"type": "string"
+    							"title": Quests['ask7_1_2'],
+    							"type": "string"
 							}							
 						}
                     },
@@ -28,7 +28,7 @@ define(['i18n!nls/questions'], function(Quests) {
                         "properties": {
 							"ask7_2_1": {
 							"title": Quests['ask7_2_1'],
-							"type": "string"
+							"type": "number"
 							},
 							"ask7_2_2": {
 							"title": Quests['ask7_2_2'],
@@ -42,7 +42,7 @@ define(['i18n!nls/questions'], function(Quests) {
                         "properties": {
 							"ask7_3_1": {
 							"title": Quests['ask7_3_1'],
-							"type": "string"
+							"type": "number"
 							},
 							"ask7_3_2": {
 							"title": Quests['ask7_3_2'],
@@ -78,9 +78,9 @@ define(['i18n!nls/questions'], function(Quests) {
 						"uniqueItems": true,
 						"format": "select",
 						"enum": [
-								"Yes",
-								"No",
-								"Maybe"
+							"Yes",
+							"No",
+							"Maybe"
 						]
     				}	
 				}
