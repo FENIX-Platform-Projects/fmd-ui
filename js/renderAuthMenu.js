@@ -7,8 +7,8 @@ define(['underscore',
 
 	return function(menuId) {
 		//AUTH & TOP MENU
-		var path = window.location.pathname.substring(window.location.pathname.lastIndexOf('/')).match(/\/(.+)\..*/)
-			pagename = !_.isEmpty(path) ? [1] : 'index';
+		var path = window.location.pathname.substring(window.location.pathname.lastIndexOf('/')).match(/\/(.+)\..*/),
+			pagename = !_.isEmpty(path) ? path[1] : 'index';
 
 		if(menuId===true)
 			menuId = pagename;
@@ -32,7 +32,7 @@ define(['underscore',
 			}),
 			menu = new Menu( Config.debug || auth.isLogged() ? menuConfAuth : menuConfPub );
 
-		if(_.contains(Config.adminPages, menuId) && auth.isLogged()===false)
+		if(_.contains(Config.adminPages, pagename) && !auth.isLogged())
 			window.location.replace('index.html');
         
         $('footer').load('html/footer.html');
