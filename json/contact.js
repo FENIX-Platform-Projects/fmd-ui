@@ -26,9 +26,9 @@ define(['i18n!nls/questions'], function(Quests) {
                 "format": "email"
             }, 
             "phone": {
-                "type": "string",
+                "type": "integer",
                 "title": Quests['contact_info_5'],
-                "format": "tel"
+                "format": "number"
             },
             "street": {
                 "type": "string",

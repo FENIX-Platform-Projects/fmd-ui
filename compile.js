@@ -71,12 +71,9 @@ require([
 
 		Router({
 			default: function() {
-				$('body').addClass('page-compile');
-				$('#alertnotpub').show();
+				showQuestDetail();
 			},
 			edit: function(id) {
-				$('body').addClass('page-edit');
-
 				
 				currentQuestId = id;
 
@@ -112,10 +109,14 @@ require([
 		function showQuestDetail(data) {
 
 			if(_.isEmpty(data)) {
+				$('body').addClass('page-new');
+				$('body').removeClass('page-edit');
 				$('#quest-head').html('');
 				$('#alertnotpub').show();
 			}
 			else {
+				$('body').addClass('page-edit');
+				$('body').removeClass('page-new');
 				$('#quest-head').html(Handlebars.compile(tmplHead)(data.contact));		
 				$('#alertnotpub').hide();
 			}
@@ -214,12 +215,11 @@ require([
 				collection: Config.dbCollectionData,
 				payload: payload,
 				success: function() {
-				    
-				    $('#alertmsg').hide();
-				    $loading.fadeOut(2000, function() {
+					showQuestDetail();
+/*				    $loading.fadeOut(2000, function() {
 					    if(currentQuestId)
 							window.location.href = 'view.html';
-				    });
+				    });*/
 				}
 			});
 		});

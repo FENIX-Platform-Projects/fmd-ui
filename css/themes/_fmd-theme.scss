@@ -264,3 +264,14 @@ thead{
 .tab-content {
   padding-top: 0;
 }
+
+
+body.page-new #btn-pub-quest span.edit,
+body.page-new #btn-reset-quest span.edit {
+  display: none;
+}
+
+body.page-edit #btn-pub-quest span.new,
+body.page-edit #btn-reset-quest span.new {
+  display: none;
+}
