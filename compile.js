@@ -40,6 +40,7 @@ require([
 		tmplHead,
 
 		schemaContact,
+
 		Config,
 		Quests
 	) {
@@ -130,7 +131,7 @@ require([
 				jsonForms.contact = new jsonForm('#form-contact', {
 					disable_collapse: false,
 					schema: schemaContact,
-					startval: formStore.getSections('contact'),
+					values: formStore.getSections('contact'),
 					onChange: function(data) {
 						console.log('onChange contact', data)
 						formStore.addSection('contact', data);
@@ -167,7 +168,7 @@ require([
 
 				jsonForms[id] = new jsonForm('#'+id, {
 					schema: schema,
-					startval: formStore.getSections(id),
+					values: formStore.getSections(id),
 					onChange: function(data) {
 						formStore.addSection(id, data);
 					},
