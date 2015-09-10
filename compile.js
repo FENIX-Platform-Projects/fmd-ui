@@ -132,9 +132,6 @@ require([
 					schema: schemaContact,
 					startval: formStore.getSections('contact'),
 					onChange: function(data) {
-						
-						console.log('onChange',data);
-
 						formStore.addSection('contact', data);
 					},
 					onReset: function(data) {
