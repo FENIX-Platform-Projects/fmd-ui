@@ -10,7 +10,7 @@ require([
 
 	require([
     	'jquery','underscore','handlebars','jsoneditor',
-		'js/renderAuthMenu',
+		'src/renderAuthMenu',
         'config/services'
 	], function($, _, Handlebars, JsonEditor,
     	renderAuthMenu,

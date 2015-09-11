@@ -13,7 +13,7 @@ require([
 	require([
 		'jquery','underscore','handlebars','bootstrap','bootstrap-btn',
 
-		'js/renderAuthMenu',
+		'src/renderAuthMenu',
 		
 		'fx-common/js/jsonForm',
 		'fx-common/js/storeForm',
@@ -21,7 +21,7 @@ require([
 		'fx-common/js/WDSClient',
 		'fx-report',
 
-		'json/search',
+		'schemas/search',
 
 		'text!html/questResult.html',
 

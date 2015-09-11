@@ -8,7 +8,7 @@ require([
 
     Compiler.resolve([menuConfig], compilerConfig);
 
-    require(['js/renderAuthMenu'], function(renderAuthMenu) {
+    require(['src/renderAuthMenu'], function(renderAuthMenu) {
 
         renderAuthMenu(true);
 

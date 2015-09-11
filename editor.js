@@ -10,7 +10,7 @@ require([
 
 	require([
 		'jquery','underscore','bootstrap','handlebars',
-		'js/renderAuthMenu',
+		'src/renderAuthMenu',
 		'fx-common/js/jsonForm',
 		'text!fx-common/html/pills.html',
 		'config/services',
@@ -34,7 +34,7 @@ require([
 		$list.on('change', function(e) {
 			var cat = $(e.target).val();
 			
-			require(['json/jsonschema_fmd','json/'+cat], function (schema, values) {
+			require([Config.dirSchema+'jsonschema_fmd',Config.dirSchema+cat], function (schema, values) {
 
 				schema.title = " ";
 				schema.description = " ";
@@ -48,7 +48,7 @@ require([
 		});
 
 		$('#add-schema').on('click', function(e) {
-			require(['json/schema_fmd'], function (schema) {
+			require([Config.dirSchema+'schema_fmd'], function (schema) {
 
 				schema.title = " ";
 				schema.description = " ";

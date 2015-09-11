@@ -2,7 +2,7 @@
 
 module.exports = function(grunt) {
 
-	var jsonDir = './json/',
+	var jsonDir = './schemas/',
 		requirejs = require('requirejs');
 
 
@@ -12,7 +12,7 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		clean: {
 			json: {
-				src: ['json/jsonschema_pdf.json']
+				src: ['schemas/jsonschema_pdf.json']
 			}
 		}
 	});

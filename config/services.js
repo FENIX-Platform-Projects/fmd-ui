@@ -6,13 +6,13 @@ define(['underscore'], function(_) {
 		dbName: "FMD",
 		dbCollectionData: "quests",		
 		dbCollectionSchemas: "schemas",
-		
+
+		dirSchema: "schemas/",
+		//TODO use WDS for load schema from DB
+		reportPdfUrlSchema: "http://fenix.fao.org/demo/fmd-ui/schemas/jsonschema_pdf.json",
 		//reportPdfUrl: "http://kalimaha-fao.device.fao.org:8080",
 		//reportPdfUrl: "http://fenixapps2.fao.org/fenixExport",
 		reportPdfUrl: "http://fenixapps2.fao.org/fenixExport-demo",
-
-		//TODO use WDS for load schema from DB
-		reportPdfUrlSchema: "http://fenix.fao.org/demo/fmd-ui/json/jsonschema_pdf.json",
 
 		gaul0Url: "http://fenixservices.fao.org/d3s/msd/resources/data/uid/GAUL0",
 

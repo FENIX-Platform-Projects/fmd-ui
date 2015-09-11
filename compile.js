@@ -11,9 +11,8 @@ require([
 	require([
 		'jquery','underscore','bootstrap','handlebars','bootstrap-btn','amplify',
 
-		'js/renderAuthMenu',
-		'js/router',
-		'js/fmdCore',
+		'src/renderAuthMenu',
+		'src/router',
 
 		'fx-common/js/jsonForm',
 		'fx-common/js/storeForm',
@@ -22,7 +21,7 @@ require([
 		'text!fx-common/html/pills.html',
 		'text!html/questHead.html',
 
-		'json/contact',
+		'schemas/contact',
 
 		'config/services',
 		'i18n!nls/questions'
@@ -30,7 +29,6 @@ require([
 		
 		renderAuthMenu,
 		Router,
-		fmdCore,
 		
 		jsonForm,
 		storeForm,
@@ -162,7 +160,7 @@ require([
 			var $pill = $(e.target),
 				id = $pill.data('id');
 
-			require(['json/'+ id ], function(schema) {
+			require([Config.dirSchema + id ], function(schema) {
 
 				schema.lang = language;
 
