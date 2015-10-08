@@ -43,8 +43,7 @@ require([
     	Config,
     	Quests
     ) {
-    	var authMenu = renderAuthMenu(true),
-    		user = authMenu.auth.getCurrentUser();
+    	renderAuthMenu(true);
 
 		var tmplQuestResult = Handlebars.compile(questResult),
 			$tmplAlert = $(Handlebars.compile('<div class="alert alert-warning">{{text}}</div>')),

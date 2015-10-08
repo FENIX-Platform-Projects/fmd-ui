@@ -117,21 +117,31 @@ define({
 		"rightItems": [
 			{
 				"attrs": {
-					"id": "login",
+					"id": "profile",
 					"class": "afo-eldorado-icons"
 				},
 				"label": {
-					"EN": "LOGIN <span class='icojam_user'></span>",
+					"EN": "<span class='icojam_user'></span> ",
 					"FR": ""
 				}
 			},
 			{
 				"attrs": {
-					"id": "logout",
-					"class": "afo-eldorado-icons"
+					"id": "login"
 				},
+				"target": "#",
 				"label": {
-					"EN": "LOGOUT <span class='icojam_user'></span>",
+					"EN": "LOGIN",
+					"FR": ""
+				}
+			},
+			{
+				"attrs": {
+					"id": "logout"
+				},
+				"target": "#",
+				"label": {
+					"EN": "LOGOUT",
 					"FR": ""
 				}
 			}			

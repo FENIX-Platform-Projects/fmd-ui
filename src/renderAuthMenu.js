@@ -3,7 +3,7 @@ define(['underscore',
     'submodules/fenix-ui-common/js/AuthManager',
     'fx-menu/start',
 	'config/fenix-ui-menu'
-], function (_,	Config, AuthManager, Menu, menuConf) {
+], function (_,	Config, AuthManager, Menu, ConfigMenu) {
 
 	return function(menuId) {
 		//AUTH & TOP MENU
@@ -13,16 +13,18 @@ define(['underscore',
 		if(menuId===true)
 			menuId = pagename;
 
-		menuConf.active = menuId;
+		ConfigMenu.active = menuId;
 
-		var menuConfAuth = _.extend({}, menuConf, {
+		var authMenuConf = _.extend({}, ConfigMenu, {
 				hiddens: ['login']
 			}),
-			menuConfPub = _.extend({}, menuConf, {
-				hiddens: ['dataentry','editor','logout']
+			pubMenuConf = _.extend({}, ConfigMenu, {
+				hiddens: ['dataentry','editor','profile','logout']
 			});
 
-		var auth = new AuthManager({
+		var lang = requirejs.s.contexts._.config.i18n.locale.toUpperCase(),
+			auth = new AuthManager({
+				storekey: 'fmd.auth.user',
 				onLogin: function() {
 					window.location.href = 'compile.html';
 				},
@@ -30,7 +32,17 @@ define(['underscore',
 					window.location.href = 'index.html';
 				}
 			}),
-			menu = new Menu( Config.debug || auth.isLogged() ? menuConfAuth : menuConfPub );
+
+			authorized = Config.debug || auth.isLogged(),
+			menuConf = authorized ? authMenuConf : pubMenuConf;
+
+		if(authorized) {
+			var u = auth.getCurrentUser();
+			menuConf.config.rightItems[0].label[lang] += u.name+' &bull; '+u.email;
+		}
+
+
+		var menu = new Menu( menuConf );
 
 		if(_.contains(Config.adminPages, pagename) && !auth.isLogged())
 			window.location.replace('index.html');
@@ -39,7 +51,8 @@ define(['underscore',
         
 		return {
 			auth: auth,
-			menu: menu
+			menu: menu,
+			lang: lang
 		};
 	};
 });

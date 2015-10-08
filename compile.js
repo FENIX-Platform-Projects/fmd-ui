@@ -45,8 +45,7 @@ require([
 
 		var authMenu = renderAuthMenu(true),
 			user = authMenu.auth.getCurrentUser(),
-			username = user.name || 'unlogged',
-			language = requirejs.s.contexts._.config.i18n.locale;
+			username = user.name || 'unlogged';
 
 		var wdsClient = new WDSClient({
 			datasource: Config.dbName,
@@ -162,7 +161,7 @@ require([
 
 			require([Config.dirSchema + id ], function(schema) {
 
-				schema.lang = language;
+				schema.lang = authMenu.lang;
 
 				jsonForms[id] = new jsonForm('#'+id, {
 					schema: schema,
