@@ -82,6 +82,10 @@ define({
 						"label": {
 							"EN": "New Questionnaire",
 							"FR": ""
+						},
+						"breadcrumbLabel": {
+							"EN": "Fill a new questionnaire",
+							"FR": ""
 						}
 					},
 					{
@@ -95,7 +99,7 @@ define({
 							"FR": ""
 						},
 						"breadcrumbLabel": {
-							"EN": "Archive",
+							"EN": "Archive of published questionnaires",
 							"FR": ""
 						}
 					}

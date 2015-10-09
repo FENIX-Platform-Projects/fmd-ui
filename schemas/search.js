@@ -1,7 +1,7 @@
 define(['i18n!nls/questions'], function(Quests) {
 	return {
 		"type": "object",
-		"title": "Filter Questionnaire by",
+		"title": "Filter by",
 		"properties": {
 
 	        "country": {

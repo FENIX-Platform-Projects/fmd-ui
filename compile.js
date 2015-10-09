@@ -43,9 +43,7 @@ require([
 		Quests
 	) {
 
-		var authMenu = renderAuthMenu(true),
-			user = authMenu.auth.getCurrentUser(),
-			username = user.name || 'unlogged';
+		var authMenu = renderAuthMenu(true);
 
 		var wdsClient = new WDSClient({
 			datasource: Config.dbName,
@@ -54,7 +52,7 @@ require([
 		});
 
 		var formStore = new storeForm({
-				prefix: username,
+				prefix: authMenu.username,
 				storeExpires: 100000,
 				autosaveLoader: '#sectionstorage-loader'
 			});
@@ -62,10 +60,6 @@ require([
 		var currentQuestId = null;
 
 		var jsonForms = {};
-
-		window.jsonForms = jsonForms;
-		window.formStore = formStore;
-
 
 		Router({
 			default: function() {
@@ -130,7 +124,6 @@ require([
 					schema: schemaContact,
 					values: formStore.getSections('contact'),
 					onChange: function(data) {
-						console.log('onChange contact', data)
 						formStore.addSection('contact', data);
 					},
 					onReset: function(data) {
@@ -215,10 +208,10 @@ require([
 				payload: payload,
 				success: function() {
 					showQuestDetail();
-/*				    $loading.fadeOut(2000, function() {
+				    $loading.fadeOut(2000, function() {
 					    if(currentQuestId)
 							window.location.href = 'view.html';
-				    });*/
+				    });
 				}
 			});
 		});

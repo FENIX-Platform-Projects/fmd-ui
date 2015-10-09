@@ -32,19 +32,17 @@ define(['underscore',
 					window.location.href = 'index.html';
 				}
 			}),
-
+			currentUser = auth.getCurrentUser(),
 			authorized = Config.debug || auth.isLogged(),
-			menuConf = authorized ? authMenuConf : pubMenuConf;
+			menuConf = authorized ? authMenuConf : pubMenuConf,
+			isAdmin = authorized && currentUser.email === Config.adminUser;
 
-		if(authorized) {
-			var u = auth.getCurrentUser();
-			menuConf.config.rightItems[0].label[lang] += u.name+' &bull; '+u.email;
-		}
-
+		if(authorized)
+			menuConf.config.rightItems[0].label[lang] += currentUser.name+' &bull; '+currentUser.email;
 
 		var menu = new Menu( menuConf );
 
-		if(_.contains(Config.adminPages, pagename) && !auth.isLogged())
+		if(_.contains(Config.privatePages, pagename) && !auth.isLogged())
 			window.location.replace('index.html');
         
         $('footer').load('html/footer.html');
@@ -52,7 +50,9 @@ define(['underscore',
 		return {
 			auth: auth,
 			menu: menu,
-			lang: lang
+			lang: lang,
+			username: currentUser.name || 'unlogged',
+			isAdmin: isAdmin
 		};
 	};
 });

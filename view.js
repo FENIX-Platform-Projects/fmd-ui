@@ -11,7 +11,7 @@ require([
 	Compiler.resolve([menuConfig, repoConfig], compilerConfig);
 
 	require([
-		'jquery','underscore','handlebars','bootstrap','bootstrap-btn',
+		'jquery','underscore','handlebars','bootstrap','bootstrap-btn','moment',
 
 		'src/renderAuthMenu',
 		
@@ -27,7 +27,7 @@ require([
 
 		'config/services',
 		'i18n!nls/questions'
-    ], function ($, _, Handlebars, bootstrap, bootstrapBtn,
+    ], function ($, _, Handlebars, bootstrap, bootstrapBtn, moment,
     	
     	renderAuthMenu,
     	jsonForm,
@@ -43,11 +43,12 @@ require([
     	Config,
     	Quests
     ) {
-    	renderAuthMenu(true);
+    	var authMenu = renderAuthMenu(true);
 
 		var tmplQuestResult = Handlebars.compile(questResult),
 			$tmplAlert = $(Handlebars.compile('<div class="alert alert-warning">{{text}}</div>')),
-			$results = $('#results-search'),
+			$resultsTab = $('#results-search'),
+			$results = $resultsTab.find('tbody'),
 			$resloading = $results.prev('.loader');
 
 		var wdsClient = new WDSClient({
@@ -83,6 +84,7 @@ require([
 			schema: schemaSearch,
 			onReset: function() {
 				$results.empty();
+				$resultsTab.hide();
 			},
 			onSubmit: function(data) {
 
@@ -102,35 +104,47 @@ require([
 				wdsClient.retrieve({
 					payload: {
 					    query: data[0],
-					    filters: { contact: 1 }
+					    filters: { contact: 1 },
+					    sort: {
+					        'contact.date': 1
+					    }
 					},
 					success: function(data) {
 						
 						$results.empty();
 						$resloading.fadeOut(1000);
 
+						if(!data || data.length<1)
+							$resultsTab.hide();
+						else
+							$resultsTab.show();
+
 						_.each(data, function(quest) {
+
 							quest.filename = 'fmd_';
 							if(quest.contact && quest.contact.name && quest.contact.date)
 								quest.filename += quest.contact.name+'_'+quest.contact.date;
 							quest.filename += '.pdf';
 
+							quest.contact.date = moment(quest.contact.date).format('DD/MM/YYYY');
+
 							var $row = $(tmplQuestResult(quest)).appendTo($results);
 
 							$row.find('.btn-del').btsConfirmButton({
 								className: '.btn-primary',
-								msg: 'Confirm'
+								msg: '<i class="fa fa-trash"></i> Sure!'
 							}, function(e) {
 					
 								var $btn = $(e.currentTarget),
+									$row = $btn.parents('tr'),
 									id = $btn.data('id');
-								
+
 								wdsClient.delete({
 									payload: {
 										query: {'_id': { '$oid': id } }
 									},
 									success: function(data) {
-										$row.slideUp();
+										$row.fadeOut('slow');
 									}
 								});
 							});	

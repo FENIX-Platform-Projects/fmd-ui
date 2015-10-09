@@ -2,5 +2,9 @@
   "guest@fao.org" : {
       "name" : "Guest",
       "password" : "guest"
+  },
+  "admin@fao.org" : {
+      "name" : "Admin",
+      "password" : "admin"
   }
 }
