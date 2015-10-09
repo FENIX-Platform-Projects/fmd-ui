@@ -10,14 +10,16 @@
 	</td>
 	{{/with}}
 	<td class="text-right">
-		<a class="btn-edit btn btn-sm pull-right" href="compile.html#edit/{{_id.$oid}}">
+	{{#if isMy}}
+		<a class="btn-edit btn btn-xs" href="compile.html#edit/{{_id.$oid}}">
 			<i class="fa fa-edit"></i> <small>Edit</small>
 		</a>
-		<a class="btn-del btn btn-sm pull-right" data-id="{{_id.$oid}}" href="#">
+		<a class="btn-del btn btn-xs" data-id="{{_id.$oid}}" href="#">
 			<i class="fa fa-trash"></i> <small>Delete</small>
 		</a>
-		<a class="btn-pdf btn btn-sm pull-right" data-id="{{_id.$oid}}" data-filename="{{filename}}" href="#">
+	{{/if}}
+		<a class="btn-pdf btn btn-xs" data-id="{{_id.$oid}}" data-filename="{{filename}}" href="#">
 			<i class="fa fa-file-pdf-o"></i> <small>Download</small>
-		</a>
+		</a>		
 	</td>
 </tr>

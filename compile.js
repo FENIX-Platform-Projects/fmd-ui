@@ -187,6 +187,8 @@ require([
 				return false;
 			}
 
+			doc.username = authMenu.username;
+
 			if(currentQuestId) {
 				wdsAction = 'update';
 				payload = {

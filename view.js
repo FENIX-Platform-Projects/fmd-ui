@@ -104,7 +104,7 @@ require([
 				wdsClient.retrieve({
 					payload: {
 					    query: data[0],
-					    filters: { contact: 1 },
+					    filters: { contact: 1, username: 1 },
 					    sort: {
 					        'contact.date': 1
 					    }
@@ -127,6 +127,10 @@ require([
 							quest.filename += '.pdf';
 
 							quest.contact.date = moment(quest.contact.date).format('DD/MM/YYYY');
+
+							quest.isMy = (authMenu.isAdmin || quest.username === authMenu.username);
+
+console.log(quest._id.$oid, quest);
 
 							var $row = $(tmplQuestResult(quest)).appendTo($results);
 
