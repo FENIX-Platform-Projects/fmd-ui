@@ -130,8 +130,6 @@ require([
 
 							quest.isMy = (authMenu.isAdmin || quest.username === authMenu.username);
 
-console.log(quest._id.$oid, quest);
-
 							var $row = $(tmplQuestResult(quest)).appendTo($results);
 
 							$row.find('.btn-del').btsConfirmButton({
