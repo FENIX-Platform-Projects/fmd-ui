@@ -64,46 +64,33 @@ define({
 			},
 			{
 				"attrs": {
-	                "id": "dataentry",
-					"class": "admin"	                
-	            },
-	            "target": "#",
-	            "label": {
-	                "EN": "Data Entry",
-	                "FR": ""
-	            },				
-				"type": "dropdown",
-	            "children": [
-					{
-						"attrs": {
-							"id": "compile"
-						},
-						"target": "compile.html",
-						"label": {
-							"EN": "New Questionnaire",
-							"FR": ""
-						},
-						"breadcrumbLabel": {
-							"EN": "Fill a new questionnaire",
-							"FR": ""
-						}
-					},
-					{
-						"attrs": {
-							"id": "view",
-							"class": "admin"
-						},
-						"target": "view.html",
-						"label": {
-							"EN": "Archive",
-							"FR": ""
-						},
-						"breadcrumbLabel": {
-							"EN": "Archive of published questionnaires",
-							"FR": ""
-						}
-					}
-				]
+					"id": "compile",
+					"class": "admin"
+				},
+				"target": "compile.html",
+				"label": {
+					"EN": "Data Entry",
+					"FR": ""
+				},
+				"breadcrumbLabel": {
+					"EN": "Fill a new questionnaire",
+					"FR": ""
+				}
+			},
+			{
+				"attrs": {
+					"id": "view",
+					"class": "admin"
+				},
+				"target": "view.html",
+				"label": {
+					"EN": "Archive",
+					"FR": ""
+				},
+				"breadcrumbLabel": {
+					"EN": "Archive of published questionnaires",
+					"FR": ""
+				}
 			}
 /*			,{
 				"attrs": {

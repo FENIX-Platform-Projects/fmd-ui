@@ -19,7 +19,7 @@ define(['underscore',
 				hiddens: ['login']
 			}),
 			pubMenuConf = _.extend({}, ConfigMenu, {
-				hiddens: ['dataentry','editor','profile','logout']
+				hiddens: ['compile','view','editor','profile','logout']
 			});
 
 		var lang = requirejs.s.contexts._.config.i18n.locale.toUpperCase(),
