@@ -222,6 +222,8 @@ require([
 			_.each(jsonForms, function(form, id) {
 				form.reset();
 			});
+			
+			$('#sections').removeClass('saved');
 
 			showQuestDetail({});
 		});		
