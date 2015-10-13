@@ -73,7 +73,7 @@ define({
 					"FR": ""
 				},
 				"breadcrumbLabel": {
-					"EN": "Fill a new questionnaire",
+					"EN": "",
 					"FR": ""
 				}
 			},
