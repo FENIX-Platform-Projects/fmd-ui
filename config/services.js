@@ -12,7 +12,8 @@ define(['underscore'], function(_) {
 		reportPdfUrlSchema: "http://fenix.fao.org/demo/fmd-ui/schemas/jsonschema_pdf.json",
 		//reportPdfUrl: "http://kalimaha-fao.device.fao.org:8080",
 		//reportPdfUrl: "http://fenixapps2.fao.org/fenixExport",
-		reportPdfUrl: "http://fenixapps2.fao.org/fenixExport-demo",
+		//reportPdfUrl: "http://fenixapps2.fao.org/fenixExport-demo",
+		reportPdfUrl: "http://fenix.fao.org/external/fenixapps2/fenixExport-demo",
 
 		gaul0Url: "http://fenixservices.fao.org/d3s/msd/resources/data/uid/GAUL0",
 

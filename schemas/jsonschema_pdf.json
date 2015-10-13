@@ -8,22 +8,32 @@
       "title": "COMPILER INFORMATION",
       "type": "object",
       "properties": {
-        "country": {
-          "type": "string",
-          "title": "Country Name"
-        },
         "date": {
-          "type": "string",
-          "title": "Date",
-          "format": "date"
+            "type": "string",
+            "title": "Date",
+            "format": "date"
+        },
+        "country": {
+            "type": "string",
+            "title": "Country name"
         },
         "name": {
-          "type": "string",
-          "title": "Name"
+            "type": "string",
+            "title": "Name"
+        },         
+        "email": {
+            "type": "string",
+            "title": "Email",
+            "format": "email"
+        }, 
+        "phone": {
+            "type": "integer",
+            "title": "Phone",
+            "format": "number"
         },
-        "contact": {
-          "type": "string",
-          "title": "Contact Information"
+        "street": {
+            "type": "string",
+            "title": "Street"
         }
       }
     },
