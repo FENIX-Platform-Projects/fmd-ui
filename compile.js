@@ -223,7 +223,7 @@ require([
 				form.reset();
 			});
 			
-			$('#sections').removeClass('saved');
+			$('#sections .nav-pills a').removeClass('saved');
 
 			showQuestDetail({});
 		});		
