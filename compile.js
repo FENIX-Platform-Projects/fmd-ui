@@ -210,10 +210,7 @@ require([
 				payload: payload,
 				success: function() {
 					showQuestDetail();
-				    $loading.fadeOut(2000, function() {
-					    if(currentQuestId)
-							window.location.href = 'view.html';
-				    });
+				    $loading.fadeOut(2000);
 				}
 			});
 		});
