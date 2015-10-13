@@ -11,8 +11,8 @@ define(['i18n!nls/questions'], function(Quests) {
 	        "name": {
 	            "type": "string",
 	            "title": Quests['contact_info_3']
-	        },
-			"datefrom": {
+	        }
+/*			,"datefrom": {
 				"options": {
 					"disabled": true
 				},
@@ -27,7 +27,7 @@ define(['i18n!nls/questions'], function(Quests) {
 				"type": "string",
 				"title": "To Date",
 				"format": "date"
-			}		
+			}*/	
 		}
 	};
 });
