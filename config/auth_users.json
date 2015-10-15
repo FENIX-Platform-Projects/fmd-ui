@@ -3,6 +3,10 @@
       "name" : "Guest",
       "password" : "guest"
   },
+  "beta@fao.org" : {
+      "name" : "Beta",
+      "password" : "beta"
+  },  
   "admin@fao.org" : {
       "name" : "Admin",
       "password" : "admin"
