@@ -3,25 +3,22 @@ define(['i18n!nls/questions'], function(Quests) {
 	    "type": "object",
 	    "title": Quests['cat7'],
 	    "properties": {
-	        "ask16": {
-	            "title": Quests['ask16'],
+
+
+	        "ask17a": {
+	            "title": Quests['ask17a'],
 	            "type": "string",
 	            "uniqueItems": true,
 	            "format": "select",
 	            "enum": [
 	                "Yes",
-	                "No",
-	                "Not sure"
+	                "No"
+
 	            ]
 	        },
-	        "ask16_1": {
-	            "title": Quests['ask16_1'],
-	            "type": "string",
-	            "format": "date"
-	        },
-	        "ask16_2": {
-	            "title": Quests['ask16_2'],
-	            "type": "array",
+			"ask17_0a": {
+				"title": Quests['ask17_0a'],
+				"type": "array",
 				"minItems": 1,
 				"maxItems": 5,
 				"items": {
@@ -31,24 +28,44 @@ define(['i18n!nls/questions'], function(Quests) {
 				},
 				"additionalItems":false
 			},
-	        "ask17": {
-	            "title": Quests['ask16'],
-	            "type": "string",
-	            "uniqueItems": true,
-	            "format": "select",
-	            "enum": [
-	                "Yes",
-	                "No",
-	                "Not sure"
-	            ]
-	        },
-	        "ask17_1": {
-	            "title": Quests['ask16_1'],
-	            "type": "string",
-	            "format": "date"
-	        },
-	        "ask17_2": {
-	            "title": Quests['ask16_2'],
+			"ask17b": {
+				"title": Quests['ask17b'],
+				"type": "string",
+				"uniqueItems": true,
+				"format": "select",
+				"enum": [
+					"Yes",
+					"No",
+					"Not sure"
+				]
+			},
+			"ask17_0b": {
+				"title": Quests['ask17_0b'],
+				"type": "array",
+				"minItems": 1,
+				"maxItems": 5,
+				"items": {
+					"type": "string",
+					"title": " ",
+					"default": ""
+				},
+				"additionalItems":false
+			},
+
+
+			"ask18": {
+				"title": Quests['ask18'],
+				"type": "string",
+				"uniqueItems": true,
+				"format": "select",
+				"enum": [
+					"Yes",
+					"No"
+				]
+			},
+
+	        "ask18_1": {
+	            "title": Quests['ask18_1'],
 	            "type": "array",
 				"minItems": 1,
 				"maxItems": 5,

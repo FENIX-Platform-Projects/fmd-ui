@@ -3,51 +3,7 @@ define(['i18n!nls/questions'], function(Quests) {
         "type": "object",
         "title": Quests['cat8'],
         "properties": {
-            "ask18": {
-                "title": Quests['ask18'],
-                "type": "string",
-                "uniqueItems": true,
-                "format": "select",
-                "enum": [
-                    "Yes",
-                    "No",
-                    "Not sure"
-                ]
-            },
-            "ask18_1": {
-                "title": Quests['ask18_1'],
-                "type": "object",
-                "properties": {
-                    "ask18_1_1": {
-                        "title": Quests['ask18_1_1'],
-                        "type": "string",
-                        "format": "date"
-                    },
-                    "ask18_1_2": {
-                        "title": Quests['ask18_1_2'],
-                        "type": "string",
-                        "uniqueItems": true,
-                        "format": "select",
-                        "enum": [
-                            "Yes",
-                            "No",
-                            "Not sure"
-                        ]
-                    }
-                }
-            },
-            "aks18_2": {
-                "title": Quests['ask18_2'],
-                "type": "string",
-                "uniqueItems": true,
-                "format": "select",
-                "enum": [
-                    "Yes",
-                    "No",
-                    "Not sure"
-                ]
-            },
-            "aks19": {
+            "ask19": {
                 "title": Quests['ask19'],
                 "type": "string",
                 "uniqueItems": true,
@@ -56,6 +12,63 @@ define(['i18n!nls/questions'], function(Quests) {
                     "Yes",
                     "No"
                 ]
+            },
+
+
+            "ask20": {
+                "title": Quests['ask20'],
+                "type": "object",
+                "properties":
+                {
+                    "ask20_1": {
+                        "title": Quests['ask20_1'],
+                        "type": "array",
+                        "uniqueItems": true,
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "Eradication of FMD virus",
+                                "Control of clinical FMD",
+                                "Apply for disease free zone",
+                                "Apply for official OIE recognition of FMD free with vaccination",
+                                "Apply for official OIE recognition of FMD free without vaccination"
+                            ]
+                        }
+                    },
+
+
+                    "ask20_2": {
+                        "title": Quests['ask20_2'],
+                        "type": "array",
+                        "uniqueItems": true,
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "Eradication of FMD virus",
+                                "Control of clinical FMD",
+                                "Apply for disease free zone",
+                                "Apply for official OIE recognition of FMD free with vaccination",
+                                "Apply for official OIE recognition of FMD free without vaccination"
+                            ]
+                        }
+                    }
+
+
+
+
+
+
+
+
+                }
+
+
+
+            },
+
+            "aks21": {
+                "title": Quests['ask21'],
+                "type": "string"
             }
         }
     };

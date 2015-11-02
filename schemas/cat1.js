@@ -3,16 +3,15 @@ define(['i18n!nls/questions'], function(Quests) {
 		"type": "object",
 		"title": Quests['cat1'],
 		"properties": {
+			"ask0":{"title": Quests['ask0']},
 			"ask1": {
 				"title": Quests['ask1'],
 				"type": "string",
 				"uniqueItems": true,
 				"format": "select",
 				"enum": [
-					"Yes, officially",
-					"Yes, not officially",
-					"No",
-					"Not sure"
+					"Yes",
+					"No"
 				]
 			},
 			"ask1_1": {		

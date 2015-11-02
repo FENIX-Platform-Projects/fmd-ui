@@ -7,149 +7,230 @@ define(['i18n!nls/questions'], function(Quests) {
                 "title": Quests['ask7'],
                 "type": "object",
                 "properties": {
-                    
-					"ask7_1":{
-						"title": Quests['ask7_1'],
-                        "type": "object",
-                        "properties": {
-							"ask7_1_1": {
-    							"title": Quests['ask7_1_1'],
-    							"type": "number"
-							},
-							"ask7_1_2": {
-    							"title": Quests['ask7_1_2'],
-    							"type": "string"
-							}							
-						}
-                    },
-					"ask7_2":{
-						"title": Quests['ask7_2'],
-                        "type": "object",
-                        "properties": {
-							"ask7_2_1": {
-							"title": Quests['ask7_2_1'],
-							"type": "number"
-							},
-							"ask7_2_2": {
-							"title": Quests['ask7_2_2'],
-							"type": "string"
-							}							
-						}
-                    },
-					"ask7_3":{
-						"title": Quests['ask7_3'],
-                        "type": "object",
-                        "properties": {
-							"ask7_3_1": {
-							"title": Quests['ask7_3_1'],
-							"type": "number"
-							},
-							"ask7_3_2": {
-							"title": Quests['ask7_3_2'],
-							"type": "string"
-							}							
-						}
-                    }
 
+                    "ask7_1": {
+                        "title": Quests['ask7_1'],
+                        "type": "array",
+                        "uniqueItems": true,
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "2014",
+                                "2013",
+                                "2012"
+                            ]
+                        }
+                    },
+                    "ask7_2": {
+                        "title": Quests['ask7_2'],
+                        "type": "array",
+                        "uniqueItems": true,
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "2014",
+                                "2013",
+                                "2012"
+                            ]
+                        }
+                    },
+
+                    "ask7_3": {
+                        "title": Quests['ask7_3'],
+                        "type": "array",
+                        "uniqueItems": true,
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "2014",
+                                "2013",
+                                "2012"
+                            ]
+                        }
+                    },
+
+                    "ask7_4": {
+                        "title": Quests['ask7_4'],
+                        "type": "array",
+                        "uniqueItems": true,
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "2014",
+                                "2013",
+                                "2012"
+                            ]
+                        }
+                    },
+                    "ask7_5": {
+                        "title": Quests['ask7_5'],
+                        "type": "array",
+                        "uniqueItems": true,
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "2014",
+                                "2013",
+                                "2012"
+                            ]
+                        }
+                    },
+                    "ask7_6": {
+                        "title": Quests['ask7_6'],
+                        "type": "array",
+                        "uniqueItems": true,
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "2014",
+                                "2013",
+                                "2012"
+                            ]
+                        }
+                    },
+                    "ask7_7": {
+                        "title": Quests['ask7_7'],
+                        "type": "array",
+                        "uniqueItems": true,
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "2014",
+                                "2013",
+                                "2012"
+                            ]
+                        }
+                    }
                 }
             },
-            "ask8": {
+
+                    "ask8": {
                 "title": Quests['ask8'],
                 "type": "string",
                 "uniqueItems": true,
                 "format": "select",
                 "enum": [
                     "Yes",
-                    "No",
-                    "Not sure"
+                    "No"
                 ]
             },
-			"ask9": {
-    			"title": Quests['ask9'],
-    			"type": "object",
-    			"properties": {
-    				"ask9_1": {
-						"title": Quests['ask9'],
-						"type": "string"
-					},
-    				"ask9_2": {
-						"title": Quests['ask9_2'],
-						"type": "string",
-						"uniqueItems": true,
-						"format": "select",
-						"enum": [
-							"Yes",
-							"No",
-							"Maybe"
-						]
-    				}	
-				}
-			},
+            "ask9": {
+                "title": Quests['ask9'],
+                "type": "string",
+                "uniqueItems": true,
+                "format": "select",
+                "enum": [
+                    "Yes, always/routinely",
+                    "Yes, when needed/when appropriate",
+                    "No"
+                ]
+            },
+
+
+            "ask9_1":  {
+                "title": Quests['ask9_1'],
+                "type": "array",
+                "uniqueItems": true,
+                "items": {
+                    "type": "string",
+                    "enum": [
+                        "Insufficient human resources",
+                        "Lack equipment",
+                        "Lack financial resources",
+                        "Lack of capabilities of skilled human resources"
+                    ]
+                }
+            },
+
+
             "ask10": {
                 "title": Quests['ask10'],
                 "type": "object",
                 "properties": {
+
                     "ask10_1": {
                         "title": Quests['ask10_1'],
-                        "type": "string",
+                        "type": "array",
                         "uniqueItems": true,
-                        "format": "select",
-                        "enum": [
-                            "Usually",
-                            "Sometimes",
-                            "No"
-                        ]
-                    },
-                    "ask10_1_1": {
-                        "title": Quests['ask10_1_1'],
-                        "type": "string"
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "Yes, always/routinely",
+                                "Yes, when needed/when appropriate",
+                                "No"
+                            ]
+                        }
                     },
                     "ask10_2": {
                         "title": Quests['ask10_2'],
-                        "type": "string",
+                        "type": "array",
                         "uniqueItems": true,
-                        "format": "select",
-                        "enum": [
-                            "Usually",
-                            "Sometimes",
-                            "No"
-                        ]
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "Yes, always/routinely",
+                                "Yes, when needed/when appropriate",
+                                "No"
+                            ]
+                        }
                     },
+
                     "ask10_3": {
                         "title": Quests['ask10_3'],
-                        "type": "string",
+                        "type": "array",
                         "uniqueItems": true,
-                        "format": "select",
-                        "enum": [
-                            "Usually",
-                            "Sometimes",
-                            "No"
-                        ]
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "Yes, always/routinely",
+                                "Yes, when needed/when appropriate",
+                                "No"
+                            ]
+                        }
                     },
                     "ask10_4": {
                         "title": Quests['ask10_4'],
-                        "type": "string",
+                        "type": "array",
                         "uniqueItems": true,
-                        "format": "select",
-                        "enum": [
-                            "Usually",
-                            "Sometimes",
-                            "No"
-                        ]
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "Yes, always/routinely",
+                                "Yes, when needed/when appropriate",
+                                "No"
+                            ]
+                        }
                     },
                     "ask10_5": {
-                        "title": Quests['ask10_4'],
-                        "type": "string",
+                        "title": Quests['ask10_5'],
+                        "type": "array",
                         "uniqueItems": true,
-                        "format": "select",
-                        "enum": [
-                            "Yes",
-                            "No",
-                            "Not sure"
-                        ]
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "Yes, always/routinely",
+                                "Yes, when needed/when appropriate",
+                                "No"
+                            ]
+                        }
+                    },
+                    "ask10_6": {
+                        "title": Quests['ask10_6'],
+                        "type": "array",
+                        "uniqueItems": true,
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "Yes, always/routinely",
+                                "Yes, when needed/when appropriate",
+                                "No"
+                            ]
+                        }
                     }
+
                 }
             },
+
             "ask11": {
                 "title": Quests['ask11'],
                 "type": "array",
@@ -164,9 +245,16 @@ define(['i18n!nls/questions'], function(Quests) {
                     ]
 				}
             },
-            "ask11_1": {
-                "title": Quests['ask11_1'],
+
+            "ask12": {
+                "title": Quests['ask12'],
                 "type": "string",
+                "uniqueItems": false,
+                "format": "select",
+                "enum": [
+                    "Yes",
+                    "No"
+                ]
             },
             "ask13": {
                 "title": Quests['ask13'],
@@ -175,8 +263,7 @@ define(['i18n!nls/questions'], function(Quests) {
                 "format": "select",
                 "enum": [
                     "Yes",
-                    "No",
-                    "Not sure"
+                    "No"
                 ]
             },
             "ask14": {
@@ -186,13 +273,8 @@ define(['i18n!nls/questions'], function(Quests) {
                 "format": "select",
                 "enum": [
                     "Yes",
-                    "No",
-                    "Not sure"
+                    "No"
                 ]
-            },
-            "ask14_1": {
-                "title": Quests['ask14_1'],
-                "type": "string",
             },
             "ask15": {
                 "title": Quests['ask15'],
@@ -200,10 +282,28 @@ define(['i18n!nls/questions'], function(Quests) {
                 "uniqueItems": false,
                 "format": "select",
                 "enum": [
+                    "After every new outbreak event.",
+                    " On a change in the epidemiological situation.",
+                    " The Control Plan is written but rarely or never applied."
+                ]
+            },
+
+            "ask16": {
+                "title": Quests['ask16'],
+                "type": "string",
+                "uniqueItems": false,
+                "format": "select",
+                "enum": [
                     "Yes",
                     "No"
+
                 ]
             }
+
+
+
+
+
         }
     };
 });

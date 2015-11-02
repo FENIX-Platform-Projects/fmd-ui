@@ -29,9 +29,10 @@ define({
 				"contact_person_3_2": "eMail:",
 
 		"cat1": "GENERAL INFORMATION",
+			"ask0":       "Transboundary Animal Diseases (TADs) are highly contagious epidemic diseases that can spread extremely rapidly, irrespective of national borders. They can cause high rates of death and/or disease in animals, thereby having serious socio-economic and sometimes public health consequences while constituting a constant threat to the livelihoods of livestock farmers.",
 
-			"ask1":       "1) Has your country identified a list of Priority Transboundary Animal Diseases (TAD)?",
-				"ask1_1": "If yes, list the 5 highest priority diseases",
+			"ask1":       "1) Has your country identified a list of Priority Transboundary Animal Diseases (TADs)?",
+				"ask1_1": "List the 5 diseases with the highest priority for your country:",
 
 		"cat2": "LIVESTOCK POPULATION",
 
@@ -100,75 +101,92 @@ define({
 
 		"cat5": "ANIMAL MOVEMENTS",
 
-			"ask5":        "5) Is animal movement monitored?",
-			"ask6":        "6) Are data routinely collected on the number, origin and destination of livestock traded?(Exclusive answers)",
+			"ask5":        "5) Is animal movement registered?",
+			"ask5_1":      "Please tell us in which sectors you monitor livestock movement",
+			"ask6":        "Are data regularly collected on the number, origin and destination of livestock movement? ",
+			"ask6_1":      "Please specify how often: ",
 
 		"cat6": "FMD OUTBREAKS",
 
-			"ask7":        "7) Number of FMD outbreaks detected in your country since 2012:      (An outbreak is defined as a FMD case in an epi-unit (farm, village, dip-tank location) with FMD clinical signs of FMD_ It does not refer to the number of animals affected within an epi-unit_)",
-			"ask7_1": "2014 (to date) ",
-						"ask7_1_1":"Number of FMD outbreaks detected",
-						"ask7_1_2":"Serotype(s) involved (if unknown, please indicate with ‘unk’)",
-			"ask7_2": "2013",	
-						"ask7_2_1":"Number of FMD outbreaks detected",
-						"ask7_2_2":"Serotype(s) involved (if unknown, please indicate with ‘unk’)",
-			"ask7_3": "2012",
-						"ask7_3_1":"Number of FMD outbreaks detected",
-						"ask7_3_2":"Serotype(s) involved (if unknown, please indicate with ‘unk’)",
-			
-			"ask8":        "8) Is there a laboratory specialized in FMD diagnosis in your country? (Exclusive answers)",
-			"ask9":        "9) When an outbreak of FMD is notified, is an outbreak investigation conducted? (Exclusive answers)",
-				"ask9_1":  "Other:",
-				"ask9_2":  "Would you need/want assistance to deal with outbreak investigation?",
+			"ask7":        "7) What are the FMD serotypes identified in your country since 2012?",
+			"ask7_1": "A",
+			"ask7_2": "O",
+			"ask7_3": "C",
+			"ask7_4": "SAT 1",
+			"ask7_5": "SAT 2",
+			"ask7_6": "SAT 3",
+			"ask7_7": "Asia 1",
 
-			"ask10":             "10) What activities are undertaken during an outbreak investigation(multiple choices)",
-				"ask10_1":       "a) Forward and backward tracing – attempting to identify routes of FMD virus transmission_ (exclusive answer)",
-					"ask10_1_1": "If no, why?",
-				"ask10_2":       "b) Sampling for confirmation – FMD laboratory diagnosis",
-				"ask10_3":       "c) Followed by identification of serotype",
-				"ask10_4":       "d) Followed by sequencing of genotype",
-				"ask10_5":       "e) Are samples shipped to an International Reference Laboratory for further analysis?",
+
+			
+			"ask8":        "8) Is there a national reference laboratory following OIE FMD standards and procedures? ",
+			"ask9":        "9)When an outbreak of FMD is identified, is there a system in place to carry out an outbreak epidemiological investigation?",
+				"ask9_1":  "Please specify the reasons:",
+
+
+			"ask10":             "10)From the following list, which activities are undertaken during an FMD outbreak investigation",
+				"ask10_1":       "Identification of risk factors for clinical FMD",
+
+				"ask10_2":       "Supporting farmers in preventing further spread of infection and taking care of affected livestock",
+				"ask10_3":       "Forward and backward tracing – attempting to identify routes of FMD virus transmission",
+				"ask10_4":       "Sampling are taken for confirmation and send to an FMD laboratory for diagnosis",
+				"ask10_5":       "Identification of the virus is followed by identification of the serotype",
+
+				"ask10_6": "Samples are sent either to a regional or to an international Reference Laboratory for further analysis",
 				
-			"ask11":       "11) What additional control measures are applied when an outbreak occurs in your country?(select all that apply)(multiple answer)",
-				"ask11_1": "Other:",
-			
-			"ask12":       "12) Has your country adopted legislation to enforce/support these measures? (exclusive answer)",
-			"ask13":       "13) Does your country have a written and government endorsed FMD Contingency Plan?",
-			"ask14":       "14) If yes, has your country implemented or exercised the FMD Contingency Plan within the last 12 months?",
-				"ask14_1": "If yes, please specify:",
+			"ask11":       "11) What additional control measures are applied when an outbreak occurs in your country? ",
 
-			"ask15":       "15) Is the written FMD Contingency Plan available for our review?",
+			"ask12":       "12) Does your country have a written and government endorsed FMD Control Plan? ",
+
+			"ask13":       "13) Is this control plan developed along the lines of a Risk-Based Strategy?",
+
+			"ask14":       "14) Has the country conducted FMD simulation exercises?",
+				"ask14_1": "When was the last simulation exercise performed?",
+
+			"ask15":       "15) In which situations is your country’s FMD Control Plan implemented?",
+
+			"ask16": "16) Is the written FMD Control Plan available?",
+
+
+
 
 		"cat7": "IDENTIFICATION OF RISK FACTORS AND HOTSPOTS",
 
-			"ask16":       "16) Has your country determined the risk factors for FMD?",
-				"ask16_1": "If yes, which year?",
-				"ask16_2": "Which risk factors have been identified? (Please, list approx_ 5)",
-			"ask17":       "17) Has your country determined risk hotspots for FMD?",
-				"ask17_1": "If yes, which year?",
-				"ask17_2": "Which risk hotspots have been identified? (Please, list approx_ 5)",
+			"ask17a":       "17 a) Has your country determined the risk factors for FMD?",
+
+
+			"ask17b": "17 b) Has your country identified the ris factors for FMD spread?",
+
+
+			"ask17_0a": " which risk factors (maximum five) have been identified?",
+			"ask17_0b": " which risk factors (maximum five) have been identified?",
+
+
+			"ask18":   "18) Has your country determined risk hotspots for FMD?",
+		    "ask18_1": " Could you please list a maximum of five risk hotspots that have been identified? ",
+
 
 		"cat8": "FMD CONTROL",
 
-			"ask18":         "18) Does your country have a written and government endorsed FMD control strategy?",
-
-			"ask18_1":       "18_1) If yes",
-				"ask18_1_1": "Which year was it endorsed?",
-				"ask18_1_2": "Is this control plan developed along the lines of a Risk-Based Strategy?",
-				"ask18_2":   "If No, would you like assistance to develop such a plan?",
 			"ask19":         "19) Are you familiar with Progressive Control Pathway for FMD control (PCP-FMD)?",
+
+			"ask20":       "20) What is/are the short term (1-3 years) and long term (5 – 10 years) objective(s) for 	controlling FMD in your country? ",
+				"ask20_1": "Short term 1-3 years",
+				"ask20_2": "Long term 5-10 years",
+
+			"ask21":         "21) Are you familiar with Progressive Control Pathway for FMD control (PCP-FMD)?",
 			
 		"cat9": "SOCIO-ECONOMIC IMPACT",
 
-			"ask20":        "20) Has the socio-economic impact of FMD been studied in your country? (exclusive)",
-				"ask20_1":  "If yes, In which year was the study conducted?",
-				"ask20_2":  "Which of the following sectors were included? (Multiple choices)",
-				"ask20_3":  "Is the report available for our review?",
-				"ask20_4":  "If possible, point of contact name and email:",
+			"ask201111":        "20) Has the socio-economic impact of FMD been studied in your country? (exclusive)",
+				"ask20_1111":  "If yes, In which year was the study conducted?",
+				"ask20_2111":  "Which of the following sectors were included? (Multiple choices)",
+				"ask20_31111":  "Is the report available for our review?",
+				"ask20_411111":  "If possible, point of contact name and email:",
 			
 		"cat10": "SEROSURVEILLANCE",
 
-			"ask21":        "21) Has your country conducted NSP serological surveillance with the purpose of estimating the prevalence of FMD viral circulation? (exclusive)",
+			"ask211111":        "21) Has your country conducted NSP serological surveillance with the purpose of estimating the prevalence of FMD viral circulation? (exclusive)",
 				"aks21_1":  "If yes, which year(s)?",
 				"aks21_2":  "Which attributes were included for the most recent survey? (check appropriate boxes)",
 				"ask21_3":  "Is there a report available for our review? (exclusive)",
