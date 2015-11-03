@@ -3,8 +3,6 @@ define(['i18n!nls/questions'], function(Quests) {
 	    "type": "object",
 	    "title": Quests['cat7'],
 	    "properties": {
-
-
 	        "ask17a": {
 	            "title": Quests['ask17a'],
 	            "type": "string",
@@ -13,7 +11,6 @@ define(['i18n!nls/questions'], function(Quests) {
 	            "enum": [
 	                "Yes",
 	                "No"
-
 	            ]
 	        },
 			"ask17_0a": {

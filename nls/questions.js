@@ -2,12 +2,14 @@ define({
 	"fr": false,
 	"root": {
 
-		"commons": {
-			"yes-of": "Yes, officially",
-			"yes-no": "Yes, not officially",
-			"no": "No",
-			"not": "Not sure"
-		},
+		"common_yesof": "Yes, officially",
+		"common_yesnof": "Yes, not officially",
+		"common_nosure": "Not sure",
+		"common_yes": "Yes",		
+		"common_no": "No",
+
+
+
 
 		"contact_info":       "Contact Information",
 			"contact_info_1": "Date",

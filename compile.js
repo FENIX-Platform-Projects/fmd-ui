@@ -22,6 +22,7 @@ require([
 		'text!html/questHead.html',
 
 		'schemas/contact',
+		'schemas/definitions',
 
 		'config/services',
 		'i18n!nls/questions',
@@ -39,6 +40,7 @@ require([
 		tmplHead,
 
 		schemaContact,
+		schemaDefinitions,
 
 		Config,
 		Quests,
@@ -161,7 +163,11 @@ require([
 
 			require([Config.dirSchema + id ], function(schema) {
 
+				schema.definitions = schemaDefinitions;
+
 				schema.lang = authMenu.lang;
+
+console.log(id,schema);
 
 				jsonForms[id] = new jsonForm('#'+id, {
 					schema: schema,
