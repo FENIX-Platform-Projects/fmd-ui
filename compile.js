@@ -24,7 +24,8 @@ require([
 		'schemas/contact',
 
 		'config/services',
-		'i18n!nls/questions'
+		'i18n!nls/questions',
+		'i18n!nls/jsoneditorErrors'
 	], function ($, _, bootstrap, Handlebars, bootstrapBtn, Amplify,
 		
 		renderAuthMenu,
@@ -40,7 +41,8 @@ require([
 		schemaContact,
 
 		Config,
-		Quests
+		Quests,
+		jsoneditorErrors
 	) {
 
 		var authMenu = renderAuthMenu(true);
@@ -131,6 +133,11 @@ require([
 					},
 					onSubmit: function(data) {
 						showQuestDetail({contact: data});
+					},
+					tmpl: {
+						languages: {
+							en: jsoneditorErrors
+						}
 					}
 				});
 			}

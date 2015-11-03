@@ -25,7 +25,8 @@ define({
 		"error_uniqueItems":"Array must have unique items",
 		"error_maxProperties":"Object must have at most {{0}} properties",
 		"error_minProperties":"Object must have at least {{0}} properties",
-		"error_required":"Object is missing the required property '{{0}}'",
+		//"error_required": 'Object is missing the required property {{0}}',
+		"error_required": 'Required field: {{0}}',
 		"error_additional_properties":"No additional properties allowed, but property {{0}} is set",
 		"error_dependency":"Must have property {{0}}"
 	}

@@ -2,10 +2,11 @@ define(['i18n!nls/questions'], function(Quests) {
     return {
         "type": "object",
         "title": Quests['contact_info'],
-
-/*        "required": ["country","name"],
-        "additionalProperties": false,
-*/
+        "required": [
+            "date",
+            "country",
+            "name"
+        ],
         "properties": {
             "date": {
                 "type": "string",
