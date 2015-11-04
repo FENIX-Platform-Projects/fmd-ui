@@ -1,18 +1,11 @@
 define(['i18n!nls/questions'], function(Quests) {
     return {
         "type": "object",
-        "title": Quests['cat8'],
+        "title": Quests['cat9'],
         "properties": {
             "ask20": {
                 "title": Quests['ask20'],
-                "type": "string",
-                "uniqueItems": true,
-                "format": "select",
-                "enum": [
-                    "Yes",
-                    "No",
-                    "Not sure"
-                ]
+                "$ref": "#/definitions/yesno_notsure"
             },
             "ask20_1": {
                 "title": Quests['ask20_1'],
@@ -37,13 +30,7 @@ define(['i18n!nls/questions'], function(Quests) {
             },
             "ask20_3": {
                 "title": Quests['ask20_3'],
-                "type": "string",
-                "uniqueItems": true,
-                "format": "select",
-                "enum": [
-                    "Yes",
-                    "No"
-                ]
+                "$ref": "#/definitions/yesno"
             },
             "ask20_4": {
                 "title": Quests['ask20_4'],

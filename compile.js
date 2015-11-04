@@ -40,7 +40,7 @@ require([
 		tmplHead,
 
 		schemaContact,
-		schemaDefinitions,
+		schemaDefs,
 
 		Config,
 		Quests,
@@ -123,6 +123,10 @@ require([
 			var id = $(e.target).attr('id');
 
 			if(id === 'coll-contact') {
+
+				schemaContact['lang'] = authMenu.lang;
+				schemaContact['definitions'] = schemaContact['definitions'] ? _.extend(schemaDefs, schemaContact['definitions']) : schemaDefs;
+
 				jsonForms.contact = new jsonForm('#form-contact', {
 					disable_collapse: false,
 					schema: schemaContact,
@@ -163,9 +167,8 @@ require([
 
 			require([Config.dirSchema + id ], function(schema) {
 
-				schema.definitions = schemaDefinitions;
-
-				schema.lang = authMenu.lang;
+				schema['lang'] = authMenu.lang;
+				schema['definitions'] = schema['definitions'] ? _.extend(schemaDefs, schema['definitions']) : schemaDefs;
 
 				jsonForms[id] = new jsonForm('#'+id, {
 					schema: schema,

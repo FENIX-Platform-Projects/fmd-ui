@@ -5,14 +5,7 @@ define(['i18n!nls/questions'], function(Quests) {
 		"properties": {
 			"ask3": {
 				"title": Quests['ask3'],
-				"type": "string",
-				"uniqueItems": true,
-				"format": "select",
-				"enum": [
-					"Yes",
-					"No",
-					"Partial"
-				]
+				"$ref": "#/definitions/yesno_partial"
 			},
 			"ask3_1": {
 				"title": Quests['ask3_1'],

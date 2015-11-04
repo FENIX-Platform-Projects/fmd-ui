@@ -2,12 +2,12 @@ define({
 	"fr": false,
 	"root": {
 
-		"common_yesof": "Yes, officially",
-		"common_yesnof": "Yes, not officially",
-		"common_nosure": "Not sure",
-		"common_yes": "Yes",		
-		"common_no": "No",
-
+		"yesof": "Yes, officially",
+		"yesnof": "Yes, not officially",
+		"notsure": "Not sure",
+		"yes": "Yes",		
+		"no": "No",
+		"partial": "Partial",
 
 
 
