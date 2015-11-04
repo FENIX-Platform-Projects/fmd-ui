@@ -13,13 +13,29 @@ define(['i18n!nls/questions'], function(Quests) {
 				"type": "array",
 				"minItems": 1,
 				"maxItems": 5,
+				"additionalItems":false,				
 				"items": {
 					"type": "string",
 					"title": " ",
 					"default": ""
-				},
-				"additionalItems":false
+				}
 			}
 		}
+/*		"properties": {
+			"ask1": {
+				"type": "object",
+				"title": Quests["ask1"]
+			}
+		},
+		"oneOf": [
+			{
+				"title": Quests["no"],
+				"type": "null"
+			},
+			{
+				"title": Quests["yes"],
+				"$ref": "#/definitions/items5"
+			}
+		]	*/	
 	};
 });

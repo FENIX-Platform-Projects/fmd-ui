@@ -36,21 +36,19 @@ define(['i18n!nls/questions'], function(Quests) {
 			"enum": [
 				Quests["yesof"],
 				Quests["yesnof"],
-				Quests["nosure"],
+				Quests["notsure"],
 				Quests["no"]
 			]
 		},
 		"yesno_always": {
-            "type": "array",
+            "type": "string",
             "uniqueItems": true,
-            "items": {
-                "type": "string",
-                "enum": [
-                    Quests["yesalways"],
-                    Quests["yesneeded"],
-                    Quests["no"]
-                ]
-            }
+            "format": "select",
+            "enum": [
+                Quests["yesalways"],
+                Quests["yesneeded"],
+                Quests["no"]
+            ]
         },
 		"years": {
 			"type": "number",
@@ -82,6 +80,17 @@ define(['i18n!nls/questions'], function(Quests) {
             	Quests["present"],
 				Quests["absent"],
             ]
+		},
+		"items5": {
+			"type": "array",
+			"minItems": 1,
+			"maxItems": 5,
+			"additionalItems":false,
+			"items": {
+				"type": "string",
+				"title": " ",
+				"default": ""
+			}
 		}
 	};
 });

@@ -56,10 +56,10 @@ require([
 		});
 
 		var formStore = new storeForm({
-				prefix: authMenu.username,
-				storeExpires: 100000,
-				autosaveLoader: '#sectionstorage-loader'
-			});
+			prefix: authMenu.username,
+			storeExpires: 100000,
+			autosaveLoader: '#sectionstorage-loader'
+		});
 
 		var currentQuestId = null;
 
@@ -170,8 +170,6 @@ require([
 				schema['lang'] = authMenu.lang;
 				schema['definitions'] = schema['definitions'] ? _.extend(schemaDefs, schema['definitions']) : schemaDefs;
 
-console.log(schema['definitions'])
-
 				jsonForms[id] = new jsonForm('#'+id, {
 					schema: schema,
 					values: formStore.getSections(id),
@@ -245,7 +243,7 @@ console.log(schema['definitions'])
 		});	
 
 		if(Config.debug) {
-			$('#btn-coll-quest').add('#sections .nav-pills a:eq(1)').trigger('click');
+			$('#btn-coll-quest').add('#sections .nav-pills a:eq(0)').trigger('click');
 		}
 
     });
