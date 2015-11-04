@@ -3,16 +3,22 @@ define(['i18n!nls/questions'], function(Quests) {
         "type": "object",
         "title": Quests['cat9'],
         "properties": {
-            "ask20": {
-                "title": Quests['ask20'],
-                "$ref": "#/definitions/yesno_notsure"
+            "ask22": {
+                "title": Quests['ask22'],
+                "type": "string",
+                "uniqueItems": true,
+                "format": "select",
+                "enum": [
+                    "Yes",
+                    "No"
+                ]
             },
-            "ask20_1": {
-                "title": Quests['ask20_1'],
+            "ask22_1": {
+                "title": Quests['ask22_1'],
                 "type": "string"
             },
-            "ask20_2": {
-                "title": Quests['ask20_2'],
+            "ask22_2": {
+                "title": Quests['ask22_2'],
                 "type": "array",
                 "uniqueItems": true,
                 "items": {
@@ -24,17 +30,21 @@ define(['i18n!nls/questions'], function(Quests) {
                         "Small ruminants",
                         "Pigs",
                         "Mixed livestock systems",
-                        "Other"
+                        "Pastoralist",
+                        "Silvo-pastoralist"
+
                     ]
                 }
             },
-            "ask20_3": {
-                "title": Quests['ask20_3'],
-                "$ref": "#/definitions/yesno"
-            },
-            "ask20_4": {
-                "title": Quests['ask20_4'],
-                "type": "string"
+            "ask22_3": {
+                "title": Quests['ask22_3'],
+                "type": "string",
+                "uniqueItems": true,
+                "format": "select",
+                "enum": [
+                    "Yes",
+                    "No"
+                ]
             }
         }
     };
