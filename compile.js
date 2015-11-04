@@ -167,8 +167,6 @@ require([
 
 				schema.lang = authMenu.lang;
 
-console.log(id,schema);
-
 				jsonForms[id] = new jsonForm('#'+id, {
 					schema: schema,
 					values: formStore.getSections(id),
@@ -239,7 +237,11 @@ console.log(id,schema);
 			$('#sections .nav-pills a').removeClass('saved');
 
 			showQuestDetail({});
-		});		
+		});	
+
+		if(Config.debug) {
+			$('#btn-coll-quest').add('#sections .nav-pills a:eq(1)').trigger('click');
+		}
 
     });
 });

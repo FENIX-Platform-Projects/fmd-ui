@@ -42,7 +42,7 @@ define(['underscore',
 
 		var menu = new Menu( menuConf );
 
-		if(_.contains(Config.privatePages, pagename) && !auth.isLogged())
+		if(_.contains(Config.privatePages, pagename) && !authorized)
 			window.location.replace('index.html');
         
         $('footer').load('html/footer.html');
