@@ -2,13 +2,18 @@ define({
 	"fr": false,
 	"root": {
 
-		"yesof": "Yes, officially",
-		"yesnof": "Yes, not officially",
-		"notsure": "Not sure",
 		"yes": "Yes",		
 		"no": "No",
+		"notsure": "Not sure",
+		
+		"yesof": "Yes, officially",
+		"yesnof": "Yes, not officially",
+		"yesalways": "Yes, always/routinely",
+        "yesneeded": "Yes, when needed/when appropriate",
+		
 		"partial": "Partial",
-
+		"present": "Present",
+		"absent": "Absent",
 
 
 		"contact_info":       "Contact Information",
@@ -148,7 +153,6 @@ define({
 			"ask15":       "15) In which situations is your country’s FMD Control Plan implemented?",
 
 			"ask16": "16) Is the written FMD Control Plan available?",
-
 
 
 

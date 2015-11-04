@@ -4,6 +4,91 @@
   "description": "D3S 2nd Level Metadata",
   "type": "object",
   "properties": {
+		"definitions": {
+		"yesno": {
+			"type": "string",
+			"uniqueItems": true,
+			"format": "select",
+			"enum": [
+				"Yes",
+				"No"
+			]
+		},
+		"yesno_partial": {
+			"type": "string",
+			"uniqueItems": true,
+			"format": "select",
+			"enum": [
+				"Yes",
+				"No",
+				"Partial"
+			]
+		},
+		"yesno_notsure": {
+			"type": "string",
+			"uniqueItems": true,
+			"format": "select",
+			"enum": [
+				"Yes",
+				"No",
+				"Not Sure"
+			]
+		},		
+		"yesno_official": {
+			"type": "string",
+			"uniqueItems": true,
+			"format": "select",
+			"enum": [
+				"Yes, officially",
+				"Yes, not officially",
+				"Not sure",
+				"No"
+			]
+		},
+		"yesno_always": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+                "type": "string",
+                "enum": [
+					"Yes, always/routinely",
+					"Yes, when needed/when appropriate",
+                    "No"
+                ]
+            }
+        },		
+		"years": {
+			"type": "number",
+			"uniqueItems": true,
+			"format": "select",
+			"default": 2015,
+			"enum": [
+				2000,2001,2002,2003,2004,
+				2005,2006,2007,2008,2009,
+				2010,2011,2012,2013,2014,
+				2015,2016,2017,2018,2019
+			]
+		},
+		"years_since2012": {
+			"type": "number",
+			"uniqueItems": true,
+			"format": "select",
+			"default": 2015,
+			"enum": [
+				2012,2013,2014,2015
+			]
+		},		
+		"presentabsent": {
+            "type": "string",
+            "uniqueItems": true,
+            "format": "select",
+            "default": "Absent",
+            "enum": [
+            	"Present",
+				"Absent",
+            ]
+		}
+	},  	
     "contact": {
       "title": "COMPILER INFORMATION",
       "type": "object",

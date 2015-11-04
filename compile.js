@@ -170,6 +170,8 @@ require([
 				schema['lang'] = authMenu.lang;
 				schema['definitions'] = schema['definitions'] ? _.extend(schemaDefs, schema['definitions']) : schemaDefs;
 
+console.log(schema['definitions'])
+
 				jsonForms[id] = new jsonForm('#'+id, {
 					schema: schema,
 					values: formStore.getSections(id),
