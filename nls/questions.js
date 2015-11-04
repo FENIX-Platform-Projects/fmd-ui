@@ -127,11 +127,11 @@ define({
 
 			
 			"ask8":        "8) Is there a national reference laboratory following OIE FMD standards and procedures? ",
-			"ask9":        "9)When an outbreak of FMD is identified, is there a system in place to carry out an outbreak epidemiological investigation?",
+			"ask9":        "9) When an outbreak of FMD is identified, is there a system in place to carry out an outbreak epidemiological investigation?",
 				"ask9_1":  "Please specify the reasons:",
 
 
-			"ask10":             "10)From the following list, which activities are undertaken during an FMD outbreak investigation",
+			"ask10":             "10) From the following list, which activities are undertaken during an FMD outbreak investigation",
 				"ask10_1":       "Identification of risk factors for clinical FMD",
 
 				"ask10_2":       "Supporting farmers in preventing further spread of infection and taking care of affected livestock",
@@ -324,33 +324,39 @@ define({
 
 		"cat13": "ACTIVITIES TO COMBINE FMD AND OTHER DISEASES CONTROL",
 
-			"ask33aaa":       "33) Does your country perform any activity which combines FMD surveillance and/or control with activities related to other diseases? (i_e, use of serum samples to test for more than one disease including FMD, awareness campaign targeting multiple diseases, combination of vaccination strategies__) (exclusive):",
-				"ask33_1aaa": "If yes, please indicate each activity and diseases addressed in each one:",
+			"ask35":       "35) . Does your country perform any activity which combines FMD surveillance and/or control with activities related to other diseases?",
+			"ask35_1": "Specify",
+
+		"ask35_2": "Please indicate each activity and diseases addressed in each one:",
+
+
+		"ask35_2a": "Disease",
+		"ask35_2b": "Activity",
+
+
 			
 		"cat14": "CHALLENGES",
 
-			"ask34aaa":       "34) Please indicate  the major challenges/difficulties your country is facing in controlling/eliminating FMD?  (Please,  Rank the  5 most significant challenges)",
-			"ask35":       "35) Please indicate which of the following areas your country desires technical assistance and capacity building to improve your FMD control? (Please,  Rank the 5 top priorities from the list below)",
-				"ask35_1": "Others:",
-			
+			"ask36":       "36) Please indicate a maximum of five major challenges/difficulties which your country is facing in	controlling/eliminating FMD? ",
+			"ask37":       "37) Please indicate in which of the following areas your country would benefit the most from receiving support to improve FMD control?",
+
 		"cat15": "GLOBAL FMD PORTFOLIO",
 
-			"ask36":               "36) Has your country participated in any specific activities, programs or projects that involve FMD surveillance and/or control in the last 3 years? (please list as appropriate)",
-				"ask36_0":         "Project",
-				"ask36_1":         "If yes:",
-				"ask36_1_1":       "What is the Geographic area of implementation? (exclusive)",
-				"ask36_1_2":       "Project status (exclusive):",
-				"ask36_1_3":       "Budget:",
-					"ask36_1_3_1": "a_ Amount (USD)",
-				"ask36_1_3_2":     "b_ Source of funds (multiple)",
-				"ask36_1_3_3":     "Donors:",
-				
-			"ask36_2":       "Title of the  project:",
-			"ask36_3":       "Objectives: (exclusive)",
-				"ask36_3_1": "If Development project (medium to long term)",
-			"ask36_4":       "Activities (multiple):",
-				"ask36_4_1": "Others:",
-			"ask36_5":       "Tools used: (multiple)",
-				"ask36_5_1": "Others:"
+		"ask38":       "38) Has your country been involved in any specific activities, programs or projects that involve FMD surveillance and/or control in the last 3 years?  ",
+
+		"ask39": "Project",
+		"ask39_1": "Name of the project",
+		"ask40":       "40) Project status",
+		"ask41":       "41) Which is/are/was/were the objective(s) that was/were covered by the project?",
+		"ask42":       "42) What is/was the Geographic area of implementation of the project?",
+		"ask43":       "43) What is/was the estimated budget of the project (in US Dollars):",
+		"ask43_1":       "Amount (USD)",
+		"ask43_2":       "Source of funds",
+		"ask43_3": 		 "Donors",
+		"ask43_4": 		 "Who is/are/was/were the implementer of the project",
+		"ask44": 		 "44) Which of the following activities were carried out as part of the project? ",
+		"ask44_1":       "Did you use the PCP tools for your FMD strategy?",
+		"ask44_2":       "Could you please tell us which tool did you use?"
+
 	}
 });

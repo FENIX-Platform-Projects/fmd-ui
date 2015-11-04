@@ -5,13 +5,7 @@ define(['i18n!nls/questions'], function(Quests) {
         "properties": {
             "ask22": {
                 "title": Quests['ask22'],
-                "type": "string",
-                "uniqueItems": true,
-                "format": "select",
-                "enum": [
-                    "Yes",
-                    "No"
-                ]
+                "$ref": "#/definitions/yesno"
             },
             "ask22_1": {
                 "title": Quests['ask22_1'],
@@ -38,13 +32,7 @@ define(['i18n!nls/questions'], function(Quests) {
             },
             "ask22_3": {
                 "title": Quests['ask22_3'],
-                "type": "string",
-                "uniqueItems": true,
-                "format": "select",
-                "enum": [
-                    "Yes",
-                    "No"
-                ]
+                "$ref": "#/definitions/yesno"
             }
         }
     };

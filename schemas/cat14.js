@@ -3,8 +3,8 @@ define(['i18n!nls/questions'], function(Quests) {
         "type": "object",
         "title": Quests['cat14'],
         "properties": {
-            "ask34": {
-                "title": Quests['ask34'],
+            "ask36": {
+                "title": Quests['ask36'],
                 "type": "array",
                 "minItems": 1,
                 "maxItems": 5,
@@ -15,29 +15,28 @@ define(['i18n!nls/questions'], function(Quests) {
                 },
                 "additionalItems": false
             },
-            "ask35": {
-                "title": Quests['ask35'],
-                "type": "string",
+
+            "ask37": {
+                "title": Quests['ask37'],
+                "type": "array",
                 "uniqueItems": true,
-                "format": "select",
-                "enum": [
-                    "Epidemiology training",
-                    "Laboratory training",
-                    "Development of FMD control strategy",
-                    "Development of laboratory capacity",
-                    "Regional coordination",
-                    "Training on surveillance",
-                    "Training on Risk Analysis",
-                    "Socio-Economic impact studies",
-                    "Development/implementation of legislation and Regulation",
-                    "Management of FMD emergencies",
-                    "Animal Identification",
-                    "Movement Control"
-                ]
-            },
-            "ask35_1": {
-                "title": Quests['ask35_1'],
-                "type": "string"
+                "items": {
+                    "type": "string",
+                    "enum": [
+                        "Epidemiology training",
+                        "Laboratory training",
+                        "Development of FMD control strategy",
+                        "Development of laboratory capacity",
+                        "Regional coordination",
+                        "Training on surveillance",
+                        "Training on Risk Analysis",
+                        "Socio-Economic impact studies",
+                        "Development/implementation of legislation and Regulation",
+                        "Management of FMD emergencies",
+                        "Animal Identification",
+                        "Movement Control"
+                    ]
+                }
             }
         }
 	};

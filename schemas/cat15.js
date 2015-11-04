@@ -3,18 +3,12 @@ define(['i18n!nls/questions'], function(Quests) {
         "type": "object",
         "title": Quests['cat15'],
         "properties": {
-            "ask36": {
-                "title": Quests['ask36'],                
-                "type": "string",
-                "uniqueItems": true,
-                "format": "select",
-                "enum": [
-                    "Yes",
-                    "No"
-                ]
+            "ask38": {
+                "title": Quests['ask38'],
+                "$ref": "#/definitions/yesno"
             },
-            "ask36_1": {
-                "title": Quests['ask36_1'],
+            "ask39": {
+                "title": Quests['ask39'],
                 "type": "array",
                 "format": "tabs",
                 "items": {
@@ -27,26 +21,21 @@ define(['i18n!nls/questions'], function(Quests) {
         },
         "definitions": {
             "project": {
-                "title": Quests['ask36_0'],
-                "type": "object",
+                "title": Quests['ask39'],
+
                 "properties": {
-                    "ask36_2": {
-                        "title": Quests['ask36_2'],
+
+
+
+
+
+
+                    "ask39_1": {
+                        "title": Quests['ask39_1'],
                         "type": "string"
-                    },                    
-                    "ask36_1_1": {
-                        "title": Quests['ask36_1_1'],
-                        "type": "string",
-                        "uniqueItems": true,
-                        "format": "select",
-                        "enum": [
-                            "Global",
-                            "Regional",
-                            "National"
-                        ]
                     },
-                    "ask36_1_2": {
-                        "title": Quests['ask36_1_2'],
+                    "ask40": {
+                        "title": Quests['ask40'],
                         "type": "string",
                         "uniqueItems": true,
                         "format": "select",
@@ -56,32 +45,8 @@ define(['i18n!nls/questions'], function(Quests) {
                             "Pipeline"
                         ]
                     },
-                    "ask36_1_3": {
-                        "title": Quests['ask36_1_3'],
-                        "type": "object",
-                        "properties": {
-                            "ask36_1_3_1": {
-                                "title": Quests['ask36_1_3_1'],
-                                "type": "number"
-                            },
-                            "ask36_1_3_2": {
-                                "title": Quests['ask36_1_3_2'],
-                                "type": "string",
-                                "uniqueItems": true,
-                                "format": "select",
-                                "enum": [
-                                    "National/Regional Budget",
-                                    "External Support"
-                                ]
-                            },
-                            "ask36_1_3_3": {
-                                "title": Quests['ask36_1_3_3'],
-                                "type": "string"
-                            }
-                        }
-                    },
-                    "ask36_3": {
-                        "title": Quests['ask36_3'],
+                    "ask41": {
+                        "title": Quests['ask41'],
                         "type": "string",
                         "uniqueItems": true,
                         "format": "select",
@@ -90,43 +55,106 @@ define(['i18n!nls/questions'], function(Quests) {
                             "Development project (medium to long term)"
                         ]
                     },
-                    "ask36_4": {
-                        "title": Quests['ask36_4'],
+                    "ask42": {
+                        "title": Quests['ask42'],
                         "type": "string",
-                        "uniqueItems": false,
+                        "uniqueItems": true,
                         "format": "select",
                         "enum": [
-                            "Epidemiology",
-                            "Prevention",
-                            "Early Detection",
-                            "Emergency Response",
-                            "Vaccination",
-                            "Laboratory Capacity",
-                            "Compensation",
-                            "Veterinary Services Capacity",
-                            "Communication",
-                            "Global/Regional Coordination",
-                            "Research"
+                            "Global",
+                            "Regional",
+                            "National"
                         ]
                     },
-                    "ask36_4_1": {
-                        "title": Quests['ask36_4_1'],
-                        "type": "string"
-                    },
-                    "ask36_4": {
-                        "title": Quests['ask36_5'],
-                        "type": "string",
-                        "uniqueItems": false,
-                        "format": "select",
-                        "enum": [
-                            "FMD PCP",
-                            "OIE Performance of Veterinary Services Pathway (PVS)"
-                        ]
-                    },
-                    "ask36_5": {
-                        "title": Quests['ask36_5'],
-                        "type": "string"
+
+                    "ask43":{
+                        "title": Quests["ask43"],
+                        "type":"object",
+                        "properties":{
+
+                            "ask43_1":{
+                                "title": Quests["ask43_1"],
+                                "type":"string"
+                            },
+                            "ask43_2":{
+                                "title": Quests["ask43_2"],
+                                "type":"string",
+                                "uniqueItems": true,
+                                "format": "select",
+                                "enum": [
+                                    "National/Regional Budget",
+                                    "International donors"
+                                ]
+
+                            },
+                            "ask43_3":{
+
+                                "title": Quests["ask43_3"],
+                                "type":"string"
+                            },
+                            "ask43_4":{
+                                "title": Quests["ask43_4"],
+                                "type":"string"
+
+                            },
+
+                            "ask44":{
+                                "title": Quests["ask44"],
+                                "type":"string",
+                                "uniqueItems": true,
+                                "format": "select",
+                                "enum": [
+                                    "Epidemiology",
+                                    "Prevention",
+                                    "Early Detection",
+                                    "Emergency Response",
+                                    "Vaccination",
+                                    "Laboratory Capacity",
+                                    "Compensation",
+                                    "Veterinary Services Capacity",
+                                    "Communication",
+                                    "Global/Regional Coordination",
+                                    "Research"
+                                ]
+
+                            },
+
+
+                            "ask44_1":{
+                                "title": Quests["ask44_1"],
+                                "$ref": "#/definitions/yesno"
+
+                            },
+                            "ask44_2":{
+                                "title": Quests["ask44_2"],
+                                "type":"string"
+
+                            }
+
+
+
+                        }
+
+
+
                     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 }
             }
         }
