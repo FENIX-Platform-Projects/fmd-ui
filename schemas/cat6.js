@@ -45,19 +45,49 @@ define(['i18n!nls/questions'], function(Quests) {
                 "$ref": "#/definitions/yesno"
             },
 
-            "ask9": {
+/*            "ask9": {
                 "title": Quests['ask9'],
                 "type": "string",
                 "uniqueItems": true,
                 "format": "select",
                 "enum": [
-                    "Yes, always/routinely",
-                    "Yes, when needed/when appropriate",
-                    Quests['no']
+                    Quests["yesalways"],
+                    Quests["yesneeded"],
+                    Quests["no"]
                 ]
-            },
+            },*/
 
-            "ask9_1":  {
+            "ask9": {
+                "title": Quests['ask9'],
+                "oneOf": [
+                    {
+                        "title": Quests["yesalways"],
+                        "type": "null"
+                    },
+                    {
+                        "title": Quests["yesneeded"],
+                        "type": "null"
+                    },
+                    {
+                        "title": Quests["no"],
+                        "description": Quests['ask9_1'],
+                        "type": "array",
+                        "uniqueItems": true,
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "Insufficient human resources",
+                                "Lack equipment",
+                                "Lack financial resources",
+                                "Lack of capabilities of skilled human resources"
+                            ]
+                        }
+                    }                 
+
+                ]
+            },            
+
+/*            "ask9_1":  {
                 "title": Quests['ask9_1'],
                 "type": "array",
                 "uniqueItems": true,
@@ -70,7 +100,7 @@ define(['i18n!nls/questions'], function(Quests) {
                         "Lack of capabilities of skilled human resources"
                     ]
                 }
-            },
+            },*/
 
             "ask10": {
                 "title": Quests['ask10'],
