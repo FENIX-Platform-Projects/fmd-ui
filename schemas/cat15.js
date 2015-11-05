@@ -4,32 +4,33 @@ define(['i18n!nls/questions'], function(Quests) {
         "title": Quests['cat15'],
         "properties": {
             "ask38": {
-                "title": Quests['ask38'],
-                "$ref": "#/definitions/yesno"
-            },
-            "ask39": {
-                "title": Quests['ask39'],
-                "type": "array",
-                "format": "tabs",
-                "items": {
-                    "$ref": "#/definitions/project"
-                },
-                "minItems": 1,
-                "maxItems": 3,
-                "additionalItems": false
-            }
+               "title": Quests['ask38'],
+               "oneOf": [
+                   {
+                       "title": Quests["no"],
+                        "type": "null"
+                   },
+                   {
+                        "title": Quests["yes"],
+                        "description": Quests['ask39'],
+                       "type": "array",
+                       "format": "tabs",
+                       "items": {
+                            "$ref": "#/definitions/project"
+                        },
+                        "minItems": 1,
+                            "maxItems": 3,
+                            "additionalItems": false
+                        }
+                   }
+               ]
+           }
         },
         "definitions": {
             "project": {
                 "title": Quests['ask39'],
 
                 "properties": {
-
-
-
-
-
-
                     "ask39_1": {
                         "title": Quests['ask39_1'],
                         "type": "string"
@@ -138,25 +139,9 @@ define(['i18n!nls/questions'], function(Quests) {
 
 
                     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                }
+                     }
             }
+
         }
     };
 });

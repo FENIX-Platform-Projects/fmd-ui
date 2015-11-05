@@ -171,7 +171,7 @@ define({
 
 
 		"cat7": "IDENTIFICATION OF RISK FACTORS AND HOTSPOTS",
-
+			"ask17_0":       "Risk factors are those management, environmental, socio-economic and production factors that increase the	risk of introduction of FMD infection and / or transmission. For example: trading cattle back and forward from animal markets is an important risk factor for both introduction and transmission of the FMD virus. Risk factor is an epidemiological term, identified through statistical analysis",
 			"ask17a":       "17 a) Has your country determined the risk factors for FMD?",
 
 			"ask17b": "17 b) Has your country identified the ris factors for FMD spread?",
@@ -196,15 +196,15 @@ define({
 			"ask21":         "21) Are you familiar with Progressive Control Pathway for FMD control (PCP-FMD)?",
 			
 		"cat9": "SOCIO-ECONOMIC IMPACT",
-
-			"ask22":        "22) Has the socio-economic impact of FMD been studied in your country? (exclusive)",
+			"ask_22_0":"Social indicators include for example impact in poverty, whether related to income or social and living conditions, and access to adequate nutrition. Economic indicators include public and private costs of an outbreak, as well as the costs of the measures taken in order to control or prevent the disease and disease outbreaks.",
+				"ask22":        "22) Has the socio-economic impact of FMD been studied in your country? (exclusive)",
 				"ask22_1": "In which year was conducted that assessment?",
 				"ask22_2":  "Which of the following sectors were included?",
 				"ask22_3":  "Is there any evidence of the socio-economic impact assessment?",
 
 			
 		"cat10": "SEROSURVEILLANCE",
-
+			"ask23_0":"Social indicators include for example impact in poverty, whether related to income or social and living conditions, and access to adequate nutrition. Economic indicators include public and private costs of an	outbreak, as well as the costs of the measures taken in order to control or prevent the disease and disease	outbreaks.",
 			"ask23":        "23) Has your country conducted non-structural protein (NSP) serological surveillance with the purpose of estimating the true prevalence of FMD viral circulation?",
 				"ask23_1":  "When was serological surveillance conducted last?",
 				"ask23_2":  "Which attributes were included for the most recent survey?",
@@ -325,7 +325,7 @@ define({
 
 			"cat12": "EPIDEMIOLOGY AND LABORATORY NETWORKS",
 
-			"ask32":       "31) Does your country belong to any Epidemiology Network?",
+			"ask32":       "32) Does your country belong to any Epidemiology Network?",
 				"ask32_1": "Please provide the names of the network and the countries involved:",
 			"ask33":       "33) Does your country belong to any Laboratory Network which deals with FMD control?",
 				"ask33_1": "Please provide the names of the network and the countries involved:",
@@ -336,7 +336,7 @@ define({
 
 		"cat13": "ACTIVITIES TO COMBINE FMD AND OTHER DISEASES CONTROL",
 
-			"ask35":       "35) . Does your country perform any activity which combines FMD surveillance and/or control with activities related to other diseases?",
+			"ask35": "35) . Does your country perform any activity which combines FMD surveillance and/or control with activities related to other diseases?",
 			"ask35_1": "Specify",
 
 		"ask35_2": "Please indicate each activity and diseases addressed in each one:",
