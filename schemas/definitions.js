@@ -55,6 +55,42 @@ define(['i18n!nls/questions'], function(Quests) {
                 Quests["no"]
             ]
         },
+		"yesno_sectors": {
+            "type": "string",
+            "oneOf": [
+	            {
+                    "title": "Yes, all the individuals",
+                    "type": "null",
+                },
+                {
+            	    "title": "Yes, in some sectors",
+                    "description": Quests['ask4_1_1'],
+                    "type": "string"
+                },
+                {
+                    "title": Quests["no"],
+                    "type": "null",
+                }
+	        ]
+        },
+		"yesno_movements": {
+            "type": "string",
+            "oneOf": [
+	            {
+                    "title": "Yes, all movements",
+                    "type": "null",
+                },
+                {
+            	    "title": "Yes, in some sectors",
+                    "description": Quests['ask5_1'],
+                    "type": "string"
+                },
+                {
+                    "title": Quests["no"],
+                    "type": "null",
+                }
+	        ]
+        },        
 		"years": {
 			"type": "number",
 			"uniqueItems": true,

@@ -5,29 +5,22 @@ define(['i18n!nls/questions'], function(Quests) {
 		"properties": {
 			"ask5": {
 				"title": Quests['ask5'],
-				"type":"string",
-				"uniqueItems": true,
-				"format":"select",
-				"enum":[
-					Quests['yesmove'],
-					Quests['yessome'],
-					Quests['no']
-				]
-			},
-			"ask5_1": {
-				"title": Quests['ask5_1'],
-				"type":"string",
+				"$ref": "#/definitions/yesno_movements"
 			},
 
 			"ask6": {
 				"title": Quests['ask6'],
-				"$ref": "#/definitions/yesno"		
-			},
-
-			"ask6_1": {
-				"title": Quests['ask6_1'],
-				"type": "string",
-
+	            "oneOf": [
+		            {
+	                    "title": Quests["no"],
+	                    "type": "null",
+	                },
+	                {
+	            	    "title": Quests["yes"],
+	                    "description": Quests['ask6_1'],
+	                    "type": "string"
+	                }
+		        ]
 			}
 		}		
 	}

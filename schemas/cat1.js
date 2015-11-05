@@ -34,14 +34,9 @@ define(['i18n!nls/questions'], function(Quests) {
 					},		
 					{
 						"title": Quests["yes"],
-						"type": "object",
-						"properties": {
-							"ask1_1": {
-								"title": Quests['ask1_1'],
-								"type": "array",
-								"$ref": "#/definitions/items5"	
-							}
-						}
+						"description": Quests['ask1_1'],
+						"type": "array",
+						"$ref": "#/definitions/items5"	
 					}
 				]
 			}
