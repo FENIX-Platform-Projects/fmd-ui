@@ -10,7 +10,10 @@ define({
 		"yesnof": "Yes, not officially",
 		"yesalways": "Yes, always/routinely",
         "yesneeded": "Yes, when needed/when appropriate",
-		
+
+		"yesmove": "Yes, all movements",
+		"yessome": "Yes, in some sectors",
+
 		"partial": "Partial",
 		"present": "Present",
 		"absent": "Absent",
@@ -93,7 +96,7 @@ define({
 		"cat3": "FARM REGISTER",
 
 			"ask3":       "3) Is there an official livestock establishment registration system in your country?",
-				"ask3_1": "Please, specify the sector(s):",
+				"ask3_1": "If partial, please, specify the sector(s):",
 
 		"cat4": "ANIMAL IDENTIFICATION",
 
@@ -110,8 +113,9 @@ define({
 
 			"ask5":        "5) Is animal movement registered?",
 			"ask5_1":      "Please tell us in which sectors you monitor livestock movement",
-			"ask6":        "Are data regularly collected on the number, origin and destination of livestock movement? ",
-			"ask6_1":      "Please specify how often: ",
+			
+			"ask6":        "6) Are data regularly collected on the number, origin and destination of livestock movement? ",
+			"ask6_1":      "If you answer Yes, please specify how often: ",
 
 		"cat6": "FMD OUTBREAKS",
 
@@ -160,7 +164,6 @@ define({
 		"cat7": "IDENTIFICATION OF RISK FACTORS AND HOTSPOTS",
 
 			"ask17a":       "17 a) Has your country determined the risk factors for FMD?",
-
 
 			"ask17b": "17 b) Has your country identified the ris factors for FMD spread?",
 

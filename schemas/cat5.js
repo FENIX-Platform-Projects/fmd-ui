@@ -9,11 +9,10 @@ define(['i18n!nls/questions'], function(Quests) {
 				"uniqueItems": true,
 				"format":"select",
 				"enum":[
-					"Yes, all movements",
-					"Yes, in some sectors",
-					"No"
-				]		
-				
+					Quests['yesmove'],
+					Quests['yessome'],
+					Quests['no']
+				]
 			},
 			"ask5_1": {
 				"title": Quests['ask5_1'],

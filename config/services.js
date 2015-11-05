@@ -1,7 +1,7 @@
 define(['underscore'], function(_) {
 	return {
 		
-		debug: true,
+		debug: false,
 
 		dbName: "FMD",
 		dbCollectionData: "survey",		

@@ -44,6 +44,7 @@ define(['i18n!nls/questions'], function(Quests) {
                 "title": Quests['ask8'],
                 "$ref": "#/definitions/yesno"
             },
+
             "ask9": {
                 "title": Quests['ask9'],
                 "type": "string",
@@ -52,10 +53,9 @@ define(['i18n!nls/questions'], function(Quests) {
                 "enum": [
                     "Yes, always/routinely",
                     "Yes, when needed/when appropriate",
-                    "No"
+                    Quests['no']
                 ]
             },
-
 
             "ask9_1":  {
                 "title": Quests['ask9_1'],

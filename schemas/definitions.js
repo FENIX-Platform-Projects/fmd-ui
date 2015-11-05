@@ -85,7 +85,7 @@ define(['i18n!nls/questions'], function(Quests) {
 			"type": "array",
 			"minItems": 1,
 			"maxItems": 5,
-			"additionalItems":false,
+			"additionalItems": false,
 			"items": {
 				"type": "string",
 				"title": " ",
