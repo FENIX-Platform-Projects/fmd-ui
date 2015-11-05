@@ -123,14 +123,17 @@ define(['i18n!nls/questions'], function(Quests) {
 
             "ask12": {
                 "title": Quests['ask12'],
+               "description":  Quests['ask12_0'],
                 "$ref": "#/definitions/yesno"
             },
             "ask13": {
                 "title": Quests['ask13'],
+                "description":  Quests['ask13_0'],
                 "$ref": "#/definitions/yesno"
             },
             "ask14": {
                 "title": Quests['ask14'],
+                "description":  Quests['ask14_0'],
                 "$ref": "#/definitions/yesno"
             },
             "ask15": {

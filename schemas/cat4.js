@@ -2,6 +2,7 @@ define(['i18n!nls/questions'], function(Quests) {
 	return {
 		"type": "object",
 		"title": Quests['cat4'],
+		"description": Quests['ask4_0'],
 		"properties": {
 			"ask4": {
 				"type":"object",

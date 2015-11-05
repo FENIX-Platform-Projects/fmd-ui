@@ -39,10 +39,11 @@ define({
 				"contact_person_3_2": "eMail:",
 
 		"cat1": "GENERAL INFORMATION",
+
 			"ask0":       "Transboundary Animal Diseases (TADs) are highly contagious epidemic diseases that can spread extremely rapidly, irrespective of national borders. They can cause high rates of death and/or disease in animals, thereby having serious socio-economic and sometimes public health consequences while constituting a constant threat to the livelihoods of livestock farmers.",
 
 			"ask1":       "1) Has your country identified a list of Priority Transboundary Animal Diseases (TADs)?",
-				"ask1_1": "List the 5 diseases with the highest priority for your country:",
+				"ask1_1": "If yes, list the 5 diseases with the highest priority for your country:",
 
 		"cat2": "LIVESTOCK POPULATION",
 
@@ -95,11 +96,13 @@ define({
 
 		"cat3": "FARM REGISTER",
 
+
+			"ask3_0": "Farm register refers to a national identification system, supported by the appropriate national regulation, which assigns a unique identification number to premises and owners within a country.",
 			"ask3":       "3) Is there an official livestock establishment registration system in your country?",
 				"ask3_1": "If partial, please, specify the sector(s):",
 
 		"cat4": "ANIMAL IDENTIFICATION",
-
+			"ask4_0": "Animal identification and recording (AIR) refers to a national identification and recording system, supported by the appropriate national regulation, which assigns a unique identification number for 			individual animals or groups of animals.",
 			"ask4":             "4) Is there an official system of animal identification and registration?",
 				"ask4_1":       "a) Large Ruminants:",
 					"ask4_1_1": "Please, specify the sector(s):",
@@ -112,7 +115,7 @@ define({
 		"cat5": "ANIMAL MOVEMENTS",
 
 			"ask5":        "5) Is animal movement registered?",
-			"ask5_1":      "Please tell us in which sectors you monitor livestock movement",
+			"ask5_1":      "If you answer “Yes, in some sectors”, please tell us in which sectors you monitor livestock movement",
 			
 			"ask6":        "6) Are data regularly collected on the number, origin and destination of livestock movement? ",
 			"ask6_1":      "If you answer Yes, please specify how often: ",
@@ -132,7 +135,7 @@ define({
 			
 			"ask8":        "8) Is there a national reference laboratory following OIE FMD standards and procedures? ",
 			"ask9":        "9) When an outbreak of FMD is identified, is there a system in place to carry out an outbreak epidemiological investigation?",
-				"ask9_1":  "Please specify the reasons:",
+				"ask9_1":  "If NO, please specify the reasons:",
 
 
 			"ask10":             "10) From the following list, which activities are undertaken during an FMD outbreak investigation",
@@ -147,12 +150,18 @@ define({
 				
 			"ask11":       "11) What additional control measures are applied when an outbreak occurs in your country? ",
 
-			"ask12":       "12) Does your country have a written and government endorsed FMD Control Plan? ",
+			"ask12":       "12) Does your country have a written and government endorsed FMD Control Plan?* ",
+		"ask12_0":       "* Control plans are sets of well-structured and clearly-stated documents that describe policies, strategies and procedures for effective disease-control response to high-threat diseases, such as FMD.",
 
-			"ask13":       "13) Is this control plan developed along the lines of a Risk-Based Strategy?",
 
+
+
+		"ask13":       "13) If Yes, is this control plan developed along the lines of a Risk-Based Strategy?",
+		"ask13_0": "In a risk-based strategy the intervention measures target risk hotspots. These measures are selected according their effectiveness at reducing the probability of occurrence and spread of FMD.as well as the impact of an outbreak. Usually these measures will be identified through risk analysis",
 			"ask14":       "14) Has the country conducted FMD simulation exercises?",
-				"ask14_1": "When was the last simulation exercise performed?",
+
+		"ask14_0": "Simulation exercises: The purpose of simulation exercises for FMD is to test and strengthen the management response to events involving and FMD outbreak. This includes testing the country capacity to	communicate within and between the countries and with international organizations, and the ability to prioritise tasks at national and local level.",
+				"ask14_1": "If Yes, when was the last simulation exercise performed?",
 
 			"ask15":       "15) In which situations is your country’s FMD Control Plan implemented?",
 
