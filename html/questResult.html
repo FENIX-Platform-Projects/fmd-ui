@@ -1,15 +1,15 @@
 
 <tr class="fmd-quest-result">
 	{{#with contact}}
-	<td>{{date}}</td>
-	<td>{{name}}</td>
-	<td>{{country}}</td>
-	<td>
+	<td class="col-xs-2">{{#if date}} {{date}} {{else}} - {{/if}}</td>
+	<td class="col-xs-2">{{#if name}} {{name}} {{else}} - {{/if}}</td>
+	<td class="col-xs-2">{{#if country}} {{country}} {{else}} - {{/if}}</td>
+	<td class="col-xs-2">
 		{{#if email}}  {{email}}  <br />{{/if}}
 		{{#if phone}}  {{phone}}  <br />{{/if}}
 	</td>
 	{{/with}}
-	<td class="text-right">
+	<td class="col-xs-3 text-right">
 		{{#if isMy}}
 			<a class="btn-edit btn btn-xs" href="compile.html#edit/{{_id.$oid}}">
 				<i class="fa fa-edit"></i> <small>Edit</small>

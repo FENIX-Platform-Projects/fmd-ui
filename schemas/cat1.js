@@ -1,12 +1,12 @@
 define(['i18n!nls/questions'], function(Quests) {
 	return {
-		"type": "object",
+/*		"type": "object",
 		"title": Quests['cat1'],
 		"description": Quests['ask0'],
 		"properties": {
 			"ask1": {
 				"title": Quests["ask1"],
-				"$ref": "#/definitions/yesno_official"
+				"$ref": "#/definitions/yesno"
 			},
 			"ask1_1": {		
 				"title": Quests['ask1_1'],
@@ -20,22 +20,31 @@ define(['i18n!nls/questions'], function(Quests) {
 					"default": ""
 				}
 			}
-		}
-/*		"properties": {
+		}*/
+		"type": "object",
+		"title": Quests['cat1'],
+		"description": Quests['ask0'],
+		"properties": {
 			"ask1": {
-				"type": "object",
-				"title": Quests["ask1"]
+				"title": Quests["ask1"],
+				"oneOf": [
+					{
+						"title": Quests["no"],
+						"type": "null"
+					},		
+					{
+						"title": Quests["yes"],
+						"type": "object",
+						"properties": {
+							"ask1_1": {
+								"title": Quests['ask1_1'],
+								"type": "array",
+								"$ref": "#/definitions/items5"	
+							}
+						}
+					}
+				]
 			}
-		},
-		"oneOf": [
-			{
-				"title": Quests["no"],
-				"type": "null"
-			},
-			{
-				"title": Quests["yes"],
-				"$ref": "#/definitions/items5"
-			}
-		]	*/	
+		}
 	};
 });

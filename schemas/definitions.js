@@ -4,6 +4,7 @@ define(['i18n!nls/questions'], function(Quests) {
 			"type": "string",
 			"uniqueItems": true,
 			"format": "select",
+			"default": Quests["yes"],
 			"enum": [
 				Quests["yes"],
 				Quests["no"]
@@ -13,6 +14,7 @@ define(['i18n!nls/questions'], function(Quests) {
 			"type": "string",
 			"uniqueItems": true,
 			"format": "select",
+			"default": Quests["yes"],
 			"enum": [
 				Quests["yes"],
 				Quests["no"],
@@ -23,6 +25,7 @@ define(['i18n!nls/questions'], function(Quests) {
 			"type": "string",
 			"uniqueItems": true,
 			"format": "select",
+			"default": Quests["yes"],
 			"enum": [
 				Quests["yes"],
 				Quests["no"],
@@ -33,6 +36,7 @@ define(['i18n!nls/questions'], function(Quests) {
 			"type": "string",
 			"uniqueItems": true,
 			"format": "select",
+			"default": Quests["yesof"],
 			"enum": [
 				Quests["yesof"],
 				Quests["yesnof"],
@@ -44,6 +48,7 @@ define(['i18n!nls/questions'], function(Quests) {
             "type": "string",
             "uniqueItems": true,
             "format": "select",
+            "default": Quests["yesalways"],
             "enum": [
                 Quests["yesalways"],
                 Quests["yesneeded"],

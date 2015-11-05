@@ -131,7 +131,7 @@ require([
 					disable_collapse: false,
 					schema: schemaContact,
 					
-					values: Config.debug ? {} : formStore.getSections('contact'),
+					values: formStore.getSections('contact'),
 
 					onChange: function(data) {
 						formStore.addSection('contact', data);
@@ -142,10 +142,8 @@ require([
 					onSubmit: function(data) {
 						showQuestDetail({contact: data});
 					},
-					tmpl: {
-						languages: {
-							en: jsoneditorErrors
-						}
+					languages: {
+						en: jsoneditorErrors
 					}
 				});
 			}
@@ -175,7 +173,7 @@ require([
 				jsonForms[id] = new jsonForm('#'+id, {
 					schema: schema,
 					
-					values: Config.debug ? {} : formStore.getSections(id),
+					values: formStore.getSections(id),
 
 					onChange: function(data) {
 						formStore.addSection(id, data);
@@ -187,10 +185,8 @@ require([
 						formStore.removeSection(id);
 						$pill.removeClass('saved');
 					},
-					tmpl: {
-						languages: {
-							en: jsoneditorErrors
-						}
+					languages: {
+						en: jsoneditorErrors
 					}					
 				});
 

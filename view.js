@@ -122,11 +122,13 @@ require([
 						_.each(data, function(quest) {
 
 							quest.filename = 'fmd_';
-							if(quest.contact && quest.contact.name && quest.contact.date)
-								quest.filename += quest.contact.name+'_'+quest.contact.date;
-							quest.filename += '.pdf';
+							if(quest.contact && quest.contact.name && quest.contact.date) {
+								
+								quest.contact.date = moment(quest.contact.date).format('DD/MM/YYYY');
 
-							quest.contact.date = moment(quest.contact.date).format('DD/MM/YYYY');
+								quest.filename += quest.contact.name+'_'+quest.contact.date;
+							}
+							quest.filename += '.pdf';
 
 							quest.isMy = (authMenu.isAdmin || quest.username === authMenu.username);
 
