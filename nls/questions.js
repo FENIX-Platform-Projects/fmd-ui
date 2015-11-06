@@ -115,7 +115,7 @@ define({
 		"cat5": "ANIMAL MOVEMENTS",
 
 			"ask5":        "5) Is animal movement registered?",
-			"ask5_1":      "If you answer “Yes, in some sectors”, please tell us in which sectors you monitor livestock movement",
+			"ask5_1":      "Please tell us in which sectors you monitor livestock movement",
 			
 			"ask6":        "6) Are data regularly collected on the number, origin and destination of livestock movement? ",
 			"ask6_1":      "If you answer Yes, please specify how often: ",
@@ -161,6 +161,7 @@ define({
 		"ask13":       "13) If Yes, is this control plan developed along the lines of a Risk-Based Strategy?",
 		"ask13_0": "In a risk-based strategy the intervention measures target risk hotspots. These measures are selected according their effectiveness at reducing the probability of occurrence and spread of FMD.as well as the impact of an outbreak. Usually these measures will be identified through risk analysis",
 			"ask14":       "14) Has the country conducted FMD simulation exercises?",
+
 
 		"ask14_0": "Simulation exercises: The purpose of simulation exercises for FMD is to test and strengthen the management response to events involving and FMD outbreak. This includes testing the country capacity to	communicate within and between the countries and with international organizations, and the ability to prioritise tasks at national and local level.",
 				"ask14_1": "If Yes, when was the last simulation exercise performed?",
