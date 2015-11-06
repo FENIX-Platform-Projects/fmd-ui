@@ -2577,6 +2577,12 @@ thead {
   float: left;
   margin-right: 20px
 }
+.quest-owner {
+  font-size: 11px;
+  color: #aaa
+}
+
+
 
 .bootstrap-datetimepicker-widget {
   font-family: 'Glyphicons Halflings' !important;
@@ -2596,3 +2602,4 @@ body.page-edit #btn-pub-quest span.new,
 body.page-edit #btn-reset-quest span.new {
   display: none;
 }
+

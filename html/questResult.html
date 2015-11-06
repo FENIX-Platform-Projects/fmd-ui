@@ -1,7 +1,9 @@
 
 <tr class="fmd-quest-result">
 	{{#with contact}}
-	<td class="col-xs-2">{{#if date}} {{date}} {{else}} - {{/if}}</td>
+	<td class="col-xs-2">
+		{{#if date}} {{date}} {{else}} - {{/if}}
+	</td>
 	<td class="col-xs-2">{{#if name}} {{name}} {{else}} - {{/if}}</td>
 	<td class="col-xs-2">{{#if country}} {{country}} {{else}} - {{/if}}</td>
 	<td class="col-xs-2">
@@ -17,11 +19,11 @@
 			<a class="btn-del btn btn-xs" data-id="{{_id.$oid}}" href="#">
 				<i class="fa fa-trash"></i> <small>Delete</small>
 			</a>
-		{{else}}
-			<small class="text-mutde">User owner: <i>{{username}}</i> &nbsp;&nbsp;</small>
 		{{/if}}
 		<a class="btn-pdf btn btn-xs" data-id="{{_id.$oid}}" data-filename="{{filename}}" href="#">
 			<i class="fa fa-file-pdf-o"></i> <small>Download</small>
-		</a>		
+		</a>
+		<br >
+		<small class="quest-owner">User owner: <i>{{username}}</i> </small>
 	</td>
 </tr>
