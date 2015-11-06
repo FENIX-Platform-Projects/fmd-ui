@@ -4,7 +4,7 @@ define(['underscore'], function(_) {
 		debug: false,
 
 		dbName: "FMD",
-		dbCollectionData: "survey",		
+		dbCollectionData: "survey",
 		dbCollectionSchemas: "schemas",
 
 		dirSchema: "schemas/",
@@ -23,9 +23,15 @@ define(['underscore'], function(_) {
 		adminUser: "admin@fao.org",
 
 		sections: (function() {
-			var secs = _.map(_.range(1, 16), function(i) {
+			/*var secs = _.map(_.range(1, 16), function(i) {
 				return 'cat'+i;
-			});
+			});*/
+			var secs = [
+				'cat1','cat2','cat3','cat4','cat5',
+				'cat6','cat6b',
+				'cat7','cat8','cat9',
+				'cat10','cat11','cat12','cat13','cat14','cat15','cat16','cat17'
+			];
 			//HIDDEN SECTIONS
 			return secs;//_.without(secs,'cat11');
 		})(),

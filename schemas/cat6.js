@@ -40,22 +40,11 @@ define(['i18n!nls/questions'], function(Quests) {
                     }
                 }
             },
+            
             "ask8": {
                 "title": Quests['ask8'],
                 "$ref": "#/definitions/yesno"
             },
-
-/*            "ask9": {
-                "title": Quests['ask9'],
-                "type": "string",
-                "uniqueItems": true,
-                "format": "select",
-                "enum": [
-                    Quests["yesalways"],
-                    Quests["yesneeded"],
-                    Quests["no"]
-                ]
-            },*/
 
             "ask9": {
                 "title": Quests['ask9'],
@@ -70,37 +59,27 @@ define(['i18n!nls/questions'], function(Quests) {
                     },
                     {
                         "title": Quests["no"],
-                        "description": Quests['ask9_1'],
-                        "type": "array",
-                        "uniqueItems": true,
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "Insufficient human resources",
-                                "Lack equipment",
-                                "Lack financial resources",
-                                "Lack of capabilities of skilled human resources"
-                            ]
+                        "type": "object",
+                        "properties": {
+                            "ask9_1": {
+                                "title": Quests['ask9_1'],
+                                "type": "array",
+                                "uniqueItems": true,
+                                "items": {
+                                    "type": "string",
+                                    "enum": [
+                                        "Insufficient human resources",
+                                        "Lack equipment",
+                                        "Lack financial resources",
+                                        "Lack of capabilities of skilled human resources"
+                                    ]
+                                }
+                            }
                         }
                     }                 
 
                 ]
-            },            
-
-/*            "ask9_1":  {
-                "title": Quests['ask9_1'],
-                "type": "array",
-                "uniqueItems": true,
-                "items": {
-                    "type": "string",
-                    "enum": [
-                        "Insufficient human resources",
-                        "Lack equipment",
-                        "Lack financial resources",
-                        "Lack of capabilities of skilled human resources"
-                    ]
-                }
-            },*/
+            },
 
             "ask10": {
                 "title": Quests['ask10'],
@@ -149,37 +128,6 @@ define(['i18n!nls/questions'], function(Quests) {
                         "Emergency vaccination"
                     ]
 				}
-            },
-
-            "ask12": {
-                "title": Quests['ask12'],
-               "description":  Quests['ask12_0'],
-                "$ref": "#/definitions/yesno"
-            },
-            "ask13": {
-                "title": Quests['ask13'],
-                "description":  Quests['ask13_0'],
-                "$ref": "#/definitions/yesno"
-            },
-            "ask14": {
-                "title": Quests['ask14'],
-                "description":  Quests['ask14_0'],
-                "$ref": "#/definitions/yesno"
-            },
-            "ask15": {
-                "title": Quests['ask15'],
-                "type": "string",
-                "uniqueItems": false,
-                "format": "select",
-                "enum": [
-                    "After every new outbreak event.",
-                    "On a change in the epidemiological situation.",
-                    "The Control Plan is written but rarely or never applied."
-                ]
-            },
-            "ask16": {
-                "title": Quests['ask16'],
-                "$ref": "#/definitions/yesno"
             }
         }
     };
