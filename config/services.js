@@ -9,7 +9,7 @@ define(['underscore'], function(_) {
 
 		dirSchema: "schemas/",
 		//TODO use WDS for load schema from DB
-		reportPdfUrlSchema: "http://fenixrepo.fao.org/demo/fmd-ui-new/schemas/jsonschema_pdf.json",
+		reportPdfUrlSchema: "http://fenix.fao.org/demo/fmd-ui-new/schemas/jsonschema_pdf.json",
 		//reportPdfUrl: "http://kalimaha-fao.device.fao.org:8080",
 		//reportPdfUrl: "http://fenixapps2.fao.org/fenixExport",
 		//reportPdfUrl: "http://fenixapps2.fao.org/fenixExport-demo",

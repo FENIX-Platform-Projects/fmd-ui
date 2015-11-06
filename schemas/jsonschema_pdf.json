@@ -3,123 +3,90 @@
   "title": "MDSD",
   "description": "D3S 2nd Level Metadata",
   "type": "object",
-  "properties": {
-		"definitions": {
-		"yesno": {
-			"type": "string",
-			"uniqueItems": true,
-			"format": "select",
-			"enum": [
-				"Yes",
-				"No"
-			]
-		},
-		"yesno_partial": {
-			"type": "string",
-			"uniqueItems": true,
-			"format": "select",
-			"enum": [
-				"Yes",
-				"No",
-				"Partial"
-			]
-		},
-		"yesno_notsure": {
-			"type": "string",
-			"uniqueItems": true,
-			"format": "select",
-			"enum": [
-				"Yes",
-				"No",
-				"Not Sure"
-			]
-		},		
-		"yesno_official": {
-			"type": "string",
-			"uniqueItems": true,
-			"format": "select",
-			"enum": [
-				"Yes, officially",
-				"Yes, not officially",
-				"Not sure",
-				"No"
-			]
-		},
-		"yesno_always": {
-            "type": "array",
-            "uniqueItems": true,
-            "items": {
-                "type": "string",
-                "enum": [
-					"Yes, always/routinely",
-					"Yes, when needed/when appropriate",
-                    "No"
-                ]
-            }
-        },		
-		"years": {
-			"type": "number",
-			"uniqueItems": true,
-			"format": "select",
-			"default": 2015,
-			"enum": [
-				2000,2001,2002,2003,2004,
-				2005,2006,2007,2008,2009,
-				2010,2011,2012,2013,2014,
-				2015,2016,2017,2018,2019
-			]
-		},
-		"years_since2012": {
-			"type": "number",
-			"uniqueItems": true,
-			"format": "select",
-			"default": 2015,
-			"enum": [
-				2012,2013,2014,2015
-			]
-		},		
-		"presentabsent": {
-            "type": "string",
-            "uniqueItems": true,
-            "format": "select",
-            "default": "Absent",
-            "enum": [
-            	"Present",
-				"Absent",
-            ]
-		}
-	},  	
+  "properties": {  	
     "contact": {
       "title": "COMPILER INFORMATION",
       "type": "object",
       "properties": {
-        "date": {
-            "type": "string",
-            "title": "Date",
-            "format": "date"
-        },
-        "country": {
-            "type": "string",
-            "title": "Country name"
-        },
-        "name": {
-            "type": "string",
-            "title": "Name"
-        },
-        "email": {
-            "type": "string",
-            "title": "Email",
-            "format": "email"
-        }, 
-        "phone": {
-            "type": "integer",
-            "title": "Phone",
-            "format": "number"
-        },
-        "street": {
-            "type": "string",
-            "title": "Street"
-        }
+            "date": {
+                "type": "string",
+                "title": "Date",
+                "format": "date"
+            },
+            "country": {
+                "type": "string",
+                "title": "Country"
+            },
+            "name": {
+                "type": "string",
+                "title": "Author"
+            },         
+            "email": {
+                "type": "string",
+                "title": "Email",
+                "format": "email"
+            }, 
+            "phone": {
+                "type": "integer",
+                "title": "Phone",
+                "format": "number"
+            },
+            "street": {
+                "type": "string",
+                "title": "Street address"
+            },
+            "person": {
+                "title": "Please, complete the person in contact for each which applied",
+                "type": "object",
+                "options": {
+                    "disable_collapse": false,
+                    "collapsed": true
+                },                
+                "properties": {
+                    "contact_1": {
+                        "title": "FMD PCP specialist:",
+                        "type": "object",
+                        "properties": {
+                            "contact_person_1_1": {
+                                "title": "Name:",
+                                "type": "string"
+                            },
+                            "contact_person_1_2": {
+                                "title": "eMail",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "contact_person_2": {
+                        "title": "FMD Laboratory specialist",
+                        "type": "object",
+                        "properties": {
+                            "contact_person_2_1": {
+                                "title": "Name",
+                                "type": "string"
+                            },
+                            "contact_person_2_2": {
+                                "title": "eMail:",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "contact_person_3": {
+                        "title": "FMD Epidemiology specialist",
+                        "type": "object",
+                        "properties": {
+                            "contact_person_3_1": {
+                                "title": "Name",
+                                "type": "string"
+                            },
+                            "contact_person_3_2": {
+                                "title": "eMail:",
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            }
       }
     },
     "cat1": {
