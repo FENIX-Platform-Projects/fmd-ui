@@ -103,7 +103,7 @@ define({
 
 		"cat4": "ANIMAL IDENTIFICATION",
 			"ask4_0": "Animal identification and recording (AIR) refers to a national identification and recording system, supported by the appropriate national regulation, which assigns a unique identification number for 			individual animals or groups of animals.",
-			"ask4":             "4) Is there an official system of animal identification and registration?",
+			"ask4":             "4) Is there an official system of animal identification and recording (AIR) system?",
 				"ask4_1":       "a) Large Ruminants:",
 					"ask4_1_1": "Please, specify the sector(s):",
 				"ask4_2":       "b) Small Ruminants:",
@@ -172,7 +172,8 @@ define({
 
 		"cat7": "IDENTIFICATION OF RISK FACTORS AND HOTSPOTS",
 			"ask17_0":       "Risk factors are those management, environmental, socio-economic and production factors that increase the	risk of introduction of FMD infection and / or transmission. For example: trading cattle back and forward from animal markets is an important risk factor for both introduction and transmission of the FMD virus. Risk factor is an epidemiological term, identified through statistical analysis",
-			"ask17a":       "17 a) Has your country determined the risk factors for FMD?",
+
+				"ask17a":       "17 a) Has your country determined the risk factors for FMD introduction?",
 
 			"ask17b": "17 b) Has your country identified the ris factors for FMD spread?",
 
@@ -193,7 +194,7 @@ define({
 				"ask20_1": "Short term 1-3 years",
 				"ask20_2": "Long term 5-10 years",
 
-			"ask21":         "21) Are you familiar with Progressive Control Pathway for FMD control (PCP-FMD)?",
+			"ask21":         "21) What are the key indicators to know if your FMD control strategy is working?",
 			
 		"cat9": "SOCIO-ECONOMIC IMPACT",
 			"ask_22_0":"Social indicators include for example impact in poverty, whether related to income or social and living conditions, and access to adequate nutrition. Economic indicators include public and private costs of an outbreak, as well as the costs of the measures taken in order to control or prevent the disease and disease outbreaks.",
