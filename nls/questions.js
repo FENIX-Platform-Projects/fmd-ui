@@ -151,12 +151,11 @@ define({
 			"ask11":       "11) What additional control measures are applied when an outbreak occurs in your country? ",
 
 
-		
+		"cat6b": "CONTROL PLAN",
+	
+			"ask12_0":       "* Control plans are sets of well-structured and clearly-stated documents that describe policies, strategies and procedures for effective disease-control response to high-threat diseases, such as FMD.",
 
 			"ask12":       "12) Does your country have a written and government endorsed FMD Control Plan?* ",
-		"ask12_0":       "* Control plans are sets of well-structured and clearly-stated documents that describe policies, strategies and procedures for effective disease-control response to high-threat diseases, such as FMD.",
-
-
 
 
 		"ask13":       "13) If Yes, is this control plan developed along the lines of a Risk-Based Strategy?",
