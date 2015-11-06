@@ -64,12 +64,20 @@ define(['i18n!nls/questions'], function(Quests) {
                 },
                 {
             	    "title": "Yes, in some sectors",
-                    "description": Quests['ask4_1_1'],
-                    "type": "string"
+					"type":"object",
+					"properties":{
+						"ask4_1_1":{
+
+							"title":Quests["ask4_1_1"],
+							"type":"string"
+						}
+
+					}
+
                 },
                 {
                     "title": Quests["no"],
-                    "type": "null",
+                    "type": "null"
                 }
 	        ]
         },
@@ -78,12 +86,20 @@ define(['i18n!nls/questions'], function(Quests) {
             "oneOf": [
 	            {
                     "title": "Yes, all movements",
-                    "type": "null",
+                    "type": "null"
                 },
                 {
             	    "title": "Yes, in some sectors",
-                    "description": Quests['ask5_1'],
-                    "type": "string"
+					"type":"object",
+					"properties":{
+						"ask5_1":{
+						"title": Quests['ask5_1'],
+						"type": "string"
+						}
+					}
+
+
+
                 },
                 {
                     "title": Quests["no"],

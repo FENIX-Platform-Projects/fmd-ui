@@ -4,7 +4,7 @@ define(['i18n!nls/questions'], function(Quests) {
 		"title": Quests['cat1'],
 		"description": Quests['ask3_0'],
 		"properties": {
-			"ask1": {
+			"ask3": {
 				"title": Quests["ask3"],
 				"oneOf": [
 					{
@@ -20,8 +20,16 @@ define(['i18n!nls/questions'], function(Quests) {
 					{
 						"title":Quests["partial"],
 						"description": Quests['ask3_1'],
-						"type": "array",
-						"$ref": "#/definitions/items5"
+						"type": "object",
+						"properties": {
+
+							"ask3_1": {
+								"title": Quests['ask1_1'],
+								"type": "array",
+								"$ref": "#/definitions/items5"
+							}
+
+						}
 					}
 				]
 			}

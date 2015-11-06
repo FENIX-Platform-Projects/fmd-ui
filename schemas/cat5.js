@@ -17,8 +17,13 @@ define(['i18n!nls/questions'], function(Quests) {
 	                },
 	                {
 	            	    "title": Quests["yes"],
-	                    "description": Quests['ask6_1'],
+						"type":"object",
+						"properties":{
+							"ask6_1":{
+	                    "title": Quests['ask6_1'],
 	                    "type": "string"
+							}
+						}
 	                }
 		        ]
 			}

@@ -44,7 +44,7 @@ define({
 
 			"ask1":       "1) Has your country identified a list of Priority Transboundary Animal Diseases (TADs)?",
 				"ask1_1": "If yes, list the 5 diseases with the highest priority for your country:",
-
+		"ask1_2": "Is the disease notifiable?",
 		"cat2": "LIVESTOCK POPULATION",
 
 			"ask2":       "2) Please, provide information on population of FMD-susceptible livestock and wild life in your country? (Multiple answer, fill in the boxes)",
@@ -149,6 +149,9 @@ define({
 				"ask10_6": "Samples are sent either to a regional or to an international Reference Laboratory for further analysis",
 				
 			"ask11":       "11) What additional control measures are applied when an outbreak occurs in your country? ",
+
+
+		
 
 			"ask12":       "12) Does your country have a written and government endorsed FMD Control Plan?* ",
 		"ask12_0":       "* Control plans are sets of well-structured and clearly-stated documents that describe policies, strategies and procedures for effective disease-control response to high-threat diseases, such as FMD.",
