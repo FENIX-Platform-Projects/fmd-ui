@@ -18,6 +18,8 @@ define(['i18n!nls/questions'], function(Quests) {
 
             "ask37": {
                 "title": Quests['ask37'],
+                "description":Quests["ask37_descr"],
+
                 "type": "array",
                 "uniqueItems": true,
                 "items": {

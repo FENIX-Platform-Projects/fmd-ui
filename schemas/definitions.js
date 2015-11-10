@@ -138,17 +138,37 @@ define(['i18n!nls/questions'], function(Quests) {
 				Quests["absent"],
             ]
 		},
-		"items5": {
-			"type": "array",
-			"minItems": 1,
-			"maxItems": 5,
-			"additionalItems": false,
-			"items": {
-				"type": "string",
-				"title": " ",
-				"default": ""
-			}
-		},	
+
+         "desease":{
+                    "title":" ",
+                    "type":"object",
+                    "properties":{
+                        "ask1_1a":{
+                        "title": Quests["ask1_1a"],
+                        "type": "string",
+                            "default": ""},
+                        "ask1_1b":{
+                            "title":Quests["ask1_1b"],
+                            "$ref": "#/definitions/yesno"
+                        }
+
+                    }
+
+                },
+
+        "items5":{
+            "type": "array",
+            "minItems": 1,
+            "maxItems":5,
+            "additionalItems": false,
+            "items":{ "type": "string",
+                "title": " ",
+                "default": ""}
+
+        },
+
+
+
 		"project": {
             "title": Quests['ask39'],
             "type": "object",
@@ -214,39 +234,63 @@ define(['i18n!nls/questions'], function(Quests) {
                         "ask43_4": {
                             "title": Quests["ask43_4"],
                             "type": "string"
-                        },
-                        "ask44": {
-                            "title": Quests["ask44"],
-                            "type": "string",
-                            "uniqueItems": true,
-                            "format": "select",
-                            "enum": [
-                                "Epidemiology",
-                                "Prevention",
-                                "Early Detection",
-                                "Emergency Response",
-                                "Vaccination",
-                                "Laboratory Capacity",
-                                "Compensation",
-                                "Veterinary Services Capacity",
-                                "Communication",
-                                "Global/Regional Coordination",
-                                "Research"
-                            ]
-
-                        },
-                        "ask44_1": {
-                            "title": Quests["ask44_1"],
-                            "$ref": "#/definitions/yesno"
-
-                        },
-                        "ask44_2": {
-                            "title": Quests["ask44_2"],
-                            "type": "string"
                         }
                     }
-                }
-            }
-        }
+                },
+                        "ask44": {
+                            "title": Quests["ask44"],
+                            "description": Quests["ask37_descr"],
+
+                            "type": "array",
+                            "uniqueItems": true,
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "Epidemiology",
+                                    "Prevention",
+                                    "Early Detection",
+                                    "Emergency Response",
+                                    "Vaccination",
+                                    "Laboratory Capacity",
+                                    "Compensation",
+                                    "Veterinary Services Capacity",
+                                    "Communication",
+                                    "Global/Regional Coordination",
+                                    "Research"
+                                ]
+
+                            }
+                        },
+                            "ask44_1": {
+                                "title": Quests["ask44_1"],
+                                "oneOf": [
+
+                                    {
+                                        "title": Quests["no"],
+                                        "type": "null"
+                                    },
+                                    {
+                                        "title": Quests["yes"],
+                                        "type": "object",
+                                        "properties": {
+                                            "ask44_2": {
+                                                "title": Quests["ask44_2"],
+                                                "type": "string"
+                                            }
+
+                                        }
+                                    }
+
+
+                                ]
+                            }
+                        }
+                    }
+
+
+
+
+
+
 	};
 });

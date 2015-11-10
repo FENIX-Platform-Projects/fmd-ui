@@ -19,12 +19,12 @@ define(['i18n!nls/questions'], function(Quests) {
 
 					{
 						"title":Quests["partial"],
-						"description": Quests['ask3_1'],
+
 						"type": "object",
 						"properties": {
 
 							"ask3_1": {
-								"title": Quests['ask1_1'],
+								"title": Quests['ask3_1'],
 								"type": "array",
 								"$ref": "#/definitions/items5"
 							}

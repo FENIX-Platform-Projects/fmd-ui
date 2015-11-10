@@ -6,6 +6,7 @@ define(['i18n!nls/questions'], function(Quests) {
         "properties": {
             "ask22": {
              "title": Quests['ask22'],
+
              "oneOf": [
                  {
                   "title": Quests["no"],
@@ -17,10 +18,11 @@ define(['i18n!nls/questions'], function(Quests) {
                   "properties": {
                       "ask22_1": {
                         "title": Quests['ask22_1'],
-                        "type": "string"
+                          "$ref": "#/definitions/years"
                       },
                       "ask22_2": {
                         "title": Quests['ask22_2'],
+                          "description":Quests["ask22_descr"],
                         "type": "array",
                         "uniqueItems": true,
                         "items": {

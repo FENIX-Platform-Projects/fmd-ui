@@ -38,6 +38,7 @@ define(['i18n!nls/questions'], function(Quests) {
 
 			"ask18": {
 				"title": Quests['ask18'],
+				"description":Quests["ask18_0"],
 				"oneOf": [
 					{
 						"title": Quests["no"],

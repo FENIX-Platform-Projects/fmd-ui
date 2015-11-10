@@ -14,7 +14,7 @@ define(['i18n!nls/questions'], function(Quests) {
 
                          "ask23_1": {
                          "title": Quests['ask23_1'],
-                         "type": "string"
+                              "$ref": "#/definitions/years"
                          },
                          "ask23_2": {
                          "title": Quests['ask23_2'],

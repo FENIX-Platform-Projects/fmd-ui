@@ -14,15 +14,13 @@ define(['i18n!nls/questions'], function(Quests) {
 					{
 						"title": Quests["yes"],
 						"description": Quests['ask1_1'],
-						"type": "object",
-						"properties": {
-
-							"ask1_1": {
-								"title": Quests['ask1_1'],
-								"type": "array",
-								"$ref": "#/definitions/items5"
-							}
-
+						"type": "array",
+						"format": "tabs",
+						"minItems": 1,
+						"maxItems": 3,
+						"additionalItems": false,
+						"items": {
+							"$ref": "#/definitions/desease"
 						}
 					}
 				]

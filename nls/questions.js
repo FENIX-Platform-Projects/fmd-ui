@@ -44,12 +44,15 @@ define({
 
 			"ask1":       "1) Has your country identified a list of Priority Transboundary Animal Diseases (TADs)?",
 				"ask1_1": "If yes, list the 5 diseases with the highest priority for your country:",
-		"ask1_2": "Is the disease notifiable?",
+		"ask1_1a": "Desease",
+
+		"ask1_1b": "Is the disease notifiable?",
+
 		"cat2": "LIVESTOCK POPULATION",
 
 			"ask2":       "2) Please, provide information on population of FMD-susceptible livestock and wild life in your country? (Multiple answer, fill in the boxes)",
 
-			"ask2_1":      "2_1) Domestic Species",
+			"ask2_1":      "Domestic Species",
 
 			"ask2_1_1":    "Cattle",
 				"ask2_1_1_1":  "Number",
@@ -72,7 +75,7 @@ define({
 				"ask2_1_6_1":  "Number",
 				"ask2_1_6_2":  "Census year",
 
-			"ask2_2":			 "2_2) FMD susceptible Wild Life species",
+			"ask2_2":			 "FMD susceptible Wild Life species",
 			"ask2_2_1": 		"Buffalo",
 				"ask2_2_1_1": 		"presence",
 				"ask2_2_1_2": 		"Approximate population number (if known)",
@@ -90,7 +93,7 @@ define({
 				"ask2_2_5_1":			"presence",
 				"ask2_2_5_2":			"Approximate population number (if known)",
 
-			"ask2_2_6": 	"Other (specify)",
+			"ask2_2_6": 	"Wild goats",
 				"ask2_2_6_1":			"presence",
 				"ask2_2_6_2":			"Approximate population number (if known)",
 
@@ -115,7 +118,7 @@ define({
 		"cat5": "ANIMAL MOVEMENTS",
 
 			"ask5":        "5) Is animal movement registered?",
-			"ask5_1":      "Please tell us in which sectors you monitor livestock movement",
+			"ask5_1":      "Please tell us in which sectors you monitor livestock movement:",
 			
 			"ask6":        "6) Are data regularly collected on the number, origin and destination of livestock movement? ",
 			"ask6_1":      "If you answer Yes, please specify how often: ",
@@ -135,7 +138,7 @@ define({
 			
 			"ask8":        "8) Is there a national reference laboratory following OIE FMD standards and procedures? ",
 			"ask9":        "9) When an outbreak of FMD is identified, is there a system in place to carry out an outbreak epidemiological investigation?",
-				"ask9_1":  "If NO, please specify the reasons:",
+				"ask9_1":  "Please specify the reasons:",
 
 
 			"ask10":             "10) From the following list, which activities are undertaken during an FMD outbreak investigation",
@@ -153,14 +156,16 @@ define({
 
 		"cat6b": "CONTROL PLAN",
 	
-			"ask12_0":       "* Control plans are sets of well-structured and clearly-stated documents that describe policies, strategies and procedures for effective disease-control response to high-threat diseases, such as FMD.",
+			"ask12_0":       "Control plans are sets of well-structured and clearly-stated documents that describe policies, strategies and procedures for effective disease-control response to high-threat diseases, such as FMD.",
 
-			"ask12":       "12) Does your country have a written and government endorsed FMD Control Plan?* ",
+			"ask12":       "12) Does your country have a written and government endorsed FMD Control Plan? ",
 
 
 		"ask13":       "13) If Yes, is this control plan developed along the lines of a Risk-Based Strategy?",
 		"ask13_0": "In a risk-based strategy the intervention measures target risk hotspots. These measures are selected according their effectiveness at reducing the probability of occurrence and spread of FMD.as well as the impact of an outbreak. Usually these measures will be identified through risk analysis",
-			"ask14":       "14) Has the country conducted FMD simulation exercises?",
+
+
+					"ask14":       "14) Has the country conducted FMD simulation exercises?",
 
 
 		"ask14_0": "Simulation exercises: The purpose of simulation exercises for FMD is to test and strengthen the management response to events involving and FMD outbreak. This includes testing the country capacity to	communicate within and between the countries and with international organizations, and the ability to prioritise tasks at national and local level.",
@@ -174,18 +179,20 @@ define({
 
 
 		"cat7": "IDENTIFICATION OF RISK FACTORS AND HOTSPOTS",
-			"ask17_0":       "Risk factors are those management, environmental, socio-economic and production factors that increase the	risk of introduction of FMD infection and / or transmission. For example: trading cattle back and forward from animal markets is an important risk factor for both introduction and transmission of the FMD virus. Risk factor is an epidemiological term, identified through statistical analysis",
+			"ask17_0":       "Risk factors are those management, environmental, socio-economic and production factors that increase the	risk of introduction of FMD infection and / or transmission. For example: trading cattle back and forward from animal markets is an important risk factor for both introduction and transmission of the FMD virus. Risk factor is an epidemiological term, identified through statistical analysis.",
 
 				"ask17a":       "17 a) Has your country determined the risk factors for FMD introduction?",
 
 			"ask17b": "17 b) Has your country identified the ris factors for FMD spread?",
 
 
-			"ask17_0a": " which risk factors (maximum five) have been identified?",
-			"ask17_0b": " which risk factors (maximum five) have been identified?",
+			"ask17_0a": " Which risk factors (maximum five) have been identified?",
+			"ask17_0b": " Which risk factors (maximum five) have been identified?",
 
 
 			"ask18":   "18) Has your country determined risk hotspots for FMD?",
+
+		"ask18_0":   "Risk hotspots are defined as geographical areas, production sectors, age categories or practices conducted by people that pose a particular high risk of FMD transmission or that suffer a great impact from FMD infection. Risk hotspots are determined based on the collation of surveillance information from different sources such as value-chain analysis, impact assessment, serological studies, etc.",
 		    "ask18_1": " Could you please list a maximum of five risk hotspots that have been identified? ",
 
 
@@ -202,13 +209,15 @@ define({
 		"cat9": "SOCIO-ECONOMIC IMPACT",
 			"ask_22_0":"Social indicators include for example impact in poverty, whether related to income or social and living conditions, and access to adequate nutrition. Economic indicators include public and private costs of an outbreak, as well as the costs of the measures taken in order to control or prevent the disease and disease outbreaks.",
 				"ask22":        "22) Has the socio-economic impact of FMD been studied in your country? (exclusive)",
+		"ask22_descr":"*Please press ctrl to activate the multiple selection",
+
 				"ask22_1": "In which year was conducted that assessment?",
-				"ask22_2":  "Which of the following sectors were included?",
+				"ask22_2":  "Which of the following sectors were included?*",
 				"ask22_3":  "Is there any evidence of the socio-economic impact assessment?",
 
 			
 		"cat10": "SEROSURVEILLANCE",
-			"ask23_0":"Social indicators include for example impact in poverty, whether related to income or social and living conditions, and access to adequate nutrition. Economic indicators include public and private costs of an	outbreak, as well as the costs of the measures taken in order to control or prevent the disease and disease	outbreaks.",
+			"ask23_0":"Serosurveillance refers to the implementation a a sampling protocol aiming to gather serological evidence of FMD virus circulation by detection of antibodies against non-structural proteins (NSPs) of FMD virus in	serum samples, which is used as an indicator of virus exposure.",
 			"ask23":        "23) Has your country conducted non-structural protein (NSP) serological surveillance with the purpose of estimating the true prevalence of FMD viral circulation?",
 				"ask23_1":  "When was serological surveillance conducted last?",
 				"ask23_2":  "Which attributes were included for the most recent survey?",
@@ -341,7 +350,7 @@ define({
 		"cat13": "ACTIVITIES TO COMBINE FMD AND OTHER DISEASES CONTROL",
 
 			"ask35": "35) . Does your country perform any activity which combines FMD surveillance and/or control with activities related to other diseases?",
-			"ask35_1": "Specify",
+			"ask35_1": "Specify:",
 
 		"ask35_2": "Please indicate each activity and diseases addressed in each one:",
 
@@ -354,23 +363,23 @@ define({
 		"cat14": "CHALLENGES",
 
 			"ask36":       "36) Please indicate a maximum of five major challenges/difficulties which your country is facing in	controlling/eliminating FMD? ",
-			"ask37":       "37) Please indicate in which of the following areas your country would benefit the most from receiving support to improve FMD control?",
-
+			"ask37":       "37) Please indicate in which of the following areas your country would benefit the most from receiving support to improve FMD control?*",
+		"ask37_descr":"*Please press ctrl to activate the multiple selection",
 		"cat15": "GLOBAL FMD PORTFOLIO",
 
 		"ask38":       "38) Has your country been involved in any specific activities, programs or projects that involve FMD surveillance and/or control in the last 3 years?  ",
 
 		"ask39": "Project",
-		"ask39_1": "Name of the project",
+		"ask39_1": "Title of the project",
 		"ask40":       "40) Project status",
 		"ask41":       "41) Which is/are/was/were the objective(s) that was/were covered by the project?",
 		"ask42":       "42) What is/was the Geographic area of implementation of the project?",
 		"ask43":       "43) What is/was the estimated budget of the project (in US Dollars):",
-		"ask43_1":       "Amount (USD)",
-		"ask43_2":       "Source of funds",
-		"ask43_3": 		 "Donors",
-		"ask43_4": 		 "Who is/are/was/were the implementer of the project",
-		"ask44": 		 "44) Which of the following activities were carried out as part of the project? ",
+		"ask43_1":       "Amount (USD):",
+		"ask43_2":       "Source of funds:",
+		"ask43_3": 		 "Donors:",
+		"ask43_4": 		 "Who is/are/was/were the implementer of the project?",
+		"ask44": 		 "44) Which of the following activities were carried out as part of the project?* ",
 		"ask44_1":       "Did you use the PCP tools for your FMD strategy?",
 		"ask44_2":       "Could you please tell us which tool did you use?"
 

@@ -2,11 +2,12 @@ define(['i18n!nls/questions'], function(Quests) {
     return {
         "type": "object",
         "title": Quests['cat6b'],
+        "description":  Quests['ask12_0'],
         "properties": {
             
             "ask12": {
                 "title": Quests['ask12'],
-               "description":  Quests['ask12_0'],
+
                 "oneOf":[
                     {
                         "title": Quests["no"],
@@ -25,8 +26,10 @@ define(['i18n!nls/questions'], function(Quests) {
                              "description":  Quests['ask13_0'],
                              "$ref": "#/definitions/yesno"
                              },
+
                              "ask14": {
                              "title": Quests['ask14'],
+                             "description": Quests["ask14_0"],
                              "oneOf": [
 
                              {
