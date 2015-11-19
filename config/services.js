@@ -22,19 +22,12 @@ define(['underscore'], function(_) {
 
 		adminUser: "admin@fao.org",
 
-		sections: (function() {
-			/*var secs = _.map(_.range(1, 16), function(i) {
-				return 'cat'+i;
-			});*/
-			var secs = [
-				'cat1','cat2','cat3','cat4','cat5',
-				'cat6','cat6b',
-				'cat7','cat8','cat9',
-				'cat10','cat11','cat12','cat13','cat14','cat15'
-			];
-			//HIDDEN SECTIONS
-			return secs;//_.without(secs,'cat11');
-		})(),
+		sections: [
+			'cat1','cat2','cat3','cat4','cat5',
+			'cat6','cat7','cat8','cat9','cat10',
+			'cat11','cat12','cat13','cat14','cat15',
+			'cat16'
+		],
 
 		wmsUrl: "http://fenixapps2.fao.org/geoserver-demo",
 		sldUrl: "http://fenixapps2.fao.org/geoservices/CSS2SLD",

@@ -1,24 +1,45 @@
 define(['i18n!nls/questions'], function(Quests) {
     return {
+        "type": "object",
         "title": Quests['cat15'],
-        "description": Quests['ask38'],
-        "oneOf": [
-            {
-                "title": Quests["no"],
-                "type": "null"
-            },
-            {
-                "title": Quests["yes"],
-                "description": Quests['ask39'],
+        "properties": {
+            "ask36": {
+                "title": Quests['ask36'],
                 "type": "array",
-                "format": "tabs",
                 "minItems": 1,
-                "maxItems": 3,
-                "additionalItems": false,
+                "maxItems": 5,
                 "items": {
-                    "$ref": "#/definitions/project"
-                }                
+                    "type": "string",
+                    "title": " ",
+                    "default": ""
+                },
+                "additionalItems": false
+            },
+
+            "ask37": {
+                "title": Quests['ask37'],
+                "description":Quests["ask37_descr"],
+
+                "type": "array",
+                "uniqueItems": true,
+                "items": {
+                    "type": "string",
+                    "enum": [
+                        "Epidemiology training",
+                        "Laboratory training",
+                        "Development of FMD control strategy",
+                        "Development of laboratory capacity",
+                        "Regional coordination",
+                        "Training on surveillance",
+                        "Training on Risk Analysis",
+                        "Socio-Economic impact studies",
+                        "Development/implementation of legislation and Regulation",
+                        "Management of FMD emergencies",
+                        "Animal Identification",
+                        "Movement Control"
+                    ]
+                }
             }
-        ]
-    };
+        }
+	};
 });

@@ -2,50 +2,67 @@ define(['i18n!nls/questions'], function(Quests) {
     return {
         "type": "object",
         "title": Quests['cat9'],
-        "description": Quests["ask_22_0"],
         "properties": {
-            "ask22": {
-             "title": Quests['ask22'],
+            "ask19": {
+                "title": Quests['ask19'],
+                "$ref": "#/definitions/yesno"
+            },
 
-             "oneOf": [
-                 {
-                  "title": Quests["no"],
-                  "type": "null"
-                 },
-                 {
-                  "title": Quests["yes"],
-                  "type": "object",
-                  "properties": {
-                      "ask22_1": {
-                        "title": Quests['ask22_1'],
-                          "$ref": "#/definitions/years"
-                      },
-                      "ask22_2": {
-                        "title": Quests['ask22_2'],
-                          "description":Quests["ask22_descr"],
+
+            "ask20": {
+                "title": Quests['ask20'],
+                "type": "object",
+                "properties":
+                {
+                    "ask20_1": {
+                        "title": Quests['ask20_1'],
                         "type": "array",
                         "uniqueItems": true,
                         "items": {
-                          "type": "string",
-                          "enum": [
-                            "Small holder",
-                            "Dairy production",
-                            "Beef production",
-                            "Small ruminants",
-                            "Pigs",
-                            "Mixed livestock systems",
-                            "Pastoralist",
-                            "Silvo-pastoralist"
-                          ]
+                            "type": "string",
+                            "enum": [
+                                "Eradication of FMD virus",
+                                "Control of clinical FMD",
+                                "Apply for disease free zone",
+                                "Apply for official OIE recognition of FMD free with vaccination",
+                                "Apply for official OIE recognition of FMD free without vaccination"
+                            ]
                         }
-                      },
-                      "ask22_3": {
-                        "title": Quests['ask22_3'],
-                        "$ref": "#/definitions/yesno"
-                      }
-                   }
-               }
-             ]
+                    },
+
+
+                    "ask20_2": {
+                        "title": Quests['ask20_2'],
+                        "type": "array",
+                        "uniqueItems": true,
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "Eradication of FMD virus",
+                                "Control of clinical FMD",
+                                "Apply for disease free zone",
+                                "Apply for official OIE recognition of FMD free with vaccination",
+                                "Apply for official OIE recognition of FMD free without vaccination"
+                            ]
+                        }
+                    }
+
+
+
+
+
+
+
+
+                }
+
+
+
+            },
+
+            "aks21": {
+                "title": Quests['ask21'],
+                "type": "string"
             }
         }
     };
