@@ -63,7 +63,8 @@ require([
 
 		var currentQuestId = null;
 
-		var jsonForms = {};
+		window.jsonForms = {};
+		window.schemas = {};
 
 		Router({
 			default: function() {
@@ -127,6 +128,8 @@ require([
 				schemaContact['lang'] = authMenu.lang;
 				schemaContact['definitions'] = schemaContact['definitions'] ? _.extend(schemaDefs, schemaContact['definitions']) : schemaDefs;
 
+				schemas['contact'] = schemaContact;
+
 				jsonForms.contact = new jsonForm('#form-contact', {
 					disable_collapse: false,
 					schema: schemaContact,
@@ -169,6 +172,8 @@ require([
 
 				schema['lang'] = authMenu.lang;
 				schema['definitions'] = schema['definitions'] ? _.extend(schemaDefs, schema['definitions']) : schemaDefs;
+				
+				schemas[id] = schema;
 
 				jsonForms[id] = new jsonForm('#'+id, {
 					schema: schema,

@@ -1,4 +1,18 @@
 define(['i18n!nls/questions'], function(Quests) {
+
+    var today = new Date(),
+        dd = today.getDate(),
+        mm = today.getMonth()+1,
+        yyyy = today.getFullYear();
+
+    if(dd<10)
+        dd = '0'+dd;
+    if(mm<10)
+        mm = '0'+mm;
+    
+    //today = dd+'/'+mm+'/'+yyyy;
+    today = yyyy+'-'+mm+'-'+dd;
+
     return {
         "type": "object",
         "title": Quests['contact_info'],
@@ -11,7 +25,8 @@ define(['i18n!nls/questions'], function(Quests) {
             "date": {
                 "type": "string",
                 "title": Quests['contact_info_1'],
-                "format": "date"
+                "format": "date",   //yyyy-mm-dd
+                "default": today
             },
             "country": {
                 "type": "string",
