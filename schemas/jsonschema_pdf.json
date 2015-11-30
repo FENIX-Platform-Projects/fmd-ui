@@ -1,8 +1,33 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "MDSD",
-  "description": "D3S 2nd Level Metadata",
   "type": "object",
+  "definitions": {
+    "yesno": {
+      "type": "string",
+      "uniqueItems": true,
+      "format": "select",
+      "default": "Yes",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },    
+    "desease": {
+      "title":" ",
+      "type": "object",
+      "properties": {
+          "ask1_1a": {
+              "title": "Desease",
+              "type": "string",
+              "default": ""
+          },
+          "ask1_1b": {
+              "title": "Is the disease notifiable?",
+              "$ref": "#/definitions/yesno"
+          }
+      }
+    }
+  },
   "properties": {  	
     "contact": {
       "title": "COMPILER INFORMATION",
@@ -20,7 +45,7 @@
             "name": {
                 "type": "string",
                 "title": "Author"
-            },         
+            },
             "email": {
                 "type": "string",
                 "title": "Email",

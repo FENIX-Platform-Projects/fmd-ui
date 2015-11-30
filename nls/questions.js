@@ -18,7 +18,6 @@ define({
 		"present": "Present",
 		"absent": "Absent",
 
-
 		"contact_info":       "Contact Information",
 			"contact_info_1": "Date",
 			"contact_info_2": "Country",
