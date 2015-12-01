@@ -13,7 +13,7 @@ define(['underscore'], function(_) {
 		//reportPdfUrl: "http://kalimaha-fao.device.fao.org:8080",
 		//reportPdfUrl: "http://fenixapps2.fao.org/fenixExport",
 		//reportPdfUrl: "http://fenixapps2.fao.org/fenixExport-demo",
-		reportPdfUrl: "http://fenix.fao.org/external/fenixapps2/fenixExport-demo",
+		reportPdfUrl: "http://fenix.fao.org/external/fenixapps2/fenixExportFiltered",
 		//reportPdfUrl: "http://faber-cst-pc.device.fao.org:8080",
 
 		gaul0Url: "http://fenixservices.fao.org/d3s/msd/resources/data/uid/GAUL0",
