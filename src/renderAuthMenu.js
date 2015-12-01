@@ -46,7 +46,9 @@ define(['underscore',
 			window.location.replace('index.html');
         
         $('footer').load('html/footer.html');
-        
+
+    	$('body').prepend('<h2 id="testversion"> TEST VERSION </h2>');
+		
 		return {
 			auth: auth,
 			menu: menu,

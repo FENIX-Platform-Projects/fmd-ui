@@ -11,109 +11,287 @@
         "Yes",
         "No"
       ]
-    },    
+    },
+    "yesno_partial": {
+      "type": "string",
+      "uniqueItems": true,
+      "format": "select",
+      "default": "Yes",
+      "enum": [
+        "Yes",
+        "No",
+        "Partial"
+      ]
+    },
+    "yesno_notsure": {
+      "type": "string",
+      "uniqueItems": true,
+      "format": "select",
+      "default": "Yes",
+      "enum": [
+        "Yes",
+        "No",
+        "Not sure"
+      ]
+    },
+    "yesno_official": {
+      "type": "string",
+      "uniqueItems": true,
+      "format": "select",
+      "default": "Yes, officially",
+      "enum": [
+        "Yes, officially",
+        "Yes, not officially",
+        "Not sure",
+        "No"
+      ]
+    },
+    "yesno_always": {
+      "type": "string",
+      "uniqueItems": true,
+      "format": "select",
+      "default": "Yes, always/routinely",
+      "enum": [
+        "Yes, always/routinely",
+        "Yes, when needed/when appropriate",
+        "No"
+      ]
+    },
+    "yesno_sectors": {
+      "type": "string",
+      "oneOf": [
+        {
+          "title": "Yes, all the individuals",
+          "type": "null"
+        },
+        {
+          "title": "Yes, in some sectors",
+          "type": "object",
+          "properties": {
+            "ask4_1_1": {
+              "title": "Please, specify the sector(s):",
+              "type": "string"
+            }
+          }
+        },
+        {
+          "title": "No",
+          "type": "null"
+        }
+      ]
+    },
+    "yesno_movements": {
+      "type": "string",
+      "oneOf": [
+        {
+          "title": "Yes, all movements",
+          "type": "null"
+        },
+        {
+          "title": "Yes, in some sectors",
+          "type": "object",
+          "properties": {
+            "ask5_1": {
+              "title": "Please tell us in which sectors you monitor livestock movement:",
+              "type": "string"
+            }
+          }
+        },
+        {
+          "title": "No",
+          "type": "null"
+        }
+      ]
+    },
+    "years": {
+      "type": "number",
+      "uniqueItems": true,
+      "format": "select",
+      "default": 2015,
+      "enum": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019
+      ]
+    },
+    "years_since2012": {
+      "type": "number",
+      "uniqueItems": true,
+      "format": "select",
+      "default": 2015,
+      "enum": [
+        2012,
+        2013,
+        2014,
+        2015
+      ]
+    },
+    "presentabsent": {
+      "type": "string",
+      "uniqueItems": true,
+      "format": "select",
+      "default": "Absent",
+      "enum": [
+        "Present",
+        "Absent"
+      ]
+    },
     "desease": {
-      "title":" ",
+      "title": " ",
       "type": "object",
       "properties": {
-          "ask1_1a": {
-              "title": "Desease",
+        "ask1_1a": {
+          "title": "Desease",
+          "type": "string",
+          "default": ""
+        },
+        "ask1_1b": {
+          "title": "Is the disease notifiable?",
+          "$ref": "#/definitions/yesno"
+        }
+      }
+    },
+    "items5": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 5,
+      "additionalItems": false,
+      "items": {
+        "type": "string",
+        "title": " ",
+        "default": ""
+      }
+    },
+    "project": {
+      "title": "Project",
+      "type": "object",
+      "properties": {
+        "ask39_1": {
+          "title": "39) Title of the project",
+          "type": "string"
+        },
+        "ask40": {
+          "title": "40) Project status",
+          "type": "string",
+          "uniqueItems": true,
+          "format": "select",
+          "enum": [
+            "Closed",
+            "On-going",
+            "Pipeline"
+          ]
+        },
+        "ask41": {
+          "title": "41) Which is/are/was/were the objective(s) that was/were covered by the project?",
+          "type": "string",
+          "uniqueItems": true,
+          "format": "select",
+          "enum": [
+            "Emergency Support (Immediate-short term)",
+            "Development project (medium to long term)"
+          ]
+        },
+        "ask42": {
+          "title": "42) What is/was the Geographic area of implementation of the project?",
+          "type": "string",
+          "uniqueItems": true,
+          "format": "select",
+          "enum": [
+            "Global",
+            "Regional",
+            "National"
+          ]
+        },
+        "ask43": {
+          "title": "43) What is/was the estimated budget of the project (in US Dollars):",
+          "type": "object",
+          "properties": {
+            "ask43_1": {
+              "title": "Amount (USD):",
+              "type": "string"
+            },
+            "ask43_2": {
+              "title": "Source of funds:",
               "type": "string",
-              "default": ""
-          },
-          "ask1_1b": {
-              "title": "Is the disease notifiable?",
-              "$ref": "#/definitions/yesno"
+              "uniqueItems": true,
+              "format": "select",
+              "enum": [
+                "National/Regional Budget",
+                "International donors"
+              ]
+            },
+            "ask43_3": {
+              "title": "Donors:",
+              "type": "string"
+            },
+            "ask43_4": {
+              "title": "Who is/are/was/were the implementer of the project?",
+              "type": "string"
+            }
           }
+        },
+        "ask44": {
+          "title": "44) Which of the following activities were carried out as part of the project?* ",
+          "description": "*Please press ctrl to activate the multiple selection",
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "enum": [
+              "Epidemiology",
+              "Prevention",
+              "Early Detection",
+              "Emergency Response",
+              "Vaccination",
+              "Laboratory Capacity",
+              "Compensation",
+              "Veterinary Services Capacity",
+              "Communication",
+              "Global/Regional Coordination",
+              "Research"
+            ]
+          }
+        },
+        "ask44_1": {
+          "title": "Did you use the PCP tools for your FMD strategy?",
+          "oneOf": [
+            {
+              "title": "No",
+              "type": "null"
+            },
+            {
+              "title": "Yes",
+              "type": "object",
+              "properties": {
+                "ask44_2": {
+                  "title": "Could you please tell us which tool did you use?",
+                  "type": "string"
+                }
+              }
+            }
+          ]
+        }
       }
     }
   },
-  "properties": {  	
-    "contact": {
-      "title": "COMPILER INFORMATION",
-      "type": "object",
-      "properties": {
-            "date": {
-                "type": "string",
-                "title": "Date",
-                "format": "date"
-            },
-            "country": {
-                "type": "string",
-                "title": "Country"
-            },
-            "name": {
-                "type": "string",
-                "title": "Author"
-            },
-            "email": {
-                "type": "string",
-                "title": "Email",
-                "format": "email"
-            }, 
-            "phone": {
-                "type": "integer",
-                "title": "Phone",
-                "format": "number"
-            },
-            "street": {
-                "type": "string",
-                "title": "Street address"
-            },
-            "person": {
-                "title": "Please, complete the person in contact for each which applied",
-                "type": "object",
-                "options": {
-                    "disable_collapse": false,
-                    "collapsed": true
-                },                
-                "properties": {
-                    "contact_1": {
-                        "title": "FMD PCP specialist:",
-                        "type": "object",
-                        "properties": {
-                            "contact_person_1_1": {
-                                "title": "Name:",
-                                "type": "string"
-                            },
-                            "contact_person_1_2": {
-                                "title": "eMail",
-                                "type": "string"
-                            }
-                        }
-                    },
-                    "contact_person_2": {
-                        "title": "FMD Laboratory specialist",
-                        "type": "object",
-                        "properties": {
-                            "contact_person_2_1": {
-                                "title": "Name",
-                                "type": "string"
-                            },
-                            "contact_person_2_2": {
-                                "title": "eMail:",
-                                "type": "string"
-                            }
-                        }
-                    },
-                    "contact_person_3": {
-                        "title": "FMD Epidemiology specialist",
-                        "type": "object",
-                        "properties": {
-                            "contact_person_3_1": {
-                                "title": "Name",
-                                "type": "string"
-                            },
-                            "contact_person_3_2": {
-                                "title": "eMail:",
-                                "type": "string"
-                            }
-                        }
-                    }
-                }
-            }
-      }
-    },
+  "properties": {
     "cat1": {
       "type": "object",
       "title": "GENERAL INFORMATION",
@@ -125,7 +303,7 @@
             {
               "title": "No",
               "type": "null"
-            },    
+            },
             {
               "title": "Yes",
               "description": "If yes, list the 5 diseases with the highest priority for your country:",
@@ -151,7 +329,11 @@
           "type": "object",
           "properties": {
             "ask2_1": {
-              "title": "2.1) Domestic Species",
+              "options": {
+                "disable_collapse": false,
+                "collapsed": true
+              },
+              "title": "Domestic Species",
               "type": "object",
               "properties": {
                 "ask2_1_1": {
@@ -160,11 +342,11 @@
                   "properties": {
                     "ask2_1_1_1": {
                       "title": "Number",
-                      "type": "string"
+                      "type": "number"
                     },
                     "ask2_1_1_2": {
                       "title": "Census year",
-                      "type": "string"
+                      "$ref": "#/definitions/years"
                     }
                   }
                 },
@@ -174,11 +356,11 @@
                   "properties": {
                     "ask2_1_2_1": {
                       "title": "Number",
-                      "type": "string"
+                      "type": "number"
                     },
                     "ask2_1_2_2": {
                       "title": "Census year",
-                      "type": "string"
+                      "$ref": "#/definitions/years"
                     }
                   }
                 },
@@ -188,11 +370,11 @@
                   "properties": {
                     "ask2_1_3_1": {
                       "title": "Number",
-                      "type": "string"
+                      "type": "number"
                     },
                     "ask2_1_3_2": {
                       "title": "Census year",
-                      "type": "string"
+                      "$ref": "#/definitions/years"
                     }
                   }
                 },
@@ -202,11 +384,11 @@
                   "properties": {
                     "ask2_1_4_1": {
                       "title": "Number",
-                      "type": "string"
+                      "type": "number"
                     },
                     "ask2_1_4_2": {
                       "title": "Census year",
-                      "type": "string"
+                      "$ref": "#/definitions/years"
                     }
                   }
                 },
@@ -216,11 +398,11 @@
                   "properties": {
                     "ask2_1_5_1": {
                       "title": "Number",
-                      "type": "string"
+                      "type": "number"
                     },
                     "ask2_1_5_2": {
                       "title": "Census year",
-                      "type": "string"
+                      "$ref": "#/definitions/years"
                     }
                   }
                 },
@@ -230,18 +412,22 @@
                   "properties": {
                     "ask2_1_6_1": {
                       "title": "Number",
-                      "type": "string"
+                      "type": "number"
                     },
                     "ask2_1_6_2": {
                       "title": "Census year",
-                      "type": "string"
+                      "$ref": "#/definitions/years"
                     }
                   }
                 }
               }
             },
             "ask2_2": {
-              "title": "2.2) FMD susceptible Wild Life species",
+              "options": {
+                "disable_collapse": false,
+                "collapsed": true
+              },
+              "title": "FMD susceptible Wild Life species",
               "type": "object",
               "properties": {
                 "ask2_2_1": {
@@ -250,14 +436,11 @@
                   "properties": {
                     "ask2_2_1_1": {
                       "title": "presence",
-                      "type": "string"
+                      "$ref": "#/definitions/presentabsent"
                     },
                     "ask2_2_1_2": {
                       "title": "Approximate population number (if known)",
-                      "type": "string",
-                      "uniqueItems": true,
-                      "format": "select",
-                      "enum": ["present", "absent"]
+                      "type": "number"
                     }
                   }
                 },
@@ -267,14 +450,11 @@
                   "properties": {
                     "ask2_2_2_1": {
                       "title": "presence",
-                      "type": "string"
+                      "$ref": "#/definitions/presentabsent"
                     },
                     "ask2_2_2_2": {
                       "title": "Approximate population number (if known)",
-                      "type": "string",
-                      "uniqueItems": true,
-                      "format": "select",
-                      "enum": ["present", "absent"]
+                      "type": "number"
                     }
                   }
                 },
@@ -284,14 +464,11 @@
                   "properties": {
                     "ask2_2_3_1": {
                       "title": "presence",
-                      "type": "string",
-                      "uniqueItems": true,
-                      "format": "select",
-                      "enum": ["present", "absent"]
+                      "$ref": "#/definitions/presentabsent"
                     },
                     "ask2_2_3_2": {
                       "title": "Approximate population number (if known)",
-                      "type": "string"
+                      "type": "number"
                     }
                   }
                 },
@@ -301,48 +478,39 @@
                   "properties": {
                     "ask2_2_4_1": {
                       "title": "presence",
-                      "type": "string"
+                      "$ref": "#/definitions/presentabsent"
                     },
                     "ask2_2_4_2": {
                       "title": "Approximate population number (if known)",
-                      "type": "string",
-                      "uniqueItems": true,
-                      "format": "select",
-                      "enum": ["present", "absent"]
+                      "type": "number"
                     }
                   }
                 },
                 "ask2_2_5": {
-                  "title": "Buffalo",
+                  "title": "Feral pigs",
                   "type": "object",
                   "properties": {
                     "ask2_2_5_1": {
                       "title": "presence",
-                      "type": "string"
+                      "$ref": "#/definitions/presentabsent"
                     },
                     "ask2_2_5_2": {
                       "title": "Approximate population number (if known)",
-                      "type": "string",
-                      "uniqueItems": true,
-                      "format": "select",
-                      "enum": ["present", "absent"]
+                      "type": "number"
                     }
                   }
                 },
                 "ask2_2_6": {
-                  "title": "Other (specify)",
+                  "title": "Wild goats",
                   "type": "object",
                   "properties": {
                     "ask2_2_6_1": {
                       "title": "presence",
-                      "type": "string"
+                      "$ref": "#/definitions/presentabsent"
                     },
                     "ask2_2_6_2": {
                       "title": "Approximate population number (if known)",
-                      "type": "string",
-                      "uniqueItems": true,
-                      "format": "select",
-                      "enum": ["present", "absent"]
+                      "type": "number"
                     }
                   }
                 }
@@ -354,65 +522,1196 @@
     },
     "cat3": {
       "type": "object",
-      "title": "FARM REGISTER",
+      "title": "GENERAL INFORMATION",
+      "description": "Farm register refers to a national identification system, supported by the appropriate national regulation, which assigns a unique identification number to premises and owners within a country.",
       "properties": {
         "ask3": {
           "title": "3) Is there an official livestock establishment registration system in your country?",
-          "type": "string",
-          "uniqueItems": true,
-          "format": "select",
-          "enum": ["Yes", "No", "Partial"]
-        },
-        "ask3_1": {
-          "title": "Please, specify the sector(s):",
-          "type": "string"
+          "oneOf": [
+            {
+              "title": "No",
+              "type": "null"
+            },
+            {
+              "title": "Yes",
+              "type": "null"
+            },
+            {
+              "title": "Partial",
+              "type": "object",
+              "properties": {
+                "ask3_1": {
+                  "title": "If partial, please, specify the sector(s):",
+                  "type": "array",
+                  "$ref": "#/definitions/items5"
+                }
+              }
+            }
+          ]
         }
       }
     },
     "cat4": {
       "type": "object",
       "title": "ANIMAL IDENTIFICATION",
+      "description": "Animal identification and recording (AIR) refers to a national identification and recording system, supported by the appropriate national regulation, which assigns a unique identification number for \t\t\tindividual animals or groups of animals.",
       "properties": {
         "ask4": {
           "type": "object",
-          "title": "4) Is there an official system of animal identification and registration?",
+          "title": "4) Is there an official system of animal identification and recording (AIR) system?",
           "properties": {
             "ask4_1": {
               "title": "a) Large Ruminants:",
-              "type": "string",
-              "uniqueItems": true,
-              "format": "select",
-              "enum": ["Yes", "No", "Partial"]
-            },
-            "ask4_1_1": {
-              "title": "Please, specify the sector(s):",
-              "type": "string"
+              "$ref": "#/definitions/yesno_sectors"
             },
             "ask4_2": {
               "title": "b) Small Ruminants:",
-              "type": "string",
-              "uniqueItems": true,
-              "format": "select",
-              "enum": ["Yes", "No", "Partial"]
-            },
-            "ask4_2_1": {
-              "title": "Please, specify the sector(s):",
-              "type": "string"
+              "$ref": "#/definitions/yesno_sectors"
             },
             "ask4_3": {
               "title": "c) Pigs:",
-              "type": "string",
-              "uniqueItems": true,
-              "format": "select",
-              "enum": ["Yes", "No", "Partial"]
-            },
-            "ask4_3_1": {
-              "title": "Please, specify the sector(s):",
-              "type": "string"
+              "$ref": "#/definitions/yesno_sectors"
             }
           }
         }
       }
+    },
+    "cat5": {
+      "type": "object",
+      "title": "ANIMAL MOVEMENTS",
+      "properties": {
+        "ask5": {
+          "title": "5) Is animal movement registered?",
+          "$ref": "#/definitions/yesno_movements"
+        },
+        "ask6": {
+          "title": "6) Are data regularly collected on the number, origin and destination of livestock movement? ",
+          "oneOf": [
+            {
+              "title": "No",
+              "type": "null"
+            },
+            {
+              "title": "Yes",
+              "type": "object",
+              "properties": {
+                "ask6_1": {
+                  "title": "If you answer Yes, please specify how often: ",
+                  "type": "string"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "cat6": {
+      "type": "object",
+      "title": "FMD OUTBREAKS",
+      "properties": {
+        "ask7": {
+          "title": "7) What are the FMD serotypes identified in your country since 2012?",
+          "type": "object",
+          "properties": {
+            "ask7_1": {
+              "title": "A",
+              "$ref": "#/definitions/years_since2012"
+            },
+            "ask7_2": {
+              "title": "O",
+              "$ref": "#/definitions/years_since2012"
+            },
+            "ask7_3": {
+              "title": "C",
+              "$ref": "#/definitions/years_since2012"
+            },
+            "ask7_4": {
+              "title": "SAT 1",
+              "$ref": "#/definitions/years_since2012"
+            },
+            "ask7_5": {
+              "title": "SAT 2",
+              "$ref": "#/definitions/years_since2012"
+            },
+            "ask7_6": {
+              "title": "SAT 3",
+              "$ref": "#/definitions/years_since2012"
+            },
+            "ask7_7": {
+              "title": "Asia 1",
+              "$ref": "#/definitions/years_since2012"
+            }
+          }
+        },
+        "ask8": {
+          "title": "8) Is there a national reference laboratory following OIE FMD standards and procedures? ",
+          "$ref": "#/definitions/yesno"
+        },
+        "ask9": {
+          "title": "9) When an outbreak of FMD is identified, is there a system in place to carry out an outbreak epidemiological investigation?",
+          "oneOf": [
+            {
+              "title": "Yes, always/routinely",
+              "type": "null"
+            },
+            {
+              "title": "Yes, when needed/when appropriate",
+              "type": "null"
+            },
+            {
+              "title": "No",
+              "type": "object",
+              "properties": {
+                "ask9_1": {
+                  "title": "Please specify the reasons:",
+                  "type": "array",
+                  "uniqueItems": true,
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "Insufficient human resources",
+                      "Lack equipment",
+                      "Lack financial resources",
+                      "Lack of capabilities of skilled human resources"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "ask10": {
+          "title": "10) From the following list, which activities are undertaken during an FMD outbreak investigation",
+          "type": "object",
+          "properties": {
+            "ask10_1": {
+              "title": "Identification of risk factors for clinical FMD",
+              "$ref": "#/definitions/yesno_always"
+            },
+            "ask10_2": {
+              "title": "Supporting farmers in preventing further spread of infection and taking care of affected livestock",
+              "$ref": "#/definitions/yesno_always"
+            },
+            "ask10_3": {
+              "title": "Forward and backward tracing \u2013 attempting to identify routes of FMD virus transmission",
+              "$ref": "#/definitions/yesno_always"
+            },
+            "ask10_4": {
+              "title": "Sampling are taken for confirmation and send to an FMD laboratory for diagnosis",
+              "$ref": "#/definitions/yesno_always"
+            },
+            "ask10_5": {
+              "title": "Identification of the virus is followed by identification of the serotype",
+              "$ref": "#/definitions/yesno_always"
+            },
+            "ask10_6": {
+              "title": "Samples are sent either to a regional or to an international Reference Laboratory for further analysis",
+              "$ref": "#/definitions/yesno_always"
+            }
+          }
+        },
+        "ask11": {
+          "title": "11) What additional control measures are applied when an outbreak occurs in your country? ",
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "enum": [
+              "Animal movement restrictions",
+              "Application of biosecurity measures",
+              "Quarantine measures",
+              "Emergency vaccination"
+            ]
+          }
+        }
+      }
+    },
+    "cat7": {
+      "type": "object",
+      "title": "CONTROL PLAN",
+      "description": "Control plans are sets of well-structured and clearly-stated documents that describe policies, strategies and procedures for effective disease-control response to high-threat diseases, such as FMD.",
+      "properties": {
+        "ask12": {
+          "title": "12) Does your country have a written and government endorsed FMD Control Plan? ",
+          "oneOf": [
+            {
+              "title": "No",
+              "type": "null"
+            },
+            {
+              "title": "Yes",
+              "type": "object",
+              "properties": {
+                "ask13": {
+                  "title": "13) If Yes, is this control plan developed along the lines of a Risk-Based Strategy?",
+                  "description": "In a risk-based strategy the intervention measures target risk hotspots. These measures are selected according their effectiveness at reducing the probability of occurrence and spread of FMD.as well as the impact of an outbreak. Usually these measures will be identified through risk analysis",
+                  "$ref": "#/definitions/yesno"
+                },
+                "ask14": {
+                  "title": "14) Has the country conducted FMD simulation exercises?",
+                  "description": "Simulation exercises: The purpose of simulation exercises for FMD is to test and strengthen the management response to events involving and FMD outbreak. This includes testing the country capacity to\tcommunicate within and between the countries and with international organizations, and the ability to prioritise tasks at national and local level.",
+                  "oneOf": [
+                    {
+                      "title": "Yes",
+                      "type": "object",
+                      "properties": {
+                        "ask14_1": {
+                          "title": "If Yes, when was the last simulation exercise performed?",
+                          "type": "string"
+                        }
+                      }
+                    },
+                    {
+                      "title": "No",
+                      "type": "null"
+                    }
+                  ]
+                },
+                "ask15": {
+                  "title": "15) In which situations is your country\u2019s FMD Control Plan implemented?",
+                  "type": "string",
+                  "uniqueItems": false,
+                  "format": "select",
+                  "enum": [
+                    "After every new outbreak event.",
+                    "On a change in the epidemiological situation.",
+                    "The Control Plan is written but rarely or never applied."
+                  ]
+                },
+                "ask16": {
+                  "title": "16) Is the written FMD Control Plan available?",
+                  "$ref": "#/definitions/yesno"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "cat8": {
+      "type": "object",
+      "title": "IDENTIFICATION OF RISK FACTORS AND HOTSPOTS",
+      "description": "Risk factors are those management, environmental, socio-economic and production factors that increase the\trisk of introduction of FMD infection and / or transmission. For example: trading cattle back and forward from animal markets is an important risk factor for both introduction and transmission of the FMD virus. Risk factor is an epidemiological term, identified through statistical analysis.",
+      "properties": {
+        "ask17a": {
+          "title": "17 a) Has your country determined the risk factors for FMD introduction?",
+          "oneOf": [
+            {
+              "title": "No",
+              "type": "null"
+            },
+            {
+              "title": "Yes",
+              "description": " Which risk factors (maximum five) have been identified?",
+              "type": "array",
+              "$ref": "#/definitions/items5"
+            }
+          ]
+        },
+        "ask17b": {
+          "title": "17 b) Has your country identified the ris factors for FMD spread?",
+          "oneOf": [
+            {
+              "title": "No",
+              "type": "null"
+            },
+            {
+              "title": "Yes",
+              "description": " Which risk factors (maximum five) have been identified?",
+              "type": "array",
+              "$ref": "#/definitions/items5"
+            }
+          ]
+        },
+        "ask18": {
+          "title": "18) Has your country determined risk hotspots for FMD?",
+          "description": "Risk hotspots are defined as geographical areas, production sectors, age categories or practices conducted by people that pose a particular high risk of FMD transmission or that suffer a great impact from FMD infection. Risk hotspots are determined based on the collation of surveillance information from different sources such as value-chain analysis, impact assessment, serological studies, etc.",
+          "oneOf": [
+            {
+              "title": "No",
+              "type": "null"
+            },
+            {
+              "title": "Yes",
+              "description": " Could you please list a maximum of five risk hotspots that have been identified? ",
+              "type": "array",
+              "$ref": "#/definitions/items5"
+            }
+          ]
+        }
+      }
+    },
+    "cat9": {
+      "type": "object",
+      "title": "FMD CONTROL",
+      "properties": {
+        "ask19": {
+          "title": "19) Are you familiar with Progressive Control Pathway for FMD control (PCP-FMD)?",
+          "$ref": "#/definitions/yesno"
+        },
+        "ask20": {
+          "title": "20) What is/are the short term (1-3 years) and long term (5 \u2013 10 years) objective(s) for \tcontrolling FMD in your country? ",
+          "type": "object",
+          "properties": {
+            "ask20_1": {
+              "title": "Short term 1-3 years",
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "Eradication of FMD virus",
+                  "Control of clinical FMD",
+                  "Apply for disease free zone",
+                  "Apply for official OIE recognition of FMD free with vaccination",
+                  "Apply for official OIE recognition of FMD free without vaccination"
+                ]
+              }
+            },
+            "ask20_2": {
+              "title": "Long term 5-10 years",
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "Eradication of FMD virus",
+                  "Control of clinical FMD",
+                  "Apply for disease free zone",
+                  "Apply for official OIE recognition of FMD free with vaccination",
+                  "Apply for official OIE recognition of FMD free without vaccination"
+                ]
+              }
+            }
+          }
+        },
+        "aks21": {
+          "title": "21) What are the key indicators to know if your FMD control strategy is working?",
+          "type": "string"
+        }
+      }
+    },
+    "cat10": {
+      "type": "object",
+      "title": "SOCIO-ECONOMIC IMPACT",
+      "description": "Social indicators include for example impact in poverty, whether related to income or social and living conditions, and access to adequate nutrition. Economic indicators include public and private costs of an outbreak, as well as the costs of the measures taken in order to control or prevent the disease and disease outbreaks.",
+      "properties": {
+        "ask22": {
+          "title": "22) Has the socio-economic impact of FMD been studied in your country? (exclusive)",
+          "oneOf": [
+            {
+              "title": "No",
+              "type": "null"
+            },
+            {
+              "title": "Yes",
+              "type": "object",
+              "properties": {
+                "ask22_1": {
+                  "title": "In which year was conducted that assessment?",
+                  "$ref": "#/definitions/years"
+                },
+                "ask22_2": {
+                  "title": "Which of the following sectors were included?*",
+                  "description": "*Please press ctrl to activate the multiple selection",
+                  "type": "array",
+                  "uniqueItems": true,
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "Small holder",
+                      "Dairy production",
+                      "Beef production",
+                      "Small ruminants",
+                      "Pigs",
+                      "Mixed livestock systems",
+                      "Pastoralist",
+                      "Silvo-pastoralist"
+                    ]
+                  }
+                },
+                "ask22_3": {
+                  "title": "Is there any evidence of the socio-economic impact assessment?",
+                  "$ref": "#/definitions/yesno"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "cat11": {
+      "type": "object",
+      "title": "SEROSURVEILLANCE",
+      "description": "Serosurveillance refers to the implementation a a sampling protocol aiming to gather serological evidence of FMD virus circulation by detection of antibodies against non-structural proteins (NSPs) of FMD virus in\tserum samples, which is used as an indicator of virus exposure.",
+      "properties": {
+        "ask23": {
+          "title": "23) Has your country conducted non-structural protein (NSP) serological surveillance with the purpose of estimating the true prevalence of FMD viral circulation?",
+          "oneOf": [
+            {
+              "title": "No",
+              "type": "null"
+            },
+            {
+              "title": "Yes",
+              "type": "object",
+              "properties": {
+                "ask23_1": {
+                  "title": "When was serological surveillance conducted last?",
+                  "$ref": "#/definitions/years"
+                },
+                "ask23_2": {
+                  "title": "Which attributes were included for the most recent survey?",
+                  "type": "object",
+                  "properties": {
+                    "ask23_2_1": {
+                      "title": "Large Ruminants (Cattle and Buffalo)",
+                      "type": "object",
+                      "properties": {
+                        "ask23_2_1a": {
+                          "title": "Age",
+                          "type": "string",
+                          "uniqueItems": true,
+                          "format": "select",
+                          "enum": [
+                            "Under 2 years",
+                            "2 years and above"
+                          ]
+                        },
+                        "ask23_2_1b": {
+                          "title": "Production system",
+                          "type": "string",
+                          "uniqueItems": true,
+                          "format": "select",
+                          "enum": [
+                            "Small holder",
+                            "Dairy production",
+                            "Beef production",
+                            "Small ruminants",
+                            "Pigs",
+                            "Mixed Livestock",
+                            "System"
+                          ]
+                        },
+                        "ask23_2_1c": {
+                          "title": "Regions/Areas",
+                          "type": "string",
+                          "uniqueItems": true,
+                          "format": "select",
+                          "enum": [
+                            "Selected area",
+                            "Nationwide"
+                          ]
+                        }
+                      }
+                    },
+                    "ask23_2_2": {
+                      "title": "Small Ruminants",
+                      "type": "object",
+                      "properties": {
+                        "ask23_2_2a": {
+                          "title": "Age",
+                          "type": "string",
+                          "uniqueItems": true,
+                          "format": "select",
+                          "enum": [
+                            "Under 2 years",
+                            "2 years and above"
+                          ]
+                        },
+                        "ask23_2_2b": {
+                          "title": "Production system",
+                          "type": "string",
+                          "uniqueItems": true,
+                          "format": "select",
+                          "enum": [
+                            "Small holder",
+                            "Dairy production",
+                            "Beef production",
+                            "Small ruminants",
+                            "Pigs",
+                            "Mixed Livestock",
+                            "System"
+                          ]
+                        },
+                        "ask23_2_2c": {
+                          "title": "Regions/Areas",
+                          "type": "string",
+                          "uniqueItems": true,
+                          "format": "select",
+                          "enum": [
+                            "Selected area",
+                            "Nationwide"
+                          ]
+                        }
+                      }
+                    },
+                    "ask23_2_3": {
+                      "title": "Pigs",
+                      "type": "object",
+                      "properties": {
+                        "ask23_2_3a": {
+                          "title": "Age",
+                          "type": "string",
+                          "uniqueItems": true,
+                          "format": "select",
+                          "enum": [
+                            "Under 2 years",
+                            "2 years and above"
+                          ]
+                        },
+                        "ask23_2_3b": {
+                          "title": "Production system",
+                          "type": "string",
+                          "uniqueItems": true,
+                          "format": "select",
+                          "enum": [
+                            "Small holder",
+                            "Dairy production",
+                            "Beef production",
+                            "Small ruminants",
+                            "Pigs",
+                            "Mixed Livestock",
+                            "System"
+                          ]
+                        },
+                        " ask23_2_3c": {
+                          "title": "Regions/Areas",
+                          "type": "string",
+                          "uniqueItems": true,
+                          "format": "select",
+                          "enum": [
+                            "Selected area",
+                            "Nationwide"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "ask24": {
+                  "title": "24) Which proportion of animals tested NSP-Antibodies positive (overall results) (exclusive):",
+                  "type": "string",
+                  "uniqueItems": false,
+                  "format": "select",
+                  "enum": [
+                    "less than 5%",
+                    "between 5% and 10%",
+                    "between 11 and 25%",
+                    "more than 25%"
+                  ]
+                },
+                "ask25": {
+                  "title": "25) Which proportion of epidemiological units (farms, herds, villages, kraals) had 1 or more NSP-Ab positive animals (exclusive):",
+                  "type": "string",
+                  "uniqueItems": false,
+                  "format": "select",
+                  "enum": [
+                    "less than 5%",
+                    "between 5% and 10%",
+                    "between 11 and 25%",
+                    "more than 25%"
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "cat12": {
+      "type": "object",
+      "title": "VACCINATION",
+      "properties": {
+        "ask26": {
+          "title": "26)Is there an FMD national vaccination strategy implemented by your government?",
+          "oneOf": [
+            {
+              "title": "No",
+              "type": "null"
+            },
+            {
+              "title": "Yes",
+              "type": "object",
+              "properties": {
+                "ask27": {
+                  "title": "27) Please provide the information on the vaccination strategy for the following species ",
+                  "type": "object",
+                  "properties": {
+                    "ask27_1": {
+                      "title": "Large Ruminants (Cattle and Buffalo)",
+                      "type": "object",
+                      "properties": {
+                        "ask27_1a": {
+                          "title": "Year of vaccination",
+                          "type": "string"
+                        },
+                        "ask27_1b": {
+                          "title": "Type of vaccination",
+                          "type": "string",
+                          "uniqueItems": true,
+                          "format": "select",
+                          "enum": [
+                            "Voluntary vaccination",
+                            "Compulsory vaccination"
+                          ]
+                        },
+                        "ask27_1c": {
+                          "title": "Vaccination protocol",
+                          "oneOf": [
+                            {
+                              "title": "Uniform vaccination",
+                              "type": "null"
+                            },
+                            {
+                              "title": "Targeted vaccination",
+                              "type": "object",
+                              "properties": {
+                                "ask27_1d": {
+                                  "title": "If the vaccination protocol of your country is targeted, in which of the following categories FMD vaccination is performed?",
+                                  "type": "string",
+                                  "uniqueItems": true,
+                                  "format": "select",
+                                  "enum": [
+                                    "Zonal vaccination in a\tgiven geographic area of the country",
+                                    "Vaccination for some specific production systems (dairy, beef, etc.)",
+                                    "Vaccination for only some specific age groups",
+                                    "Ring vaccination is used in response to an FMD outbreak"
+                                  ]
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    "ask27_2": {
+                      "title": "Small Ruminants",
+                      "type": "object",
+                      "properties": {
+                        "ask27_2a": {
+                          "title": "Year of vaccination",
+                          "type": "string"
+                        },
+                        "ask27_2b": {
+                          "title": "Type of vaccination",
+                          "type": "string",
+                          "uniqueItems": true,
+                          "format": "select",
+                          "enum": [
+                            "Voluntary vaccination",
+                            "Compulsory vaccination"
+                          ]
+                        },
+                        "ask27_2c": {
+                          "title": "Vaccination protocol",
+                          "oneOf": [
+                            {
+                              "title": "Uniform vaccination",
+                              "type": "null"
+                            },
+                            {
+                              "title": "Targeted vaccination",
+                              "type": "object",
+                              "properties": {
+                                "ask27_2d": {
+                                  "title": "If the vaccination protocol of your country is targeted, in which of the following categories FMD vaccination is performed?",
+                                  "type": "string",
+                                  "uniqueItems": true,
+                                  "format": "select",
+                                  "enum": [
+                                    "Zonal vaccination in a\tgiven geographic area of the country",
+                                    "Vaccination for some specific production systems (dairy, beef, etc.)",
+                                    "Vaccination for only some specific age groups",
+                                    "Ring vaccination is used in response to an FMD outbreak"
+                                  ]
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    "ask27_3": {
+                      "title": "Pigs",
+                      "type": "object",
+                      "properties": {
+                        "ask27_3a": {
+                          "title": "Year of vaccination",
+                          "type": "string"
+                        },
+                        "ask27_3b": {
+                          "title": "Type of vaccination",
+                          "type": "string",
+                          "uniqueItems": true,
+                          "format": "select",
+                          "enum": [
+                            "Voluntary vaccination",
+                            "Compulsory vaccination"
+                          ]
+                        },
+                        "ask27_3c": {
+                          "title": "Vaccination protocol",
+                          "oneOf": [
+                            {
+                              "title": "Uniform vaccination",
+                              "type": "null"
+                            },
+                            {
+                              "title": "Targeted vaccination",
+                              "type": "object",
+                              "properties": {
+                                "ask27_3d": {
+                                  "title": "If the vaccination protocol of your country is targeted, in which of the following categories FMD vaccination is performed?",
+                                  "type": "string",
+                                  "uniqueItems": true,
+                                  "format": "select",
+                                  "enum": [
+                                    "Zonal vaccination in a\tgiven geographic area of the country",
+                                    "Vaccination for some specific production systems (dairy, beef, etc.)",
+                                    "Vaccination for only some specific age groups",
+                                    "Ring vaccination is used in response to an FMD outbreak"
+                                  ]
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "ask28": {
+                  "title": "28) Please, indicate the vaccine name, supplier, species targeted and serotypes (if unknown, please indicate with \u2018?\u2019):",
+                  "type": "array",
+                  "minItems": 1,
+                  "maxItems": 5,
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "ask28_1": {
+                        "title": "Year",
+                        "$ref": "#/definitions/years"
+                      },
+                      "ask28_2": {
+                        "title": "What is the name of the vaccine?",
+                        "type": "string"
+                      },
+                      "ask28_3": {
+                        "title": "Who is the supplier (s)?",
+                        "type": "string"
+                      },
+                      "ask28_4": {
+                        "title": "Which serotypes are covered by the vaccine?",
+                        "type": "string"
+                      },
+                      "ask28_5": {
+                        "title": "Is the vaccine used by the public\tsector?",
+                        "$ref": "#/definitions/yesno"
+                      },
+                      "ask28_6": {
+                        "title": "Is the vaccine used by the private sector?",
+                        "$ref": "#/definitions/yesno"
+                      }
+                    }
+                  },
+                  "additionalItems": false
+                },
+                "ask29": {
+                  "title": "29) What is the approximate number of doses applied by the public and private sector (if appropriate) in 2013 and 2014 ",
+                  "type": "object",
+                  "properties": {
+                    "ask29_1": {
+                      "title": "Large Ruminants",
+                      "type": "object",
+                      "properties": {
+                        "ask29_1_1": {
+                          "title": "2013",
+                          "type": "object",
+                          "properties": {
+                            "ask29_1_1a": {
+                              "title": "private",
+                              "type": "string"
+                            },
+                            "ask29_1_1b": {
+                              "title": "public",
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "ask29_1_2": {
+                          "title": "2014",
+                          "type": "object",
+                          "properties": {
+                            "ask29_1_2a": {
+                              "title": "private",
+                              "type": "string"
+                            },
+                            "ask29_1_2b": {
+                              "title": "public",
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "ask29_2": {
+                      "title": "Small Ruminants",
+                      "type": "object",
+                      "properties": {
+                        "ask29_2_1": {
+                          "title": "2013",
+                          "type": "object",
+                          "properties": {
+                            "ask29_2_1a": {
+                              "title": "private",
+                              "type": "string"
+                            },
+                            "ask29_2_1b": {
+                              "title": "public",
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "ask29_2_2": {
+                          "title": "2014",
+                          "type": "object",
+                          "properties": {
+                            "ask29_2_2a": {
+                              "title": "private",
+                              "type": "string"
+                            },
+                            "ask29_2_2b": {
+                              "title": "public",
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "ask29_3": {
+                      "title": "Pigs",
+                      "type": "object",
+                      "properties": {
+                        "ask29_3_1": {
+                          "title": "2013",
+                          "type": "object",
+                          "properties": {
+                            "ask29_3_1a": {
+                              "title": "private",
+                              "type": "string"
+                            },
+                            "ask29_3_1b": {
+                              "title": "public",
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "ask29_3_2": {
+                          "title": "2014",
+                          "type": "object",
+                          "properties": {
+                            "ask29_3_2a": {
+                              "title": "private",
+                              "type": "string"
+                            },
+                            "ask29_3_2b": {
+                              "title": "public",
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "ask30": {
+                  "title": " 30) Does the owner contribute to cover the costs of vaccination?",
+                  "oneOf": [
+                    {
+                      "title": "No",
+                      "type": "null"
+                    },
+                    {
+                      "title": "Yes",
+                      "type": "object",
+                      "properties": {
+                        "ask30_1": {
+                          "title": "What is the approximate percentage of the cost covered by the owner?",
+                          "type": "string",
+                          "uniqueItems": true,
+                          "format": "select",
+                          "enum": [
+                            ">75%",
+                            ">50%-75%",
+                            ">25 - 50%",
+                            "<25%"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                },
+                "ask31": {
+                  "title": "31) Is there a quality assurance process in place to assess the vaccines used during the 2013 / 2014 period? ",
+                  "oneOf": [
+                    {
+                      "title": "No",
+                      "type": "null"
+                    },
+                    {
+                      "title": "Yes",
+                      "type": "object",
+                      "properties": {
+                        "ask31_1": {
+                          "title": "Who assessed the Vaccine Quality?",
+                          "type": "string",
+                          "uniqueItems": true,
+                          "format": "select",
+                          "enum": [
+                            "The vaccine producer",
+                            "National authorities",
+                            "International reference laboratory"
+                          ]
+                        },
+                        "ask31_2": {
+                          "title": "Which of the following quality indicators were assessed?",
+                          "type": "object",
+                          "properties": {
+                            "ask31_2a": {
+                              "title": "2013",
+                              "type": "array",
+                              "uniqueItems": true,
+                              "items": {
+                                "type": "string",
+                                "enum": [
+                                  "Vaccine matching: vaccine virus tested against with field strains tested at least once",
+                                  "Vaccine potency: was the PD50 determined?",
+                                  "Immune response after vaccination (Structural Protein-Antibody response 30 days (or more)after vaccination",
+                                  "Vaccine effectiveness studies: field study\tcomparing occurrence of clinical FMD in\tvaccinated animals compared with nonvaccinated animals.",
+                                  "Cold chain: Was the Vaccine Cold Chain\tmonitored and assessed?"
+                                ]
+                              }
+                            },
+                            "ask31_2b": {
+                              "title": "2014",
+                              "type": "array",
+                              "uniqueItems": true,
+                              "items": {
+                                "type": "string",
+                                "enum": [
+                                  "Vaccine matching: vaccine virus tested against with field strains tested at least once",
+                                  "Vaccine potency: was the PD50 determined?",
+                                  "Immune response after vaccination (Structural Protein-Antibody response 30 days (or more)after vaccination",
+                                  "Vaccine effectiveness studies: field study\tcomparing occurrence of clinical FMD in\tvaccinated animals compared with nonvaccinated animals.",
+                                  "Cold chain: Was the Vaccine Cold Chain\tmonitored and assessed?"
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "cat13": {
+      "type": "object",
+      "title": "EPIDEMIOLOGY AND LABORATORY NETWORKS",
+      "properties": {
+        "ask32": {
+          "title": "32) Does your country belong to any Epidemiology Network?",
+          "oneOf": [
+            {
+              "title": "No",
+              "type": "null"
+            },
+            {
+              "title": "Yes",
+              "type": "object",
+              "properties": {
+                "ask32_1": {
+                  "title": "Please provide the names of the network and the countries involved:",
+                  "type": "array",
+                  "$ref": "#/definitions/items5"
+                }
+              }
+            }
+          ]
+        },
+        "ask33": {
+          "title": "33) Does your country belong to any Laboratory Network which deals with FMD control?",
+          "oneOf": [
+            {
+              "title": "No",
+              "type": "null"
+            },
+            {
+              "title": "Yes",
+              "type": "object",
+              "properties": {
+                "ask33_1": {
+                  "title": "Please provide the names of the network and the countries involved:",
+                  "type": "array",
+                  "$ref": "#/definitions/items5"
+                }
+              }
+            }
+          ]
+        },
+        "ask34": {
+          "title": "34) Does your country have any bilateral agreement to share information on FMD outbreaks with neighboring countries?,\t\t\t",
+          "oneOf": [
+            {
+              "title": "No",
+              "type": "null"
+            },
+            {
+              "title": "Yes",
+              "type": "object",
+              "properties": {
+                "ask34_1": {
+                  "title": " Please provide the name of the country(ies)",
+                  "type": "array",
+                  "$ref": "#/definitions/items5"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "cat14": {
+      "type": "object",
+      "title": "ACTIVITIES TO COMBINE FMD AND OTHER DISEASES CONTROL",
+      "properties": {
+        "ask35": {
+          "title": "35) . Does your country perform any activity which combines FMD surveillance and/or control with activities related to other diseases?",
+          "oneOf": [
+            {
+              "title": "No",
+              "type": "null"
+            },
+            {
+              "title": "Yes",
+              "type": "object",
+              "properties": {
+                "ask35_2": {
+                  "title": "Please indicate each activity and diseases addressed in each one:",
+                  "type": "array",
+                  "minItems": 1,
+                  "maxItems": 5,
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "ask35_2a": {
+                        "title": "Disease",
+                        "type": "string"
+                      },
+                      "ask35_2b": {
+                        "title": "Activity",
+                        "oneOf": [
+                          {
+                            "title": "Use of serum samples to test for more than one diseasemincluding FMD",
+                            "type": "null"
+                          },
+                          {
+                            "title": "Awareness campaign targeting multiple diseases",
+                            "type": "null"
+                          },
+                          {
+                            "title": "Combination of vaccination strategies",
+                            "type": "null"
+                          },
+                          {
+                            "title": "Others",
+                            "type": "object",
+                            "properties": {
+                              "ask35_1": {
+                                "title": "Specify:",
+                                "type": "string"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "additionalItems": false
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "cat15": {
+      "type": "object",
+      "title": "CHALLENGES",
+      "properties": {
+        "ask36": {
+          "title": "36) Please indicate a maximum of five major challenges/difficulties which your country is facing in\tcontrolling/eliminating FMD? ",
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 5,
+          "items": {
+            "type": "string",
+            "title": " ",
+            "default": ""
+          },
+          "additionalItems": false
+        },
+        "ask37": {
+          "title": "37) Please indicate in which of the following areas your country would benefit the most from receiving support to improve FMD control?*",
+          "description": "*Please press ctrl to activate the multiple selection",
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "enum": [
+              "Epidemiology training",
+              "Laboratory training",
+              "Development of FMD control strategy",
+              "Development of laboratory capacity",
+              "Regional coordination",
+              "Training on surveillance",
+              "Training on Risk Analysis",
+              "Socio-Economic impact studies",
+              "Development/implementation of legislation and Regulation",
+              "Management of FMD emergencies",
+              "Animal Identification",
+              "Movement Control"
+            ]
+          }
+        }
+      }
+    },
+    "cat16": {
+      "title": "GLOBAL FMD PORTFOLIO",
+      "description": "38) Has your country been involved in any specific activities, programs or projects that involve FMD surveillance and/or control in the last 3 years? ",
+      "oneOf": [
+        {
+          "title": "No",
+          "type": "null"
+        },
+        {
+          "title": "Yes",
+          "description": "Project",
+          "type": "array",
+          "format": "tabs",
+          "minItems": 1,
+          "maxItems": 3,
+          "additionalItems": false,
+          "items": {
+            "$ref": "#/definitions/project"
+          }
+        }
+      ]
     }
   }
 }

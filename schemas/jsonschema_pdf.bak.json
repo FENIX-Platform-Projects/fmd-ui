@@ -121,7 +121,24 @@
       "properties": {
         "ask1": {
           "title": "1) Has your country identified a list of Priority Transboundary Animal Diseases (TADs)?",
-          "type": "string"
+          "oneOf": [
+            {
+              "title": "No",
+              "type": "null"
+            },    
+            {
+              "title": "Yes",
+              "description": "If yes, list the 5 diseases with the highest priority for your country:",
+              "type": "array",
+              "format": "tabs",
+              "minItems": 1,
+              "maxItems": 3,
+              "additionalItems": false,
+              "items": {
+                "$ref": "#/definitions/desease"
+              }
+            }
+          ]
         }
       }
     },

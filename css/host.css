@@ -2603,3 +2603,10 @@ body.page-edit #btn-reset-quest span.new {
   display: none;
 }
 
+
+#testversion {
+  position: absolute;
+  z-index: 2000;
+  top:20px;
+  right: 100px
+}
