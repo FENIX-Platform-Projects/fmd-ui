@@ -10,5 +10,17 @@
   "admin@fao.org" : {
       "name" : "Admin",
       "password" : "admin"
+  },
+  "egypt-fmd@fao.org" : {
+      "name" : "Egypt",
+      "password" : "Egypt123"
+  },
+  "saudi-fmd@fao.org" : {
+      "name" : "Saudi",
+      "password" : "Saudi123"
+  },  
+  "uae-fmd@fao.org" : {
+      "name" : "UAE",
+      "password" : "Uae123"
   }
 }
