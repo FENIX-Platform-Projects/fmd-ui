@@ -256,35 +256,5 @@ require([
 			$('#btn-coll-quest').add('#sections .nav-pills a:eq(0)').trigger('click');
 		}
 
-		window.generatePdfSchema = function() {
-			var SCHEMAPDF = {
-				"$schema": "http://json-schema.org/draft-04/schema#",
-				"type": "object",
-				"definitions": {},
-				"properties": {}
-			},
-			$t = $("#schemaPdf").show();
-
-			SCHEMAPDF.definitions = schemaDefs;
-
-			var paths = _.map(Config.sections, function(id) {
-				return SCHEMAPDF.properties[id] = Config.dirSchema + id;
-			});
-
-			require(paths, function() {
-
-				var schemas = arguments;
-
-				for(var i = 0; i < schemas.length; i++) {
-					
-					var id = Config.sections[i];
-
-					SCHEMAPDF.properties[id] = schemas[i];
-				}
-				
-				document.write( JSON.stringify(SCHEMAPDF) );
-			});
-		};
-
     });
 });
