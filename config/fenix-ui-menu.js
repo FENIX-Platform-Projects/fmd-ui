@@ -52,7 +52,7 @@ define({
 					"FR": ""
 				}
 			},
-			{
+/*			{
 				"attrs": {
 					"id": "down"
 				},
@@ -61,7 +61,7 @@ define({
 					"EN": "Download",
 					"FR": ""
 				}
-			},
+			},*/
 			{
 				"attrs": {
 					"id": "compile",
