@@ -91,6 +91,8 @@ require([
 				var data = formStore.getSections();
 				showQuestDetail( data );
 
+				console.log('always data',data)
+
 				$('#sections').find('a[data-toggle="tab"]').each(function() {
 					var $pill = $(this),
 						id = $pill.data('id');
@@ -234,7 +236,7 @@ require([
 				payload: payload,
 				success: function() {
 					showQuestDetail();
-				    $loading.fadeOut(2000);
+				    $loading.fadeOut(4000);
 				}
 			});
 		});
