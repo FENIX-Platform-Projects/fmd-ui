@@ -182,7 +182,7 @@ define({
 
 				"ask17a":       "17 a) Has your country determined the risk factors for FMD introduction?",
 
-			"ask17b": "17 b) Has your country identified the ris factors for FMD spread?",
+			"ask17b": "17 b) Has your country identified the risk factors for FMD spread?",
 
 
 			"ask17_0a": " Which risk factors (maximum five) have been identified?",
