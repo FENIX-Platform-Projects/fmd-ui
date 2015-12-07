@@ -3,6 +3,10 @@
       "name" : "Guest",
       "password" : "guest"
   },
+  "oie-fmd@fao.org" : {
+      "name" : "OIE User",
+      "password" : "Oie321"
+  },
   "beta@fao.org" : {
       "name" : "Beta",
       "password" : "beta"
